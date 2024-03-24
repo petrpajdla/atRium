@@ -17,7 +17,6 @@ This is an in-person event only.
 
 ```{r}
 #| echo: false
-#| column: page-inset-left
 library(leaflet)
 arub <- c(16.6208208, 49.1892306)
 popup <- paste0("Here!")

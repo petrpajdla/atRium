@@ -24,6 +24,18 @@ website:
       - href: about.qmd
         text: About
         icon: people
+  page-footer: 
+    # background: "#F2F3F4"
+    left: 
+      - href: https://quarto.org/
+        text: "Build with quarto."
+      - text: "Code licensed under MIT License, other content under CC BY-SA 4.0 Int."
+    right: 
+      - icon: github
+        href: https://github.com/petrpajdla/atRium
+  repo-url: https://github.com/petrpajdla/atRium
+  repo-actions: [source, edit, issue]
+  back-to-top-navigation: true
 
 format:
   html:
