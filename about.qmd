@@ -1,0 +1,85 @@
+---
+title: "About the training school"
+---
+
+## Organizers
+
+**Petr Pajdla**  
+*Institute of Archaeology, Czech Acad Sci, Brno*  
+[{{< ai orcid >}} 0000-0001-7050-9572](https://orcid.org/0000-0001-7050-9572)
+
+**Peter Tkáč**  
+*Masaryk University*  
+[{{< ai orcid >}} 0000-0002-9444-1936](https://orcid.org/0000-0002-9444-1936)
+
+**Michael Kempf**  
+*Unviersity of Basel*  
+[{{< ai orcid >}} 0000-0002-9474-4670](https://orcid.org/0000-0002-9474-4670)
+
+**Giacomo Bilotti**  
+*Kiel University*  
+[{{< ai orcid >}} 0000-0002-7328-0811](https://orcid.org/0000-0002-7328-0811)
+
+
+### Support
+
+**Zuzana Kopáčová**  
+*Institute of Archaeology, Czech Acad Sci, Brno*  
+Finances, administration
+
+**Vít Kozák**  
+*Masaryk University*  
+Teaching assistant
+
+and **AIS CR** team members...
+
+
+## Organizations
+
+### ATRIUM
+
+The training (summer) school is organized as trans-national access provision in the ATRIUM Project (*Advancing Frontier Research In the Arts and Humanities*) funded from the Horizon Europe research and innovation actions proggramme under grant agreement No. [101132163](https://cordis.europa.eu/project/id/101132163).
+
+Learn more about the project [here](https://www.ariadne-research-infrastructure.eu/atrium/).
+
+
+### ARIADNE 
+
+[ARIADNE Research Infrastructure](https://www.ariadne-research-infrastructure.eu/) is a non-profit organisation aggregating, integrating and providing access to over 4 million of archaeology data resources. 
+The access is provided through a comprehensive data catalogue [ARIADNE Portal](https://portal.ariadne-infrastructure.eu/) (see the short video below for more details) and directly through a SPARQL endpoint to the linked-open data triple store ARIADNE Knowledge Base.
+
+One of the goals of the training school is to enable *programmatic* access to these resources by introducing basics of knowledge representation in triple store, explaining ARIADNE [AO-Cat Ontology](https://zenodo.org/doi/10.5281/zenodo.7818374), and providing training in building SPARQL queries.
+
+{{< video https://vimeo.com/920069846 >}}
+
+
+### AIS CR 
+
+[Archaeological information system of the Czech Republic (AIS CR)](https://www.aiscr.cz/en/)  is a research infrastructure integrating digital resources and services on archaeology in the Czech Republic and as such is one of many data providers in the ARIADNE research infrastructure. 
+AIS CR is jointly operated by the Insititutes of Archaeology of the Czech Academy of Sciences in [Brno (IAB)](https://www.arub.cz/) and [Prague (IAP)](https://www.arup.cas.cz/).
+
+
+### 
+
+:::: {.columns}
+::: {.column width=40%}
+[![](figs/aiscr.png)](https://www.aiscr.cz/en/)
+:::
+::: {.column width=10%}
+:::
+::: {.column width=45%}
+[![](figs/ariadne.png)](https://www.ariadne-research-infrastructure.eu/)
+:::
+::::
+
+
+:::: {.columns}
+::: {.column width=50%}
+[![](figs/arub.png)](https://www.arub.cz/)
+:::
+::: {.column width=10%}
+:::
+::: {.column width=40%}
+![](figs/eu.jpg)
+:::
+::::

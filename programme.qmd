@@ -1,0 +1,48 @@
+---
+title: "Programme"
+---
+
+## Training school programme
+
+The training school will last 5 days and consists of three distinct blocks (described in detail below) in which the participants will learn how to code in the R programming language, query data from the ARIADNE Knowledge Base, and analyze it using various  spatial analysis methods, especially point pattern analysis.
+
+::: {.column-page-inset-left}
+![*Provisional programme*](figs/atrium_programme.svg) 
+:::
+
+
+
+
+### 1. R Programming
+
+#### 1.1 Introduction to R and workflows
+
+#### 1.2 Data analysis and visualization in R
+
+#### 1.3 Introduction to spatial data in R
+
+### 2. Data in ARIADNE
+
+#### 2.1 ARIADNE & AO-Cat Ontology
+
+#### 2.2 Introduction to SPARQL query language
+
+#### 2.3 Querying ARIADNE SPARQL endpoint
+
+### 3. Spatial analysis
+
+#### 3.1 Point pattern analysis
+
+#### 3.2 Analyzing spatial data and point patterns in R
+
+#### 3.3 ?
+
+#### 3.4 ?
+
+## Keynote lecture
+
+Will be given by **Michael Kempf** on Wednesday, 18th September at 5:30pm as part of the *Science pub* series at the institute followed by a social event.
+Topic to be added.
+
+<!-- ### Social event/Walking meeting -->
+

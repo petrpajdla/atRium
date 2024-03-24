@@ -1,0 +1,35 @@
+project:
+  type: website
+
+website:
+  title: "ATRIUM Training School"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+        icon: house-door
+      - href: info.qmd
+        text: General info
+        icon: info-circle
+      - href: applications.qmd
+        text: Applications
+        icon: envelope-paper
+      - href: programme.qmd
+        text: Programme
+        icon: calendar4
+      # - href: materials.qmd
+      #   text: Materials
+      #   icon: book
+    right:
+      - href: about.qmd
+        text: About
+        icon: people
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+

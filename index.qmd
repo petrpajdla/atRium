@@ -1,0 +1,13 @@
+---
+title: "ATRIUM Training School"
+---
+
+::: {.callout-note}
+### Basics
+
+**When?** 17th to 20th September 2024  
+**Where?** Brno, Czech Republic  
+**What?** Training school on querying data aggregated in the ARIADNE infrastructure and their spatial analysis in R
+
+:::
+
