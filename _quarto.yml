@@ -29,7 +29,8 @@ website:
     left: 
       - href: https://quarto.org/
         text: "Build with quarto."
-      - text: "Code licensed under MIT License, other content under CC BY-SA 4.0 Int."
+    center:
+      - text: "Licenses: MIT (code) & CC BY-SA 4.0 Int. (other content)."
     right: 
       - icon: github
         href: https://github.com/petrpajdla/atRium
@@ -42,6 +43,3 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
-
-
-
