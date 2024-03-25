@@ -30,30 +30,44 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "ATRIUM Training School",
+    "title": "atRium Training School",
     "section": "",
     "text": "Basics\n\n\n\nWhen? 17th to 20th September 2024\nWhere? Brno, Czech Republic\nWhat? Training school on querying data aggregated in the ARIADNE infrastructure and their spatial analysis in R\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "programme.html",
     "href": "programme.html",
-    "title": "Programme",
+    "title": "Training school programme",
     "section": "",
-    "text": "The training school will last 5 days and consists of three distinct blocks (described in detail below) in which the participants will learn how to code in the R programming language, query data from the ARIADNE Knowledge Base, and analyze it using various spatial analysis methods, especially point pattern analysis.\n\n\n\n\nProvisional programme"
+    "text": "The training school will last 5 days and consists of three distinct blocks (described in detail below) in which the participants will learn how to code in the R programming language, query data from the ARIADNE Knowledge Base, and analyze it using various spatial analysis methods, especially point pattern analysis."
   },
   {
-    "objectID": "programme.html#training-school-programme",
-    "href": "programme.html#training-school-programme",
-    "title": "Programme",
-    "section": "",
-    "text": "The training school will last 5 days and consists of three distinct blocks (described in detail below) in which the participants will learn how to code in the R programming language, query data from the ARIADNE Knowledge Base, and analyze it using various spatial analysis methods, especially point pattern analysis.\n\n\n\n\nProvisional programme"
+    "objectID": "programme.html#r-programming",
+    "href": "programme.html#r-programming",
+    "title": "Training school programme",
+    "section": "1. R Programming",
+    "text": "1. R Programming\nR is a programming language and an environment for statistical computing and graphics. All the workshops of the school will use R and this practical introduction will give you enough experience to be able to write and understand code on yourself, know where and how to look for help, read and write data to/from R, and create and export basic plots.\n\n1.1 Introduction to R and workflows\nAn introductory course to R. Anyone with minimal or no prior experience with R will be able to understand what is happening in the code and write or adapt existing code for their use case.\n\n\n1.2 Data analysis and visualization in R\nYou will learn basics of data manipulation with dplyr package and data visualization with ggplot2 package. This will give you a powerfull set of tools to analyze and visualize data.\n\n\n1.3 Introduction to spatial data in R\nYou will learn how spatial data is represented in R, especially vector data as simple features in the sf package and raster data in the terra package. We will also have a look at various operations with geographic data, including reprojecting, geometry operations etc. Integral part of the workshop will be making maps in R."
+  },
+  {
+    "objectID": "programme.html#ariadne-data",
+    "href": "programme.html#ariadne-data",
+    "title": "Training school programme",
+    "section": "2. ARIADNE Data",
+    "text": "2. ARIADNE Data\nARIADNE infrastructure aggregates and integrates large amounts of archaeology data worldwide. Second day of the summer school will be focused on how the data is represented in the ARIADNE Knowledge Base (ARIADNE KB) and how to access it.\n\n2.1 ARIADNE & AO-Cat Ontology\nWe will start by exploring ARIADNE Portal, a catalogue interface to the ARIADNE KB. After building up notion of how data look in the ARIADNE Portal, we will delve deeper into how data is represented in the ARIADNE KB, from general notion of linked-open data to semantic data in RDF. Finally, we will explore the AO-Cat Ontology, which will give us a basis for querying the knowledge base.\n\n\n2.2 Introduction to SPARQL\nSPARQL is a query language for semantic data in RDF. You will learn very basics of SPARQL, how do the queries look, what parts are there etc. Practical examples of queries performed on the ARIADNE SPARQL endpoint will help us to understand what is possible with the query language.\n\n\n2.3 Querying ARIADNE SPARQL endpoint\nIn the workshop, you will combine the knowledge of AO-Cat ontology and SPARQL to query ARIADNE KB. At the end of the day you will be able to create and adapt various queries to obtain data from the ARIADNE KB for further analysis and re-use."
+  },
+  {
+    "objectID": "programme.html#spatial-analysis",
+    "href": "programme.html#spatial-analysis",
+    "title": "Training school programme",
+    "section": "3. Spatial analysis",
+    "text": "3. Spatial analysis\n\n3.1 Point pattern analysis\n\n\n3.2 Analyzing spatial data and point patterns in R\n\n\n3.3 ?\n\n\n3.4 ?"
   },
   {
     "objectID": "programme.html#keynote-lecture",
     "href": "programme.html#keynote-lecture",
-    "title": "Programme",
+    "title": "Training school programme",
     "section": "Keynote lecture",
-    "text": "Keynote lecture\nWill be given by Michael Kempf on Wednesday, 18th September at 5:30pm as part of the Science pub series at the institute followed by a social event. Topic to be added."
+    "text": "Keynote lecture\nWill be given by Michael Kempf on Wednesday, 18th September at 5:30pm as part of the Science pub series at the institute followed by a social event."
   },
   {
     "objectID": "materials.html",
@@ -81,7 +95,7 @@
     "href": "info.html#grants",
     "title": "General Information",
     "section": "Grants",
-    "text": "Grants\nEach participant of the school is eligible to receive around 1,400 Euro to cover travel expenses, housing, and daily subsistence during the meeting. To receive the grant, participants need to:\n\nApply via official form of the ATRIUM project (see section Applications for details) containing personal details, motivation for participation and a short project proposal.\nParticipate in person, i.e. sign attendance sheets for each day of the school.\nSubmit a report within a given time frame after the school with details of their participation and progress on the project they worked on."
+    "text": "Grants\nEach participant of the school is eligible to receive around 1,400 Euro to cover travel expenses, housing, and daily subsistence during the meeting. To receive the grant, participants need to:\n\nApply via official form of the ATRIUM project (see section Applications for details) containing personal details, motivation for participation and a short project proposal.\nParticipate in person, i.e. sign attendance sheets for each day of the school.\nSubmit a report within a given time frame after the school with details on the participation and progress on the project they worked on."
   },
   {
     "objectID": "info.html#other-information",

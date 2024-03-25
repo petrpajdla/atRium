@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ATRIUM Training School - Programme</title>
+<title>atRium Training School - Training school programme</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">ATRIUM Training School</span>
+    <span class="navbar-title">atRium Training School</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -131,11 +131,24 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#training-school-programme" id="toc-training-school-programme" class="nav-link active" data-scroll-target="#training-school-programme">Training school programme</a>
+  <li><a href="#r-programming" id="toc-r-programming" class="nav-link active" data-scroll-target="#r-programming">1. R Programming</a>
   <ul class="collapse">
-  <li><a href="#r-programming" id="toc-r-programming" class="nav-link" data-scroll-target="#r-programming">1. R Programming</a></li>
-  <li><a href="#data-in-ariadne" id="toc-data-in-ariadne" class="nav-link" data-scroll-target="#data-in-ariadne">2. Data in ARIADNE</a></li>
-  <li><a href="#spatial-analysis" id="toc-spatial-analysis" class="nav-link" data-scroll-target="#spatial-analysis">3. Spatial analysis</a></li>
+  <li><a href="#introduction-to-r-and-workflows" id="toc-introduction-to-r-and-workflows" class="nav-link" data-scroll-target="#introduction-to-r-and-workflows">1.1 Introduction to R and workflows</a></li>
+  <li><a href="#data-analysis-and-visualization-in-r" id="toc-data-analysis-and-visualization-in-r" class="nav-link" data-scroll-target="#data-analysis-and-visualization-in-r">1.2 Data analysis and visualization in R</a></li>
+  <li><a href="#introduction-to-spatial-data-in-r" id="toc-introduction-to-spatial-data-in-r" class="nav-link" data-scroll-target="#introduction-to-spatial-data-in-r">1.3 Introduction to spatial data in R</a></li>
+  </ul></li>
+  <li><a href="#ariadne-data" id="toc-ariadne-data" class="nav-link" data-scroll-target="#ariadne-data">2. ARIADNE Data</a>
+  <ul class="collapse">
+  <li><a href="#ariadne-ao-cat-ontology" id="toc-ariadne-ao-cat-ontology" class="nav-link" data-scroll-target="#ariadne-ao-cat-ontology">2.1 ARIADNE &amp; AO-Cat Ontology</a></li>
+  <li><a href="#introduction-to-sparql" id="toc-introduction-to-sparql" class="nav-link" data-scroll-target="#introduction-to-sparql">2.2 Introduction to SPARQL</a></li>
+  <li><a href="#querying-ariadne-sparql-endpoint" id="toc-querying-ariadne-sparql-endpoint" class="nav-link" data-scroll-target="#querying-ariadne-sparql-endpoint">2.3 Querying ARIADNE SPARQL endpoint</a></li>
+  </ul></li>
+  <li><a href="#spatial-analysis" id="toc-spatial-analysis" class="nav-link" data-scroll-target="#spatial-analysis">3. Spatial analysis</a>
+  <ul class="collapse">
+  <li><a href="#point-pattern-analysis" id="toc-point-pattern-analysis" class="nav-link" data-scroll-target="#point-pattern-analysis">3.1 Point pattern analysis</a></li>
+  <li><a href="#analyzing-spatial-data-and-point-patterns-in-r" id="toc-analyzing-spatial-data-and-point-patterns-in-r" class="nav-link" data-scroll-target="#analyzing-spatial-data-and-point-patterns-in-r">3.2 Analyzing spatial data and point patterns in R</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">3.3 ?</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">3.4 ?</a></li>
   </ul></li>
   <li><a href="#keynote-lecture" id="toc-keynote-lecture" class="nav-link" data-scroll-target="#keynote-lecture">Keynote lecture</a></li>
   </ul>
@@ -146,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Programme</h1>
+<h1 class="title">Training school programme</h1>
 </div>
 
 
@@ -163,8 +176,6 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="training-school-programme" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="training-school-programme">Training school programme</h2>
 <p>The training school will last 5 days and consists of three distinct blocks (described in detail below) in which the participants will learn how to code in the R programming language, query data from the ARIADNE Knowledge Base, and analyze it using various spatial analysis methods, especially point pattern analysis.</p>
 <div class="page-columns page-full">
 <div class="quarto-figure quarto-figure-center page-columns page-full">
@@ -174,49 +185,56 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </div>
-<section id="r-programming" class="level3">
-<h3 class="anchored" data-anchor-id="r-programming">1. R Programming</h3>
-<section id="introduction-to-r-and-workflows" class="level4">
-<h4 class="anchored" data-anchor-id="introduction-to-r-and-workflows">1.1 Introduction to R and workflows</h4>
+<section id="r-programming" class="level2">
+<h2 class="anchored" data-anchor-id="r-programming">1. R Programming</h2>
+<p><a href="https://cran.r-project.org/">R is a programming language</a> and an environment for statistical computing and graphics. All the workshops of the school will use R and this practical introduction will give you enough experience to be able to write and understand code on yourself, know where and how to look for help, read and write data to/from R, and create and export basic plots.</p>
+<section id="introduction-to-r-and-workflows" class="level3">
+<h3 class="anchored" data-anchor-id="introduction-to-r-and-workflows">1.1 Introduction to R and workflows</h3>
+<p>An introductory course to R. Anyone with minimal or no prior experience with R will be able to understand what is happening in the code and write or adapt existing code for their use case.</p>
 </section>
-<section id="data-analysis-and-visualization-in-r" class="level4">
-<h4 class="anchored" data-anchor-id="data-analysis-and-visualization-in-r">1.2 Data analysis and visualization in R</h4>
+<section id="data-analysis-and-visualization-in-r" class="level3">
+<h3 class="anchored" data-anchor-id="data-analysis-and-visualization-in-r">1.2 Data analysis and visualization in R</h3>
+<p>You will learn basics of data manipulation with <a href="https://dplyr.tidyverse.org/"><code>dplyr</code> package</a> and data visualization with <a href="https://ggplot2.tidyverse.org/"><code>ggplot2</code> package</a>. This will give you a powerfull set of tools to analyze and visualize data.</p>
 </section>
-<section id="introduction-to-spatial-data-in-r" class="level4">
-<h4 class="anchored" data-anchor-id="introduction-to-spatial-data-in-r">1.3 Introduction to spatial data in R</h4>
-</section>
-</section>
-<section id="data-in-ariadne" class="level3">
-<h3 class="anchored" data-anchor-id="data-in-ariadne">2. Data in ARIADNE</h3>
-<section id="ariadne-ao-cat-ontology" class="level4">
-<h4 class="anchored" data-anchor-id="ariadne-ao-cat-ontology">2.1 ARIADNE &amp; AO-Cat Ontology</h4>
-</section>
-<section id="introduction-to-sparql-query-language" class="level4">
-<h4 class="anchored" data-anchor-id="introduction-to-sparql-query-language">2.2 Introduction to SPARQL query language</h4>
-</section>
-<section id="querying-ariadne-sparql-endpoint" class="level4">
-<h4 class="anchored" data-anchor-id="querying-ariadne-sparql-endpoint">2.3 Querying ARIADNE SPARQL endpoint</h4>
+<section id="introduction-to-spatial-data-in-r" class="level3">
+<h3 class="anchored" data-anchor-id="introduction-to-spatial-data-in-r">1.3 Introduction to spatial data in R</h3>
+<p>You will learn how spatial data is represented in R, especially vector data as simple features in the <a href="https://r-spatial.github.io/sf/"><code>sf</code> package</a> and raster data in the <a href="https://rspatial.github.io/terra/index.html"><code>terra</code> package</a>. We will also have a look at various operations with geographic data, including reprojecting, geometry operations etc. Integral part of the workshop will be making maps in R.</p>
 </section>
 </section>
-<section id="spatial-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="spatial-analysis">3. Spatial analysis</h3>
-<section id="point-pattern-analysis" class="level4">
-<h4 class="anchored" data-anchor-id="point-pattern-analysis">3.1 Point pattern analysis</h4>
+<section id="ariadne-data" class="level2">
+<h2 class="anchored" data-anchor-id="ariadne-data">2. ARIADNE Data</h2>
+<p><a href="./about.html#ariadne">ARIADNE</a> infrastructure aggregates and integrates large amounts of archaeology data worldwide. Second day of the summer school will be focused on how the data is represented in the ARIADNE Knowledge Base <em>(ARIADNE KB)</em> and how to access it.</p>
+<section id="ariadne-ao-cat-ontology" class="level3">
+<h3 class="anchored" data-anchor-id="ariadne-ao-cat-ontology">2.1 ARIADNE &amp; AO-Cat Ontology</h3>
+<p>We will start by exploring <a href="https://portal.ariadne-infrastructure.eu/">ARIADNE Portal</a>, a catalogue interface to the ARIADNE KB. After building up notion of how data look in the ARIADNE Portal, we will delve deeper into how data is represented in the ARIADNE KB, from general notion of linked-open data to semantic data in <a href="https://www.w3.org/TR/rdf11-primer/">RDF</a>. Finally, we will explore the <a href="https://zenodo.org/doi/10.5281/zenodo.7818374">AO-Cat Ontology</a>, which will give us a basis for querying the knowledge base.</p>
 </section>
-<section id="analyzing-spatial-data-and-point-patterns-in-r" class="level4">
-<h4 class="anchored" data-anchor-id="analyzing-spatial-data-and-point-patterns-in-r">3.2 Analyzing spatial data and point patterns in R</h4>
+<section id="introduction-to-sparql" class="level3">
+<h3 class="anchored" data-anchor-id="introduction-to-sparql">2.2 Introduction to SPARQL</h3>
+<p><a href="https://www.w3.org/TR/sparql11-query/">SPARQL</a> is a query language for semantic data in <a href="https://www.w3.org/TR/rdf11-primer/">RDF</a>. You will learn very basics of SPARQL, how do the queries look, what parts are there etc. Practical examples of queries performed on the ARIADNE SPARQL endpoint will help us to understand what is possible with the query language.</p>
 </section>
-<section id="section" class="level4">
-<h4 class="anchored" data-anchor-id="section">3.3 ?</h4>
+<section id="querying-ariadne-sparql-endpoint" class="level3">
+<h3 class="anchored" data-anchor-id="querying-ariadne-sparql-endpoint">2.3 Querying ARIADNE SPARQL endpoint</h3>
+<p>In the workshop, you will combine the knowledge of AO-Cat ontology and SPARQL to query ARIADNE KB. At the end of the day you will be able to create and adapt various queries to obtain data from the ARIADNE KB for further analysis and re-use.</p>
 </section>
-<section id="section-1" class="level4">
-<h4 class="anchored" data-anchor-id="section-1">3.4 ?</h4>
 </section>
+<section id="spatial-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="spatial-analysis">3. Spatial analysis</h2>
+<section id="point-pattern-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="point-pattern-analysis">3.1 Point pattern analysis</h3>
+</section>
+<section id="analyzing-spatial-data-and-point-patterns-in-r" class="level3">
+<h3 class="anchored" data-anchor-id="analyzing-spatial-data-and-point-patterns-in-r">3.2 Analyzing spatial data and point patterns in R</h3>
+</section>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section">3.3 ?</h3>
+</section>
+<section id="section-1" class="level3">
+<h3 class="anchored" data-anchor-id="section-1">3.4 ?</h3>
 </section>
 </section>
 <section id="keynote-lecture" class="level2">
 <h2 class="anchored" data-anchor-id="keynote-lecture">Keynote lecture</h2>
-<p>Will be given by <strong>Michael Kempf</strong> on Wednesday, 18th September at 5:30pm as part of the <em>Science pub</em> series at the institute followed by a social event. Topic to be added.</p>
+<p>Will be given by <strong>Michael Kempf</strong> on Wednesday, 18th September at 5:30pm as part of the <em>Science pub</em> series at the institute followed by a social event.</p>
 <!-- ### Social event/Walking meeting -->
 
 
@@ -642,13 +660,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <p>Build with quarto.</p>
 </a>
   </li>  
-    <li class="nav-item">
- Code licensed under MIT License, other content under CC BY-SA 4.0 Int.
-  </li>  
 </ul>
     </div>   
     <div class="nav-footer-center">
-      &nbsp;
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ Licenses: MIT (code) &amp; CC BY-SA 4.0 Int. (other content).
+  </li>  
+</ul>
     <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/petrpajdla/atRium/blob/main/programme.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/petrpajdla/atRium/edit/main/programme.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li><li><a href="https://github.com/petrpajdla/atRium/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
