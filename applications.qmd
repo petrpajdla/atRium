@@ -2,12 +2,33 @@
 title: "Applications"
 ---
 
+<!-- ::: {.callout-note} -->
+
+## Key dates 
+
+Dates (except the date of the training school) are not yet fixed, as these depend on other partners and circumstances in the ATRIUM project as well.
+
+|                               |                                |
+|-----------------------------  |--------------------------------|
+| Beginning of April 2024       | Call for participants opens    |
+| **End of April/Mid. March 2024?** | **Deadline for applications** |
+| End of May 2024?              | Acceptance/rejection notifications send to applicants |
+| **16. -- 20. September 2024** | **The training school**        |
+| 4. October 2024               | Deadline for submission of reports |
+| End of November 2024          | Grants paid before this date   |
+
+: {tbl-colwidths="[30,70]"}
+
+<!-- ::: -->
+
+## Who should apply
+
 ::: {.callout-important}
 Only applicants with institutional affiliation **outside of the Czech Republic** are eligible to apply due to the *trans-national* nature of the access to the infrastructure provided by the school.
 :::
 
 We invite especially early-career researchers and PhD students to apply.
 
-Registration deadline
+## How to apply
 
-Acceptance notifications
+## Selection process
