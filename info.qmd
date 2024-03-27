@@ -33,7 +33,7 @@ To receive the grant, participants need to:
 
 1. **Apply via official form** of the ATRIUM project (see section [Applications](applications.qmd) for details) containing personal details, motivation for participation and a short project proposal.
 2. **Participate in person**, i.e. sign attendance sheets for each day of the school.
-3. **Submit a report** within a given time frame after the school with details of their participation and progress on the project they worked on.
+3. **Submit a report** within a given time frame after the school with details on the participation and progress on the project they worked on.
 
 ## Other information
 

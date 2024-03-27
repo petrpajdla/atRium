@@ -1,5 +1,5 @@
 ---
-title: "ATRIUM Training School"
+title: "atRium Training School"
 ---
 
 ::: {.callout-note}
@@ -10,4 +10,3 @@ title: "ATRIUM Training School"
 **What?** Training school on querying data aggregated in the ARIADNE infrastructure and their spatial analysis in R
 
 :::
-
