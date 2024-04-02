@@ -4,17 +4,17 @@ title: "Applications"
 
 <!-- ::: {.callout-note} -->
 
-## Key dates 
+More details can be found here.
 
-Dates (except the date of the training school) are not yet fixed, as these depend on other partners and circumstances in the ATRIUM project as well.
+## Key dates 
 
 |                               |                                |
 |-----------------------------  |--------------------------------|
 | Beginning of April 2024       | Call for participants opens    |
-| **End of April/Mid. March 2024?** | **Deadline for applications** |
-| End of May 2024?              | Acceptance/rejection notifications send to applicants |
+| **31. May 2024**              | **Deadline for applications** |
+| 30. June 2024                 | Acceptance notifications send before this date |
 | **16. -- 20. September 2024** | **The training school**        |
-| 4. October 2024               | Deadline for submission of reports |
+| Mid. October 2024 (?)         | Deadline for submission of reports |
 | End of November 2024          | Grants paid before this date   |
 
 : {tbl-colwidths="[30,70]"}
