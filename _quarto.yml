@@ -4,6 +4,9 @@ project:
 website:
   title: "atRium Training School"
   navbar:
+    logo: figs/BrandmarkSunbleached.png
+    background: "#A6503E"
+    foreground: "#E8DAC8"
     left:
       - href: index.qmd
         text: Home
@@ -25,7 +28,8 @@ website:
         text: About
         icon: people
   page-footer: 
-    # background: "#F2F3F4"
+    background: "#3A3736"
+    foreground: "#E8DAC8"
     left: 
       - href: https://quarto.org/
         text: "Build with quarto."
@@ -36,10 +40,13 @@ website:
         href: https://github.com/petrpajdla/atRium
   repo-url: https://github.com/petrpajdla/atRium
   repo-actions: [source, edit, issue]
-  back-to-top-navigation: true
+  back-to-top-navigation: false
 
 format:
   html:
     theme: cosmo
+    mainfont: Barlow
     css: styles.css
     toc: true
+    header-includes: |
+      <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">

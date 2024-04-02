@@ -61,6 +61,8 @@ AIS CR is jointly operated by the Insititutes of Archaeology of the Czech Academ
 
 ### 
 
+[![](figs/Clay.png){fig-align="center" width=60%}](https://atrium-research.eu)
+
 :::: {.columns}
 ::: {.column width=40%}
 [![](figs/aiscr.png)](https://www.aiscr.cz/en/)
@@ -80,6 +82,6 @@ AIS CR is jointly operated by the Insititutes of Archaeology of the Czech Academ
 ::: {.column width=10%}
 :::
 ::: {.column width=40%}
-![](figs/eu.jpg)
+![](figs/eu.png)
 :::
 ::::
