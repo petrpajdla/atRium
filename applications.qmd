@@ -2,9 +2,11 @@
 title: "Applications"
 ---
 
-<!-- ::: {.callout-note} -->
+<!-- ::: {.callout-note}
+Apply using the online form [here](https://docs.google.com/forms/d/e/1FAIpQLSctI5Dw7VhUmVKQxSj7lPwGWCvEKU3oI5YlRi0Y1MihDKTXGg/viewform).
+::: -->
 
-More details can be found here.
+More details about the transnational access scheme grants can be found on the [ATRIUM project page](https://atrium-research.eu/travel-grants/){.external}.
 
 ## Key dates 
 
@@ -24,11 +26,19 @@ More details can be found here.
 ## Who should apply
 
 ::: {.callout-important}
-Only applicants with institutional affiliation **outside of the Czech Republic** are eligible to apply due to the *trans-national* nature of the access to the infrastructure provided by the school.
+Only applicants with institutional affiliation **outside of the Czech Republic** are eligible to recieve funding due to the *trans-national* nature of the access to the infrastructure provided by the school.
 :::
 
-We invite especially early-career researchers and PhD students to apply.
+We invite especially early-career researchers and PhD students eager to learn how to programmaticaly (using R scripting language) get and analyze large spatial data sets to apply to the training school. 
+We expect participants to be interested in data analysis and processing in a formalized and reproducible manner using a scripting language.
+Applicants with prior knowledge of R programming are welcome, although the first day of the training will be devoted to learning the nuts and bolts of R, so even complete beginners are not discouraged from applying.
+We expect that you will have basic knowledge of statistics and geographic information systems.
+
 
 ## How to apply
 
-## Selection process
+Submit your applications through an [**online form**](https://docs.google.com/forms/d/e/1FAIpQLSctI5Dw7VhUmVKQxSj7lPwGWCvEKU3oI5YlRi0Y1MihDKTXGg/viewform){.external}. 
+On the 4th page of the application (*TNA Scheme*), choose **Summer School Access** and **Archaeological Information System of the Czech Republic, Institute of Archaeology of the Czech Academy of Sciences, Brno -- AIS CR (ARUB)** as a proposed host organisation.
+On the next page (*Summer School Application*) please outline the reasons why you would find the training beneficial and how you could apply these lessons to your own organisation and research.
+
+More details on how to apply can be found [here](https://atrium-research.eu/tna-application-process/){.external}.

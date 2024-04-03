@@ -10,3 +10,5 @@ title: "atRium Brno Training School"
 **What?** Training school on querying data aggregated in the ARIADNE infrastructure and their spatial analysis in R
 
 :::
+
+[![](figs/Clay.png){fig-align="center" width=60%}](https://atrium-research.eu)

@@ -11,7 +11,7 @@ The training school will last 5 days and consists of three distinct blocks (desc
 
 ## 1. R Programming
 
-[R is a programming language](https://cran.r-project.org/) and an environment for statistical computing and graphics.
+[R is a programming language](https://cran.r-project.org/){.external} and an environment for statistical computing and graphics.
 All the workshops of the school will use R and this practical introduction will give you enough experience to be able to write and understand code on yourself, know where and how to look for help, read and write data to/from R, and create and export basic plots.
 
 ### 1.1 Introduction to R and workflows
@@ -21,12 +21,12 @@ Anyone with minimal or no prior experience with R will be able to understand wha
 
 ### 1.2 Data analysis and visualization in R
 
-You will learn basics of data manipulation with [`dplyr` package](https://dplyr.tidyverse.org/) and data visualization with [`ggplot2` package](https://ggplot2.tidyverse.org/). 
+You will learn basics of data manipulation with [`dplyr` package](https://dplyr.tidyverse.org/){.external} and data visualization with [`ggplot2` package](https://ggplot2.tidyverse.org/){.external}. 
 This will give you a powerfull set of tools to analyze and visualize data.
 
 ### 1.3 Introduction to spatial data in R
 
-You will learn how spatial data is represented in R, especially vector data as simple features in the [`sf` package](https://r-spatial.github.io/sf/) and raster data in the [`terra` package](https://rspatial.github.io/terra/index.html).
+You will learn how spatial data is represented in R, especially vector data as simple features in the [`sf` package](https://r-spatial.github.io/sf/){.external} and raster data in the [`terra` package](https://rspatial.github.io/terra/index.html){.external}.
 We will also have a look at various operations with geographic data, including reprojecting, geometry operations etc.
 Integral part of the workshop will be making maps in R.
 
@@ -38,13 +38,13 @@ Second day of the summer school will be focused on how the data is represented i
 
 ### 2.1 ARIADNE & AO-Cat Ontology
 
-We will start by exploring [ARIADNE Portal](https://portal.ariadne-infrastructure.eu/), a catalogue interface to the ARIADNE KB.
-After building up notion of how data look in the ARIADNE Portal, we will delve deeper into how data is represented in the ARIADNE KB, from general notion of linked-open data to semantic data in [RDF](https://www.w3.org/TR/rdf11-primer/).
-Finally, we will explore the [AO-Cat Ontology](https://zenodo.org/doi/10.5281/zenodo.7818374), which will give us a basis for querying the knowledge base.
+We will start by exploring [ARIADNE Portal](https://portal.ariadne-infrastructure.eu/){.external}, a catalogue interface to the ARIADNE KB.
+After building up notion of how data look in the ARIADNE Portal, we will delve deeper into how data is represented in the ARIADNE KB, from general notion of linked-open data to semantic data in [RDF](https://www.w3.org/TR/rdf11-primer/){.external}.
+Finally, we will explore the [AO-Cat Ontology](https://zenodo.org/doi/10.5281/zenodo.7818374){.external}, which will give us a basis for querying the knowledge base.
 
 ### 2.2 Introduction to SPARQL
 
-[SPARQL](https://www.w3.org/TR/sparql11-query/) is a query language for semantic data in [RDF](https://www.w3.org/TR/rdf11-primer/).
+[SPARQL](https://www.w3.org/TR/sparql11-query/){.external} is a query language for semantic data in [RDF](https://www.w3.org/TR/rdf11-primer/){.external}.
 You will learn very basics of SPARQL, how do the queries look, what parts are there etc.
 Practical examples of queries performed on the ARIADNE SPARQL endpoint will help us to understand what is possible with the query language.
 
