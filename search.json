@@ -1,68 +1,5 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About the training school",
-    "section": "",
-    "text": "Petr Pajdla\nInstitute of Archaeology, Czech Acad Sci, Brno\n 0000-0001-7050-9572\nPeter Tkáč\nMasaryk University\n 0000-0002-9444-1936\nMichael Kempf\nUnviersity of Basel\n 0000-0002-9474-4670\nGiacomo Bilotti\nKiel University\n 0000-0002-7328-0811\n\n\nZuzana Kopáčová\nInstitute of Archaeology, Czech Acad Sci, Brno\nFinances, administration\nVít Kozák\nMasaryk University\nTeaching assistant\nand AIS CR team members…"
-  },
-  {
-    "objectID": "about.html#organizers",
-    "href": "about.html#organizers",
-    "title": "About the training school",
-    "section": "",
-    "text": "Petr Pajdla\nInstitute of Archaeology, Czech Acad Sci, Brno\n 0000-0001-7050-9572\nPeter Tkáč\nMasaryk University\n 0000-0002-9444-1936\nMichael Kempf\nUnviersity of Basel\n 0000-0002-9474-4670\nGiacomo Bilotti\nKiel University\n 0000-0002-7328-0811\n\n\nZuzana Kopáčová\nInstitute of Archaeology, Czech Acad Sci, Brno\nFinances, administration\nVít Kozák\nMasaryk University\nTeaching assistant\nand AIS CR team members…"
-  },
-  {
-    "objectID": "about.html#organizations",
-    "href": "about.html#organizations",
-    "title": "About the training school",
-    "section": "Organizations",
-    "text": "Organizations\n\nATRIUM\nThe training (summer) school is organized as trans-national access provision in the ATRIUM Project (Advancing Frontier Research In the Arts and Humanities) funded from the Horizon Europe research and innovation actions proggramme under grant agreement No. 101132163.\nLearn more about the project here.\n\n\nARIADNE\nARIADNE Research Infrastructure is a non-profit organisation aggregating, integrating and providing access to over 4 million of archaeology data resources. The access is provided through a comprehensive data catalogue ARIADNE Portal (see the short video below for more details) and directly through a SPARQL endpoint to the linked-open data triple store ARIADNE Knowledge Base.\nOne of the goals of the training school is to enable programmatic access to these resources by introducing basics of knowledge representation in triple store, explaining ARIADNE AO-Cat Ontology, and providing training in building SPARQL queries.\n\n\n\nAIS CR\nArchaeological information system of the Czech Republic (AIS CR) is a research infrastructure integrating digital resources and services on archaeology in the Czech Republic and as such is one of many data providers in the ARIADNE research infrastructure. AIS CR is jointly operated by the Insititutes of Archaeology of the Czech Academy of Sciences in Brno (IAB) and Prague (IAP)."
-  },
-  {
-    "objectID": "applications.html",
-    "href": "applications.html",
-    "title": "Applications",
-    "section": "",
-    "text": "Dates (except the date of the training school) are not yet fixed, as these depend on other partners and circumstances in the ATRIUM project as well.\n\n\n\n\n\n\n\nBeginning of April 2024\nCall for participants opens\n\n\nEnd of April/Mid. March 2024?\nDeadline for applications\n\n\nEnd of May 2024?\nAcceptance/rejection notifications send to applicants\n\n\n16. – 20. September 2024\nThe training school\n\n\n4. October 2024\nDeadline for submission of reports\n\n\nEnd of November 2024\nGrants paid before this date"
-  },
-  {
-    "objectID": "applications.html#key-dates",
-    "href": "applications.html#key-dates",
-    "title": "Applications",
-    "section": "",
-    "text": "Dates (except the date of the training school) are not yet fixed, as these depend on other partners and circumstances in the ATRIUM project as well.\n\n\n\n\n\n\n\nBeginning of April 2024\nCall for participants opens\n\n\nEnd of April/Mid. March 2024?\nDeadline for applications\n\n\nEnd of May 2024?\nAcceptance/rejection notifications send to applicants\n\n\n16. – 20. September 2024\nThe training school\n\n\n4. October 2024\nDeadline for submission of reports\n\n\nEnd of November 2024\nGrants paid before this date"
-  },
-  {
-    "objectID": "applications.html#who-should-apply",
-    "href": "applications.html#who-should-apply",
-    "title": "Applications",
-    "section": "Who should apply",
-    "text": "Who should apply\n\n\n\n\n\n\nImportant\n\n\n\nOnly applicants with institutional affiliation outside of the Czech Republic are eligible to apply due to the trans-national nature of the access to the infrastructure provided by the school.\n\n\nWe invite especially early-career researchers and PhD students to apply."
-  },
-  {
-    "objectID": "applications.html#how-to-apply",
-    "href": "applications.html#how-to-apply",
-    "title": "Applications",
-    "section": "How to apply",
-    "text": "How to apply"
-  },
-  {
-    "objectID": "applications.html#selection-process",
-    "href": "applications.html#selection-process",
-    "title": "Applications",
-    "section": "Selection process",
-    "text": "Selection process"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "atRium Training School",
-    "section": "",
-    "text": "Basics\n\n\n\nWhen? 17th to 20th September 2024\nWhere? Brno, Czech Republic\nWhat? Training school on querying data aggregated in the ARIADNE infrastructure and their spatial analysis in R\n\n\n\n\n\n Back to top"
-  },
-  {
     "objectID": "programme.html",
     "href": "programme.html",
     "title": "Training school programme",
@@ -98,13 +35,6 @@
     "text": "Keynote lecture\nWill be given by Michael Kempf on Wednesday, 18th September at 5:30pm as part of the Science pub series at the institute followed by a social event."
   },
   {
-    "objectID": "materials.html",
-    "href": "materials.html",
-    "title": "Materials",
-    "section": "",
-    "text": "Here will be materials for the summer school…\n\n\n\n Back to top"
-  },
-  {
     "objectID": "info.html",
     "href": "info.html",
     "title": "General Information",
@@ -131,5 +61,75 @@
     "title": "General Information",
     "section": "Other information",
     "text": "Other information\n\nTravelling to Brno\nBrno is easily reachable by trains or buses from Prague (approx 2 – 2.5 hour journey) and Vienna (approx. 1.5 – 2 hour journey). Many overnight trains crossing large part of Europe start or end in Vienna and we recommend taking these trains as an alternative to flying."
+  },
+  {
+    "objectID": "applications.html",
+    "href": "applications.html",
+    "title": "Applications",
+    "section": "",
+    "text": "More details can be found here."
+  },
+  {
+    "objectID": "applications.html#key-dates",
+    "href": "applications.html#key-dates",
+    "title": "Applications",
+    "section": "Key dates",
+    "text": "Key dates\n\n\n\n\n\n\n\nBeginning of April 2024\nCall for participants opens\n\n\n31. May 2024\nDeadline for applications\n\n\n30. June 2024\nAcceptance notifications send before this date\n\n\n16. – 20. September 2024\nThe training school\n\n\nMid. October 2024 (?)\nDeadline for submission of reports\n\n\nEnd of November 2024\nGrants paid before this date"
+  },
+  {
+    "objectID": "applications.html#who-should-apply",
+    "href": "applications.html#who-should-apply",
+    "title": "Applications",
+    "section": "Who should apply",
+    "text": "Who should apply\n\n\n\n\n\n\nImportant\n\n\n\nOnly applicants with institutional affiliation outside of the Czech Republic are eligible to apply due to the trans-national nature of the access to the infrastructure provided by the school.\n\n\nWe invite especially early-career researchers and PhD students to apply."
+  },
+  {
+    "objectID": "applications.html#how-to-apply",
+    "href": "applications.html#how-to-apply",
+    "title": "Applications",
+    "section": "How to apply",
+    "text": "How to apply"
+  },
+  {
+    "objectID": "applications.html#selection-process",
+    "href": "applications.html#selection-process",
+    "title": "Applications",
+    "section": "Selection process",
+    "text": "Selection process"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About the training school",
+    "section": "",
+    "text": "Petr Pajdla\nInstitute of Archaeology, Czech Acad Sci, Brno\n 0000-0001-7050-9572\nPeter Tkáč\nMasaryk University\n 0000-0002-9444-1936\nMichael Kempf\nUnviersity of Basel\n 0000-0002-9474-4670\nGiacomo Bilotti\nKiel University\n 0000-0002-7328-0811\n\n\nZuzana Kopáčová\nInstitute of Archaeology, Czech Acad Sci, Brno\nFinances, administration\nVít Kozák\nMasaryk University\nTeaching assistant\nand AIS CR team members…"
+  },
+  {
+    "objectID": "about.html#organizers",
+    "href": "about.html#organizers",
+    "title": "About the training school",
+    "section": "",
+    "text": "Petr Pajdla\nInstitute of Archaeology, Czech Acad Sci, Brno\n 0000-0001-7050-9572\nPeter Tkáč\nMasaryk University\n 0000-0002-9444-1936\nMichael Kempf\nUnviersity of Basel\n 0000-0002-9474-4670\nGiacomo Bilotti\nKiel University\n 0000-0002-7328-0811\n\n\nZuzana Kopáčová\nInstitute of Archaeology, Czech Acad Sci, Brno\nFinances, administration\nVít Kozák\nMasaryk University\nTeaching assistant\nand AIS CR team members…"
+  },
+  {
+    "objectID": "about.html#organizations",
+    "href": "about.html#organizations",
+    "title": "About the training school",
+    "section": "Organizations",
+    "text": "Organizations\n\nATRIUM\nThe training (summer) school is organized as trans-national access provision in the ATRIUM Project (Advancing Frontier Research In the Arts and Humanities) funded from the Horizon Europe research and innovation actions proggramme under grant agreement No. 101132163.\nLearn more about the project here.\n\n\nARIADNE\nARIADNE Research Infrastructure is a non-profit organisation aggregating, integrating and providing access to over 4 million of archaeology data resources. The access is provided through a comprehensive data catalogue ARIADNE Portal (see the short video below for more details) and directly through a SPARQL endpoint to the linked-open data triple store ARIADNE Knowledge Base.\nOne of the goals of the training school is to enable programmatic access to these resources by introducing basics of knowledge representation in triple store, explaining ARIADNE AO-Cat Ontology, and providing training in building SPARQL queries.\n\n\n\nAIS CR\nArchaeological information system of the Czech Republic (AIS CR) is a research infrastructure integrating digital resources and services on archaeology in the Czech Republic and as such is one of many data providers in the ARIADNE research infrastructure. AIS CR is jointly operated by the Insititutes of Archaeology of the Czech Academy of Sciences in Brno (IAB) and Prague (IAP)."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "atRium Brno Training School",
+    "section": "",
+    "text": "Basics\n\n\n\nWhen? 17. to 20. September 2024\nWhere? Brno, Czech Republic\nWhat? Training school on querying data aggregated in the ARIADNE infrastructure and their spatial analysis in R"
+  },
+  {
+    "objectID": "materials.html",
+    "href": "materials.html",
+    "title": "Materials",
+    "section": "",
+    "text": "Here will be materials for the summer school…"
   }
 ]

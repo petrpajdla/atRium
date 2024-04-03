@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.551">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -66,6 +66,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -78,6 +79,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./figs/BrandmarkSunbleached.png" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">atRium Training School</span>
     </a>
@@ -161,9 +165,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 <!-- ::: {.callout-note} -->
+<p>More details can be found here.</p>
 <section id="key-dates" class="level2">
 <h2 class="anchored" data-anchor-id="key-dates">Key dates</h2>
-<p>Dates (except the date of the training school) are not yet fixed, as these depend on other partners and circumstances in the ATRIUM project as well.</p>
 <table class="table">
 <colgroup>
 <col style="width: 30%">
@@ -175,19 +179,19 @@ ul.task-list li input[type="checkbox"] {
 <td>Call for participants opens</td>
 </tr>
 <tr class="even">
-<td><strong>End of April/Mid. March 2024?</strong></td>
+<td><strong>31. May 2024</strong></td>
 <td><strong>Deadline for applications</strong></td>
 </tr>
 <tr class="odd">
-<td>End of May 2024?</td>
-<td>Acceptance/rejection notifications send to applicants</td>
+<td>30. June 2024</td>
+<td>Acceptance notifications send before this date</td>
 </tr>
 <tr class="even">
 <td><strong>16. – 20. September 2024</strong></td>
 <td><strong>The training school</strong></td>
 </tr>
 <tr class="odd">
-<td>4. October 2024</td>
+<td>Mid. October 2024 (?)</td>
 <td>Deadline for submission of reports</td>
 </tr>
 <tr class="even">
@@ -224,7 +228,7 @@ Important
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -304,24 +308,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/petrpajdla\.github\.io\/atRium\/");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -356,11 +342,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
+      return note.innerHTML;
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
