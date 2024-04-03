@@ -67,7 +67,7 @@
     "href": "applications.html",
     "title": "Applications",
     "section": "",
-    "text": "More details can be found here."
+    "text": "More details about the transnational access scheme grants can be found on the ATRIUM project page."
   },
   {
     "objectID": "applications.html#key-dates",
@@ -81,21 +81,14 @@
     "href": "applications.html#who-should-apply",
     "title": "Applications",
     "section": "Who should apply",
-    "text": "Who should apply\n\n\n\n\n\n\nImportant\n\n\n\nOnly applicants with institutional affiliation outside of the Czech Republic are eligible to apply due to the trans-national nature of the access to the infrastructure provided by the school.\n\n\nWe invite especially early-career researchers and PhD students to apply."
+    "text": "Who should apply\n\n\n\n\n\n\nImportant\n\n\n\nOnly applicants with institutional affiliation outside of the Czech Republic are eligible to recieve funding due to the trans-national nature of the access to the infrastructure provided by the school.\n\n\nWe invite especially early-career researchers and PhD students eager to learn how to programmaticaly (using R scripting language) get and analyze large spatial data sets to apply to the training school. We expect participants to be interested in data analysis and processing in a formalized and reproducible manner using a scripting language. Applicants with prior knowledge of R programming are welcome, although the first day of the training will be devoted to learning the nuts and bolts of R, so even complete beginners are not discouraged from applying. We expect that you will have basic knowledge of statistics and geographic information systems."
   },
   {
     "objectID": "applications.html#how-to-apply",
     "href": "applications.html#how-to-apply",
     "title": "Applications",
     "section": "How to apply",
-    "text": "How to apply"
-  },
-  {
-    "objectID": "applications.html#selection-process",
-    "href": "applications.html#selection-process",
-    "title": "Applications",
-    "section": "Selection process",
-    "text": "Selection process"
+    "text": "How to apply\nSubmit your applications through an online form. On the 4th page of the application (TNA Scheme), choose Summer School Access and Archaeological Information System of the Czech Republic, Institute of Archaeology of the Czech Academy of Sciences, Brno – AIS CR (ARUB) as a proposed host organisation. On the next page (Summer School Application) please outline the reasons why you would find the training beneficial and how you could apply these lessons to your own organisation and research.\nMore details on how to apply can be found here."
   },
   {
     "objectID": "about.html",
@@ -116,7 +109,7 @@
     "href": "about.html#organizations",
     "title": "About the training school",
     "section": "Organizations",
-    "text": "Organizations\n\nATRIUM\nThe training (summer) school is organized as trans-national access provision in the ATRIUM Project (Advancing Frontier Research In the Arts and Humanities) funded from the Horizon Europe research and innovation actions proggramme under grant agreement No. 101132163.\nLearn more about the project here.\n\n\nARIADNE\nARIADNE Research Infrastructure is a non-profit organisation aggregating, integrating and providing access to over 4 million of archaeology data resources. The access is provided through a comprehensive data catalogue ARIADNE Portal (see the short video below for more details) and directly through a SPARQL endpoint to the linked-open data triple store ARIADNE Knowledge Base.\nOne of the goals of the training school is to enable programmatic access to these resources by introducing basics of knowledge representation in triple store, explaining ARIADNE AO-Cat Ontology, and providing training in building SPARQL queries.\n\n\n\nAIS CR\nArchaeological information system of the Czech Republic (AIS CR) is a research infrastructure integrating digital resources and services on archaeology in the Czech Republic and as such is one of many data providers in the ARIADNE research infrastructure. AIS CR is jointly operated by the Insititutes of Archaeology of the Czech Academy of Sciences in Brno (IAB) and Prague (IAP)."
+    "text": "Organizations\n\nATRIUM\nThe training (summer) school is organized as trans-national access provision in the ATRIUM Project (Advancing Frontier Research In the Arts and Humanities) funded from the Horizon Europe research and innovation actions proggramme under grant agreement No. 101132163.\n\n\nARIADNE\nARIADNE Research Infrastructure is a non-profit organisation aggregating, integrating and providing access to over 4 million of archaeology data resources. The access is provided through a comprehensive data catalogue ARIADNE Portal (see the short video below for more details) and directly through a SPARQL endpoint to the linked-open data triple store ARIADNE Knowledge Base.\nOne of the goals of the training school is to enable programmatic access to these resources by introducing basics of knowledge representation in triple store, explaining ARIADNE AO-Cat Ontology, and providing training in building SPARQL queries.\n\n\n\nAIS CR\nArchaeological information system of the Czech Republic (AIS CR) is a research infrastructure integrating digital resources and services on archaeology in the Czech Republic and as such is one of many data providers in the ARIADNE research infrastructure. AIS CR is jointly operated by the Insititutes of Archaeology of the Czech Academy of Sciences in Brno (IAB) and Prague (IAP)."
   },
   {
     "objectID": "index.html",
