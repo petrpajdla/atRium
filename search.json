@@ -25,7 +25,7 @@
     "href": "programme.html#spatial-analysis",
     "title": "Training school programme",
     "section": "3. Spatial analysis",
-    "text": "3. Spatial analysis\n\n3.1 Point pattern analysis\n\n\n3.2 Analyzing spatial data and point patterns in R\n\n\n3.3 ?\n\n\n3.4 ?"
+    "text": "3. Spatial analysis\n\n3.1 Analyzing spatial data in R\n\n\n3.2 TBA\n\n\n3.3 TBA"
   },
   {
     "objectID": "programme.html#keynote-lecture",
@@ -53,7 +53,7 @@
     "href": "info.html#grants",
     "title": "General Information",
     "section": "Grants",
-    "text": "Grants\nEach participant of the school is eligible to receive around 1,400 Euro to cover travel expenses, housing, and daily subsistence during the meeting. To receive the grant, participants need to:\n\nApply via official form of the ATRIUM project (see section Applications for details) containing personal details, motivation for participation and a short project proposal.\nParticipate in person, i.e. sign attendance sheets for each day of the school.\nSubmit a report within a given time frame after the school with details on the participation and progress on the project they worked on."
+    "text": "Grants\nEach participant of the school is eligible to receive a grant to cover travel expenses, housing, and daily subsistence during the meeting. To receive the grant, participants need to:\n\nApply via official form of the ATRIUM project (see section Applications for details) containing personal details and motivation for participation.\nParticipate in person, i.e. sign attendance sheets for each day of the school.\nSubmit a report within a given time frame after the school with details on their participation."
   },
   {
     "objectID": "info.html#other-information",
@@ -81,7 +81,7 @@
     "href": "applications.html#who-should-apply",
     "title": "Applications",
     "section": "Who should apply",
-    "text": "Who should apply\n\n\n\n\n\n\nImportant\n\n\n\nOnly applicants with institutional affiliation outside of the Czech Republic are eligible to recieve funding due to the trans-national nature of the access to the infrastructure provided by the school.\n\n\nWe invite especially early-career researchers and PhD students eager to learn how to programmaticaly (using R scripting language) get and analyze large spatial data sets to apply to the training school. We expect participants to be interested in data analysis and processing in a formalized and reproducible manner using a scripting language. Applicants with prior knowledge of R programming are welcome, although the first day of the training will be devoted to learning the nuts and bolts of R, so even complete beginners are not discouraged from applying. We expect that you will have basic knowledge of statistics and geographic information systems."
+    "text": "Who should apply\n\n\n\n\n\n\nNote\n\n\n\nOnly applicants with institutional affiliation outside of the Czech Republic are eligible to recieve funding due to the trans-national nature of the access to the infrastructure provided by the school.\n\n\nWe welcome applications from early-career researchers and PhD students who are enthusiastic about acquiring programming skills, particularly in the R scripting language, to efficiently retrieve and analyze extensive spatial datasets. Participants should demonstrate a keen interest in conducting data analysis and processing in a structured and reproducible manner using scripting languages.\nWhile applicants with prior knowledge of R programming are encouraged to apply, the first day of the training will be dedicated to mastering the fundamentals of R and individuals who are complete beginners are welcome as well, as no prior experience is necessary. Additionally, applicants should possess a basic understanding of statistics and geographic information systems to fully benefit from the training."
   },
   {
     "objectID": "applications.html#how-to-apply",
@@ -116,7 +116,7 @@
     "href": "index.html",
     "title": "atRium Brno Training School",
     "section": "",
-    "text": "Basics\n\n\n\nWhen? 17. to 20. September 2024\nWhere? Brno, Czech Republic\nWhat? Training school on querying data aggregated in the ARIADNE infrastructure and their spatial analysis in R"
+    "text": "Basics\n\n\n\nWhen? 17. to 20. September 2024\nWhere? Brno, Czech Republic\nWhat? Training school on querying data aggregated in the ARIADNE infrastructure and their spatial analysis in R\n\n\nJoin us in Brno for a five-day ‘atRium’ training school in computational archaeology, where you will be equipped with essential coding skills in the R programming language, knowledge on archaeological data integrated in the ARIADNE research infrastructure and fundamental spatial data analysis expertise. As large amounts of archaeological data are becoming available, spatial analysis techniques may offer valuable insights into past human behaviour and settlement patterns. Our programme is designed to deepen your understanding of computational methods in archaeology, focusing on working in a reproducible manner using R programming language and environment.\nThe training school is part of trans-national access scheme provided by the ATRIUM Project hosted by the Archaeological Information System of the Czech Republic (AIS CR) research infrastructure at the Institute of Archaeology, Czech Acad Sci, Brno."
   },
   {
     "objectID": "materials.html",
