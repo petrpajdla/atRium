@@ -25,14 +25,18 @@ More details about the transnational access scheme grants can be found on the [A
 
 ## Who should apply
 
-::: {.callout-important}
-Only applicants with institutional affiliation **outside of the Czech Republic** are eligible to recieve funding due to the *trans-national* nature of the access to the infrastructure provided by the school.
+::: {.callout-tip}
+
+## Note
+
+Only applicants with institutional affiliation **outside of the Czech Republic** are eligible to receive funding due to the *trans-national* nature of the access to the infrastructure provided by the school.
 :::
 
-We invite especially early-career researchers and PhD students eager to learn how to programmaticaly (using R scripting language) get and analyze large spatial data sets to apply to the training school. 
-We expect participants to be interested in data analysis and processing in a formalized and reproducible manner using a scripting language.
-Applicants with prior knowledge of R programming are welcome, although the first day of the training will be devoted to learning the nuts and bolts of R, so even complete beginners are not discouraged from applying.
-We expect that you will have basic knowledge of statistics and geographic information systems.
+We welcome applications from early-career researchers and PhD students who are enthusiastic about acquiring programming skills, particularly in the R scripting language, to efficiently retrieve and analyze extensive spatial datasets. 
+Participants should demonstrate a keen interest in conducting data analysis and processing in a structured and reproducible manner using scripting languages. 
+
+While applicants with prior knowledge of R programming are encouraged to apply, the first day of the training will be dedicated to mastering the fundamentals of R and individuals who are complete beginners are welcome as well, as no prior experience is necessary. 
+Additionally, applicants should possess a basic understanding of statistics and geographic information systems to fully benefit from the training.
 
 
 ## How to apply

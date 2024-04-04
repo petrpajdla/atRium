@@ -2,7 +2,8 @@
 title: "atRium Brno Training School"
 ---
 
-::: {.callout-note}
+::: {.callout-tip}
+
 ### Basics
 
 **When?** 17. to 20. September 2024  
@@ -11,4 +12,22 @@ title: "atRium Brno Training School"
 
 :::
 
+Join us in Brno for a five-day *'atRium'* training school in computational archaeology, where you will be equipped with essential coding skills in the R programming language, knowledge on archaeological data integrated in the ARIADNE research infrastructure and fundamental spatial data analysis expertise. 
+As large amounts of archaeological data are becoming available, spatial analysis techniques may offer valuable insights into past human behaviour and settlement patterns.
+Our programme is designed to deepen your understanding of computational methods in archaeology, focusing on working in a reproducible manner using R programming language and environment.
+
+The training school is part of trans-national access scheme provided by the [ATRIUM Project](https://atrium-research.eu){.external} hosted by the [Archaeological Information System of the Czech Republic (AIS CR)](https://aiscr.cz/){.external} research infrastructure at the [Institute of Archaeology, Czech Acad Sci, Brno](https://arub.cz/){.external}.
+
+
 [![](figs/Clay.png){fig-align="center" width=60%}](https://atrium-research.eu)
+
+:::: {.columns}
+::: {.column width=40%}
+[![](figs/aiscr.png)](https://www.aiscr.cz/en/)
+:::
+::: {.column width=10%}
+:::
+::: {.column width=50%}
+[![](figs/arub.png)](https://www.arub.cz/)
+:::
+::::

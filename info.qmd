@@ -10,7 +10,10 @@ The school takes place from **16th to 20th September 2024** and it is held at th
 > 602 00 Brno  
 > Czech Republic
 
-::: {.callout-note}
+::: {.callout-tip}
+
+## Note
+
 Remote participation is **not** possible!
 This is an in-person event only.
 :::
@@ -19,21 +22,23 @@ This is an in-person event only.
 #| echo: false
 library(leaflet)
 arub <- c(16.6208208, 49.1892306)
-popup <- paste0("Here!")
+popup <- paste0("<a href=https://maps.app.goo.gl/puXXYwHgCfgB8Lg9A target=_external>Google Maps</a>")
 leaflet() %>% 
   addTiles() %>% 
   setView(lng = arub[1], lat = arub[2], zoom = 15) %>% 
   addMarkers(lng = arub[1], lat = arub[2], popup = popup)
 ```
 
+
 ## Grants
 
-Each participant of the school is eligible to receive *around* 1,400 Euro to cover travel expenses, housing, and daily subsistence during the meeting. 
+Each participant of the school is eligible to receive a grant to cover travel expenses, housing, and daily subsistence during the meeting. 
 To receive the grant, participants need to:
 
-1. **Apply via official form** of the ATRIUM project (see section [Applications](applications.qmd) for details) containing personal details, motivation for participation and a short project proposal.
+1. **Apply via official form** of the ATRIUM project (see section [Applications](applications.qmd) for details) containing personal details and motivation for participation.
 2. **Participate in person**, i.e. sign attendance sheets for each day of the school.
-3. **Submit a report** within a given time frame after the school with details on the participation and progress on the project they worked on.
+3. **Submit a report** within a given time frame after the school with details on their participation.
+
 
 ## Other information
 

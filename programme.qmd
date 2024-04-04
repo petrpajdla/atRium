@@ -5,7 +5,7 @@ title: "Training school programme"
 The training school will last 5 days and consists of three distinct blocks (described in detail below) in which the participants will learn how to code in the R programming language, query data from the ARIADNE Knowledge Base, and analyze it using various spatial analysis methods, especially point pattern analysis.
 
 ::: {.column-page-inset-left}
-![*Provisional programme*](figs/atrium_programme.svg) 
+![*Provisional programme*](figs/atrium_programme.svg){width=100%} 
 :::
 
 
@@ -56,13 +56,11 @@ At the end of the day you will be able to create and adapt various queries to ob
 
 ## 3. Spatial analysis
 
-### 3.1 Point pattern analysis
+### 3.1 Analyzing spatial data in R
 
-### 3.2 Analyzing spatial data and point patterns in R
+### 3.2 *TBA*
 
-### 3.3 ?
-
-### 3.4 ?
+### 3.3 *TBA*
 
 
 ## Keynote lecture
