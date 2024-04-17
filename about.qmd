@@ -2,7 +2,10 @@
 title: "About the training school"
 ---
 
-## Organizers
+## Organizers & lecturers
+
+:::: {.columns}
+::: {.column width=50%}
 
 **Petr Pajdla**  
 *Institute of Archaeology, Czech Acad Sci, Brno*  
@@ -12,6 +15,9 @@ title: "About the training school"
 *Masaryk University*  
 [{{< ai orcid >}} 0000-0002-9444-1936](https://orcid.org/0000-0002-9444-1936)
 
+:::
+::: {.column width=50%}
+
 **Michael Kempf**  
 *Unviersity of Basel*  
 [{{< ai orcid >}} 0000-0002-9474-4670](https://orcid.org/0000-0002-9474-4670)
@@ -20,25 +26,36 @@ title: "About the training school"
 *Kiel University*  
 [{{< ai orcid >}} 0000-0002-7328-0811](https://orcid.org/0000-0002-7328-0811)
 
+:::
+::::
 
 ### Support
+
+:::: {.columns}
+::: {.column width=50%}
 
 **Zuzana Kopáčová**  
 *Institute of Archaeology, Czech Acad Sci, Brno*  
 Finances, administration
 
+:::
+::: {.column width=50%}
+
 **Vít Kozák**  
 *Masaryk University*  
 Teaching assistant
 
-and **AIS CR** team members...
+:::
+::::
+
+And **AIS CR** team members...
 
 
 ## Organizations
 
 ### ATRIUM
 
-The training (summer) school is organized as trans-national access provision in the [ATRIUM Project](https://atrium-research.eu/){.external} (*Advancing Frontier Research In the Arts and Humanities*) funded from the Horizon Europe research and innovation actions proggramme under grant agreement No. [101132163](https://cordis.europa.eu/project/id/101132163){.external}.
+The training (summer) school is organized as trans-national access provision in the [ATRIUM Project](https://atrium-research.eu/){.external} (*Advancing Frontier Research In the Arts and Humanities*) funded from the Horizon Europe research and innovation actions programme under grant agreement No. [101132163](https://cordis.europa.eu/project/id/101132163){.external}.
 
 
 ### ARIADNE 
@@ -46,14 +63,14 @@ The training (summer) school is organized as trans-national access provision in 
 [ARIADNE Research Infrastructure](https://www.ariadne-research-infrastructure.eu/){.external} is a non-profit organisation aggregating, integrating and providing access to over 4 million of archaeology data resources. 
 The access is provided through a comprehensive data catalogue [ARIADNE Portal](https://portal.ariadne-infrastructure.eu/){.external} (see the short video below for more details) and directly through a SPARQL endpoint to the linked-open data triple store ARIADNE Knowledge Base.
 
-One of the goals of the training school is to enable *programmatic* access to these resources by introducing basics of knowledge representation in triple store, explaining ARIADNE [AO-Cat Ontology](https://zenodo.org/doi/10.5281/zenodo.7818374){.external}, and providing training in building SPARQL queries.
+One of the goals of the training school is to enable *programmatic* access to these resources by introducing basics of knowledge representation in the triple store, explaining ARIADNE [AO-Cat Ontology](https://zenodo.org/doi/10.5281/zenodo.7818374){.external}, and providing training in building SPARQL queries.
 
 {{< video https://vimeo.com/920069846 >}}
 
 
 ### AIS CR 
 
-[Archaeological information system of the Czech Republic (AIS CR)](https://www.aiscr.cz/en/){.external}  is a research infrastructure integrating digital resources and services on archaeology in the Czech Republic and as such is one of many data providers in the ARIADNE research infrastructure. 
+[Archaeological information system of the Czech Republic (AIS CR)](https://www.aiscr.cz/en/){.external} is a research infrastructure integrating digital resources and services on archaeology in the Czech Republic and as such is one of many data providers in the ARIADNE research infrastructure. 
 AIS CR is jointly operated by the Insititutes of Archaeology of the Czech Academy of Sciences in [Brno (IAB)](https://www.arub.cz/){.external} and [Prague (IAP)](https://www.arup.cas.cz/){.external}.
 
 

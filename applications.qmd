@@ -12,9 +12,9 @@ More details about the transnational access scheme grants can be found on the [A
 
 |                               |                                |
 |-----------------------------  |--------------------------------|
-| Beginning of April 2024       | Call for participants opens    |
+| April 2024                    | Call for participants opens    |
 | **31. May 2024**              | **Deadline for applications** |
-| 30. June 2024                 | Acceptance notifications send before this date |
+| 28. June 2024                 | Acceptance notifications send before this date |
 | **16. -- 20. September 2024** | **The training school**        |
 | Mid. October 2024 (?)         | Deadline for submission of reports |
 | End of November 2024          | Grants paid before this date   |
@@ -32,17 +32,17 @@ More details about the transnational access scheme grants can be found on the [A
 Only applicants with institutional affiliation **outside of the Czech Republic** are eligible to receive funding due to the *trans-national* nature of the access to the infrastructure provided by the school.
 :::
 
-We welcome applications from early-career researchers and PhD students who are enthusiastic about acquiring programming skills, particularly in the R scripting language, to efficiently retrieve and analyze extensive spatial datasets. 
+We welcome applications from early-career researchers and PhD students who are enthusiastic about acquiring programming skills, particularly in the R scripting language, to efficiently retrieve and analyze extensive (spatial) datasets. 
 Participants should demonstrate a keen interest in conducting data analysis and processing in a structured and reproducible manner using scripting languages. 
 
 While applicants with prior knowledge of R programming are encouraged to apply, the first day of the training will be dedicated to mastering the fundamentals of R and individuals who are complete beginners are welcome as well, as no prior experience is necessary. 
-Additionally, applicants should possess a basic understanding of statistics and geographic information systems to fully benefit from the training.
+Additionally, applicants should possess a basic understanding of statistics, data organization, and geographic information systems to fully benefit from the training.
 
 
 ## How to apply
 
 Submit your applications through an [**online form**](https://docs.google.com/forms/d/e/1FAIpQLSctI5Dw7VhUmVKQxSj7lPwGWCvEKU3oI5YlRi0Y1MihDKTXGg/viewform){.external}. 
 On the 4th page of the application (*TNA Scheme*), choose **Summer School Access** and **Archaeological Information System of the Czech Republic, Institute of Archaeology of the Czech Academy of Sciences, Brno -- AIS CR (ARUB)** as a proposed host organisation.
-On the next page (*Summer School Application*) please outline the reasons why you would find the training beneficial and how you could apply these lessons to your own organisation and research.
+On the next page (*Summer School Application*) please outline the reasons why you would find the training beneficial and how you could apply these lessons to your own research.
 
 More details on how to apply can be found [here](https://atrium-research.eu/tna-application-process/){.external}.

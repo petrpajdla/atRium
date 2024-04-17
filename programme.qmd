@@ -9,7 +9,7 @@ The training school will last 5 days and consists of three distinct blocks (desc
 :::
 
 
-## 1. R Programming
+## 1. R Programming & general topics
 
 [R is a programming language](https://cran.r-project.org/){.external} and an environment for statistical computing and graphics.
 All the workshops of the school will use R and this practical introduction will give you enough experience to be able to write and understand code on yourself, know where and how to look for help, read and write data to/from R, and create and export basic plots.
@@ -21,7 +21,7 @@ Anyone with minimal or no prior experience with R will be able to understand wha
 
 ### 1.2 Data analysis and visualization in R
 
-You will learn basics of data manipulation with [`dplyr` package](https://dplyr.tidyverse.org/){.external} and data visualization with [`ggplot2` package](https://ggplot2.tidyverse.org/){.external}. 
+You will learn basics of data manipulation with [`dplyr` package](https://dplyr.tidyverse.org/){.external} and data visualization with [`ggplot2` package](https://ggplot2.tidyverse.org/){.external} as well as some basics of base R. 
 This will give you a powerfull set of tools to analyze and visualize data.
 
 ### 1.3 Introduction to spatial data in R
@@ -30,10 +30,12 @@ You will learn how spatial data is represented in R, especially vector data as s
 We will also have a look at various operations with geographic data, including reprojecting, geometry operations etc.
 Integral part of the workshop will be making maps in R.
 
+### 1.4 Reproducibility and good practice in data and code management
+
 
 ## 2. ARIADNE Data
 
-[ARIADNE](about.qmd#ariadne) infrastructure aggregates and integrates large amounts of archaeology data worldwide. 
+[ARIADNE](about.qmd#ariadne){.external} infrastructure aggregates and integrates large amounts of archaeology data worldwide. 
 Second day of the summer school will be focused on how the data is represented in the ARIADNE Knowledge Base *(ARIADNE KB)* and how to access it. 
 
 ### 2.1 ARIADNE & AO-Cat Ontology
@@ -58,9 +60,9 @@ At the end of the day you will be able to create and adapt various queries to ob
 
 ### 3.1 Analyzing spatial data in R
 
-### 3.2 *TBA*
+### 3.2 Advanced spatial analysis methods
 
-### 3.3 *TBA*
+### 3.3 Analyzing ARIADNE data in R
 
 
 ## Keynote lecture
