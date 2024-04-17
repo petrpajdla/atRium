@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -134,11 +134,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#r-programming" id="toc-r-programming" class="nav-link active" data-scroll-target="#r-programming">1. R Programming</a>
+  <li><a href="#r-programming-general-topics" id="toc-r-programming-general-topics" class="nav-link active" data-scroll-target="#r-programming-general-topics">1. R Programming &amp; general topics</a>
   <ul class="collapse">
   <li><a href="#introduction-to-r-and-workflows" id="toc-introduction-to-r-and-workflows" class="nav-link" data-scroll-target="#introduction-to-r-and-workflows">1.1 Introduction to R and workflows</a></li>
   <li><a href="#data-analysis-and-visualization-in-r" id="toc-data-analysis-and-visualization-in-r" class="nav-link" data-scroll-target="#data-analysis-and-visualization-in-r">1.2 Data analysis and visualization in R</a></li>
   <li><a href="#introduction-to-spatial-data-in-r" id="toc-introduction-to-spatial-data-in-r" class="nav-link" data-scroll-target="#introduction-to-spatial-data-in-r">1.3 Introduction to spatial data in R</a></li>
+  <li><a href="#reproducibility-and-good-practice-in-data-and-code-management" id="toc-reproducibility-and-good-practice-in-data-and-code-management" class="nav-link" data-scroll-target="#reproducibility-and-good-practice-in-data-and-code-management">1.4 Reproducibility and good practice in data and code management</a></li>
   </ul></li>
   <li><a href="#ariadne-data" id="toc-ariadne-data" class="nav-link" data-scroll-target="#ariadne-data">2. ARIADNE Data</a>
   <ul class="collapse">
@@ -149,8 +150,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#spatial-analysis" id="toc-spatial-analysis" class="nav-link" data-scroll-target="#spatial-analysis">3. Spatial analysis</a>
   <ul class="collapse">
   <li><a href="#analyzing-spatial-data-in-r" id="toc-analyzing-spatial-data-in-r" class="nav-link" data-scroll-target="#analyzing-spatial-data-in-r">3.1 Analyzing spatial data in R</a></li>
-  <li><a href="#tba" id="toc-tba" class="nav-link" data-scroll-target="#tba">3.2 <em>TBA</em></a></li>
-  <li><a href="#tba-1" id="toc-tba-1" class="nav-link" data-scroll-target="#tba-1">3.3 <em>TBA</em></a></li>
+  <li><a href="#advanced-spatial-analysis-methods" id="toc-advanced-spatial-analysis-methods" class="nav-link" data-scroll-target="#advanced-spatial-analysis-methods">3.2 Advanced spatial analysis methods</a></li>
+  <li><a href="#analyzing-ariadne-data-in-r" id="toc-analyzing-ariadne-data-in-r" class="nav-link" data-scroll-target="#analyzing-ariadne-data-in-r">3.3 Analyzing ARIADNE data in R</a></li>
   </ul></li>
   <li><a href="#keynote-lecture" id="toc-keynote-lecture" class="nav-link" data-scroll-target="#keynote-lecture">Keynote lecture</a></li>
   </ul>
@@ -187,8 +188,8 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </div>
-<section id="r-programming" class="level2">
-<h2 class="anchored" data-anchor-id="r-programming">1. R Programming</h2>
+<section id="r-programming-general-topics" class="level2">
+<h2 class="anchored" data-anchor-id="r-programming-general-topics">1. R Programming &amp; general topics</h2>
 <p><a href="https://cran.r-project.org/" class="external">R is a programming language</a> and an environment for statistical computing and graphics. All the workshops of the school will use R and this practical introduction will give you enough experience to be able to write and understand code on yourself, know where and how to look for help, read and write data to/from R, and create and export basic plots.</p>
 <section id="introduction-to-r-and-workflows" class="level3">
 <h3 class="anchored" data-anchor-id="introduction-to-r-and-workflows">1.1 Introduction to R and workflows</h3>
@@ -196,11 +197,14 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="data-analysis-and-visualization-in-r" class="level3">
 <h3 class="anchored" data-anchor-id="data-analysis-and-visualization-in-r">1.2 Data analysis and visualization in R</h3>
-<p>You will learn basics of data manipulation with <a href="https://dplyr.tidyverse.org/" class="external"><code>dplyr</code> package</a> and data visualization with <a href="https://ggplot2.tidyverse.org/" class="external"><code>ggplot2</code> package</a>. This will give you a powerfull set of tools to analyze and visualize data.</p>
+<p>You will learn basics of data manipulation with <a href="https://dplyr.tidyverse.org/" class="external"><code>dplyr</code> package</a> and data visualization with <a href="https://ggplot2.tidyverse.org/" class="external"><code>ggplot2</code> package</a> as well as some basics of base R. This will give you a powerfull set of tools to analyze and visualize data.</p>
 </section>
 <section id="introduction-to-spatial-data-in-r" class="level3">
 <h3 class="anchored" data-anchor-id="introduction-to-spatial-data-in-r">1.3 Introduction to spatial data in R</h3>
 <p>You will learn how spatial data is represented in R, especially vector data as simple features in the <a href="https://r-spatial.github.io/sf/" class="external"><code>sf</code> package</a> and raster data in the <a href="https://rspatial.github.io/terra/index.html" class="external"><code>terra</code> package</a>. We will also have a look at various operations with geographic data, including reprojecting, geometry operations etc. Integral part of the workshop will be making maps in R.</p>
+</section>
+<section id="reproducibility-and-good-practice-in-data-and-code-management" class="level3">
+<h3 class="anchored" data-anchor-id="reproducibility-and-good-practice-in-data-and-code-management">1.4 Reproducibility and good practice in data and code management</h3>
 </section>
 </section>
 <section id="ariadne-data" class="level2">
@@ -224,11 +228,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="analyzing-spatial-data-in-r" class="level3">
 <h3 class="anchored" data-anchor-id="analyzing-spatial-data-in-r">3.1 Analyzing spatial data in R</h3>
 </section>
-<section id="tba" class="level3">
-<h3 class="anchored" data-anchor-id="tba">3.2 <em>TBA</em></h3>
+<section id="advanced-spatial-analysis-methods" class="level3">
+<h3 class="anchored" data-anchor-id="advanced-spatial-analysis-methods">3.2 Advanced spatial analysis methods</h3>
 </section>
-<section id="tba-1" class="level3">
-<h3 class="anchored" data-anchor-id="tba-1">3.3 <em>TBA</em></h3>
+<section id="analyzing-ariadne-data-in-r" class="level3">
+<h3 class="anchored" data-anchor-id="analyzing-ariadne-data-in-r">3.3 Analyzing ARIADNE data in R</h3>
 </section>
 </section>
 <section id="keynote-lecture" class="level2">
@@ -330,6 +334,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -371,7 +380,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -175,7 +175,7 @@ Apply using the online form [here](https://docs.google.com/forms/d/e/1FAIpQLSctI
 </colgroup>
 <tbody>
 <tr class="odd">
-<td>Beginning of April 2024</td>
+<td>April 2024</td>
 <td>Call for participants opens</td>
 </tr>
 <tr class="even">
@@ -183,7 +183,7 @@ Apply using the online form [here](https://docs.google.com/forms/d/e/1FAIpQLSctI
 <td><strong>Deadline for applications</strong></td>
 </tr>
 <tr class="odd">
-<td>30. June 2024</td>
+<td>28. June 2024</td>
 <td>Acceptance notifications send before this date</td>
 </tr>
 <tr class="even">
@@ -214,15 +214,15 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Only applicants with institutional affiliation <strong>outside of the Czech Republic</strong> are eligible to recieve funding due to the <em>trans-national</em> nature of the access to the infrastructure provided by the school.</p>
+<p>Only applicants with institutional affiliation <strong>outside of the Czech Republic</strong> are eligible to receive funding due to the <em>trans-national</em> nature of the access to the infrastructure provided by the school.</p>
 </div>
 </div>
-<p>We welcome applications from early-career researchers and PhD students who are enthusiastic about acquiring programming skills, particularly in the R scripting language, to efficiently retrieve and analyze extensive spatial datasets. Participants should demonstrate a keen interest in conducting data analysis and processing in a structured and reproducible manner using scripting languages.</p>
-<p>While applicants with prior knowledge of R programming are encouraged to apply, the first day of the training will be dedicated to mastering the fundamentals of R and individuals who are complete beginners are welcome as well, as no prior experience is necessary. Additionally, applicants should possess a basic understanding of statistics and geographic information systems to fully benefit from the training.</p>
+<p>We welcome applications from early-career researchers and PhD students who are enthusiastic about acquiring programming skills, particularly in the R scripting language, to efficiently retrieve and analyze extensive (spatial) datasets. Participants should demonstrate a keen interest in conducting data analysis and processing in a structured and reproducible manner using scripting languages.</p>
+<p>While applicants with prior knowledge of R programming are encouraged to apply, the first day of the training will be dedicated to mastering the fundamentals of R and individuals who are complete beginners are welcome as well, as no prior experience is necessary. Additionally, applicants should possess a basic understanding of statistics, data organization, and geographic information systems to fully benefit from the training.</p>
 </section>
 <section id="how-to-apply" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-apply">How to apply</h2>
-<p>Submit your applications through an <a href="https://docs.google.com/forms/d/e/1FAIpQLSctI5Dw7VhUmVKQxSj7lPwGWCvEKU3oI5YlRi0Y1MihDKTXGg/viewform" class="external"><strong>online form</strong></a>. On the 4th page of the application (<em>TNA Scheme</em>), choose <strong>Summer School Access</strong> and <strong>Archaeological Information System of the Czech Republic, Institute of Archaeology of the Czech Academy of Sciences, Brno – AIS CR (ARUB)</strong> as a proposed host organisation. On the next page (<em>Summer School Application</em>) please outline the reasons why you would find the training beneficial and how you could apply these lessons to your own organisation and research.</p>
+<p>Submit your applications through an <a href="https://docs.google.com/forms/d/e/1FAIpQLSctI5Dw7VhUmVKQxSj7lPwGWCvEKU3oI5YlRi0Y1MihDKTXGg/viewform" class="external"><strong>online form</strong></a>. On the 4th page of the application (<em>TNA Scheme</em>), choose <strong>Summer School Access</strong> and <strong>Archaeological Information System of the Czech Republic, Institute of Archaeology of the Czech Academy of Sciences, Brno – AIS CR (ARUB)</strong> as a proposed host organisation. On the next page (<em>Summer School Application</em>) please outline the reasons why you would find the training beneficial and how you could apply these lessons to your own research.</p>
 <p>More details on how to apply can be found <a href="https://atrium-research.eu/tna-application-process/" class="external">here</a>.</p>
 
 
@@ -319,6 +319,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -360,7 +365,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
