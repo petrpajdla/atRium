@@ -16,8 +16,6 @@ Join us in Brno for a five-day *'atRium'* training school in computational archa
 As large amounts of archaeological data are becoming available, spatial analysis techniques may offer valuable insights into past human behaviour and settlement patterns.
 Our programme is designed to deepen your understanding of computational methods in archaeology, focusing on working in a reproducible manner using R programming language and environment.
 
-The training school is part of trans-national access scheme provided by the [ATRIUM Project](https://atrium-research.eu){.external}, it is hosted by the [Archaeological Information System of the Czech Republic (AIS CR)](https://aiscr.cz/){.external} research infrastructure at the [Institute of Archaeology, Czech Acad Sci, Brno](https://arub.cz/){.external}.
-
 
 [![](figs/Clay.png){fig-align="center" width=60%}](https://atrium-research.eu)
 
@@ -31,3 +29,11 @@ The training school is part of trans-national access scheme provided by the [ATR
 [![](figs/arub.png)](https://www.arub.cz/)
 :::
 ::::
+
+
+The training school is part of trans-national access scheme provided by the [ATRIUM Project](https://atrium-research.eu){.external}, it is hosted by the [Archaeological Information System of the Czech Republic (AIS CR)](https://aiscr.cz/){.external} research infrastructure at the [Institute of Archaeology, Czech Acad Sci, Brno](https://arub.cz/){.external}.
+
+
+[![](flyer/atRium_A4.png){.shadow}](flyer/atRium_A4.pdf)
+
+Feel free to distribute the flyer: [PDF](flyer/atRium_A4.pdf) & [PNG](flyer/atRium_A4.png)
