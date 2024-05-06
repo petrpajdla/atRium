@@ -1,5 +1,96 @@
 [
   {
+    "objectID": "programme.html",
+    "href": "programme.html",
+    "title": "Training school programme",
+    "section": "",
+    "text": "The training school will last five days and consists of three distinct blocks (described in detail below), in which participants will learn how to code in the R programming language, query data from the ARIADNE Knowledge Base, and analyse them using various spatial analysis methods, especially point pattern analysis."
+  },
+  {
+    "objectID": "programme.html#r-programming-general-topics",
+    "href": "programme.html#r-programming-general-topics",
+    "title": "Training school programme",
+    "section": "1. R programming & general topics",
+    "text": "1. R programming & general topics\nR is a programming language and environment for statistical computing and graphics. This block focuses on equipping participants with essential coding skills in R and introducing fundamental concepts in data analysis and visualisation.\n\n1.1 Introduction to R and workflows\nAn introductory course to R. Anyone with minimal or no prior experience with R will be able to understand what is happening in the code and write or adapt existing code for their use case.\n\n\n1.2 Data analysis and visualisation in R\nThrough hands-on workshops, participants will learn the basics of data manipulation with the dplyr package and data visualisation with the ggplot2 package, as well as some basics of base R. This will provide them with a powerful set of tools to analyse and visualise data.\n\n\n1.3 Introduction to spatial data in R\nParticipants will learn how spatial data are represented in R, focusing particularly on vector data as simple features in the sf package and raster data in the terra package. We will also cover various operations with geographic data, including reprojection, geometry operations, etc. An integral part of the workshop will be creating maps in R.\n\n\n1.4 Reproducibility and good practices in data and code management\nIn the final block, we will explore good practices in data management and code design aimed at enhancing reproducibility and reusability. Although these practices will be promoted throughout the school, we will summarise and contextualise them within the larger framework of Open Science at the end of the workshop."
+  },
+  {
+    "objectID": "programme.html#ariadne-data",
+    "href": "programme.html#ariadne-data",
+    "title": "Training school programme",
+    "section": "2. ARIADNE data",
+    "text": "2. ARIADNE data\nThe ARIADNE infrastructure aggregates and integrates large amounts of archaeological data worldwide. The second day of the summer school will focus on how the data are represented in the ARIADNE Knowledge Base (ARIADNE KB) and how to access them.\n\n2.1 ARIADNE & AO-Cat Ontology\nWe will begin by exploring the ARIADNE Portal, a catalogue interface to the ARIADNE KB. After gaining an understanding of how data look in the ARIADNE Portal, we will delve deeper into how data are represented in the ARIADNE KB, from the general concept of linked-open data to semantic data in RDF. Finally, we will explore the AO-Cat Ontology, which will provide a basis for querying the knowledge base.\n\n\n2.2 Introduction to SPARQL\nSPARQL is a query language for semantic data in RDF. Participants will learn the basics of SPARQL, including query structure and components, etc. Practical examples of queries performed on the ARIADNE SPARQL endpoint will help us understand the capabilities of the query language.\n\n\n2.3 Querying the ARIADNE SPARQL endpoint\nIn the workshop, participants will utilise their knowledge of the AO-Cat ontology and SPARQL to query the ARIADNE KB. By the end of the day, they will be able to create and adapt various queries to retrieve data from the ARIADNE KB for further analysis and re-use."
+  },
+  {
+    "objectID": "programme.html#spatial-analysis",
+    "href": "programme.html#spatial-analysis",
+    "title": "Training school programme",
+    "section": "3. Spatial analysis",
+    "text": "3. Spatial analysis\nBuilding upon the foundational knowledge gained in the previous blocks, this segment delves deeper into spatial analysis. Participants will learn advanced analytical methods, including point pattern analysis and other statistical modelling techniques for spatial data. Through practical exercises, they will gain hands-on experience in analysing spatial data in R, exploring various spatial analysis methods, and applying these techniques to analyse the ARIADNE data.\n\n3.1 Analysing spatial data in R\nThis session focuses on hands-on experience in working with spatial data in R, particularly using the packages sf and terra. We will practice reading, writing, manipulating, exploring and visualising spatial data in both vector and raster formats.\n\n\n3.2 Advanced spatial analysis methods\nWe will explore sophisticated spatial analysis methods beyond the basics. Topics may include spatial interpolation, spatial regression, cluster analysis, etc. This will provide a foundation for deeper insights into complex spatial patterns and relationships within archaeological datasets, especially the ARIADNE data.\n\n\n3.3 Analysing ARIADNE data in R\nOur ultimate goal is to analyse archaeological data sourced from the ARIADNE Knowledge Base in R to gain meaningful insights into past human behaviour and settlement patterns. In the previous blocks, we were able to query and extract data from the ARIADNE KB. We will proceed by integrating such data with other local datasets and performing spatial analysis tasks using R packages such as sf, terra, stars, and spatstat."
+  },
+  {
+    "objectID": "programme.html#keynote-lecture",
+    "href": "programme.html#keynote-lecture",
+    "title": "Training school programme",
+    "section": "Keynote lecture",
+    "text": "Keynote lecture\nThe keynote lecture by Michael Kempf will take place on Wednesday, 18th September at 5:30 pm as part of the Science Pub lecture series at the institute, followed by a social event."
+  },
+  {
+    "objectID": "info.html",
+    "href": "info.html",
+    "title": "General Information",
+    "section": "",
+    "text": "The school will be held from 16 to 20 September 2024 at the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/) at the address given below:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nNote\n\n\n\nPlease note that this is an on-site event only, and remote participation will not be possible."
+  },
+  {
+    "objectID": "info.html#date-and-location",
+    "href": "info.html#date-and-location",
+    "title": "General Information",
+    "section": "",
+    "text": "The school will be held from 16 to 20 September 2024 at the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/) at the address given below:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nNote\n\n\n\nPlease note that this is an on-site event only, and remote participation will not be possible."
+  },
+  {
+    "objectID": "info.html#grants",
+    "href": "info.html#grants",
+    "title": "General Information",
+    "section": "Grants",
+    "text": "Grants\nEach participant of the school is eligible to receive a grant to cover travel expenses, housing, and daily subsistence during the meeting. To receive the grant, participants need to:\n\nApply via the official form of the ATRIUM Project (see the Applications section for details).\nParticipate in person, i.e. sign attendance sheets for each training day.\nSubmit a report within a given time frame after the conclusion of the school with details of their participation."
+  },
+  {
+    "objectID": "info.html#other-information",
+    "href": "info.html#other-information",
+    "title": "General Information",
+    "section": "Other information",
+    "text": "Other information\n\nTravelling to Brno\nBrno is easily reachable by trains or buses from Prague (approx. a 2 to 2.5-hour journey) and Vienna (approx. a 1.5 to 2-hour journey). Many overnight trains crossing a large part of Europe start or end in Vienna, and we recommend taking these trains as an alternative to flying."
+  },
+  {
+    "objectID": "applications.html",
+    "href": "applications.html",
+    "title": "Applications",
+    "section": "",
+    "text": "More details about the transnational access scheme grants can be found on the ATRIUM Project website."
+  },
+  {
+    "objectID": "applications.html#key-dates",
+    "href": "applications.html#key-dates",
+    "title": "Applications",
+    "section": "Key dates",
+    "text": "Key dates\n\n\n\n\n\n\n\nApril 2024\nCall for participants opens\n\n\n31 May 2024\nDeadline for applications\n\n\n28 June 2024\nAcceptance notifications sent before this date\n\n\n16–20 September 2024\nTraining school\n\n\nmid-October 2024 (?)\nDeadline for submission of reports\n\n\nend of November 2024\nGrants paid before this date"
+  },
+  {
+    "objectID": "applications.html#who-should-apply",
+    "href": "applications.html#who-should-apply",
+    "title": "Applications",
+    "section": "Who should apply",
+    "text": "Who should apply\n\n\n\n\n\n\nNote\n\n\n\nOnly applicants with institutional affiliation outside of the Czech Republic are eligible to receive funding due to the trans-national nature of the access to the infrastructure provided by the school.\n\n\nWe welcome applications from early-career researchers and PhD students who are enthusiastic about acquiring programming skills, particularly in the R scripting language, to efficiently retrieve and analyse extensive (spatial) datasets. Participants should demonstrate a keen interest in conducting data analysis and processing in a structured and reproducible manner using scripting languages.\nWhile applicants with prior knowledge of R programming are encouraged to apply, the first day of the training will be dedicated to mastering the fundamentals of R. Individuals who are complete beginners are welcome as well, as no prior experience is necessary. Additionally, applicants should have a basic understanding of statistics, data management, and geographic information systems to fully benefit from the training."
+  },
+  {
+    "objectID": "applications.html#how-to-apply",
+    "href": "applications.html#how-to-apply",
+    "title": "Applications",
+    "section": "How to apply",
+    "text": "How to apply\nSubmit your applications through an online form. On the 4th page of the application (TNA Scheme), choose ‘Summer School Access’ and ‘Archaeological Information System of the Czech Republic, Institute of Archaeology of the Czech Academy of Sciences, Brno – AIS CR (ARUB)’ as the proposed host organisation. On the next page (Summer School Application) please explain why you believe this training would be valuable for your research and how you intend to integrate these newfound skills into your work.\nMore details on how to apply can be found here."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About the training school",
@@ -21,74 +112,11 @@
     "text": "Organizations\n\nATRIUM\nThe training (summer) school is organized as trans-national access provision in the ATRIUM Project (Advancing Frontier Research In the Arts and Humanities) funded from the Horizon Europe research and innovation actions programme under grant agreement No. 101132163.\n\n\nARIADNE\nARIADNE Research Infrastructure is a non-profit organisation aggregating, integrating and providing access to over 4 million of archaeology data resources. The access is provided through a comprehensive data catalogue ARIADNE Portal (see the short video below for more details) and directly through a SPARQL endpoint to the linked-open data triple store ARIADNE Knowledge Base.\nOne of the goals of the training school is to enable programmatic access to these resources by introducing basics of knowledge representation in the triple store, explaining ARIADNE AO-Cat Ontology, and providing training in building SPARQL queries.\n\n\n\nAIS CR\nArchaeological information system of the Czech Republic (AIS CR) is a research infrastructure integrating digital resources and services on archaeology in the Czech Republic and as such is one of many data providers in the ARIADNE research infrastructure. AIS CR is jointly operated by the Insititutes of Archaeology of the Czech Academy of Sciences in Brno (IAB) and Prague (IAP)."
   },
   {
-    "objectID": "applications.html",
-    "href": "applications.html",
-    "title": "Applications",
-    "section": "",
-    "text": "More details about the transnational access scheme grants can be found on the ATRIUM project page."
-  },
-  {
-    "objectID": "applications.html#key-dates",
-    "href": "applications.html#key-dates",
-    "title": "Applications",
-    "section": "Key dates",
-    "text": "Key dates\n\n\n\n\n\n\n\nApril 2024\nCall for participants opens\n\n\n31. May 2024\nDeadline for applications\n\n\n28. June 2024\nAcceptance notifications send before this date\n\n\n16. – 20. September 2024\nThe training school\n\n\nMid. October 2024 (?)\nDeadline for submission of reports\n\n\nEnd of November 2024\nGrants paid before this date"
-  },
-  {
-    "objectID": "applications.html#who-should-apply",
-    "href": "applications.html#who-should-apply",
-    "title": "Applications",
-    "section": "Who should apply",
-    "text": "Who should apply\n\n\n\n\n\n\nNote\n\n\n\nOnly applicants with institutional affiliation outside of the Czech Republic are eligible to receive funding due to the trans-national nature of the access to the infrastructure provided by the school.\n\n\nWe welcome applications from early-career researchers and PhD students who are enthusiastic about acquiring programming skills, particularly in the R scripting language, to efficiently retrieve and analyze extensive (spatial) datasets. Participants should demonstrate a keen interest in conducting data analysis and processing in a structured and reproducible manner using scripting languages.\nWhile applicants with prior knowledge of R programming are encouraged to apply, the first day of the training will be dedicated to mastering the fundamentals of R and individuals who are complete beginners are welcome as well, as no prior experience is necessary. Additionally, applicants should possess a basic understanding of statistics, data organization, and geographic information systems to fully benefit from the training."
-  },
-  {
-    "objectID": "applications.html#how-to-apply",
-    "href": "applications.html#how-to-apply",
-    "title": "Applications",
-    "section": "How to apply",
-    "text": "How to apply\nSubmit your applications through an online form. On the 4th page of the application (TNA Scheme), choose Summer School Access and Archaeological Information System of the Czech Republic, Institute of Archaeology of the Czech Academy of Sciences, Brno – AIS CR (ARUB) as a proposed host organisation. On the next page (Summer School Application) please outline the reasons why you would find the training beneficial and how you could apply these lessons to your own research.\nMore details on how to apply can be found here."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "atRium Brno Training School",
     "section": "",
-    "text": "Basics\n\n\n\nWhen? 16. to 20. September 2024\nWhere? Brno, Czech Republic\nWhat? Training school on querying data aggregated in the ARIADNE infrastructure and their spatial analysis in R\n\n\nJoin us in Brno for a five-day ‘atRium’ training school in computational archaeology, where you will get essential coding skills in the R programming language, knowledge on the archaeological data integrated in the ARIADNE research infrastructure and fundamental spatial data analysis expertise. As large amounts of archaeological data are becoming available, spatial analysis techniques may offer valuable insights into past human behaviour and settlement patterns. Our programme is designed to deepen your understanding of computational methods in archaeology, focusing on working in a reproducible manner using R programming language and environment.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe training school is part of trans-national access scheme provided by the ATRIUM Project, it is hosted by the Archaeological Information System of the Czech Republic (AIS CR) research infrastructure at the Institute of Archaeology, Czech Acad Sci, Brno.\n\nFeel free to distribute the flyer: PDF & PNG"
-  },
-  {
-    "objectID": "programme.html",
-    "href": "programme.html",
-    "title": "Training school programme",
-    "section": "",
-    "text": "The training school will last 5 days and consists of three distinct blocks (described in detail below) in which the participants will learn how to code in the R programming language, query data from the ARIADNE Knowledge Base, and analyze it using various spatial analysis methods, especially point pattern analysis."
-  },
-  {
-    "objectID": "programme.html#r-programming-general-topics",
-    "href": "programme.html#r-programming-general-topics",
-    "title": "Training school programme",
-    "section": "1. R programming & general topics",
-    "text": "1. R programming & general topics\nR is a programming language and an environment for statistical computing and graphics. This block focuses on equipping you (participants) with essential coding skills in R and introduce you to fundamental concepts in data analysis and visualization.\n\n1.1 Introduction to R and workflows\nAn introductory course to R. Anyone with minimal or no prior experience with R will be able to understand what is happening in the code and write or adapt existing code for their use case.\n\n\n1.2 Data analysis and visualization in R\nThrough hands-on workshops, you will learn basics of data manipulation with dplyr package and data visualization with ggplot2 package as well as some basics of base R. This will give you a powerfull set of tools to analyze and visualize data.\n\n\n1.3 Introduction to spatial data in R\nYou will learn how spatial data is represented in R, especially vector data as simple features in the sf package and raster data in the terra package. We will also have a look at various operations with geographic data, including reprojecting, geometry operations etc. Integral part of the workshop will be making maps in R.\n\n\n1.4 Reproducibility and good practice in data and code management\nIn the last block we will have a look at good practice in data management and code design aimed at enhancing reproducibility and reusability. Although these practices will be promoted throughout the entire school, at the end we will wrap up and name the things we did in practice and bring them into the larger context of Open Science."
-  },
-  {
-    "objectID": "programme.html#ariadne-data",
-    "href": "programme.html#ariadne-data",
-    "title": "Training school programme",
-    "section": "2. ARIADNE data",
-    "text": "2. ARIADNE data\nARIADNE infrastructure aggregates and integrates large amounts of archaeology data worldwide. Second day of the summer school will be focused on how the data is represented in the ARIADNE Knowledge Base (ARIADNE KB) and how to access it.\n\n2.1 ARIADNE & AO-Cat Ontology\nWe will start by exploring ARIADNE Portal, a catalogue interface to the ARIADNE KB. After building up notion of how data look in the ARIADNE Portal, we will delve deeper into how data is represented in the ARIADNE KB, from general notion of linked-open data to semantic data in RDF. Finally, we will explore the AO-Cat Ontology, which will give us a basis for querying the knowledge base.\n\n\n2.2 Introduction to SPARQL\nSPARQL is a query language for semantic data in RDF. You will learn very basics of SPARQL, how do the queries look, what parts are there etc. Practical examples of queries performed on the ARIADNE SPARQL endpoint will help us to understand what is possible with the query language.\n\n\n2.3 Querying ARIADNE SPARQL endpoint\nIn the workshop, you will combine the knowledge of AO-Cat ontology and SPARQL to query ARIADNE KB. At the end of the day you will be able to create and adapt various queries to obtain data from the ARIADNE KB for further analysis and re-use."
-  },
-  {
-    "objectID": "programme.html#spatial-analysis",
-    "href": "programme.html#spatial-analysis",
-    "title": "Training school programme",
-    "section": "3. Spatial analysis",
-    "text": "3. Spatial analysis\nBuilding upon the foundational knowledge gained in the previous blocks, this segment delves deeper into spatial analysis. Attendees will learn advanced analytical methods, including point pattern analysis and other statistical modelling techniques for spatial data. Through practical exercises, you will gain hands-on experience in analyzing spatial data in R, exploring various spatial analysis methods, and applying these techniques to analyze ARIADNE.\n\n3.1 Analyzing spatial data in R\nThis session focuses on hands-on experience in working with spatial data in R, especially using packages sf and terra. We will practice how to read, write, manipulate, explore and visualize (etc.) spatial data in both vector and raster formats.\n\n\n3.2 Advanced spatial analysis methods\nIn this session, we will explore some of the sophisticated spatial analysis methods beyond the basics. Topics may include spatial interpolation, spatial regression, cluster analysis, etc. This will give us a basis for deeper insights into coplex spatial patterns and relationships within archaeological datasets, especially the ARIADNE data.\n\n\n3.3 Analyzing ARIADNE data in R\nOur ultimate goal is to be able to analyze archaeological data sourced from the ARIADNE Knowledge Base in R to gain meaningful insights into past human behavior and settlement patterns. In the previous blocks we were able to query and extract data from ARIADNE Knowledge Base and we will proceed by integrating this data with other local datasets and perform spatial analysis tasks using R packages such as sf, terra, stars and spatstat."
-  },
-  {
-    "objectID": "programme.html#keynote-lecture",
-    "href": "programme.html#keynote-lecture",
-    "title": "Training school programme",
-    "section": "Keynote lecture",
-    "text": "Keynote lecture\nWill be given by Michael Kempf on Wednesday, 18th September at 5:30pm as part of the Science pub series at the institute followed by a social event."
+    "text": "Basics\n\n\n\nWhen? 16–20 September 2024\nWhere? Brno, Czech Republic\nWhat? Training school on querying data aggregated in the ARIADNE infrastructure and their spatial analysis in R\n\n\nJoin us in Brno for a five-day ‘atRium’ training school in computational archaeology, where you will gain essential coding skills in the R programming language, knowledge of archaeological data integrated into the ARIADNE research infrastructure, and fundamental spatial data analysis expertise. As large amounts of archaeological data have become available, spatial analysis techniques may offer valuable insights into past human behaviour and settlement patterns. Our programme is designed to deepen your understanding of computational methods in archaeology, focusing on working in a reproducible manner using the R programming language and environment.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe training school is part of a trans-national access scheme provided by the ATRIUM Project, hosted by the Archaeological Information System of the Czech Republic (AIS CR) research infrastructure at the Institute of Archaeology, Czech Academy of Sciences, Brno.\n\nFeel free to distribute the flyer in PDF or PNG."
   },
   {
     "objectID": "materials.html",
@@ -96,33 +124,5 @@
     "title": "Materials",
     "section": "",
     "text": "Here will be materials for the summer school…"
-  },
-  {
-    "objectID": "info.html",
-    "href": "info.html",
-    "title": "General Information",
-    "section": "",
-    "text": "The school takes place from 16th to 20th September 2024 and it is held at the premises of the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/), the address is:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nNote\n\n\n\nRemote participation is not possible! This is an in-person event only."
-  },
-  {
-    "objectID": "info.html#date-and-venue",
-    "href": "info.html#date-and-venue",
-    "title": "General Information",
-    "section": "",
-    "text": "The school takes place from 16th to 20th September 2024 and it is held at the premises of the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/), the address is:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nNote\n\n\n\nRemote participation is not possible! This is an in-person event only."
-  },
-  {
-    "objectID": "info.html#grants",
-    "href": "info.html#grants",
-    "title": "General Information",
-    "section": "Grants",
-    "text": "Grants\nEach participant of the school is eligible to receive a grant to cover travel expenses, housing, and daily subsistence during the meeting. To receive the grant, participants need to:\n\nApply via official form of the ATRIUM project (see section Applications for details) containing personal details and motivation for participation.\nParticipate in person, i.e. sign attendance sheets for each day of the school.\nSubmit a report within a given time frame after the school with details on their participation."
-  },
-  {
-    "objectID": "info.html#other-information",
-    "href": "info.html#other-information",
-    "title": "General Information",
-    "section": "Other information",
-    "text": "Other information\n\nTravelling to Brno\nBrno is easily reachable by trains or buses from Prague (approx 2 – 2.5 hour journey) and Vienna (approx. 1.5 – 2 hour journey). Many overnight trains crossing large part of Europe start or end in Vienna and we recommend taking these trains as an alternative to flying."
   }
 ]

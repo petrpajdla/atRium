@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://petrpajdla.github.io/atRium/about.html</loc>
-    <lastmod>2024-04-17T20:25:06.870Z</lastmod>
-  </url>
-  <url>
-    <loc>https://petrpajdla.github.io/atRium/applications.html</loc>
-    <lastmod>2024-04-17T20:36:20.543Z</lastmod>
-  </url>
-  <url>
-    <loc>https://petrpajdla.github.io/atRium/index.html</loc>
-    <lastmod>2024-05-04T21:43:10.203Z</lastmod>
-  </url>
-  <url>
     <loc>https://petrpajdla.github.io/atRium/programme.html</loc>
-    <lastmod>2024-05-03T19:42:21.606Z</lastmod>
-  </url>
-  <url>
-    <loc>https://petrpajdla.github.io/atRium/materials.html</loc>
-    <lastmod>2024-03-24T20:57:48.320Z</lastmod>
+    <lastmod>2024-05-06T08:29:07.288Z</lastmod>
   </url>
   <url>
     <loc>https://petrpajdla.github.io/atRium/info.html</loc>
-    <lastmod>2024-04-17T20:17:37.013Z</lastmod>
+    <lastmod>2024-05-06T07:33:20.233Z</lastmod>
+  </url>
+  <url>
+    <loc>https://petrpajdla.github.io/atRium/applications.html</loc>
+    <lastmod>2024-05-06T07:38:43.982Z</lastmod>
+  </url>
+  <url>
+    <loc>https://petrpajdla.github.io/atRium/about.html</loc>
+    <lastmod>2024-05-02T08:27:18.957Z</lastmod>
+  </url>
+  <url>
+    <loc>https://petrpajdla.github.io/atRium/index.html</loc>
+    <lastmod>2024-05-06T07:27:03.462Z</lastmod>
+  </url>
+  <url>
+    <loc>https://petrpajdla.github.io/atRium/materials.html</loc>
+    <lastmod>2024-04-03T08:56:54.649Z</lastmod>
   </url>
 </urlset>

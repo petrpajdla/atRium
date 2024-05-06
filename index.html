@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -111,8 +111,6 @@ ul.task-list li input[type="checkbox"] {
 </i> 
 <span class="menu-text">Programme</span></a>
   </li>  
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> <i class="bi bi-people" role="img">
 </i> 
@@ -164,12 +162,12 @@ Basics
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>When?</strong> 16. to 20. September 2024<br>
+<p><strong>When?</strong> 16–20 September 2024<br>
 <strong>Where?</strong> Brno, Czech Republic<br>
 <strong>What?</strong> Training school on querying data aggregated in the ARIADNE infrastructure and their spatial analysis in R</p>
 </div>
 </div>
-<p>Join us in Brno for a five-day <em>‘atRium’</em> training school in computational archaeology, where you will get essential coding skills in the R programming language, knowledge on the archaeological data integrated in the ARIADNE research infrastructure and fundamental spatial data analysis expertise. As large amounts of archaeological data are becoming available, spatial analysis techniques may offer valuable insights into past human behaviour and settlement patterns. Our programme is designed to deepen your understanding of computational methods in archaeology, focusing on working in a reproducible manner using R programming language and environment.</p>
+<p>Join us in Brno for a five-day <em>‘atRium’</em> training school in computational archaeology, where you will gain essential coding skills in the R programming language, knowledge of archaeological data integrated into the ARIADNE research infrastructure, and fundamental spatial data analysis expertise. As large amounts of archaeological data have become available, spatial analysis techniques may offer valuable insights into past human behaviour and settlement patterns. Our programme is designed to deepen your understanding of computational methods in archaeology, focusing on working in a reproducible manner using the R programming language and environment.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="https://atrium-research.eu"><img src="figs/Clay.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></a></p>
@@ -184,9 +182,9 @@ Basics
 <p><a href="https://www.arub.cz/"><img src="figs/arub.png" class="img-fluid"></a></p>
 </div>
 </div>
-<p>The training school is part of trans-national access scheme provided by the <a href="https://atrium-research.eu" class="external">ATRIUM Project</a>, it is hosted by the <a href="https://aiscr.cz/" class="external">Archaeological Information System of the Czech Republic (AIS CR)</a> research infrastructure at the <a href="https://arub.cz/" class="external">Institute of Archaeology, Czech Acad Sci, Brno</a>.</p>
+<p>The training school is part of a trans-national access scheme provided by the <a href="https://atrium-research.eu" class="external">ATRIUM Project</a>, hosted by the <a href="https://aiscr.cz/" class="external">Archaeological Information System of the Czech Republic (AIS CR)</a> research infrastructure at the <a href="https://arub.cz/" class="external">Institute of Archaeology, Czech Academy of Sciences, Brno</a>.</p>
 <p><a href="flyer/atRium_A4.pdf"><img src="flyer/atRium_A4.png" class="shadow img-fluid"></a></p>
-<p>Feel free to distribute the flyer: <a href="flyer/atRium_A4.pdf">PDF</a> &amp; <a href="flyer/atRium_A4.png">PNG</a></p>
+<p>Feel free to distribute the flyer in <a href="flyer/atRium_A4.pdf">PDF</a> or <a href="flyer/atRium_A4.png">PNG</a>.</p>
 
 
 
@@ -281,11 +279,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -327,11 +320,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
+      return note.innerHTML;
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
