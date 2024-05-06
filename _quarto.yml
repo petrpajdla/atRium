@@ -24,7 +24,6 @@ website:
       # - href: materials.qmd
       #   text: Materials
       #   icon: book
-    right:
       - href: about.qmd
         text: About
         icon: people

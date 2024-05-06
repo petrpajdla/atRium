@@ -6,15 +6,15 @@ title: "atRium Brno Training School"
 
 ### Basics
 
-**When?** 16. to 20. September 2024  
+**When?** 16–20 September 2024  
 **Where?** Brno, Czech Republic  
 **What?** Training school on querying data aggregated in the ARIADNE infrastructure and their spatial analysis in R
 
 :::
 
-Join us in Brno for a five-day *'atRium'* training school in computational archaeology, where you will get essential coding skills in the R programming language, knowledge on the archaeological data integrated in the ARIADNE research infrastructure and fundamental spatial data analysis expertise. 
-As large amounts of archaeological data are becoming available, spatial analysis techniques may offer valuable insights into past human behaviour and settlement patterns.
-Our programme is designed to deepen your understanding of computational methods in archaeology, focusing on working in a reproducible manner using R programming language and environment.
+Join us in Brno for a five-day *'atRium'* training school in computational archaeology, where you will gain essential coding skills in the R programming language, knowledge of archaeological data integrated into the ARIADNE research infrastructure, and fundamental spatial data analysis expertise. 
+As large amounts of archaeological data have become available, spatial analysis techniques may offer valuable insights into past human behaviour and settlement patterns.
+Our programme is designed to deepen your understanding of computational methods in archaeology, focusing on working in a reproducible manner using the R programming language and environment.
 
 
 [![](figs/Clay.png){fig-align="center" width=60%}](https://atrium-research.eu)
@@ -31,9 +31,9 @@ Our programme is designed to deepen your understanding of computational methods 
 ::::
 
 
-The training school is part of trans-national access scheme provided by the [ATRIUM Project](https://atrium-research.eu){.external}, it is hosted by the [Archaeological Information System of the Czech Republic (AIS CR)](https://aiscr.cz/){.external} research infrastructure at the [Institute of Archaeology, Czech Acad Sci, Brno](https://arub.cz/){.external}.
+The training school is part of a trans-national access scheme provided by the [ATRIUM Project](https://atrium-research.eu){.external}, hosted by the [Archaeological Information System of the Czech Republic (AIS CR)](https://aiscr.cz/){.external} research infrastructure at the [Institute of Archaeology, Czech Academy of Sciences, Brno](https://arub.cz/){.external}.
 
 
 [![](flyer/atRium_A4.png){.shadow}](flyer/atRium_A4.pdf)
 
-Feel free to distribute the flyer: [PDF](flyer/atRium_A4.pdf) & [PNG](flyer/atRium_A4.png)
+Feel free to distribute the flyer in [PDF](flyer/atRium_A4.pdf) or [PNG](flyer/atRium_A4.png).
