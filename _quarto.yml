@@ -31,8 +31,8 @@ website:
     background: "#3A3736"
     foreground: "#E8DAC8"
     left: 
-      - href: https://quarto.org/
-        text: "Build with quarto."
+      - href: https://www.quarto.org/
+        text: "Build with &#9825; in Quarto."
     center:
       - text: "Licenses: MIT (code) & CC BY-SA 4.0 Int. (other content)."
     right: 
