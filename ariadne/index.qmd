@@ -1,0 +1,40 @@
+---
+title: "ARIADNE & AO-Cat Ontology"
+format:
+  # html: default
+  revealjs:
+    fontsize: 24px
+    # output-file: slides_space.html
+    footer: "[atRium](https://aiscr.cz/atRium/) *training school*, Brno 2024 | [ARIADNE](/ariadne/index.qmd)"
+    chalkboard:
+      theme: whiteboard
+      chalk-effect: 0.0
+  # pdf: default
+execute:
+  echo: true
+  warning: false
+  cache: true
+---
+
+## ARIADNE 
+
+- Advanced Research Infrastructure for Archaeological Dataset Networking In Europe
+- ARIADNE is a research infrastructure.
+- ARIADNE is an 
+
+[https://www.ariadne-research-infrastructure.eu/](https://www.ariadne-research-infrastructure.eu/)
+
+
+## ARIADNE Portal 
+
+[https://portal.ariadne-infrastructure.eu/](https://portal.ariadne-infrastructure.eu/)
+
+## Types of resources
+
+## Where, When, What
+
+### PeriodO
+
+### Getty AAT
+
+## Exercise 
