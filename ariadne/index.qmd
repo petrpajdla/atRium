@@ -1,11 +1,15 @@
 ---
-title: "ARIADNE & AO-Cat Ontology"
+title: "ARIADNE & Linked Open Data"
+title-slide-attributes:
+  data-background-color: "#B5E2FF"
 format:
   # html: default
   revealjs:
+    # mainfont: "Alegreya Sans"
     fontsize: 24px
     # output-file: slides_space.html
     footer: "[atRium](https://aiscr.cz/atRium/) *training school*, Brno 2024 | [ARIADNE](/ariadne/index.qmd)"
+    logo: /figs/Clay.png
     chalkboard:
       theme: whiteboard
       chalk-effect: 0.0
@@ -14,9 +18,17 @@ execute:
   echo: true
   warning: false
   cache: true
+callout-appearance: simple
+callout-icon: false
 ---
 
-## ARIADNE 
+<!-- ARIADNE =============================================================== -->
+
+## ARIADNE {.center background-color="#CDFFB5"}
+
+### *Archaeological data in the ARIADNE Portal*
+
+## ARIADNE
 
 - Advanced Research Infrastructure for Archaeological Dataset Networking In Europe
 - ARIADNE is a research infrastructure.
@@ -25,9 +37,12 @@ execute:
 [https://www.ariadne-research-infrastructure.eu/](https://www.ariadne-research-infrastructure.eu/)
 
 
-## ARIADNE Portal 
+## ARIADNE Portal
+
+![](figs/portal.jpg)
 
 [https://portal.ariadne-infrastructure.eu/](https://portal.ariadne-infrastructure.eu/)
+
 
 ## Types of resources
 
@@ -37,4 +52,92 @@ execute:
 
 ### Getty AAT
 
-## Exercise 
+Arts and architecture thesaurus
+
+## Exercise {background-color="#B5E2FF"}
+
+
+<!-- LOD =================================================================== -->
+
+## Linked Open Data  {.center background-color="#CDFFB5"}
+
+### *Semantic Web* 
+
+
+## Linked Open Data {.center background-image="figs/intro-bg.jpg" background-opacity=0.42}
+
+### (LOD)
+
+![](figs/5-star-steps.png){.nostretch width="42%"}
+
+[https://5stardata.info/](https://5stardata.info/)
+
+::: {.notes}
+
+Tim Berners Lee, 2006
+
+5-star deployment scheme for Open Data:
+
+1. Available on the web (whatever format) but with an open licence, to be Open Data
+2. Available as machine-readable structured data (e.g. excel instead of image scan of a table)
+3. as (2) plus non-proprietary format (e.g. CSV instead of excel)
+4. use URIs to denote things, so that people can point at your stuff (All the above plus, Use open standards from W3C (RDF and SPARQL) to identify things, so that people can point at your stuff)
+5. All the above, plus: Link your data to other people’s data to provide context
+
+https://www.w3.org/DesignIssues/LinkedData.html
+
+:::
+
+
+## Linked Open Data 
+
+### What makes it linked and open?
+
+<!-- > *Linked Open Data (LOD) denote publicly available data in the Web, identified via URI and accessible via HTTP. Linked data connect to other data via URI.* -->
+
+::: {.callout-important}
+
+## Semantic Web / Web of Data
+
+*Semantic Web* is an extension of the **Web of documents** to the **Web of data**.
+It is about creating **links** between documents, datasets etc. that are understandable and readable to both **humans and machines**.
+*Linked Open Data* is at the core of the Semantic Web providing tools and best practices to make these links.
+
+:::
+
+- **Open license**.
+- *Uniform Resource Identifiers* (**URIs**) **name and identify** individual *things*.
+- URIs are **resolvable** using `http://` (or `https://`) protocol  
+    (it is possible to find information about the *things*).
+- URIs lead to useful information (data in RDF or SPARQL **standards**). 
+- URIs in the resources lead to other resources, so more *things* can be discovered following the **links**. 
+
+::: {.callout-note}
+
+## URLs, URIs & IRIs
+
+**URL** (Uniform Resource Locator) -- **locates** and allows retrieval of things *on* the Web.  
+**URN** (Universal Resource Name) -- identifies but does not locate.  
+**URI** (Uniform Resource Identifier, formerly *Universal Resource Identifier*) -- **identifies** (both abstract or physical) things (resources) *in* the Web.  
+**IRI** (Internationalized Resource identifier) -- same as URI, allows wider range of characters to accomodate various writing systems.
+
+:::
+
+
+<!-- AO-Cat ================================================================ -->
+
+## AO-Cat Ontology  {.center background-color="#CDFFB5"}
+
+### *Semantic Web* 
+
+## AO-Cat Ontology
+
+Felicetti A., Meghini C., Richards J., Theodoridou M. 2023: *The AO-Cat Ontology*.
+doi:[10.5281/zenodo.7818374](https://zenodo.org/doi/10.5281/zenodo.7818374).
+
+<!-- 
+colors:
+- exercise: {background-color="#B5E2FF"}
+- section: {background-color="#CDFFB5"} ({background-color="#FAF1A4"})
+- {background-color="#FFE1B5"}
+-->
