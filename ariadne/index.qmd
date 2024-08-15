@@ -7,6 +7,7 @@ format:
   revealjs:
     # mainfont: "Alegreya Sans"
     fontsize: 24px
+    css: /styles.css
     # output-file: slides_space.html
     footer: "[atRium](https://aiscr.cz/atRium/) *training school*, Brno 2024 | [ARIADNE](/ariadne/index.qmd)"
     logo: /figs/Clay.png
@@ -22,19 +23,45 @@ callout-appearance: simple
 callout-icon: false
 ---
 
-<!-- ARIADNE =============================================================== -->
 
-## ARIADNE {.center background-color="#CDFFB5"}
+## ARIADNE {.center background-color="#FAF1A4"}
 
-### *Archaeological data in the ARIADNE Portal*
+### *Archaeological data and the ARIADNE Portal*
+
 
 ## ARIADNE
 
-- Advanced Research Infrastructure for Archaeological Dataset Networking In Europe
-- ARIADNE is a research infrastructure.
-- ARIADNE is an 
+:::: {.columns}
+
+::: {.column}
+#### A figure in Greek mythology
+
+- Cretan princess, daughter of King Minos.
+- Known for helping Theseus escape from the labyrinth after he kills Minotaur.
+
+![](https://upload.wikimedia.org/wikipedia/commons/0/02/The_Abandoned_Ariadne%2C_ancient_fresco_from_Pompeii%2C_National_Archaeological_Museum.jpg){.nostretch width="80%"}
+
+::: {.tiny}
+Egisto Sani, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons
+:::
+:::
+
+::: {.column}
+#### A research infrastructure
+
+- An acronym for *Advanced Research Infrastructure for Archaeological Dataset Networking In Europe*.
+- ARIADNE aggregates, integrates, and provides access to various archaeological data resources.
 
 [https://www.ariadne-research-infrastructure.eu/](https://www.ariadne-research-infrastructure.eu/)
+
+![](/figs/ariadne.png){.nostretch width="80%"}
+:::
+
+::::
+
+## 
+
+{{< video https://vimeo.com/920069846 width="100%" height="100%" >}}
 
 
 ## ARIADNE Portal
@@ -43,23 +70,28 @@ callout-icon: false
 
 [https://portal.ariadne-infrastructure.eu/](https://portal.ariadne-infrastructure.eu/)
 
+::: {.notes}
 
-## Types of resources
+- types of resources
+- where, when, what 
+- PeriodO
+- Getty AAT
 
-## Where, When, What
+:::
 
-### PeriodO
-
-### Getty AAT
-
-Arts and architecture thesaurus
 
 ## Exercise {background-color="#B5E2FF"}
+
+1. How many resources are there in the ARIADNE Portal?
+2. How many records of individual artefacts are there (*Resource Type: Artefact*)?
+3. Who contributes the most of the records on artefacts?
+4. How many swords are there?
+5. How many Bronze Age swords are there?
 
 
 <!-- LOD =================================================================== -->
 
-## Linked Open Data  {.center background-color="#CDFFB5"}
+## Linked Open Data  {.center background-color="#FAF1A4"}
 
 ### *Semantic Web* 
 
@@ -124,9 +156,36 @@ It is about creating **links** between documents, datasets etc. that are underst
 :::
 
 
+## Triples 
+
+### How to represent Linked Open Data
+
+subject -> predicate -> object
+
+
+
+## Example {background-color="#CDFFB5"}
+
+*Ariadne* is daughter of Minos
+
+
+
+## RDF
+
+## RDF serializations
+
+## Turtle
+
+## RDF/XML 
+
+## JSON-LD
+
+
+
+
 <!-- AO-Cat ================================================================ -->
 
-## AO-Cat Ontology  {.center background-color="#CDFFB5"}
+## AO-Cat Ontology  {.center background-color="#FAF1A4"}
 
 ### *Semantic Web* 
 
@@ -138,6 +197,7 @@ doi:[10.5281/zenodo.7818374](https://zenodo.org/doi/10.5281/zenodo.7818374).
 <!-- 
 colors:
 - exercise: {background-color="#B5E2FF"}
-- section: {background-color="#CDFFB5"} ({background-color="#FAF1A4"})
+- example: {background-color="#CDFFB5"} 
+- section: {background-color="#FAF1A4"})
 - {background-color="#FFE1B5"}
 -->

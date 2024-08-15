@@ -3,3 +3,7 @@
 .shadow {
   drop-shadow(6px 6px)
 }
+
+.tiny {
+  font-size: 42%;
+}
