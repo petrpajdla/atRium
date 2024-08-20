@@ -39,7 +39,7 @@ callout-icon: false
 - Cretan princess, daughter of King Minos.
 - Known for helping Theseus escape from the labyrinth after he kills Minotaur.
 
-![](https://upload.wikimedia.org/wikipedia/commons/0/02/The_Abandoned_Ariadne%2C_ancient_fresco_from_Pompeii%2C_National_Archaeological_Museum.jpg){.nostretch width="80%"}
+![](figs/ariadne-pompeii.jpg){.nostretch width="80%"}
 
 ::: {.tiny}
 Egisto Sani, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons
@@ -59,9 +59,9 @@ Egisto Sani, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via 
 
 ::::
 
-## 
+<!-- ## 
 
-{{< video https://vimeo.com/920069846 width="100%" height="100%" >}}
+{{< video https://vimeo.com/920069846 width="100%" height="100%" >}} -->
 
 
 ## ARIADNE Portal
@@ -82,11 +82,12 @@ Egisto Sani, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via 
 
 ## Exercise {background-color="#B5E2FF"}
 
-1. How many resources are there in the ARIADNE Portal?
-2. How many records of individual artefacts are there (*Resource Type: Artefact*)?
-3. Who contributes the most of the records on artefacts?
-4. How many swords are there?
-5. How many Bronze Age swords are there?
+1. How many **resources** are there in the ARIADNE Portal?
+2. How many records of **individual artefacts** are there?
+3. **Who** contributes the most of the records on artefacts?
+4. How many **swords** are there?
+5. How many **Bronze Age swords** are there?
+6. Are there any records from places you are interested in?
 
 
 <!-- LOD =================================================================== -->
@@ -156,21 +157,278 @@ It is about creating **links** between documents, datasets etc. that are underst
 :::
 
 
-## Triples 
+## Linked Open Data Cloud 
 
-### How to represent Linked Open Data
+:::: {.columns}
 
-subject -> predicate -> object
+::: {.column width="40%"}
+[https://lod-cloud.net/](https://lod-cloud.net/)
 
+LOD knowledge bases:
 
+![](figs/wikidata.png){.nostretch width="20%"}   
+[https://www.wikidata.org/](https://www.wikidata.org/)  
+~12,5 billion triples
+
+![](figs/dbpedia.png){.nostretch width="20%"}  
+[http://dbpedia.org/](http://dbpedia.org/)  
+~9,5 billion triples
+:::
+
+::: {.column width="60%"}
+![](figs/lod-cloud.png)
+
+::: {.tiny}
+The Linked Open Data Cloud from [lod-cloud.net](https://lod-cloud.net/) (2024-07-04)
+:::
+:::
+::::
+
+::: {.notes}
+Wikidata - community created structured (!) data, not W3C fully complient, no ontology etc.
+DBpedia - data extracted from Wikipedia infoboxes, ontology etc.
+:::
 
 ## Example {background-color="#CDFFB5"}
 
-*Ariadne* is daughter of Minos
+:::: {.columns}
+
+::: {.column width="40%"}
+- *Ariadne* is a figure in Greek mythology.  
+- *ARIADNE* is a project acronym.
+- *Ariadne* was a Byzantine empress.
+- *Ariadne* is a genus of butterflies.
+- *Ariadne* is a drug...
+
+Far too many *things* are called Ariadne!
+
+![](figs/ariadne-pompeii.jpg){.nostretch width="72%"}
+:::
+
+::: {.column width="60%"}
+### Wikidata 
+
+- [http://www.wikidata.org/entity/Q184874](http://www.wikidata.org/entity/Q184874) (URI)
+
+- Identifier: **Q184874**
+
+### DBpedia 
+
+- [http://dbpedia.org/**resource**/Ariadne](http://dbpedia.org/resource/Ariadne) (URI)
+- [http://dbpedia.org/**data**/Ariadne](http://dbpedia.org/data/Ariadne) (data in RDF)
+- [http://dbpedia.org/**page**/Ariadne](http://dbpedia.org/page/Ariadne) (landing page)
+:::
+::::
+
+::: {.tiny}
+Egisto Sani, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons
+:::
 
 
+## Triples 
 
+### How to represent LOD?
+
+```{dot}
+//| echo: false
+//| fig-width: 6
+//| fig-align: "center"
+
+graph G {
+  rankdir=LR
+  bgcolor="transparent"
+  node [
+    fontname="Vollkorn,sans-serif"
+    fontsize="10"
+  ]
+  edge [
+    fontname="Vollkorn,sans-serif" 
+    fontsize="8"
+    color="gray80"
+  ]
+  
+  "subject" -- "object" [label="predicate\n(property)"];
+}
+```
+
+
+## Example {background-color="#CDFFB5" auto-animate=true}
+
+- *Ariadne* is a figure in Greek mythology. 
+
+```{dot}
+//| echo: false
+//| fig-width: 5
+//| fig-align: "left"
+
+graph G {
+  rankdir=LR
+  bgcolor="transparent"
+  node [
+    fontname="Vollkorn,sans-serif"
+    fontsize="10"
+  ]
+  edge [
+    fontname="Vollkorn,sans-serif" 
+    fontsize="8"
+    color="gray80"
+  ]
+  
+  "Ariadne" -- "mythological figure" [label="is a"];
+}
+```
+
+## Example {background-color="#CDFFB5" auto-animate=true}
+
+- *Ariadne* is a figure in Greek mythology. 
+- *Ariadne* is from Crete.
+- Crete is an island.
+
+```{dot}
+//| echo: false
+//| fig-width: 8
+//| fig-align: "left"
+
+graph G {
+  rankdir=LR
+  bgcolor="transparent"
+  node [
+    fontname="Vollkorn,sans-serif"
+    fontsize="10"
+  ]
+  edge [
+    fontname="Vollkorn,sans-serif" 
+    fontsize="8"
+    color="gray80"
+  ]
+  
+  "Ariadne" -- "mythological\nfigure" [label="is a"];
+  "Ariadne" -- "Crete" [label="is from"];
+  "Crete" -- "island" [label="is an"];
+}
+```
+
+
+## Example {background-color="#CDFFB5" auto-animate=true}
+
+- URIs in place of **subjects** and **objects**
+
+```{dot}
+//| echo: false
+//| fig-width: 10
+//| fig-align: "left"
+
+graph G {
+  rankdir=LR
+  bgcolor="transparent"
+  node [
+    fontname="Vollkorn,sans-serif"
+    fontsize="10"
+  ]
+  edge [
+    fontname="Vollkorn,sans-serif" 
+    fontsize="8"
+    color="gray80"
+  ]
+  
+  "http://dbpedia.org/\nresource/Ariadne" -- "http://dbpedia.org/\nontology/MythologicalFigure" [label="is a"];
+  "http://dbpedia.org/\nresource/Ariadne" -- "http://dbpedia.org/\nresource/Crete" [label="is from"];
+  "http://dbpedia.org/\nresource/Crete" -- "http://dbpedia.org/\nontology/Island" [label="is an"];
+  "http://dbpedia.org/\nresource/Crete" -- "http://sws.geonames.org/\n258763" [label="is the same as"];
+}
+```
+
+
+## Example {background-color="#CDFFB5" auto-animate=true}
+
+- URIs in place of **subjects** and **objects**
+- Abbreviated URIs
+
+`dbo: http://dbpedia.org/ontology/`  
+`dbr: http://dbpedia.org/resource/`  
+`gn:  http://sws.geonames.org/`  
+
+```{dot}
+//| echo: false
+//| fig-width: 10
+//| fig-align: "left"
+
+graph G {
+  rankdir=LR
+  bgcolor="transparent"
+  node [
+    fontname="Vollkorn,sans-serif"
+    fontsize="10"
+  ]
+  edge [
+    fontname="Vollkorn,sans-serif" 
+    fontsize="8"
+    color="gray80"
+  ]
+  
+  "dbr:Ariadne" -- "dbo:MythologicalFigure" [label="is a"];
+  "dbr:Ariadne" -- "dbr:Crete" [label="is from"];
+  "dbr:Crete" -- "dbo:Island" [label="is an"];
+  "dbr:Crete" -- "gn:258763" [label="is the same as"];
+}
+```
+
+
+## Example {background-color="#CDFFB5" auto-animate=true}
+
+- URIs in place of **predicates (properties)**
+
+`dbo:    http://dbpedia.org/ontology/`  
+`dbr:    http://dbpedia.org/resource/`  
+`gn:     https://sws.geonames.org/`  
+`rdf:    http://www.w3.org/1999/02/22-rdf-syntax-ns#`  
+`schema: http://schema.org/sameAs`
+
+```{dot}
+//| echo: false
+//| fig-width: 10
+//| fig-align: "left"
+
+graph G {
+  rankdir=LR
+  bgcolor="transparent"
+  node [
+    fontname="Vollkorn,sans-serif"
+    fontsize="10"
+  ]
+  edge [
+    fontname="Vollkorn,sans-serif" 
+    fontsize="8"
+    color="gray80"
+  ]
+  
+  "dbr:Ariadne" -- "dbo:MythologicalFigure" [label="rdf:type"];
+  "dbr:Ariadne" -- "dbr:Crete" [label="dbo:origin"];
+  "dbr:Crete" -- "dbo:Island" [label="rdf:type"];
+  "dbr:Crete" -- "gn:258763" [label="schema:sameAs"];
+}
+```
+
+ 
 ## RDF
+
+### Resource Description Framework
+
+- A standard for LOD defined by the [World Wide Web Consortium](https://www.w3.org/) (W3C).
+- RDF is a data model that describes how data is structured.
+- Uses **triples** to represent statements.
+- RDF does *not exactly* tell us how to *write* the triples.
+- Numerous **serializations** (how to write things down) of RDF exist.
+
+[https://www.w3.org/standards/techs/rdf](https://www.w3.org/standards/techs/rdf)
+
+### Serializations
+
+- Turtle family of formats
+- RDF/XML 
+- JSON-LD
+
+and many more...
 
 ## RDF serializations
 
