@@ -422,30 +422,129 @@ graph G {
 
 [https://www.w3.org/standards/techs/rdf](https://www.w3.org/standards/techs/rdf)
 
-### Serializations
+### RDF serializations
 
-- Turtle family of formats
+- Turtle (subset of Notation3 language, superset of N-Triples format)
 - RDF/XML 
 - JSON-LD
 
 and many more...
 
-## RDF serializations
+RDF converter: [https://www.easyrdf.org/converter](https://www.easyrdf.org/converter)
+
 
 ## Turtle
 
+- Stands for *Terse RDF Triple Language*.
+- File extension `.ttl`.
+- Triple ends with a period.
+- URIs in angle brackets (`<`, `>`).
+- Literal (text or other value) in quotation marks (`"`).
+- Triples with a same subject are divided with semicolon (`;`).
+- Triples with a same subject and property are divided with comma (`,`).
+
+```{.zsh}
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+
+dbr:Ariadne
+  rdfs:label "Ariadne"@en ;
+  rdf:type dbo:MythologicalFigure ;
+  dbo:origin dbr:Crete .
+  
+dbr:Crete 
+  rdf:type dbo:Island ;
+  schema:sameAs <https://sws.geonames.org/258763> .
+```
+
+
 ## RDF/XML 
 
-## JSON-LD
+- File extension `.rdf`.
+- W3C standard ([https://www.w3.org/TR/rdf-syntax-grammar/](https://www.w3.org/TR/rdf-syntax-grammar/)).
+
+```{.xml}
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:schema="http://schema.org/"
+         xmlns:dbo="http://dbpedia.org/ontology/">
+
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ariadne">
+    <rdfs:label xml:lang="en">Ariadne</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MythologicalFigure"/>
+    <dbo:origin>
+      <dbo:Island rdf:about="http://dbpedia.org/resource/Crete">
+        <schema:sameAs rdf:resource="https://sws.geonames.org/258763"/>
+      </dbo:Island>
+    </dbo:origin>
+  </rdf:Description>
+</rdf:RDF>
+```
 
 
+<!-- ## JSON-LD
+
+- W3C standard ([https://www.w3.org/TR/json-ld11/](https://www.w3.org/TR/json-ld11/).)
+
+```{.json}
+{
+  "@context": {
+    "rdf": {
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#", 
+        "@type": "@id"
+      },
+    "dbr": {
+        "@id": "http://dbpedia.org/resource/",
+        "@type": "@id"
+      }
+  },
+  "@graph": [{
+      "@id": "dbr:Ariadne",
+      "http://www.w3.org/2000/01/rdf-schema#label": {
+        "@value": "Ariadne",
+        "@language": "en"
+      },
+      "rdf:type": {
+        "@id": "http://dbpedia.org/ontology/MythologicalFigure"
+      },
+      "http://dbpedia.org/ontology/:origin": {
+        "@id": "dbr:Crete"
+      }
+    }, {
+      "@id": "dbr:Crete",
+      "rdf:type": {
+        "@id": "http://dbpedia.org/ontology/:Island"
+      },
+      "http://schema.org/sameAs": {
+        "@id": "https://sws.geonames.org/258763"
+      }
+    }]
+}
+``` -->
+
+## Why is LOD useful? {.center background-color="#B5E2FF"}
+
+*Let's brainstorm...*
 
 
 <!-- AO-Cat ================================================================ -->
 
 ## AO-Cat Ontology  {.center background-color="#FAF1A4"}
 
-### *Semantic Web* 
+### *Ontologies and the Semantic Web* 
+
+
+## What is an ontology?
+
+- An **explicit, formal** way of modelling **relationships between information** within a particular **domain**.
+- An **abstraction** allowing formal representation of particular knowledge about the world.
+- **Non-hierarchical**, because things in the real world tend to be more complex, than it is possible to express using hierarchies.
+- Ontologies provide **precisely defined** vocabularies for modelling relationships.
+ 
 
 ## AO-Cat Ontology
 
