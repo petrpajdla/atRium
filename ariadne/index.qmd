@@ -100,7 +100,7 @@ Egisto Sani, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via 
 
 ### When 
 
-- PeriodO gazeteer ([https://perio.do/](https://perio.do/))
+- PeriodO gazeteer ([https://perio.do/](https://perio.do/)) -- maps periods to absolute dates on a common time scale.
 - Date 
 
 ### What 
@@ -245,6 +245,8 @@ Far too many *things* are called Ariadne!
 :::
 
 ::: {.column width="60%"}
+We need **unique identifiers**!
+
 ### Wikidata 
 
 - [http://www.wikidata.org/entity/Q184874](http://www.wikidata.org/entity/Q184874) (URI)
@@ -482,7 +484,7 @@ RDF converter: [https://www.easyrdf.org/converter](https://www.easyrdf.org/conve
 - Triples with a same subject are divided with semicolon (`;`).
 - Triples with a same subject and property are divided with comma (`,`).
 
-```{.zsh}
+```{.txt}
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
@@ -525,46 +527,6 @@ dbr:Crete
 ```
 
 
-<!-- ## JSON-LD
-
-- W3C standard ([https://www.w3.org/TR/json-ld11/](https://www.w3.org/TR/json-ld11/).)
-
-```{.json}
-{
-  "@context": {
-    "rdf": {
-        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#", 
-        "@type": "@id"
-      },
-    "dbr": {
-        "@id": "http://dbpedia.org/resource/",
-        "@type": "@id"
-      }
-  },
-  "@graph": [{
-      "@id": "dbr:Ariadne",
-      "http://www.w3.org/2000/01/rdf-schema#label": {
-        "@value": "Ariadne",
-        "@language": "en"
-      },
-      "rdf:type": {
-        "@id": "http://dbpedia.org/ontology/MythologicalFigure"
-      },
-      "http://dbpedia.org/ontology/:origin": {
-        "@id": "dbr:Crete"
-      }
-    }, {
-      "@id": "dbr:Crete",
-      "rdf:type": {
-        "@id": "http://dbpedia.org/ontology/:Island"
-      },
-      "http://schema.org/sameAs": {
-        "@id": "https://sws.geonames.org/258763"
-      }
-    }]
-}
-``` -->
-
 ## Why is LOD useful? {.center background-color="#B5E2FF"}
 
 *Let's brainstorm...*
@@ -581,14 +543,165 @@ dbr:Crete
 
 - An **explicit, formal** way of modelling **relationships between information** within a particular **domain**.
 - An **abstraction** allowing formal representation of particular knowledge about the world.
-- **Non-hierarchical**, because things in the real world tend to be more complex, than it is possible to express using hierarchies.
+<!-- - **Non-hierarchical**, because things in the real world tend to be more complex, than it is possible to express using hierarchies. -->
 - Ontologies provide **precisely defined** vocabularies for modelling relationships.
- 
+
+### What is in an ontology?
+
+- **Classes** - ontology defines abstract groups, fundamental categories of objects or concepts within a domain.
+- **Relationships** (properties) -- ontology limits what kinds of subjects and objects can properties link and how classes are related. 
+- **Instances** of objects -- what are the described individuals.
+
+### Why is this useful?
+
+- Logic
+- Automated reasoning
+- Interoperability and data integration
+
+
+## Domain and range
+
+```{dot}
+//| echo: false
+//| fig-width: 6
+//| fig-align: "center"
+
+graph G {
+  rankdir=LR
+  bgcolor="transparent"
+  node [
+    fontname="Vollkorn,sans-serif"
+    fontsize="10"
+  ]
+  edge [
+    fontname="Vollkorn,sans-serif" 
+    fontsize="8"
+    color="gray80"
+  ]
+  
+  "domain" -- "range" [label="predicate\n(property)"];
+  "subject" -- "object" [label="predicate\n(property)"];
+}
+```
+
+- **Domain** -- **subject** described by the **property** is in the class specified by the **domain**.
+- **Range** -- **object** of the statement has the given **range**.
+
+`rdfs:domain` and `rdfs:range` properties
+
+
+## Example {background-color="#CDFFB5"}
+
+```{dot}
+//| echo: false
+//| fig-width: 6
+//| fig-height: 2.4
+//| fig-align: "center"
+
+graph G {
+  rankdir=LR
+  bgcolor="transparent"
+  node [
+    fontname="Vollkorn,sans-serif"
+    fontsize="10"
+  ]
+  edge [
+    fontname="Vollkorn,sans-serif" 
+    fontsize="8"
+    color="gray80"
+  ]
+  graph [
+    fontname="Vollkorn,sans-serif"
+    fontsize="8"
+    fontcolor="gray40"
+  ]
+  
+  subgraph cluster_0 {
+    "dbr:Crete";
+    label = "rdf:type dbo:PopulatedPlace";
+    color = "black";
+  }
+  
+  subgraph cluster_1 {
+    subgraph cluster_2 {
+      "dbr:Ariadne";
+      label = "rdf:type dbo:MythologicalFigure";
+      color = "black";
+    }
+    label = "rdf:type dbo:Person";
+  }
+  
+  "dbr:Ariadne" -- "dbr:Crete" [label="dbo:origin"];
+}
+```
+
+```{.txt}
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+
+dbo:MythologicalFigure rdfs:subClassOf dbo:Person .
+
+dbo:origin rdf:type rdf:Property ;
+  rdfs:domain dbo:Person ;
+  rdfs:range dbo:PopulatedPlace .
+
+dbr:Ariadne
+  rdf:type dbo:MythologicalFigure ;
+  dbo:origin dbr:Crete .
+
+dbr:Crete 
+  rdf:type dbo:PopulatedPlace .
+```
 
 ## AO-Cat Ontology
 
-Felicetti A., Meghini C., Richards J., Theodoridou M. 2023: *The AO-Cat Ontology*.
-doi:[10.5281/zenodo.7818374](https://zenodo.org/doi/10.5281/zenodo.7818374).
+> Felicetti A., Meghini C., Richards J., Theodoridou M. 2023: *The AO-Cat Ontology*. doi:[10.5281/zenodo.7818374](https://zenodo.org/doi/10.5281/zenodo.7818374).
+
+:::: {.columns}
+::: {.column width="40%"}
+![](figs/aocat.png)
+:::
+::: {.column width="40%"}
+- *Application profile* of CIDOC CRM (most of the classes are mapped to CRM).
+- Namespace IRI: [https://ariadne-infrastructure.eu/aocat/](https://ariadne-infrastructure.eu/aocat/)
+- Classes prefixed with `AO_`
+
+### Defines: 
+- 22 classes  
+- 66 properties
+:::
+::::
+
+
+## Most important classes 
+
+
+## Most important properties 
+
+
+
+
+## ARIADNE subjects 
+
+- **Site/monument** -- each record is a site/monument.
+- **Fieldwork** -- each record is an individual archaeological investigation (event) .
+- **Fieldwork report** -- record of fieldwork event (link to *grey literature* report).
+- **Fieldwork archive** -- record of filedwork event (link to archive of digital objects).
+- **Scientific analysis** -- any analytical data.
+- **Date** -- each record is a single archaeological date (C14, dendrochronology etc.)
+- **Artefact** -- each record is a single artefact (except coins).
+- **Coin** -- each record is a single coin.
+- **Building survey** -- specific category of fieldwork report or archive for standing building survey.
+- **Maritime** -- specific category of site/monument for wrecks or fieldwork event (underwater archaeology).
+- **Inscription** -- monuments or artefacts that bear graphical manifestation of a human thought.
+- **Rock art** -- similar to inscriptions.
+- **Burial** -- each record is a burial.
+
+
+
 
 <!-- 
 colors:
