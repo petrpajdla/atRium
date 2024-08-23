@@ -87,7 +87,26 @@ Egisto Sani, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via 
 3. **Who** contributes the most of the records on artefacts?
 4. How many **swords** are there?
 5. How many **Bronze Age swords** are there?
-6. Are there any records from places you are interested in?
+6. Are there any records from Brno (Czech Republic)?
+7. How many records are there from Africa?
+
+
+## What, where & when 
+
+### Where 
+
+- Geolocations of places (points, polygons, bounding boxes)
+- Geographical names from standard vocabulary
+
+### When 
+
+- PeriodO gazeteer ([https://perio.do/](https://perio.do/))
+- Date 
+
+### What 
+
+- Getty Art & Architecture Thesaurus  
+    (Getty AAT, [https://www.getty.edu/research/tools/vocabularies/aat/](https://www.getty.edu/research/tools/vocabularies/aat/)) 
 
 
 <!-- LOD =================================================================== -->
@@ -95,6 +114,26 @@ Egisto Sani, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via 
 ## Linked Open Data  {.center background-color="#FAF1A4"}
 
 ### *Semantic Web* 
+
+
+## Let's discuss... {.white background-image="figs/bg.jpg"  background-opacity=0.18}
+
+:::: {.columns}
+::: {.column width="50%"}
+- *What is* data? 
+- *What is* structured data?
+- *What is* unstructured data?
+- *What is* a database?
+- *What is* a relational database?
+- *What makes* data open?
+- *What makes* data linked?
+:::
+::: {.column width="50%"}
+- *Have you ever* collected/created any data? 
+- *Have you ever* created a database?
+- *Have you ever* filled in a database designed by someone else?
+:::
+::::
 
 
 ## Linked Open Data {.center background-image="figs/intro-bg.jpg" background-opacity=0.42}
