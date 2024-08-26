@@ -28,3 +28,77 @@ callout-icon: false
 - SPARQL is a query language for RDF data.
 - SPARQL is a recursive acronym for *SPARQL Protocol and Query Language*.
 - [W3C standard](http://www.w3.org/TR/sparql11-query/).
+
+
+## SPARQL query 
+
+- Consists of **triple patterns** with **zero or more variables**.
+- Variables are prefixed with a question mark (`?variableName`).
+- Triple patterns are matched against the triples in the graph.
+- Each matching triple produces one result.
+
+`?subject ?predicate ?object .`
+
+`?subject rdf:type dbo:MythologicalFigure .`
+
+`?s rdf:label "Ariadne" .`
+
+`dbr:Ariadne dbo:origin ?origin .`
+
+`dbr:Ariadne ?p ?o .`
+
+### Common abbreviations 
+
+- subject as `?s`
+- predicate/property as `?p`
+- object as `?o`
+
+
+## Types of queries 
+
+- `SELECT`
+- `CONSTRUCT`
+- ``
+
+## SELECT query 
+
+:::: {.columns}
+::: {.column}
+### Parts 
+
+- List of selected variables
+- Triple patterns to match 
+
+### Result 
+
+- Table 
+- Each selected variable is a column
+- Each triple pattern match is a row
+:::
+::: {.column}
+```{.sql}
+SELECT ?label
+WHERE {
+  ?variableA rdf:type ?o .
+  ?o rdf:label ?label
+}
+```
+
+```{.sql}
+SELECT ?label
+WHERE {
+  ?s rdf:origin dbo:Crete .
+  ?s rdf:label ?label .
+}
+```
+
+```{.sql}
+SELECT ?label
+WHERE {
+  ?s dbo:origin dbr:Crete .
+  ?s rdf:type dbo:MythicalFigure .
+  ?s rdf:label ?label .
+}
+```
+:::
+::::
