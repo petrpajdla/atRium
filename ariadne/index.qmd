@@ -113,7 +113,7 @@ Egisto Sani, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via 
 
 ## Linked Open Data  {.center background-color="#FAF1A4"}
 
-### *Semantic Web* 
+### *From ARIADNE Portal to ARIADNE Knowledge Base* 
 
 
 ## Let's discuss... {.white background-image="figs/bg.jpg"  background-opacity=0.18}
@@ -203,7 +203,7 @@ It is about creating **links** between documents, datasets etc. that are underst
 ::: {.column width="40%"}
 [https://lod-cloud.net/](https://lod-cloud.net/)
 
-LOD knowledge bases:
+### LOD knowledge bases:
 
 ![](figs/wikidata.png){.nostretch width="20%"}   
 [https://www.wikidata.org/](https://www.wikidata.org/)  
@@ -548,7 +548,7 @@ dbr:Crete
 
 ### What is in an ontology?
 
-- **Classes** - ontology defines abstract groups, fundamental categories of objects or concepts within a domain.
+- **Classes** -- ontology defines abstract groups, fundamental categories of objects or concepts within a domain.
 - **Relationships** (properties) -- ontology limits what kinds of subjects and objects can properties link and how classes are related. 
 - **Instances** of objects -- what are the described individuals.
 
