@@ -1,0 +1,30 @@
+---
+title: "SPARQL"
+title-slide-attributes:
+  data-background-color: "#B5E2FF"
+format:
+  # html: default
+  revealjs:
+    # mainfont: "Alegreya Sans"
+    fontsize: 24px
+    css: /styles.css
+    # output-file: slides_space.html
+    footer: "[atRium](https://aiscr.cz/atRium/) *training school*, Brno 2024 | [SPARQL](/sparql/index.qmd)"
+    logo: /figs/Clay.png
+    chalkboard:
+      theme: whiteboard
+      chalk-effect: 0.0
+  # pdf: default
+execute:
+  echo: true
+  warning: false
+  cache: true
+callout-appearance: simple
+callout-icon: false
+---
+
+## SPARQL 
+
+- SPARQL is a query language for RDF data.
+- SPARQL is a recursive acronym for *SPARQL Protocol and Query Language*.
+- [W3C standard](http://www.w3.org/TR/sparql11-query/).
