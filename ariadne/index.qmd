@@ -502,6 +502,24 @@ dbr:Crete
 ```
 
 
+## RDF can contain...
+
+- URIs/IRIs: 
+  - written in angle brackets  
+    `<http://www.w3.org/1999/02/22-rdf-syntax-ns#>`
+  - shortened as prefixes  
+    `@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>`
+- Literals (*values*):
+  -  written in quotes followed by their datatype URI
+  -  list of RDF datatypes: [https://www.w3.org/TR/rdf11-concepts/#section-Datatypes](https://www.w3.org/TR/rdf11-concepts/#section-Datatypes)
+  - strings (datatype `xsd:string` can be omitted)  
+    `"Ariadne"^^xsd:string` is the same as `"Ariadne"`
+  - numbers (quotes can be omitted)  
+    `"3.14"^^xsd:decimal` is the same as `3.14`
+  - dates  
+    `"2024-09-17"^^xsd:date`
+
+
 ## RDF/XML 
 
 - File extension `.rdf`.
