@@ -510,7 +510,7 @@ dbr:Crete
   - shortened as prefixes  
     `@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>`
 - Literals (*values*):
-  -  written in quotes followed by their datatype URI
+  -  written in quotes followed by their datatype URI (*typed literals*)
   -  list of RDF datatypes: [https://www.w3.org/TR/rdf11-concepts/#section-Datatypes](https://www.w3.org/TR/rdf11-concepts/#section-Datatypes)
   - strings (datatype `xsd:string` can be omitted)  
     `"Ariadne"^^xsd:string` is the same as `"Ariadne"`
