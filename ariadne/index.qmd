@@ -419,11 +419,11 @@ graph G {
 
 - URIs in place of **predicates (properties)**
 
-`dbo:    http://dbpedia.org/ontology/`  
-`dbr:    http://dbpedia.org/resource/`  
-`gn:     https://sws.geonames.org/`  
-`rdf:    http://www.w3.org/1999/02/22-rdf-syntax-ns#`  
-`schema: http://schema.org/sameAs`
+`dbo: http://dbpedia.org/ontology/`  
+`dbr: http://dbpedia.org/resource/`  
+`gn:  https://sws.geonames.org/`  
+`rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#`  
+`owl: http://www.w3.org/2002/07/owl#`
 
 ```{dot}
 //| echo: false
@@ -446,7 +446,7 @@ graph G {
   "dbr:Ariadne" -- "dbo:MythologicalFigure" [label="rdf:type"];
   "dbr:Ariadne" -- "dbr:Crete" [label="dbo:origin"];
   "dbr:Crete" -- "dbo:Island" [label="rdf:type"];
-  "dbr:Crete" -- "gn:258763" [label="schema:sameAs"];
+  "dbr:Crete" -- "gn:258763" [label="owl:sameAs"];
 }
 ```
 
@@ -498,7 +498,7 @@ dbr:Ariadne
   
 dbr:Crete 
   rdf:type dbo:Island ;
-  schema:sameAs <https://sws.geonames.org/258763> .
+  owl:sameAs <https://sws.geonames.org/258763> .
 ```
 
 
@@ -537,7 +537,7 @@ dbr:Crete
     <rdf:type rdf:resource="http://dbpedia.org/ontology/MythologicalFigure"/>
     <dbo:origin>
       <dbo:Island rdf:about="http://dbpedia.org/resource/Crete">
-        <schema:sameAs rdf:resource="https://sws.geonames.org/258763"/>
+        <owl:sameAs rdf:resource="https://sws.geonames.org/258763"/>
       </dbo:Island>
     </dbo:origin>
   </rdf:Description>
