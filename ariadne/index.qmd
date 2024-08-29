@@ -694,10 +694,88 @@ dbr:Crete
 ::::
 
 
-## Most important classes 
+## AO-Cat Concepts 
+
+### Resources
+
+```{dot}
+//| echo: false
+//| fig-width: 6
+//| fig-height: 6
+//| fig-align: "center"
+
+graph G {
+  rankdir=TR
+  bgcolor="transparent"
+  node [
+    fontname="Vollkorn,sans-serif"
+    fontsize="10"
+  ]
+  edge [
+    fontname="Vollkorn,sans-serif" 
+    fontsize="8"
+    color="gray80"
+  ]
+  graph [
+    fontname="Vollkorn,sans-serif"
+    fontsize="8"
+    fontcolor="gray40"
+  ]
+  
+  "AO_Entity" -- "AO_Resource";
+  "AO_Resource" -- "AO_Service";
+  "AO_Resource" -- "AO_Data_Resource";
+  "AO_Data_Resource" -- "AO_Individual_Data_Resource (A)";
+  "AO_Data_Resource" -- "AO_Collection (A)";
+  "AO_Collection (A)" -- "AO_Individual_Data_Resource (B)";
+  "AO_Collection (A)" -- "AO_Collection (B)";
+  "AO_Individual_Data_Resource (A)" -- "AO_Document";
+}
+```
+
+
+## AO-Cat Concepts 
+
+### Context
+
+```{dot}
+//| echo: false
+//| fig-width: 6
+//| fig-height: 6
+//| fig-align: "center"
+
+graph G {
+  rankdir=LR
+  bgcolor="transparent"
+  node [
+    fontname="Vollkorn,sans-serif"
+    fontsize="10"
+  ]
+  edge [
+    fontname="Vollkorn,sans-serif" 
+    fontsize="8"
+    color="gray80"
+  ]
+  graph [
+    fontname="Vollkorn,sans-serif"
+    fontsize="8"
+    fontcolor="gray40"
+  ]
+  
+  "AO_Data_Resource" -- "AO_Temporal_Region" [label="has_temporal_coverage"];
+  "AO_Data_Resource" -- "AO_Spatial_Region" [label="has_spatial_coverage"];
+  "AO_Data_Resource" -- "AO"
+}
+```
 
 
 ## Most important properties 
+
+## AO_Spatial_Region
+
+## AO_Temporal_Region 
+
+## AO_Concept
 
 
 
