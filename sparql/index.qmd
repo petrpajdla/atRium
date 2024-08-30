@@ -36,10 +36,10 @@ callout-icon: false
 
 ### Types of queries 
 
-- `ASK` query -- returns true/false answer.
+- `ASK` query -- returns true/false answer, checks whether there is at least one result.
 - **`SELECT` query** -- returns list (table) of results.
-- `DESCRIBE` query -- returns all possible information about an entity.
-- `CONSTRUCT` query -- returns new set of triples.
+- `DESCRIBE` query -- returns all possible data about an entity.
+- `CONSTRUCT` query -- returns new set of triples based on a given template.
 
 
 ## SPARQL query 
@@ -60,7 +60,7 @@ callout-icon: false
 
 ## SELECT query 
 
-```{.sql}
+```{.sparql}
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
@@ -98,7 +98,7 @@ LIMIT 100
 
 - Find all other URIs/IRIs that Ariadne maps to in DBpedia.
 
-```{.sql}
+```{.sparql}
 PREFIX dbr: <http://dbpedia.org/resource/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
@@ -123,7 +123,7 @@ Query in [DBpedia Virtuoso](https://dbpedia.org/sparql?default-graph-uri=http%3A
 
 - Find peole (and the dates they were born and died) who had to do anything with archaeology according to DBpedia.
 
-```{.sql}
+```{.sparql}
 PREFIX dbr: <http://dbpedia.org/resource/>
 PREFIX dbo: <http://dbpedia.org/ontology/>
 
@@ -153,7 +153,7 @@ Query in [DBpedia Virtuoso](https://dbpedia.org/sparql?default-graph-uri=http%3A
 
 - How many are there?
 
-```{.sql}
+```{.sparql}
 PREFIX dbr: <http://dbpedia.org/resource/>
 
 SELECT (COUNT(?s) AS ?count)
@@ -175,7 +175,8 @@ Query in [DBpedia Virtuoso](https://dbpedia.org/sparql?default-graph-uri=http%3A
 
 ![](figs/wikidata.png)
 
-[https://query.wikidata.org](https://query.wikidata.org)
+Query service: [https://query.wikidata.org/](https://query.wikidata.org)  
+SPARQL endpoint: `https://query.wikidata.org/sparql`
 
 
 ## Example query {background-color="#CDFFB5"}
@@ -184,7 +185,7 @@ Query in [DBpedia Virtuoso](https://dbpedia.org/sparql?default-graph-uri=http%3A
 
 - How many archaeologists are there in Wikidata?
 
-```{.sql}
+```{.sparql}
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
@@ -206,7 +207,7 @@ Query in [Wikidata Query Service](https://query.wikidata.org/#PREFIX%20wd%3A%20%
 
 - Return a list of archaeologists, their sex/gender, and the dates they were born and died.
 
-```{.sql}
+```{.sparql}
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -245,7 +246,7 @@ Query in [Wikidata Query Service](https://query.wikidata.org/#PREFIX%20wd%3A%20%
 ::: {.column width=50%}
 - Archaeological artefacts (`Q220659`)
 
-```{.sql}
+```{.sparql}
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
@@ -262,7 +263,7 @@ WHERE {
 ::: {.column width=50%}
 - Archaeological finds (`Q10855061`)
 
-```{.sql}
+```{.sparql}
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
@@ -280,7 +281,7 @@ WHERE {
 
 - Together in one query using `UNION`
 
-```{.sql}
+```{.sparql}
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
@@ -297,12 +298,13 @@ Query in [Wikidata Query Service](https://w.wiki/B3RM).
 
 ## ARIADNE Knowledge Base
 
-- GraphDB graph database, accessible through D4Science infrastructure  
-  [https://ariadne.d4science.org/](https://ariadne.d4science.org/)
-- SPARQL endpoint  
-  `https://graphdb.ariadne.d4science.org/repositories/ariadneplus-pr01`
-
 ![](figs/graphdb.png)
+
+GraphDB graph database, accessible through D4Science infrastructure  
+[https://ariadne.d4science.org/](https://ariadne.d4science.org/)  
+
+SPARQL endpoint  
+`https://graphdb.ariadne.d4science.org/repositories/ariadneplus-pr01`
 
 
 ## Example query {background-color="#CDFFB5"}
@@ -311,7 +313,7 @@ Query in [Wikidata Query Service](https://w.wiki/B3RM).
 
 - Find a resource with original identifier [https://doi.org/10.17026/dans-2b6-gyjh](https://doi.org/10.17026/dans-2b6-gyjh).
 
-```{.sql}
+```{.sparql}
 PREFIX aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
@@ -328,7 +330,7 @@ Query in [ARIADNE GraphDB](https://graphdb.ariadne.d4science.org/sparql?name=&in
 
 - What is it?
 
-```{.sql}
+```{.sparql}
 PREFIX aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
@@ -351,7 +353,7 @@ Query in [ARIADNE GraphDB](https://graphdb.ariadne.d4science.org/sparql?name=&in
 
 - What are the native subjects of resource (artefact) `10.17026/dans-2b6-gyjh`?
 
-```{.sql}
+```{.sparql}
 PREFIX aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
@@ -369,14 +371,12 @@ Query in [ARIADNE GraphDB](https://graphdb.ariadne.d4science.org/sparql?name=&in
 
 - Let GraphDB `DESCRIBE` the resource for us.
 
-```{.sql}
+```{.sparql}
 DESCRIBE <https://ariadne-infrastructure.eu/aocat/Resource/09C1C711-5775-3FFB-AD82-F3C9A5532D26>
 ```
 ::: {.tiny}
 Query in [ARIADNE GraphDB](https://graphdb.ariadne.d4science.org/sparql?name=&infer=true&sameAs=true&query=DESCRIBE%20%3Chttps%3A%2F%2Fariadne-infrastructure.eu%2Faocat%2FResource%2F09C1C711-5775-3FFB-AD82-F3C9A5532D26%3E%0A).
 :::
-
-- `DESCRIBE` has `IRI` as an argument and returns all predicates and objects the subject has.
 
 
 ## Example query {background-color="#CDFFB5"}
@@ -385,7 +385,7 @@ Query in [ARIADNE GraphDB](https://graphdb.ariadne.d4science.org/sparql?name=&in
 
 - Return all ARIADNE subjects. 
 
-```{.sql}
+```{.sparql}
 PREFIX aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
@@ -443,14 +443,14 @@ Various functions for formatting of JSON-LD data and transformation to RDF (N-Qu
 ### Main functions
 
 - `spq_init(endpoint = "wikidata")` initiates a SPARQL query.
-- `spq_add("?s ?p ?p")` adds a triple pattern to match. 
+- `spq_add("?s ?p ?o")` adds a triple pattern to match. 
 - `spq_perform(<query>)` performs the query.
 
 ### Additional functions 
 
 - `spq_prefix()` add prefix to the query.
 - `spq_label(<var>)`  adds labels to given variables with `rdfs:label`.
-- `spq_head(n = <n>)` limits number of returned results using `LIMIT n`. 
+- `spq_head(n)` limits number of returned results using `LIMIT n`. 
 - `spq_arrange(desc(<var>))` arranges results in descending order of the variable.
 - `spq_filter(<var>)` filter results.
 - `spq_group_by(<var>)` group results by one or more variables.
@@ -592,49 +592,3 @@ endpoint <-
 
 
 ##
-
-```{.sql}
-SELECT ?label
-WHERE {
-  ?s rdf:origin dbo:Crete .
-  ?s rdf:label ?label .
-}
-```
-
-
-
-```{.sql}
-SELECT ?label
-WHERE {
-  ?s dbo:origin dbr:Crete .
-  ?s rdf:type dbo:MythicalFigure .
-  ?s rdf:label ?label .
-}
-```
-
-
-
-## Ex 
-
-```{.sql}
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX dbr: <http://dbpedia.org/resource/>
-PREFIX dbo: <http://dbpedia.org/ontology/>
-PREFIX dbp: <http://dbpedia.org/property/>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-
-SELECT ?s ?label
-
-WHERE {
-  ?s a foaf:Person .
-  ?s dbo:academicDiscipline dbr:Archaeology .
-  ?s rdfs:label ?label .
-  
-  FILTER (lang(?label) = 'en')
-}
-
-LIMIT 100
-```
-
-[Query](https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&qtxt=PREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20dbr%3A%20%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0APREFIX%20dbo%3A%20%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0APREFIX%20dbp%3A%20%3Chttp%3A%2F%2Fdbpedia.org%2Fproperty%2F%3E%0APREFIX%20foaf%3A%20%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0A%0ASELECT%20%3Fs%20%3Flabel%0A%0AWHERE%20%7B%0A%20%20%3Fs%20a%20foaf%3APerson%20.%0A%20%20%3Fs%20dbo%3AacademicDiscipline%20dbr%3AArchaeology%20.%0A%20%20%3Fs%20rdfs%3Alabel%20%3Flabel%20.%0A%20%20%0A%20%20FILTER%20(lang(%3Flabel)%20%3D%20'en')%0A%7D%0A%0ALIMIT%20100&format=text%2Fhtml&timeout=30000&signal_void=on&signal_unconnected=on)
