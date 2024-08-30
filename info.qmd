@@ -20,12 +20,24 @@ Please note that this is an on-site event only, and remote participation will **
 ```{r}
 #| echo: false
 library(leaflet)
+
+# ARUB location
 arub <- c(16.6208208, 49.1892306)
 popup <- paste0("<a href=https://maps.app.goo.gl/puXXYwHgCfgB8Lg9A target=_external>Google Maps</a>")
+
+# places for lunches
+m <- read.csv("meals.csv") %>% 
+  dplyr::mutate(popup = paste0("<b>", place, "</b><br>", 
+                        cuisine, "<br>",
+                        "<i>", note, "</i>"))
+
+# map
 leaflet() %>% 
   addTiles() %>% 
   setView(lng = arub[1], lat = arub[2], zoom = 15) %>% 
-  addMarkers(lng = arub[1], lat = arub[2], popup = popup)
+  addMarkers(lng = arub[1], lat = arub[2], popup = popup) %>% 
+  addCircleMarkers(lng = m$lng, lat = m$lat, popup = m$popup, 
+                   stroke = "", fillOpacity = 0.4)
 ```
 
 
@@ -58,4 +70,14 @@ Many overnight trains crossing a large part of Europe start or end in Vienna, an
 <!-- Please arrange your accommodation in one of many cities hotels or hostels. -->
 <!-- We will add some tips for places close to the venue. -->
 
-<!-- ### Food -->
+### Food
+
+There are several places around the institute, see map above for locations. 
+
+```{r}
+#| echo: false
+read.csv("meals.csv") %>% 
+  dplyr::select(-lng, -lat) %>% 
+  dplyr::arrange(cuisine) %>% 
+  knitr::kable()
+```
