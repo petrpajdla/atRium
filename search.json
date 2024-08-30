@@ -32,7 +32,7 @@
     "href": "programme.html#keynote-lecture",
     "title": "Training school programme",
     "section": "Keynote lecture",
-    "text": "Keynote lecture\nThe keynote lecture by Michael Kempf will take place on Wednesday, 18th September at 5:30 pm as part of the Science Pub lecture series at the institute, followed by a social event."
+    "text": "Keynote lecture\nThe keynote lecture by Michael Kempf and Margaux Depaermentier will take place on Wednesday, 18th September at 5:30 pm as part of the Science Pub lecture series at the institute, followed by a social event.\n\nAssessing cultural vs. environmental diversity in the Neolithic Carpathian Basin using multiproxy models\nMichael Kempf and Margaux Depaermentier\nStable carbon and nitrogen isotope analysis from archaeological human and animal bone collagen is a powerful tool to enlighten past socio-agricultural systems and their close links to environmental conditions. To assess whether isotopic patterns are a function of cultural behavior or rather determined by environmental diversity, we test the spatio-temporal effects of conditional and multivariate exploratory and environmental models on stable isotope variability in the Neolithic and Chalcolithic Carpathian Basin (6000-2700 BCE)."
   },
   {
     "objectID": "info.html",
@@ -54,6 +54,13 @@
     "title": "General Information",
     "section": "Grants",
     "text": "Grants\nEach participant of the school is eligible to receive a grant to cover travel expenses, housing, and daily subsistence during the meeting. To receive the grant, participants need to:\n\nApply via the official form of the ATRIUM Project (see the Applications section for details).\nParticipate in person, i.e. sign attendance sheets for each training day.\nSubmit a report within a given time frame after the conclusion of the school with details of their participation."
+  },
+  {
+    "objectID": "info.html#prerequisites",
+    "href": "info.html#prerequisites",
+    "title": "General Information",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nBring your own laptop!\nInstall R and RStudio (follow the concise quide here).\nIf you are familiar with R, feel free to use a GUI of your choice."
   },
   {
     "objectID": "info.html#other-information",
@@ -95,14 +102,14 @@
     "href": "about.html",
     "title": "About the training school",
     "section": "",
-    "text": "Petr Pajdla\nInstitute of Archaeology, Czech Acad Sci, Brno\n 0000-0001-7050-9572\nPeter Tkáč\nMasaryk University\n 0000-0002-9444-1936\n\nMichael Kempf\nUniversity of Basel\n 0000-0002-9474-4670\nGiacomo Bilotti\nKiel University\n 0000-0002-7328-0811\n\n\n\n\n\n\nZuzana Kopáčová\nInstitute of Archaeology, Czech Acad Sci, Brno\nFinances, administration\n\nVít Kozák\nMasaryk University\nTeaching assistant\n\n\nAnd the AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to Petr Pajdla (pajdla@arub.cz ✉)."
+    "text": "Petr Pajdla\nInstitute of Archaeology, Czech Acad Sci, Brno\n 0000-0001-7050-9572\nPeter Tkáč\nMasaryk University\n 0000-0002-9444-1936\n\nMichael Kempf\nUniversity of Basel\n 0000-0002-9474-4670\nGiacomo Bilotti\nKiel University\n 0000-0002-7328-0811\n\n\n\n\n\n\nZuzana Kopáčová\nInstitute of Archaeology, Czech Acad Sci, Brno\nFinances, administration\n\nVít Kozák\nMasaryk University\nTeaching assistant\n\n\nAnd the AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to\nZuzana Kopáčová (kopacova@arub.cz ✉), and/or\nPetr Pajdla (pajdla@arub.cz ✉)."
   },
   {
     "objectID": "about.html#organisers-lecturers",
     "href": "about.html#organisers-lecturers",
     "title": "About the training school",
     "section": "",
-    "text": "Petr Pajdla\nInstitute of Archaeology, Czech Acad Sci, Brno\n 0000-0001-7050-9572\nPeter Tkáč\nMasaryk University\n 0000-0002-9444-1936\n\nMichael Kempf\nUniversity of Basel\n 0000-0002-9474-4670\nGiacomo Bilotti\nKiel University\n 0000-0002-7328-0811\n\n\n\n\n\n\nZuzana Kopáčová\nInstitute of Archaeology, Czech Acad Sci, Brno\nFinances, administration\n\nVít Kozák\nMasaryk University\nTeaching assistant\n\n\nAnd the AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to Petr Pajdla (pajdla@arub.cz ✉)."
+    "text": "Petr Pajdla\nInstitute of Archaeology, Czech Acad Sci, Brno\n 0000-0001-7050-9572\nPeter Tkáč\nMasaryk University\n 0000-0002-9444-1936\n\nMichael Kempf\nUniversity of Basel\n 0000-0002-9474-4670\nGiacomo Bilotti\nKiel University\n 0000-0002-7328-0811\n\n\n\n\n\n\nZuzana Kopáčová\nInstitute of Archaeology, Czech Acad Sci, Brno\nFinances, administration\n\nVít Kozák\nMasaryk University\nTeaching assistant\n\n\nAnd the AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to\nZuzana Kopáčová (kopacova@arub.cz ✉), and/or\nPetr Pajdla (pajdla@arub.cz ✉)."
   },
   {
     "objectID": "about.html#organisations",
@@ -119,10 +126,31 @@
     "text": "Basics\n\n\n\nWhen? 16–20 September 2024\nWhere? Brno, Czech Republic\nWhat? Training school on querying data aggregated in the ARIADNE infrastructure and their spatial analysis in R\n\n\nJoin us in Brno for a five-day ‘atRium’ training school in computational archaeology, where you will gain essential coding skills in the R programming language, knowledge of archaeological data integrated into the ARIADNE research infrastructure, and fundamental spatial data analysis expertise. As large amounts of archaeological data have become available, spatial analysis techniques may offer valuable insights into past human behaviour and settlement patterns. Our programme is designed to deepen your understanding of computational methods in archaeology, focusing on working in a reproducible manner using the R programming language and environment.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe training school is part of a trans-national access scheme provided by the ATRIUM Project, hosted by the Archaeological Information System of the Czech Republic (AIS CR) research infrastructure at the Institute of Archaeology, Czech Academy of Sciences, Brno.\n\nFeel free to distribute the flyer in PDF or PNG."
   },
   {
-    "objectID": "materials.html",
-    "href": "materials.html",
+    "objectID": "materials.html#tuesday",
+    "href": "materials.html#tuesday",
     "title": "Materials",
-    "section": "",
-    "text": "Here will be materials for the summer school…"
+    "section": "Tuesday",
+    "text": "Tuesday\n\nLOD & ARIADNE\n\nPresentation\n\n\n\nSPARQL\n\nPresentation\nCode"
+  },
+  {
+    "objectID": "materials.html#wednesday",
+    "href": "materials.html#wednesday",
+    "title": "Materials",
+    "section": "Wednesday",
+    "text": "Wednesday"
+  },
+  {
+    "objectID": "materials.html#thursday",
+    "href": "materials.html#thursday",
+    "title": "Materials",
+    "section": "Thursday",
+    "text": "Thursday"
+  },
+  {
+    "objectID": "materials.html#friday",
+    "href": "materials.html#friday",
+    "title": "Materials",
+    "section": "Friday",
+    "text": "Friday"
   }
 ]
