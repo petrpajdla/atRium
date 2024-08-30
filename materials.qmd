@@ -2,5 +2,24 @@
 title: "Materials"
 ---
 
-Here will be materials for the summer school...
+## Monday
 
+
+## Tuesday
+
+### LOD & ARIADNE 
+
+- Presentation
+
+### SPARQL 
+
+- Presentation
+- Code
+
+## Wednesday
+
+
+## Thursday
+
+
+## Friday

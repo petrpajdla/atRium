@@ -39,6 +39,12 @@ To receive the grant, participants need to:
 3. **Submit a report** within a given time frame after the conclusion of the school with details of their participation.
 
 
+## Prerequisites
+
+- **Bring your own laptop!**
+- Install **R** and **RStudio** (follow the concise quide [here](https://rstudio-education.github.io/hopr/starting.html)).  
+  *If you are familiar with R, feel free to use a GUI of your choice.*
+
 ## Other information
 
 ### Travelling to Brno

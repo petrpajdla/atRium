@@ -84,4 +84,12 @@ In the previous blocks, we were able to query and extract data from the ARIADNE 
 
 ## Keynote lecture
 
-The keynote lecture by **Michael Kempf** will take place on Wednesday, 18th September at 5:30 pm as part of the *Science Pub* lecture series at the institute, followed by a social event.
+The keynote lecture by **Michael Kempf** and **Margaux Depaermentier** will take place on Wednesday, 18th September at 5:30 pm as part of the *Science Pub* lecture series at the institute, followed by a social event.
+
+### Assessing cultural vs. environmental diversity in the Neolithic Carpathian Basin using multiproxy models
+
+**Michael Kempf** and **Margaux Depaermentier**
+
+Stable carbon and nitrogen isotope analysis from archaeological human and animal bone collagen is a powerful tool to enlighten past socio-agricultural systems and their close links to environmental conditions. To assess whether isotopic patterns are a function of cultural behavior or rather determined by environmental diversity, we test the spatio-temporal effects of conditional and multivariate exploratory and environmental models on stable isotope variability in the Neolithic and Chalcolithic Carpathian Basin (6000-2700 BCE).
+
+![](figs/sciencepub.png){.shadow fig-align="center" width="60%"}
