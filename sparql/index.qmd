@@ -85,7 +85,7 @@ LIMIT 100
 - `LIMIT`: Limits the number of returned results (so we do not overload the endpoint).
 
 
-## DBpedia DBpedia Virtuoso query service
+## DBpedia Virtuoso query service
 
 ![](figs/dbpedia.png)
 
@@ -458,23 +458,24 @@ Various functions for formatting of JSON-LD data and transformation to RDF (N-Qu
 - `spq_select(<var>)` select variables.
 
 
-## Example query (/1) {background-color="#CDFFB5"}
+## Example query (/1) {.scrollable background-color="#CDFFB5"}
 
 ### Wikidata 
 
 - Find all archaeological artefacts made of bronze. 
 
 Load the glitter package:
-```{.r}
+```{r}
 library(glitter)
 ```
 
 Package `WikidataR` helps us to identify entities and properties we need:
-```{.r}
+```{r}
 # entities
 WikidataR::find_item("archaeological artefact")
 WikidataR::find_item("bronze")
-
+```
+```{r}
 # properties 
 WikidataR::find_property("instance of")
 WikidataR::find_property("made of")
@@ -488,7 +489,7 @@ WikidataR::find_property("made of")
 - Find all archaeological artefacts made of bronze.
 
 Once we know the identifiers of properties and entities we can build a query:
-```{.r}
+```{r}
 q1 <- spq_init() %>% 
   spq_add("?a wdt:P31 wd:Q220659") %>% 
   spq_add("?a wdt:P186 wd:Q34095") %>% 
@@ -496,19 +497,22 @@ q1 <- spq_init() %>%
 ```
 
 Explore the query:
-```{.r}
+```{r}
 q1
 ```
 
+
+## Example query (/3) {background-color="#CDFFB5"}
+
 Perform the query:
-```{.r}
+```{r}
 res1 <- q1 %>% 
   spq_perform()
 ```
 
 Explore the results:
-```{.r}
-View(res1)
+```{r}
+res1
 ```
 
 

@@ -488,6 +488,7 @@ RDF converter: [https://www.easyrdf.org/converter](https://www.easyrdf.org/conve
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix dbr: <http://dbpedia.org/resource/> .
 
@@ -545,9 +546,54 @@ dbr:Crete
 ```
 
 
+## Exercise {background-color="#B5E2FF"}
+
+### Serialize the statements in this diagram as turtle RDF using DBpedia
+
+```{dot}
+//| echo: false
+//| fig-width: 8
+//| fig-align: "left"
+
+graph G {
+  rankdir=LR
+  bgcolor="transparent"
+  node [
+    fontname="Vollkorn,sans-serif"
+    fontsize="9"
+  ]
+  edge [
+    fontname="Vollkorn,sans-serif" 
+    fontsize="8"
+    color="gray80"
+  ]
+  
+  "dbr:Phaistos_Disc" -- "dbr:Artifact_(archaeology)" [label="rdf:type"];
+  "dbr:Phaistos_Disc" -- "'1908-07-03'" [label="dbp:discoveredDate"];
+  "dbr:Phaistos_Disc" -- "dbr:Crete" [label="dbp:discoveredPlace"];
+  "dbr:Crete" -- "dbo:Island" [label="rdf:type"];
+  "dbr:Crete" -- "gn:258763" [label="owl:sameAs"];
+}
+```
+
+::: {.tiny}
+Prefixes:  
+`rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# .`  
+`owl: http://www.w3.org/2002/07/owl# .`  
+`dbo: http://dbpedia.org/ontology/ .`  
+`dbr: http://dbpedia.org/resource/ .`  
+`gn:  http://sws.geonames.org/`  
+:::
+
+
 ## Why is LOD useful? {.center background-color="#B5E2FF"}
 
 *Let's brainstorm...*
+
+
+<!-- ## Exercise {background-color="#B5E2FF"}
+
+### Try to draw this Turtle serialization  -->
 
 
 <!-- AO-Cat ================================================================ -->
@@ -684,7 +730,7 @@ dbr:Crete
 :::
 ::: {.column width="40%"}
 - *Application profile* of CIDOC CRM (most of the classes are mapped to CRM).
-- Namespace IRI: [https://ariadne-infrastructure.eu/aocat/](https://ariadne-infrastructure.eu/aocat/)
+- Namespace IRI: `https://ariadne-infrastructure.eu/aocat/`
 - Classes prefixed with `AO_`
 
 ### Defines: 
@@ -764,7 +810,7 @@ graph G {
   
   "AO_Data_Resource" -- "AO_Temporal_Region" [label="has_temporal_coverage"];
   "AO_Data_Resource" -- "AO_Spatial_Region" [label="has_spatial_coverage"];
-  "AO_Data_Resource" -- "AO"
+/* "AO_Data_Resource" -- "AO" */
 }
 ```
 
