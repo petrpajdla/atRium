@@ -403,6 +403,20 @@ Query in [ARIADNE GraphDB](https://graphdb.ariadne.d4science.org/sparql?name=ARI
 
 ## Wrap up
 
+:::: {.columns}
+::: {.column width=60%}
+- SPARQL is a very complex and versatile query language for queries (not only) on graph data.
+- Most common queries are using SELECT verb.
+
+:::
+::: {.column width=40%}
+![](figs/book.jpg){.nostretch width="60%"}  
+
+*Learning SPARQL* book by Bob DuCharme  
+[https://www.learningsparql.com/](https://www.learningsparql.com/)
+:::
+::::
+
 
 ## SPARQL in R {.center background-color="#FAF1A4"}
 
