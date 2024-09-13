@@ -9,12 +9,12 @@ title: "Materials"
 
 ### LOD & ARIADNE 
 
-- Presentation
+- [Presentation](/ariadne/index.qmd)
 
 ### SPARQL 
 
-- Presentation
-- Code
+- [Presentation](/sparql/index.qmd)
+- [Code](/sparql/wikidata.r) with WikiData exercise.
 
 ## Wednesday
 
