@@ -1,0 +1,612 @@
+---
+title: "SPARQL"
+title-slide-attributes:
+  data-background-color: "#B5E2FF"
+format:
+  # html: default
+  revealjs:
+    # mainfont: "Alegreya Sans"
+    fontsize: 24px
+    css: /styles.css
+    # output-file: slides_space.html
+    footer: "[atRium](https://aiscr.cz/atRium/) *training school*, Brno 2024 | [SPARQL](/sparql/index.qmd)"
+    logo: /figs/Clay.png
+    chalkboard:
+      theme: whiteboard
+      chalk-effect: 0.0
+  # pdf: default
+execute:
+  echo: true
+  warning: false
+  cache: true
+callout-appearance: simple
+callout-icon: false
+---
+
+## Introduction to SPARQL {.center background-color="#FAF1A4"}
+
+### *SPARQL Protocol and RDF Query Language*
+
+
+## SPARQL 
+
+- SPARQL is a query language for RDF data.
+- SPARQL is a recursive acronym for *SPARQL Protocol and RDF Query Language*.
+- [W3C standard](http://www.w3.org/TR/sparql11-query/).
+
+### Types of queries 
+
+- `ASK` query -- returns true/false answer, checks whether there is at least one result.
+- **`SELECT` query** -- returns list (table) of results.
+- `DESCRIBE` query -- returns all possible data about an entity.
+- `CONSTRUCT` query -- returns new set of triples based on a given template.
+
+
+## SPARQL query 
+
+- Consists of **triple patterns** with **zero or more variables**.
+- Variables are prefixed with a question mark (`?variableName`).
+- Triple patterns are matched against the triples in the graph.
+- Each matching triple produces one result.
+
+`?subject ?predicate ?object .`
+
+### Common abbreviations 
+
+- subject as `?s`
+- predicate/property as `?p`
+- object as `?o`
+
+
+## SELECT query 
+
+```{.sparql}
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?label
+
+FROM <SPARQL endpoint>
+
+WHERE {
+  ?subject ?predicate ?object .
+  ?object rdfs:label ?label
+}
+
+LIMIT 100
+```
+
+**Parts of the query** 
+
+- `PREFIX`: Namespace definition -- prefixes.
+- `SELECT`: Selected variables -- will be in the output as column names.
+- `FROM`: Specification of the graph from which we are querying.
+- `WHERE`: Where clause with triple patterns to be matched in the graph.
+- `LIMIT`: Limits the number of returned results (so we do not overload the endpoint).
+
+
+## DBpedia Virtuoso query service
+
+![](figs/dbpedia.png)
+
+[https://dbpedia.org/sparql](https://dbpedia.org/sparql)
+
+
+## Example query {background-color="#CDFFB5"}
+
+### DBpedia
+
+- Find all other URIs/IRIs that Ariadne maps to in DBpedia.
+
+```{.sparql}
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?o
+
+FROM <http://dbpedia.org>
+
+WHERE {
+  dbr:Ariadne owl:sameAs ?o .
+}
+
+LIMIT 100
+```
+::: {.tiny}
+Query in [DBpedia Virtuoso](https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&qtxt=PREFIX%20dbr%3A%20%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0APREFIX%20owl%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0A%0ASELECT%20%3Fo%0A%0AFROM%20%3Chttp%3A%2F%2Fdbpedia.org%3E%0A%0AWHERE%20%7B%0Adbr%3AAriadne%20owl%3AsameAs%20%3Fo%20.%0A%7D%0A%0ALIMIT%20100&format=text%2Fhtml&timeout=10000&signal_void=on&signal_unconnected=on).
+:::
+
+
+## Example query {background-color="#CDFFB5"}
+
+### DBpedia
+
+- Find peole (and the dates they were born and died) who had to do anything with archaeology according to DBpedia.
+
+```{.sparql}
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?s ?born ?died
+
+FROM <http://dbpedia.org>
+
+WHERE {
+  ?s ?p dbr:Archaeology .
+  ?s dbo:birthDate ?born .
+  ?s dbo:deathDate ?died .
+}
+
+ORDER BY ASC (?born)
+LIMIT 100
+```
+::: {.tiny}
+Query in [DBpedia Virtuoso](https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&qtxt=PREFIX%20dbr%3A%20%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0APREFIX%20dbo%3A%20%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0A%0ASELECT%20%3Fs%20%3Fborn%20%3Fdied%0A%0AFROM%20%3Chttp%3A%2F%2Fdbpedia.org%3E%0A%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20dbr%3AArchaeology%20.%0A%20%20%3Fs%20dbo%3AbirthDate%20%3Fborn%20.%0A%20%20%3Fs%20dbo%3AdeathDate%20%3Fdied%20.%0A%7D%0A%0AORDER%20BY%20ASC%20(%3Fborn)%0ALIMIT%20100&format=text%2Fhtml&timeout=10000&signal_void=on&signal_unconnected=on).
+:::
+
+- `ORDER BY ASC` orders the results in an ascending order of the given variable.
+
+
+## Example query {background-color="#CDFFB5"}
+
+### DBpedia
+
+- How many are there?
+
+```{.sparql}
+PREFIX dbr: <http://dbpedia.org/resource/>
+
+SELECT (COUNT(?s) AS ?count)
+
+FROM <http://dbpedia.org>
+
+WHERE {
+  ?s ?p dbr:Archaeology .
+}
+```
+::: {.tiny}
+Query in [DBpedia Virtuoso](https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&qtxt=PREFIX%20dbr%3A%20%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0A%0ASELECT%20(COUNT(%3Fs)%20AS%20%3Fcount)%0A%0AFROM%20%3Chttp%3A%2F%2Fdbpedia.org%3E%0A%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20dbr%3AArchaeology%20.%0A%7D&format=text%2Fhtml&timeout=10000&signal_void=on&signal_unconnected=on).
+:::
+
+- `COUNT(?variable) AS ?result` counts the number of returned matches.
+
+
+## Wikidata Query Service
+
+![](figs/wikidata.png)
+
+Query service: [https://query.wikidata.org/](https://query.wikidata.org)  
+SPARQL endpoint: `https://query.wikidata.org/sparql`
+
+
+## Example query {background-color="#CDFFB5"}
+
+### Wikidata 
+
+- How many archaeologists are there in Wikidata?
+
+```{.sparql}
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT (COUNT(?ae) AS ?count)
+
+WHERE {
+  ?ae wdt:P31 wd:Q5 .
+  ?ae wdt:P106 wd:Q3621491 .
+}
+```
+::: {.tiny}
+Query in [Wikidata Query Service](https://query.wikidata.org/#PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20wdt%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E%0ASELECT%20%28COUNT%28%3Fae%29%20AS%20%3Fcount%29%0AWHERE%20%7B%0A%20%20%3Fae%20wdt%3AP31%20wd%3AQ5%20.%0A%20%20%3Fae%20wdt%3AP106%20wd%3AQ3621491%20.%0A%7D). 
+:::
+
+
+## Example query {background-color="#CDFFB5"}
+
+### Wikidata 
+
+- Return a list of archaeologists, their sex/gender, and the dates they were born and died.
+
+```{.sparql}
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?ae ?label ?sex ?born ?died
+
+WHERE {
+  ?ae wdt:P31 wd:Q5 ;
+    wdt:P106 wd:Q3621491 ;
+    rdfs:label ?label ;
+    wdt:P21 ?o ;
+    wdt:P569 ?born ;
+    wdt:P570 ?died ;
+  ?o rdfs:label ?sex .
+  
+  FILTER (lang(?label) = 'en')
+  FILTER (lang(?sex) = 'en')
+}
+
+LIMIT 200
+```
+::: {.tiny}
+Query in [Wikidata Query Service](https://query.wikidata.org/#PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20wdt%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A%0ASELECT%20%3Fae%20%3Flabel%20%3Fsex%20%3Fborn%20%3Fdied%0A%0AWHERE%20%7B%0A%20%20%3Fae%20wdt%3AP31%20wd%3AQ5%20.%0A%20%20%3Fae%20wdt%3AP106%20wd%3AQ3621491%20.%0A%20%20%3Fae%20rdfs%3Alabel%20%3Flabel%20.%0A%20%20%3Fae%20wdt%3AP21%20%3Fo%20.%0A%20%20%3Fae%20wdt%3AP569%20%3Fborn%20.%0A%20%20%3Fae%20wdt%3AP570%20%3Fdied%20.%0A%20%20%3Fo%20rdfs%3Alabel%20%3Fsex%20.%0A%20%20%0A%20%20FILTER%20%28lang%28%3Flabel%29%20%3D%20%27en%27%29%0A%20%20FILTER%20%28lang%28%3Fsex%29%20%3D%20%27en%27%29%0A%7D%0A%0ALIMIT%20200). 
+:::
+
+- `FILTER (lang(?label) = 'en')` returns only labels in English.
+
+
+## Example query {background-color="#CDFFB5"}
+
+### Wikidata 
+
+- Count all archaeological *artefacts* and archaeological *finds* in Wikidata.
+
+:::: {.columns}
+::: {.column width=50%}
+- Archaeological artefacts (`Q220659`)
+
+```{.sparql}
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT (COUNT(?a) AS ?count)
+
+WHERE {
+  ?a wdt:P31 wd:Q220659 .
+}
+```
+::: {.tiny}
+[Wikidata Query Service](https://w.wiki/B3RT).
+:::
+:::
+::: {.column width=50%}
+- Archaeological finds (`Q10855061`)
+
+```{.sparql}
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT (COUNT(?a) AS ?count)
+
+WHERE {
+  ?a wdt:P31 wd:Q10855061 .
+}
+```
+::: {.tiny}
+[Wikidata Query Service](https://w.wiki/B3RS).
+:::
+:::
+::::
+
+- Together in one query using `UNION`
+
+```{.sparql}
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT (COUNT(?a) AS ?count)
+
+WHERE {
+  { ?a wdt:P31 wd:Q220659 } UNION { ?a wdt:P31 wd:Q10855061 }  .
+}
+```
+::: {.tiny}
+Query in [Wikidata Query Service](https://w.wiki/B3RM).
+:::
+
+
+## ARIADNE Knowledge Base
+
+![](figs/graphdb.png)
+
+GraphDB graph database, accessible through D4Science infrastructure  
+[https://ariadne.d4science.org/](https://ariadne.d4science.org/)  
+
+SPARQL endpoint  
+`https://graphdb.ariadne.d4science.org/repositories/ariadneplus-pr01`
+
+
+## Example query {background-color="#CDFFB5"}
+
+### ARIADNE KB 
+
+- Find a resource with original identifier [https://doi.org/10.17026/dans-2b6-gyjh](https://doi.org/10.17026/dans-2b6-gyjh).
+
+```{.sparql}
+PREFIX aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT * 
+
+WHERE {
+    ?record aocat:has_original_id "https://doi.org/10.17026/dans-2b6-gyjh" .
+    ?record rdfs:label ?lab .
+}
+```
+::: {.tiny}
+Query in [ARIADNE GraphDB](https://graphdb.ariadne.d4science.org/sparql?name=&infer=true&sameAs=true&query=PREFIX%20aocat%3A%20%3Chttps%3A%2F%2Fwww.ariadne-infrastructure.eu%2Fresource%2Fao%2Fcat%2F1.1%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A%0ASELECT%20*%20%0A%0AWHERE%20%7B%0A%20%20%20%20%3Frecord%20aocat%3Ahas_original_id%20%22https%3A%2F%2Fdoi.org%2F10.17026%2Fdans-2b6-gyjh%22%20.%0A%20%20%20%20%3Frecord%20rdfs%3Alabel%20%3Flab%20.%0A%7D%0A%0A).
+:::
+
+- What is it?
+
+```{.sparql}
+PREFIX aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT * 
+
+WHERE {
+    ?record aocat:has_original_id "https://doi.org/10.17026/dans-2b6-gyjh" ;
+      rdfs:label ?lab ;
+      aocat:has_ARIADNE_subject ?as .
+    ?as rdfs:label ?aslab .
+}
+```
+::: {.tiny}
+Query in [ARIADNE GraphDB](https://graphdb.ariadne.d4science.org/sparql?name=&infer=true&sameAs=true&query=PREFIX%20aocat%3A%20%3Chttps%3A%2F%2Fwww.ariadne-infrastructure.eu%2Fresource%2Fao%2Fcat%2F1.1%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A%0ASELECT%20*%20%0A%0AWHERE%20%7B%0A%20%20%20%20%3Frecord%20aocat%3Ahas_original_id%20%22https%3A%2F%2Fdoi.org%2F10.17026%2Fdans-2b6-gyjh%22%20%3B%0A%20%20%20%20%20%20rdfs%3Alabel%20%3Flab%20%3B%0A%20%20%20%20%20%20aocat%3Ahas_ARIADNE_subject%20%3Fas%20.%0A%20%20%20%20%3Fas%20rdfs%3Alabel%20%3Faslab%20.%0A%7D%0A%0A).
+:::
+
+## Example query {background-color="#CDFFB5"}
+
+### ARIADNE KB 
+
+- What are the native subjects of resource (artefact) `10.17026/dans-2b6-gyjh`?
+
+```{.sparql}
+PREFIX aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT * 
+
+WHERE {
+    ?record aocat:has_original_id "https://doi.org/10.17026/dans-2b6-gyjh" ;
+      rdfs:label ?lab ;
+      aocat:has_native_subject ?ns .
+}
+```
+::: {.tiny}
+Query in [ARIADNE GraphDB](https://graphdb.ariadne.d4science.org/sparql?name=&infer=true&sameAs=true&query=PREFIX%20aocat%3A%20%3Chttps%3A%2F%2Fwww.ariadne-infrastructure.eu%2Fresource%2Fao%2Fcat%2F1.1%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A%0ASELECT%20*%20%0A%0AWHERE%20%7B%0A%20%20%20%20%3Frecord%20aocat%3Ahas_original_id%20%22https%3A%2F%2Fdoi.org%2F10.17026%2Fdans-2b6-gyjh%22%20%3B%0A%20%20%20%20%20%20rdfs%3Alabel%20%3Flab%20%3B%0A%20%20%20%20%20%20aocat%3Ahas_native_subject%20%3Fns%20.%0A%7D%0A%0A).
+:::
+
+- Let GraphDB `DESCRIBE` the resource for us.
+
+```{.sparql}
+DESCRIBE <https://ariadne-infrastructure.eu/aocat/Resource/09C1C711-5775-3FFB-AD82-F3C9A5532D26>
+```
+::: {.tiny}
+Query in [ARIADNE GraphDB](https://graphdb.ariadne.d4science.org/sparql?name=&infer=true&sameAs=true&query=DESCRIBE%20%3Chttps%3A%2F%2Fariadne-infrastructure.eu%2Faocat%2FResource%2F09C1C711-5775-3FFB-AD82-F3C9A5532D26%3E%0A).
+:::
+
+
+## Example query {background-color="#CDFFB5"}
+
+### ARIADNE KB 
+
+- Return all ARIADNE subjects. 
+
+```{.sparql}
+PREFIX aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?as ?label 
+
+WHERE {
+    ?s aocat:has_ARIADNE_subject ?as .
+    ?as rdfs:label ?label .
+}
+```
+::: {.tiny}
+Query in [ARIADNE GraphDB](https://graphdb.ariadne.d4science.org/sparql?name=ARIADNE%20subjects&infer=true&sameAs=true&query=PREFIX%20aocat%3A%20%3Chttps%3A%2F%2Fwww.ariadne-infrastructure.eu%2Fresource%2Fao%2Fcat%2F1.1%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20DISTINCT%20%3Fas%20%3Flabel%20%0AWHERE%20%7B%0A%20%20%20%20%3Fs%20aocat%3Ahas_ARIADNE_subject%20%3Fas%20.%0A%20%20%20%20%3Fas%20rdfs%3Alabel%20%3Flabel%20.%0A%7D%0A). 
+:::
+
+
+## Wrap up
+
+:::: {.columns}
+::: {.column width=60%}
+- SPARQL is a very complex and versatile query language for queries (not only) on graph data.
+- Most common queries are using SELECT verb.
+
+:::
+::: {.column width=40%}
+![](figs/book.jpg){.nostretch width="60%"}  
+
+*Learning SPARQL* book by Bob DuCharme  
+[https://www.learningsparql.com/](https://www.learningsparql.com/)
+:::
+::::
+
+
+## SPARQL in R {.center background-color="#FAF1A4"}
+
+### *How to query SPARQL endpoints from R*
+
+
+## LOD packages in R
+
+### `glitter`
+
+Allows writing and performing SPARQL queries without advanced knowledge of SPARQL.
+
+[https://lvaudor.github.io/glitter/index.html](https://lvaudor.github.io/glitter/index.html)
+
+`remotes::install_github("lvaudor/glitter")`
+
+### `rdflib`
+
+Allows to perform common tasks on local RDF data, including converting between serializations and performing SPARQL queries.
+
+[https://docs.ropensci.org/rdflib/](https://docs.ropensci.org/rdflib/)
+
+`remotes::install_github("ropensci/rdflib")`
+
+### `jsonld`
+
+Various functions for formatting of JSON-LD data and transformation to RDF (N-Quads).
+
+[https://docs.ropensci.org/jsonld/index.html](https://docs.ropensci.org/jsonld/index.html)
+
+`install.packages("jsonld")`
+
+
+## `glitter`
+
+- Functions are prefixed with `spq_`.
+
+### Main functions
+
+- `spq_init(endpoint = "wikidata")` initiates a SPARQL query.
+- `spq_add("?s ?p ?o")` adds a triple pattern to match. 
+- `spq_perform(<query>)` performs the query.
+
+### Additional functions 
+
+- `spq_prefix()` add prefix to the query.
+- `spq_label(<var>)`  adds labels to given variables with `rdfs:label`.
+- `spq_head(n)` limits number of returned results using `LIMIT n`. 
+- `spq_arrange(desc(<var>))` arranges results in descending order of the variable.
+- `spq_filter(<var>)` filter results.
+- `spq_group_by(<var>)` group results by one or more variables.
+- `spq_count()` and `spq_summarise(<var>)` count results or summarise chosen variables.
+- `spq_select(<var>)` select variables.
+
+
+## Example query (/1) {.scrollable background-color="#CDFFB5"}
+
+### Wikidata 
+
+- Find all archaeological artefacts made of bronze. 
+
+Load the glitter package:
+```{r}
+library(glitter)
+```
+
+Package `WikidataR` helps us to identify entities and properties we need:
+```{r}
+# entities
+WikidataR::find_item("archaeological artefact")
+WikidataR::find_item("bronze")
+```
+```{r}
+# properties 
+WikidataR::find_property("instance of")
+WikidataR::find_property("made of")
+```
+
+
+## Example query (/2) {background-color="#CDFFB5"}
+
+### Wikidata 
+
+- Find all archaeological artefacts made of bronze.
+
+Once we know the identifiers of properties and entities we can build a query:
+```{r}
+q1 <- spq_init() %>% 
+  spq_add("?a wdt:P31 wd:Q220659") %>% 
+  spq_add("?a wdt:P186 wd:Q34095") %>% 
+  spq_label(a, .languages = "en$")
+```
+
+Explore the query:
+```{r}
+q1
+```
+
+
+## Example query (/3) {background-color="#CDFFB5"}
+
+Perform the query:
+```{r}
+res1 <- q1 %>% 
+  spq_perform()
+```
+
+Explore the results:
+```{r}
+res1
+```
+
+
+## Example query {background-color="#CDFFB5"}
+
+### Wikidata 
+
+- Count how many artefacts are made of each material.
+
+```{.r}
+# build
+q2 <- spq_init() %>% 
+  spq_add("?a wdt:P31 wd:Q220659") %>% 
+  spq_add("?a wdt:P186 ?mat") %>% 
+  spq_label(mat, .languages = "en$") %>% 
+  spq_group_by(mat_label) %>% 
+  spq_count() %>% 
+  spq_arrange(desc(n))
+
+# explore
+q2
+
+# perform
+res2 <- q2 %>% 
+  spq_perform()
+
+# explore
+res2
+```
+
+
+## Example query {background-color="#CDFFB5"}
+
+### Wikidata 
+
+- Add coordinates and images to artefacts made of bronze where possible.
+
+```{.r}
+WikidataR::find_property("coordinate")
+
+# edit
+q3 <- spq_init() %>% 
+  spq_add("?a wdt:P31 wd:Q220659") %>% 
+  spq_add("?a wdt:P186 wd:Q34095") %>% 
+  spq_add("?a wdt:P625 ?coords", .required = FALSE) %>% 
+  spq_add("?a wdt:P18 ?img", .required = FALSE) %>% 
+  spq_label(a, .languages = "en$")
+
+# perform
+res3 <- q3 %>% 
+  spq_perform()
+
+# transform to simple features
+res3sf <- res3 %>% 
+  dplyr::filter(!is.na(coords)) %>% 
+  sf::st_as_sf(wkt = "coords") %>% 
+  dplyr::mutate(
+    popup = dplyr::if_else(
+      is.na(img), 
+      paste0("<a href='", a,"'><h2>", a_label, "</h2></a>"), 
+      paste0("<a href='", a,"'><h2>", a_label, "</h2></a><img src='", img, "' width='200' height='200'>")))
+
+# plot using leaflet
+res3sf %>% 
+  leaflet::leaflet() %>% 
+  leaflet::addTiles() %>% 
+  leaflet::addMarkers(popup = res3sf$popup)
+```
+
+## Example query {background-color="#CDFFB5"}
+
+### ARIADNE KB 
+
+```{.r}
+library(glitter)
+```
+
+```{.r}
+endpoint <- 
+```
+
+
+##

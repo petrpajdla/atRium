@@ -1,0 +1,854 @@
+---
+title: "ARIADNE & Linked Open Data"
+title-slide-attributes:
+  data-background-color: "#B5E2FF"
+format:
+  # html: default
+  revealjs:
+    # mainfont: "Alegreya Sans"
+    fontsize: 24px
+    css: /styles.css
+    # output-file: slides_space.html
+    footer: "[atRium](https://aiscr.cz/atRium/) *training school*, Brno 2024 | [ARIADNE](/ariadne/index.qmd)"
+    logo: /figs/Clay.png
+    chalkboard:
+      theme: whiteboard
+      chalk-effect: 0.0
+  # pdf: default
+execute:
+  echo: true
+  warning: false
+  cache: true
+callout-appearance: simple
+callout-icon: false
+---
+
+
+## ARIADNE {.center background-color="#FAF1A4"}
+
+### *Archaeological data and the ARIADNE Portal*
+
+
+## ARIADNE
+
+:::: {.columns}
+
+::: {.column}
+#### A figure in Greek mythology
+
+- Cretan princess, daughter of King Minos.
+- Known for helping Theseus escape from the labyrinth after he kills Minotaur.
+
+![](figs/ariadne-pompeii.jpg){.nostretch width="80%"}
+
+::: {.tiny}
+Egisto Sani, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons
+:::
+:::
+
+::: {.column}
+#### A research infrastructure
+
+- An acronym for *Advanced Research Infrastructure for Archaeological Dataset Networking In Europe*.
+- ARIADNE aggregates, integrates, and provides access to various archaeological data resources.
+
+[https://www.ariadne-research-infrastructure.eu/](https://www.ariadne-research-infrastructure.eu/)
+
+![](/figs/ariadne.png){.nostretch width="80%"}
+:::
+
+::::
+
+<!-- ## 
+
+{{< video https://vimeo.com/920069846 width="100%" height="100%" >}} -->
+
+
+## ARIADNE Portal
+
+![](figs/portal.jpg)
+
+[https://portal.ariadne-infrastructure.eu/](https://portal.ariadne-infrastructure.eu/)
+
+::: {.notes}
+
+- types of resources
+- where, when, what 
+- PeriodO
+- Getty AAT
+
+:::
+
+
+## Exercise {background-color="#B5E2FF"}
+
+1. How many **resources** are there in the ARIADNE Portal?
+2. How many records of **individual artefacts** are there?
+3. **Who** contributes the most of the records on artefacts?
+4. How many **swords** are there?
+5. How many **Bronze Age swords** are there?
+6. Are there any records from Brno (Czech Republic)?
+7. How many records are there from Africa?
+
+
+## What, where & when 
+
+### Where 
+
+- Geolocations of places (points, polygons, bounding boxes)
+- Geographical names from standard vocabulary
+
+### When 
+
+- PeriodO gazeteer ([https://perio.do/](https://perio.do/)) -- maps periods to absolute dates on a common time scale.
+- Date 
+
+### What 
+
+- Getty Art & Architecture Thesaurus  
+    (Getty AAT, [https://www.getty.edu/research/tools/vocabularies/aat/](https://www.getty.edu/research/tools/vocabularies/aat/)) 
+
+
+<!-- LOD =================================================================== -->
+
+## Linked Open Data  {.center background-color="#FAF1A4"}
+
+### *From ARIADNE Portal to ARIADNE Knowledge Base* 
+
+
+## Let's discuss... {.white background-image="figs/bg.jpg"  background-opacity=0.18}
+
+:::: {.columns}
+::: {.column width="50%"}
+- *What is* data? 
+- *What is* structured data?
+- *What is* unstructured data?
+- *What is* a database?
+- *What is* a relational database?
+- *What makes* data open?
+- *What makes* data linked?
+:::
+::: {.column width="50%"}
+- *Have you ever* collected/created any data? 
+- *Have you ever* created a database?
+- *Have you ever* filled in a database designed by someone else?
+:::
+::::
+
+
+## Linked Open Data {.center background-image="figs/intro-bg.jpg" background-opacity=0.42}
+
+### (LOD)
+
+![](figs/5-star-steps.png){.nostretch width="42%"}
+
+[https://5stardata.info/](https://5stardata.info/)
+
+::: {.notes}
+
+Tim Berners Lee, 2006
+
+5-star deployment scheme for Open Data:
+
+1. Available on the web (whatever format) but with an open licence, to be Open Data
+2. Available as machine-readable structured data (e.g. excel instead of image scan of a table)
+3. as (2) plus non-proprietary format (e.g. CSV instead of excel)
+4. use URIs to denote things, so that people can point at your stuff (All the above plus, Use open standards from W3C (RDF and SPARQL) to identify things, so that people can point at your stuff)
+5. All the above, plus: Link your data to other people’s data to provide context
+
+https://www.w3.org/DesignIssues/LinkedData.html
+
+:::
+
+
+## Linked Open Data 
+
+### What makes it linked and open?
+
+<!-- > *Linked Open Data (LOD) denote publicly available data in the Web, identified via URI and accessible via HTTP. Linked data connect to other data via URI.* -->
+
+::: {.callout-important}
+
+## Semantic Web / Web of Data
+
+*Semantic Web* is an extension of the **Web of documents** to the **Web of data**.
+It is about creating **links** between documents, datasets etc. that are understandable and readable to both **humans and machines**.
+*Linked Open Data* is at the core of the Semantic Web providing tools and best practices to make these links.
+
+:::
+
+- **Open license**.
+- *Uniform Resource Identifiers* (**URIs**) **name and identify** individual *things*.
+- URIs are **resolvable** using `http://` (or `https://`) protocol  
+    (it is possible to find information about the *things*).
+- URIs lead to useful information (data in RDF or SPARQL **standards**). 
+- URIs in the resources lead to other resources, so more *things* can be discovered following the **links**. 
+
+::: {.callout-note}
+
+## URLs, URIs & IRIs
+
+**URL** (Uniform Resource Locator) -- **locates** and allows retrieval of things *on* the Web.  
+**URN** (Universal Resource Name) -- identifies but does not locate.  
+**URI** (Uniform Resource Identifier, formerly *Universal Resource Identifier*) -- **identifies** (both abstract or physical) things (resources) *in* the Web.  
+**IRI** (Internationalized Resource identifier) -- same as URI, allows wider range of characters to accomodate various writing systems.
+
+:::
+
+
+## Linked Open Data Cloud 
+
+:::: {.columns}
+
+::: {.column width="40%"}
+[https://lod-cloud.net/](https://lod-cloud.net/)
+
+### LOD knowledge bases:
+
+![](figs/wikidata.png){.nostretch width="20%"}   
+[https://www.wikidata.org/](https://www.wikidata.org/)  
+~12,5 billion triples
+
+![](figs/dbpedia.png){.nostretch width="20%"}  
+[http://dbpedia.org/](http://dbpedia.org/)  
+~9,5 billion triples
+:::
+
+::: {.column width="60%"}
+![](figs/lod-cloud.png)
+
+::: {.tiny}
+The Linked Open Data Cloud from [lod-cloud.net](https://lod-cloud.net/) (2024-07-04)
+:::
+:::
+::::
+
+::: {.notes}
+Wikidata - community created structured (!) data, not W3C fully complient, no ontology etc.
+DBpedia - data extracted from Wikipedia infoboxes, ontology etc.
+:::
+
+## Example {background-color="#CDFFB5"}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+- *Ariadne* is a figure in Greek mythology.  
+- *ARIADNE* is a project acronym.
+- *Ariadne* was a Byzantine empress.
+- *Ariadne* is a genus of butterflies.
+- *Ariadne* is a drug...
+
+Far too many *things* are called Ariadne!
+
+![](figs/ariadne-pompeii.jpg){.nostretch width="72%"}
+:::
+
+::: {.column width="60%"}
+We need **unique identifiers**!
+
+### Wikidata 
+
+- [http://www.wikidata.org/entity/Q184874](http://www.wikidata.org/entity/Q184874) (URI)
+
+- Identifier: **Q184874**
+
+### DBpedia 
+
+- [http://dbpedia.org/**resource**/Ariadne](http://dbpedia.org/resource/Ariadne) (URI)
+- [http://dbpedia.org/**data**/Ariadne](http://dbpedia.org/data/Ariadne) (data in RDF)
+- [http://dbpedia.org/**page**/Ariadne](http://dbpedia.org/page/Ariadne) (landing page)
+:::
+::::
+
+::: {.tiny}
+Egisto Sani, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons
+:::
+
+
+## Triples 
+
+### How to represent LOD?
+
+```{dot}
+//| echo: false
+//| fig-width: 6
+//| fig-align: "center"
+
+graph G {
+  rankdir=LR
+  bgcolor="transparent"
+  node [
+    fontname="Vollkorn,sans-serif"
+    fontsize="10"
+  ]
+  edge [
+    fontname="Vollkorn,sans-serif" 
+    fontsize="8"
+    color="gray80"
+  ]
+  
+  "subject" -- "object" [label="predicate\n(property)"];
+}
+```
+
+
+## Example {background-color="#CDFFB5" auto-animate=true}
+
+- *Ariadne* is a figure in Greek mythology. 
+
+```{dot}
+//| echo: false
+//| fig-width: 5
+//| fig-align: "left"
+
+graph G {
+  rankdir=LR
+  bgcolor="transparent"
+  node [
+    fontname="Vollkorn,sans-serif"
+    fontsize="10"
+  ]
+  edge [
+    fontname="Vollkorn,sans-serif" 
+    fontsize="8"
+    color="gray80"
+  ]
+  
+  "Ariadne" -- "mythological figure" [label="is a"];
+}
+```
+
+## Example {background-color="#CDFFB5" auto-animate=true}
+
+- *Ariadne* is a figure in Greek mythology. 
+- *Ariadne* is from Crete.
+- Crete is an island.
+
+```{dot}
+//| echo: false
+//| fig-width: 8
+//| fig-align: "left"
+
+graph G {
+  rankdir=LR
+  bgcolor="transparent"
+  node [
+    fontname="Vollkorn,sans-serif"
+    fontsize="10"
+  ]
+  edge [
+    fontname="Vollkorn,sans-serif" 
+    fontsize="8"
+    color="gray80"
+  ]
+  
+  "Ariadne" -- "mythological\nfigure" [label="is a"];
+  "Ariadne" -- "Crete" [label="is from"];
+  "Crete" -- "island" [label="is an"];
+}
+```
+
+
+## Example {background-color="#CDFFB5" auto-animate=true}
+
+- URIs in place of **subjects** and **objects**
+
+```{dot}
+//| echo: false
+//| fig-width: 10
+//| fig-align: "left"
+
+graph G {
+  rankdir=LR
+  bgcolor="transparent"
+  node [
+    fontname="Vollkorn,sans-serif"
+    fontsize="10"
+  ]
+  edge [
+    fontname="Vollkorn,sans-serif" 
+    fontsize="8"
+    color="gray80"
+  ]
+  
+  "http://dbpedia.org/\nresource/Ariadne" -- "http://dbpedia.org/\nontology/MythologicalFigure" [label="is a"];
+  "http://dbpedia.org/\nresource/Ariadne" -- "http://dbpedia.org/\nresource/Crete" [label="is from"];
+  "http://dbpedia.org/\nresource/Crete" -- "http://dbpedia.org/\nontology/Island" [label="is an"];
+  "http://dbpedia.org/\nresource/Crete" -- "http://sws.geonames.org/\n258763" [label="is the same as"];
+}
+```
+
+
+## Example {background-color="#CDFFB5" auto-animate=true}
+
+- URIs in place of **subjects** and **objects**
+- Abbreviated URIs
+
+`dbo: http://dbpedia.org/ontology/`  
+`dbr: http://dbpedia.org/resource/`  
+`gn:  http://sws.geonames.org/`  
+
+```{dot}
+//| echo: false
+//| fig-width: 10
+//| fig-align: "left"
+
+graph G {
+  rankdir=LR
+  bgcolor="transparent"
+  node [
+    fontname="Vollkorn,sans-serif"
+    fontsize="10"
+  ]
+  edge [
+    fontname="Vollkorn,sans-serif" 
+    fontsize="8"
+    color="gray80"
+  ]
+  
+  "dbr:Ariadne" -- "dbo:MythologicalFigure" [label="is a"];
+  "dbr:Ariadne" -- "dbr:Crete" [label="is from"];
+  "dbr:Crete" -- "dbo:Island" [label="is an"];
+  "dbr:Crete" -- "gn:258763" [label="is the same as"];
+}
+```
+
+
+## Example {background-color="#CDFFB5" auto-animate=true}
+
+- URIs in place of **predicates (properties)**
+
+`dbo: http://dbpedia.org/ontology/`  
+`dbr: http://dbpedia.org/resource/`  
+`gn:  https://sws.geonames.org/`  
+`rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#`  
+`owl: http://www.w3.org/2002/07/owl#`
+
+```{dot}
+//| echo: false
+//| fig-width: 10
+//| fig-align: "left"
+
+graph G {
+  rankdir=LR
+  bgcolor="transparent"
+  node [
+    fontname="Vollkorn,sans-serif"
+    fontsize="10"
+  ]
+  edge [
+    fontname="Vollkorn,sans-serif" 
+    fontsize="8"
+    color="gray80"
+  ]
+  
+  "dbr:Ariadne" -- "dbo:MythologicalFigure" [label="rdf:type"];
+  "dbr:Ariadne" -- "dbr:Crete" [label="dbo:origin"];
+  "dbr:Crete" -- "dbo:Island" [label="rdf:type"];
+  "dbr:Crete" -- "gn:258763" [label="owl:sameAs"];
+}
+```
+
+ 
+## RDF
+
+### Resource Description Framework
+
+- A standard for LOD defined by the [World Wide Web Consortium](https://www.w3.org/) (W3C).
+- RDF is a data model that describes how data is structured.
+- Uses **triples** to represent statements.
+- RDF does *not exactly* tell us how to *write* the triples.
+- Numerous **serializations** (how to write things down) of RDF exist.
+
+[https://www.w3.org/standards/techs/rdf](https://www.w3.org/standards/techs/rdf)
+
+### RDF serializations
+
+- Turtle (subset of Notation3 language, superset of N-Triples format)
+- RDF/XML 
+- JSON-LD
+
+and many more...
+
+RDF converter: [https://www.easyrdf.org/converter](https://www.easyrdf.org/converter)
+
+
+## Turtle
+
+- Stands for *Terse RDF Triple Language*.
+- File extension `.ttl`.
+- Triple ends with a period.
+- URIs in angle brackets (`<`, `>`).
+- Literal (text or other value) in quotation marks (`"`).
+- Triples with a same subject are divided with semicolon (`;`).
+- Triples with a same subject and property are divided with comma (`,`).
+
+```{.txt}
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+
+dbr:Ariadne
+  rdfs:label "Ariadne"@en ;
+  rdf:type dbo:MythologicalFigure ;
+  dbo:origin dbr:Crete .
+  
+dbr:Crete 
+  rdf:type dbo:Island ;
+  owl:sameAs <https://sws.geonames.org/258763> .
+```
+
+
+## RDF can contain...
+
+- URIs/IRIs: 
+  - written in angle brackets  
+    `<http://www.w3.org/1999/02/22-rdf-syntax-ns#>`
+  - shortened as prefixes  
+    `@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>`
+- Literals (*values*):
+  -  written in quotes followed by their datatype URI (*typed literals*)
+  -  list of RDF datatypes: [https://www.w3.org/TR/rdf11-concepts/#section-Datatypes](https://www.w3.org/TR/rdf11-concepts/#section-Datatypes)
+  - strings (datatype `xsd:string` can be omitted)  
+    `"Ariadne"^^xsd:string` is the same as `"Ariadne"`
+  - numbers (quotes can be omitted)  
+    `"3.14"^^xsd:decimal` is the same as `3.14`
+  - dates  
+    `"2024-09-17"^^xsd:date`
+
+
+## RDF/XML 
+
+- File extension `.rdf`.
+- W3C standard ([https://www.w3.org/TR/rdf-syntax-grammar/](https://www.w3.org/TR/rdf-syntax-grammar/)).
+
+```{.xml}
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:dbo="http://dbpedia.org/ontology/">
+
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ariadne">
+    <rdfs:label xml:lang="en">Ariadne</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MythologicalFigure"/>
+    <dbo:origin>
+      <dbo:Island rdf:about="http://dbpedia.org/resource/Crete">
+        <owl:sameAs rdf:resource="https://sws.geonames.org/258763"/>
+      </dbo:Island>
+    </dbo:origin>
+  </rdf:Description>
+</rdf:RDF>
+```
+
+
+## Exercise {background-color="#B5E2FF"}
+
+### Serialize the statements in this diagram as turtle RDF using DBpedia
+
+```{dot}
+//| echo: false
+//| fig-width: 8
+//| fig-align: "left"
+
+graph G {
+  rankdir=LR
+  bgcolor="transparent"
+  node [
+    fontname="Vollkorn,sans-serif"
+    fontsize="9"
+  ]
+  edge [
+    fontname="Vollkorn,sans-serif" 
+    fontsize="8"
+    color="gray80"
+  ]
+  
+  "dbr:Phaistos_Disc" -- "dbr:Artifact_(archaeology)" [label="rdf:type"];
+  "dbr:Phaistos_Disc" -- "'1908-07-03'" [label="dbp:discoveredDate"];
+  "dbr:Phaistos_Disc" -- "dbr:Crete" [label="dbp:discoveredPlace"];
+  "dbr:Crete" -- "dbo:Island" [label="rdf:type"];
+  "dbr:Crete" -- "gn:258763" [label="owl:sameAs"];
+}
+```
+
+::: {.tiny}
+Prefixes:  
+`rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# .`  
+`owl: http://www.w3.org/2002/07/owl# .`  
+`dbo: http://dbpedia.org/ontology/ .`  
+`dbr: http://dbpedia.org/resource/ .`  
+`gn:  http://sws.geonames.org/`  
+:::
+
+
+## Why is LOD useful? {.center background-color="#B5E2FF"}
+
+*Let's brainstorm...*
+
+
+<!-- ## Exercise {background-color="#B5E2FF"}
+
+### Try to draw this Turtle serialization  -->
+
+
+<!-- AO-Cat ================================================================ -->
+
+## AO-Cat Ontology  {.center background-color="#FAF1A4"}
+
+### *Ontologies and the Semantic Web* 
+
+
+## What is an ontology?
+
+- An **explicit, formal** way of modelling **relationships between information** within a particular **domain**.
+- An **abstraction** allowing formal representation of particular knowledge about the world.
+<!-- - **Non-hierarchical**, because things in the real world tend to be more complex, than it is possible to express using hierarchies. -->
+- Ontologies provide **precisely defined** vocabularies for modelling relationships.
+
+### What is in an ontology?
+
+- **Classes** -- ontology defines abstract groups, fundamental categories of objects or concepts within a domain.
+- **Relationships** (properties) -- ontology limits what kinds of subjects and objects can properties link and how classes are related. 
+- **Instances** of objects -- what are the described individuals.
+
+### Why is this useful?
+
+- Logic
+- Automated reasoning
+- Interoperability and data integration
+
+
+## Domain and range
+
+```{dot}
+//| echo: false
+//| fig-width: 6
+//| fig-align: "center"
+
+graph G {
+  rankdir=LR
+  bgcolor="transparent"
+  node [
+    fontname="Vollkorn,sans-serif"
+    fontsize="10"
+  ]
+  edge [
+    fontname="Vollkorn,sans-serif" 
+    fontsize="8"
+    color="gray80"
+  ]
+  
+  "domain" -- "range" [label="predicate\n(property)"];
+  "subject" -- "object" [label="predicate\n(property)"];
+}
+```
+
+- **Domain** -- **subject** described by the **property** is in the class specified by the **domain**.
+- **Range** -- **object** of the statement has the given **range**.
+
+`rdfs:domain` and `rdfs:range` properties
+
+
+## Example {background-color="#CDFFB5"}
+
+```{dot}
+//| echo: false
+//| fig-width: 6
+//| fig-height: 2.4
+//| fig-align: "center"
+
+graph G {
+  rankdir=LR
+  bgcolor="transparent"
+  node [
+    fontname="Vollkorn,sans-serif"
+    fontsize="10"
+  ]
+  edge [
+    fontname="Vollkorn,sans-serif" 
+    fontsize="8"
+    color="gray80"
+  ]
+  graph [
+    fontname="Vollkorn,sans-serif"
+    fontsize="8"
+    fontcolor="gray40"
+  ]
+  
+  subgraph cluster_0 {
+    "dbr:Crete";
+    label = "rdf:type dbo:PopulatedPlace";
+    color = "black";
+  }
+  
+  subgraph cluster_1 {
+    subgraph cluster_2 {
+      "dbr:Ariadne";
+      label = "rdf:type dbo:MythologicalFigure";
+      color = "black";
+    }
+    label = "rdf:type dbo:Person";
+  }
+  
+  "dbr:Ariadne" -- "dbr:Crete" [label="dbo:origin"];
+}
+```
+
+```{.txt}
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+
+dbo:MythologicalFigure rdfs:subClassOf dbo:Person .
+
+dbo:origin rdf:type rdf:Property ;
+  rdfs:domain dbo:Person ;
+  rdfs:range dbo:PopulatedPlace .
+
+dbr:Ariadne
+  rdf:type dbo:MythologicalFigure ;
+  dbo:origin dbr:Crete .
+
+dbr:Crete 
+  rdf:type dbo:PopulatedPlace .
+```
+
+## AO-Cat Ontology
+
+> Felicetti A., Meghini C., Richards J., Theodoridou M. 2023: *The AO-Cat Ontology*. doi:[10.5281/zenodo.7818374](https://zenodo.org/doi/10.5281/zenodo.7818374).
+
+:::: {.columns}
+::: {.column width="40%"}
+![](figs/aocat.png)
+:::
+::: {.column width="40%"}
+- *Application profile* of CIDOC CRM (most of the classes are mapped to CRM).
+- Namespace IRI: `https://ariadne-infrastructure.eu/aocat/`
+- Classes prefixed with `AO_`
+
+### Defines: 
+- 22 classes  
+- 66 properties
+:::
+::::
+
+
+## AO-Cat Concepts 
+
+### Resources
+
+```{dot}
+//| echo: false
+//| fig-width: 6
+//| fig-height: 6
+//| fig-align: "center"
+
+graph G {
+  rankdir=TR
+  bgcolor="transparent"
+  node [
+    fontname="Vollkorn,sans-serif"
+    fontsize="10"
+  ]
+  edge [
+    fontname="Vollkorn,sans-serif" 
+    fontsize="8"
+    color="gray80"
+  ]
+  graph [
+    fontname="Vollkorn,sans-serif"
+    fontsize="8"
+    fontcolor="gray40"
+  ]
+  
+  "AO_Entity" -- "AO_Resource";
+  "AO_Resource" -- "AO_Service";
+  "AO_Resource" -- "AO_Data_Resource";
+  "AO_Data_Resource" -- "AO_Individual_Data_Resource (A)";
+  "AO_Data_Resource" -- "AO_Collection (A)";
+  "AO_Collection (A)" -- "AO_Individual_Data_Resource (B)";
+  "AO_Collection (A)" -- "AO_Collection (B)";
+  "AO_Individual_Data_Resource (A)" -- "AO_Document";
+}
+```
+
+
+## AO-Cat Concepts 
+
+### Context
+
+```{dot}
+//| echo: false
+//| fig-width: 6
+//| fig-height: 6
+//| fig-align: "center"
+
+graph G {
+  rankdir=LR
+  bgcolor="transparent"
+  node [
+    fontname="Vollkorn,sans-serif"
+    fontsize="10"
+  ]
+  edge [
+    fontname="Vollkorn,sans-serif" 
+    fontsize="8"
+    color="gray80"
+  ]
+  graph [
+    fontname="Vollkorn,sans-serif"
+    fontsize="8"
+    fontcolor="gray40"
+  ]
+  
+  "AO_Data_Resource" -- "AO_Temporal_Region" [label="has_temporal_coverage"];
+  "AO_Data_Resource" -- "AO_Spatial_Region" [label="has_spatial_coverage"];
+/* "AO_Data_Resource" -- "AO" */
+}
+```
+
+
+## Most important properties 
+
+## AO_Spatial_Region
+
+## AO_Temporal_Region 
+
+## AO_Concept
+
+
+
+
+## ARIADNE subjects 
+
+- **Site/monument** -- each record is a site/monument.
+- **Fieldwork** -- each record is an individual archaeological investigation (event) .
+- **Fieldwork report** -- record of fieldwork event (link to *grey literature* report).
+- **Fieldwork archive** -- record of filedwork event (link to archive of digital objects).
+- **Scientific analysis** -- any analytical data.
+- **Date** -- each record is a single archaeological date (C14, dendrochronology etc.)
+- **Artefact** -- each record is a single artefact (except coins).
+- **Coin** -- each record is a single coin.
+- **Building survey** -- specific category of fieldwork report or archive for standing building survey.
+- **Maritime** -- specific category of site/monument for wrecks or fieldwork event (underwater archaeology).
+- **Inscription** -- monuments or artefacts that bear graphical manifestation of a human thought.
+- **Rock art** -- similar to inscriptions.
+- **Burial** -- each record is a burial.
+
+
+
+
+<!-- 
+colors:
+- exercise: {background-color="#B5E2FF"}
+- example: {background-color="#CDFFB5"} 
+- section: {background-color="#FAF1A4"})
+- {background-color="#FFE1B5"}
+-->
