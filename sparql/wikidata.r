@@ -2,6 +2,9 @@
 # By Petr Pajdla, Brno 2024-08-29
 # For 'atRium' training school, https://www.aiscr.cz/atRium
 
+## You will need to install `glitter` package from GitHub
+# remotes::install_github("lvaudor/glitter")
+
 library(glitter)
 library(ggplot2)
 library(dplyr)
@@ -130,7 +133,7 @@ r_coords <- q_coords %>%
 # explore the results
 r_coords %>% View()
 
-# how many images have coordinates and images?
+# how many records have coordinates and images?
 r_coords <- r_coords %>% 
   mutate(has_img = !is.na(img),
          has_coords = !is.na(coords))
@@ -150,7 +153,7 @@ r_coords %>%
   ggplot() +
   aes(has_coords) +
   geom_bar(fill = "white", color = "black") +
-  labs(x = "Artefact has image", y = "Count")
+  labs(x = "Artefact has coordinates", y = "Count")
 
 # transform to simple features to draw a map
 # simple features (package sf) are a standard way of representing spatial data

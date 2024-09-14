@@ -96,7 +96,6 @@ Egisto Sani, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via 
 ### Where 
 
 - Geolocations of places (points, polygons, bounding boxes)
-- Geographical names from standard vocabulary
 
 ### When 
 
@@ -228,7 +227,7 @@ Wikidata - community created structured (!) data, not W3C fully complient, no on
 DBpedia - data extracted from Wikipedia infoboxes, ontology etc.
 :::
 
-## Example {background-color="#CDFFB5"}
+## Example -- URIs {background-color="#CDFFB5"}
 
 :::: {.columns}
 
@@ -293,7 +292,7 @@ graph G {
 ```
 
 
-## Example {background-color="#CDFFB5" auto-animate=true}
+## Example -- triples {background-color="#CDFFB5" auto-animate=true}
 
 - *Ariadne* is a figure in Greek mythology. 
 
@@ -319,7 +318,7 @@ graph G {
 }
 ```
 
-## Example {background-color="#CDFFB5" auto-animate=true}
+## Example -- triples {background-color="#CDFFB5" auto-animate=true}
 
 - *Ariadne* is a figure in Greek mythology. 
 - *Ariadne* is from Crete.
@@ -350,7 +349,7 @@ graph G {
 ```
 
 
-## Example {background-color="#CDFFB5" auto-animate=true}
+## Example -- triples {background-color="#CDFFB5" auto-animate=true}
 
 - URIs in place of **subjects** and **objects**
 
@@ -380,7 +379,7 @@ graph G {
 ```
 
 
-## Example {background-color="#CDFFB5" auto-animate=true}
+## Example -- triples {background-color="#CDFFB5" auto-animate=true}
 
 - URIs in place of **subjects** and **objects**
 - Abbreviated URIs
@@ -415,7 +414,7 @@ graph G {
 ```
 
 
-## Example {background-color="#CDFFB5" auto-animate=true}
+## Example -- triples {background-color="#CDFFB5" auto-animate=true}
 
 - URIs in place of **predicates (properties)**
 
@@ -449,6 +448,83 @@ graph G {
   "dbr:Crete" -- "gn:258763" [label="owl:sameAs"];
 }
 ```
+
+
+## Example -- RDF {background-color="#CDFFB5" auto-animate=true}
+
+- We can write down the triples using full URIs. 
+- Each triple ends with a period (`.`)
+
+```{.txt}
+<http://dbpedia.org/resource/Ariadne> 
+  <http://www.w3.org/2000/01/rdf-schema#label> 
+    "Ariadne"@en .
+
+<http://dbpedia.org/resource/Ariadne> 
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> 
+    <http://dbpedia.org/ontology/MythologicalFigure .
+
+<http://dbpedia.org/resource/Ariadne> 
+  <http://dbpedia.org/ontology/origin> 
+    <http://dbpedia.org/resource/Crete> .
+  
+<http://dbpedia.org/resource/Crete> 
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> 
+    <http://dbpedia.org/ontology/Island> .
+
+<http://dbpedia.org/resource/Crete> 
+  <http://www.w3.org/2002/07/owl#sameAs> 
+    <https://sws.geonames.org/258763> .
+```
+
+- This is perfectly fine for the machine, not so much for the human.
+
+
+## Example -- RDF {background-color="#CDFFB5" auto-animate=true}
+
+- To make the notation more readable, lets abbreviate the URIs by defining *prefixes*.
+
+```{.txt}
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+
+dbr:Ariadne rdfs:label "Ariadne"@en .
+dbr:Ariadne rdf:type dbo:MythologicalFigure .
+dbr:Ariadne dbo:origin dbr:Crete .
+  
+dbr:Crete rdf:type dbo:Island .
+dbr:Crete owl:sameAs <https://sws.geonames.org/258763> .
+```
+
+- There is still a lot of repetition, e.g. in the subjects.
+
+
+## Example -- RDF {background-color="#CDFFB5" auto-animate=true}
+
+- To remove repetition, we add different predicates and objects to the same subject using semicolon (`;`)
+- The set of triples still ends with a period (`.`)
+
+```{.txt}
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+
+dbr:Ariadne
+  rdfs:label "Ariadne"@en ;
+  rdf:type dbo:MythologicalFigure ;
+  dbo:origin dbr:Crete .
+  
+dbr:Crete 
+  rdf:type dbo:Island ;
+  owl:sameAs <https://sws.geonames.org/258763> .
+```
+
+- This is a Turtle serialization of an RDF, one of common ways of representing LOD.
 
  
 ## RDF
@@ -487,7 +563,6 @@ RDF converter: [https://www.easyrdf.org/converter](https://www.easyrdf.org/conve
 ```{.txt}
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <http://schema.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix dbr: <http://dbpedia.org/resource/> .
@@ -546,13 +621,51 @@ dbr:Crete
 ```
 
 
+## Tabular data vs triples
+
+- Any data organized in a **table** can be written as **triples**.
+
+:::: {.columns}
+::: {.column width=46%}
+For example a table like this:
+
+| ID       | human | source | delta15N | delta13C |
+|----------|-------|--------|----------|----------|
+| sample01 | TRUE  | coll   | 6.9      | -19.2    |
+| sample02 | FALSE | coll   | 4.2      | -21.83   |
+| ...      | ...   | ...    | ...      | ...      |
+| sample42 | NA    | coll   | 12.02    | NA       |
+:::
+::: {.column width=8%}
+:::
+::: {.column width=46%}
+Can become this:
+
+| subject  | predicate | object |
+|----------|-----------|--------|
+| sample01 | fromHuman | TRUE   |
+| sample01 | source    | coll   |
+| sample01 | delta15N  | 6.9    |
+| sample01 | delta13C  | -19.2  |
+| sample02 | fromHuman | FALSE  |
+| ...      | ...       | ...    |
+| sample42 | delta13C  | NA     |
+:::
+::::
+
+- Observation (row) **IDs** become **subjects**.
+- Observations (**values**) become **objects**.
+- **Variable** (column) **names** become **predicates**.
+
+
 ## Exercise {background-color="#B5E2FF"}
 
-### Serialize the statements in this diagram as turtle RDF using DBpedia
+### Serialize the statements in this diagram as Turtle RDF using DBpedia
 
 ```{dot}
 //| echo: false
 //| fig-width: 8
+//| fig-height: 3
 //| fig-align: "left"
 
 graph G {
@@ -579,11 +692,62 @@ graph G {
 ::: {.tiny}
 Prefixes:  
 `rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# .`  
+`xsd: <http://www.w3.org/2001/XMLSchema#> .`  
 `owl: http://www.w3.org/2002/07/owl# .`  
 `dbo: http://dbpedia.org/ontology/ .`  
 `dbr: http://dbpedia.org/resource/ .`  
-`gn:  http://sws.geonames.org/`  
+`dbp: http://dbpedia.org/property/ .`  
+`gn:  http://sws.geonames.org/ .`  
 :::
+
+
+## Solution {background-color="#B5E2FF"}
+
+```{dot}
+//| echo: false
+//| fig-width: 8
+//| fig-height: 3
+//| fig-align: "left"
+
+graph G {
+  rankdir=LR
+  bgcolor="transparent"
+  node [
+    fontname="Vollkorn,sans-serif"
+    fontsize="9"
+  ]
+  edge [
+    fontname="Vollkorn,sans-serif" 
+    fontsize="8"
+    color="gray80"
+  ]
+  
+  "dbr:Phaistos_Disc" -- "dbr:Artifact_(archaeology)" [label="rdf:type"];
+  "dbr:Phaistos_Disc" -- "'1908-07-03'" [label="dbp:discoveredDate"];
+  "dbr:Phaistos_Disc" -- "dbr:Crete" [label="dbp:discoveredPlace"];
+  "dbr:Crete" -- "dbo:Island" [label="rdf:type"];
+  "dbr:Crete" -- "gn:258763" [label="owl:sameAs"];
+}
+```
+
+```{.txt}
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix dbp: <http://dbpedia.org/property/> .
+@prefix gn:  <http://sws.geonames.org/> .
+
+dbr:Phaistos_Disc 
+  rdf:type dbr:Artifact_(archaeology) ;
+  dbp:discoveredDate "1908-07-03"^^xsd:date ;
+  dbp:discoveredPlace dbr:Crete .
+  
+dbr:Crete 
+  rdf:type dbo:Island ;
+  owl:sameAs gn:258763 .
+```
 
 
 ## Why is LOD useful? {.center background-color="#B5E2FF"}
