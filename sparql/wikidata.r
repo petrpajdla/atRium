@@ -2,14 +2,14 @@
 # By Petr Pajdla, Brno 2024-08-29
 # For 'atRium' training school, https://www.aiscr.cz/atRium
 
-## You will need to install `glitter` package from GitHub
+# You will need to install `glitter` package from GitHub
 # remotes::install_github("lvaudor/glitter")
 
 library(glitter)
 library(ggplot2)
 library(dplyr)
 
-# Find all archaeological artefacts made of bronze ------------------------
+# 1. Find all archaeological artefacts made of bronze ------------------------
 
 # In this query the question is how many and what are the archaeological 
 # artefacts in Wikidata made of bronze. The thing is that in my (imaginary)
@@ -58,7 +58,7 @@ r_bronzes %>% View()
 nrow(r_bronzes)
 
 
-# Count how many artefacts are made of each material ----------------------
+# 2. Count how many artefacts are made of each material ----------------------
 
 # We are also interested in materials that other artefacts are made of 
 # to see the bronze artefacts in context. For instance we want to check 
@@ -101,7 +101,7 @@ r_materials %>%
   coord_flip()
 
 
-# Add coordinates and images where possible -------------------------------
+# 3. Add coordinates and images where possible -------------------------------
 
 # Finally lets check how many of the bronze artefacts have coordinates and
 # images to have some notion of what are we looking at and from where.
@@ -180,3 +180,29 @@ r_coords_sf %>%
   # add marks for the finds
   leaflet::addMarkers(popup = r_coords_sf$popup)
 
+
+# 4. Ogham stones distribution --------------------------------------------
+
+# Try to create a distribution map with Ogham stones from Ireland based 
+# on the section 4.1.2. Linked Open Ogham: Connecting Catalogues Using Wikidata, p. 348 in 
+# an article by Sophie C. Schmid et al. 2022 Practices of Linked Open Data in Archaeology and Their 
+# Realisation in Wikidata <https://doi.org/10.3390/digital2030019>.
+
+# Tasks
+# - What is the largest Ogham site?
+# - What is the distribution of Ogham stones across the sites?
+# - Which historic county as the most Ogham stones?
+# - Plot the Ogham sites on a map.
+
+
+# 5. Samian Ware distribution ---------------------------------------------
+
+# Try to create a distribution map with Samian Ware based on the information given in 
+# section 4.1.1. A Workflow from Legacy Data to Wikidata: Linked Open Samian Ware, p. 345 in 
+# an article by Sophie C. Schmid et al. 2022 Practices of Linked Open Data in Archaeology and Their 
+# Realisation in Wikidata <https://doi.org/10.3390/digital2030019>.
+
+# Tasks 
+# - Plot Samian Ware discovery sites and production sites on a map.
+# - Which country has the most Samian Ware findspots?
+# - What is the relationship between the production centres and the distribution of Samian Ware?

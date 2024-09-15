@@ -23,6 +23,19 @@ callout-appearance: simple
 callout-icon: false
 ---
 
+
+## Outline {.white background-image="figs/bg.jpg"  background-opacity=0.18}
+
+1. Intro to **SPARQL** 
+2. **SPARQL** queries from **R**  
+
+### SPARQL query services and endpoints 
+
+- Wikidata
+- DBpedia
+- ARIADNE KB
+
+
 ## Introduction to SPARQL {.center background-color="#FAF1A4"}
 
 ### *SPARQL Protocol and RDF Query Language*
@@ -40,22 +53,6 @@ callout-icon: false
 - **`SELECT` query** -- returns list (table) of results.
 - `DESCRIBE` query -- returns all possible data about an entity.
 - `CONSTRUCT` query -- returns new set of triples based on a given template.
-
-
-## SPARQL query 
-
-- Consists of **triple patterns** with **zero or more variables**.
-- Variables are prefixed with a question mark (`?variableName`).
-- Triple patterns are matched against the triples in the graph.
-- Each matching triple produces one result.
-
-`?subject ?predicate ?object .`
-
-### Common abbreviations 
-
-- subject as `?s`
-- predicate/property as `?p`
-- object as `?o`
 
 
 ## SELECT query 
@@ -85,9 +82,63 @@ LIMIT 100
 - `LIMIT`: Limits the number of returned results (so we do not overload the endpoint).
 
 
+## SPARQL query 
+
+- Consists of **triple patterns** with **zero or more variables**.
+- Variables are prefixed with a question mark (`?variableName`).
+- Triple patterns are matched against the triples in the graph.
+- Each matching triple produces one result.
+
+`?subject ?predicate ?object .`
+
+### Common abbreviations 
+
+- **S**ubject as `?s`
+- **P**redicate/property as `?p`
+- **O**bject as `?o`
+
+
+## Examples {.center background-color="#CDFFB5"}
+
+### *SPARQL queries on DBpedia, Wikidata and ARIADNE KB*
+
+
+## Linked Open Data Cloud 
+
+:::: {.columns}
+
+::: {.column width="40%"}
+[https://lod-cloud.net/](https://lod-cloud.net/)
+
+### LOD knowledge bases:
+
+![](figs/wikidata.png){.nostretch width="20%"}   
+[https://www.wikidata.org/](https://www.wikidata.org/)  
+~12,5 billion triples
+
+![](figs/dbpedia.png){.nostretch width="20%"}  
+[http://dbpedia.org/](http://dbpedia.org/)  
+~9,5 billion triples
+:::
+
+::: {.column width="60%"}
+![](figs/lod-cloud.png)
+
+::: {.tiny}
+The Linked Open Data Cloud from [lod-cloud.net](https://lod-cloud.net/) (2024-07-04)
+:::
+:::
+::::
+
+::: {.notes}
+Wikidata - community created structured (!) data, not W3C fully complient, no ontology etc.
+DBpedia - data extracted from Wikipedia infoboxes, ontology etc.
+:::
+
+
 ## DBpedia Virtuoso query service
 
-![](figs/dbpedia.png)
+![](figs/dbpedia_q.png)
 
 [https://dbpedia.org/sparql](https://dbpedia.org/sparql)
 
@@ -124,14 +175,16 @@ Query in [DBpedia Virtuoso](https://dbpedia.org/sparql?default-graph-uri=http%3A
 - Find peole (and the dates they were born and died) who had to do anything with archaeology according to DBpedia.
 
 ```{.sparql}
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX dbr: <http://dbpedia.org/resource/>
 PREFIX dbo: <http://dbpedia.org/ontology/>
 
-SELECT ?s ?born ?died
+SELECT ?s ?p ?born ?died
 
 FROM <http://dbpedia.org>
 
 WHERE {
+  ?s rdf:type dbo:Person .
   ?s ?p dbr:Archaeology .
   ?s dbo:birthDate ?born .
   ?s dbo:deathDate ?died .
@@ -139,9 +192,10 @@ WHERE {
 
 ORDER BY ASC (?born)
 LIMIT 100
+
 ```
 ::: {.tiny}
-Query in [DBpedia Virtuoso](https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&qtxt=PREFIX%20dbr%3A%20%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0APREFIX%20dbo%3A%20%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0A%0ASELECT%20%3Fs%20%3Fborn%20%3Fdied%0A%0AFROM%20%3Chttp%3A%2F%2Fdbpedia.org%3E%0A%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20dbr%3AArchaeology%20.%0A%20%20%3Fs%20dbo%3AbirthDate%20%3Fborn%20.%0A%20%20%3Fs%20dbo%3AdeathDate%20%3Fdied%20.%0A%7D%0A%0AORDER%20BY%20ASC%20(%3Fborn)%0ALIMIT%20100&format=text%2Fhtml&timeout=10000&signal_void=on&signal_unconnected=on).
+Query in [DBpedia Virtuoso](https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&qtxt=PREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20dbr%3A%20%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0APREFIX%20dbo%3A%20%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0A%0ASELECT%20%3Fs%20%3Fp%20%3Fborn%20%3Fdied%0A%0AFROM%20%3Chttp%3A%2F%2Fdbpedia.org%3E%0A%0AWHERE%20%7B%0A%20%20%3Fs%20rdf%3Atype%20dbo%3APerson%20.%0A%20%20%3Fs%20%3Fp%20dbr%3AArchaeology%20.%0A%20%20%3Fs%20dbo%3AbirthDate%20%3Fborn%20.%0A%20%20%3Fs%20dbo%3AdeathDate%20%3Fdied%20.%0A%7D%0A%0AORDER%20BY%20ASC%20(%3Fborn)%0ALIMIT%20100%0A&format=text%2Fhtml&timeout=10000&signal_void=on&signal_unconnected=on).
 :::
 
 - `ORDER BY ASC` orders the results in an ascending order of the given variable.
@@ -151,7 +205,7 @@ Query in [DBpedia Virtuoso](https://dbpedia.org/sparql?default-graph-uri=http%3A
 
 ### DBpedia
 
-- How many are there?
+- How many pages linking to archaeology are there?
 
 ```{.sparql}
 PREFIX dbr: <http://dbpedia.org/resource/>
@@ -173,7 +227,7 @@ Query in [DBpedia Virtuoso](https://dbpedia.org/sparql?default-graph-uri=http%3A
 
 ## Wikidata Query Service
 
-![](figs/wikidata.png)
+![](figs/wikidata_q.png)
 
 Query service: [https://query.wikidata.org/](https://query.wikidata.org)  
 SPARQL endpoint: `https://query.wikidata.org/sparql`
@@ -401,12 +455,21 @@ Query in [ARIADNE GraphDB](https://graphdb.ariadne.d4science.org/sparql?name=ARI
 :::
 
 
-## Wrap up
+## Wrap up {background-color="#FAF1A4"}
 
 :::: {.columns}
 ::: {.column width=60%}
-- SPARQL is a very complex and versatile query language for queries (not only) on graph data.
-- Most common queries are using SELECT verb.
+- `SPARQL` is a very complex and versatile query language for queries (not only) on graph data.
+- Most common queries are using `SELECT` verb.
+- Triples in the `SELECT` query are matched against the triples in the graph. 
+  One matching triple in the graph returns one row in the results.
+- Variable names are prefixed with a question mark (`?`).
+
+### Common variable names
+
+- `?s` for subject. 
+- `?p` for predicate. 
+- `?o` for object.
 
 :::
 ::: {.column width=40%}
@@ -418,13 +481,21 @@ Query in [ARIADNE GraphDB](https://graphdb.ariadne.d4science.org/sparql?name=ARI
 ::::
 
 
-## SPARQL in R {.center background-color="#FAF1A4"}
+<!-- glitter ================================================================ -->
+
+
+## SPARQL queries in R {.center background-color="#FAF1A4"}
 
 ### *How to query SPARQL endpoints from R*
 
 
 ## LOD packages in R
 
+:::: {.columns}
+::: {.column width=12%}
+![](figs/glitter.png)
+:::
+::: {.column width=88%}
 ### `glitter`
 
 Allows writing and performing SPARQL queries without advanced knowledge of SPARQL.
@@ -432,7 +503,14 @@ Allows writing and performing SPARQL queries without advanced knowledge of SPARQ
 [https://lvaudor.github.io/glitter/index.html](https://lvaudor.github.io/glitter/index.html)
 
 `remotes::install_github("lvaudor/glitter")`
+:::
+::::
 
+:::: {.columns}
+::: {.column width=12%}
+![](figs/rdflib.svg)
+:::
+::: {.column width=88%}
 ### `rdflib`
 
 Allows to perform common tasks on local RDF data, including converting between serializations and performing SPARQL queries.
@@ -440,7 +518,14 @@ Allows to perform common tasks on local RDF data, including converting between s
 [https://docs.ropensci.org/rdflib/](https://docs.ropensci.org/rdflib/)
 
 `remotes::install_github("ropensci/rdflib")`
+:::
+::::
 
+:::: {.columns}
+::: {.column width=12%}
+![](figs/ropensci.png)
+:::
+::: {.column width=88%}
 ### `jsonld`
 
 Various functions for formatting of JSON-LD data and transformation to RDF (N-Quads).
@@ -448,10 +533,13 @@ Various functions for formatting of JSON-LD data and transformation to RDF (N-Qu
 [https://docs.ropensci.org/jsonld/index.html](https://docs.ropensci.org/jsonld/index.html)
 
 `install.packages("jsonld")`
-
+:::
+::::
 
 ## `glitter`
 
+:::: {.columns}
+::: {.column width=47%}
 - Functions are prefixed with `spq_`.
 
 ### Main functions
@@ -460,6 +548,11 @@ Various functions for formatting of JSON-LD data and transformation to RDF (N-Qu
 - `spq_add("?s ?p ?o")` adds a triple pattern to match. 
 - `spq_perform(<query>)` performs the query.
 
+![](figs/glitter.png){.nostretch width="30%"}
+:::
+::: {.column width=6%}
+:::
+::: {.column width=47%}
 ### Additional functions 
 
 - `spq_prefix()` add prefix to the query.
@@ -470,143 +563,26 @@ Various functions for formatting of JSON-LD data and transformation to RDF (N-Qu
 - `spq_group_by(<var>)` group results by one or more variables.
 - `spq_count()` and `spq_summarise(<var>)` count results or summarise chosen variables.
 - `spq_select(<var>)` select variables.
+:::
+::::
 
 
-## Example query (/1) {.scrollable background-color="#CDFFB5"}
+## Queries with `glitter` {.scrollable background-color="#CDFFB5"}
 
-### Wikidata 
+#### Wikidata 
 
-- Find all archaeological artefacts made of bronze. 
+- Explore and continue work in the `R` script with comments [**here**](wikidata.r).  
+    [https://petrpajdla.github.io/atRium/sparql/wikidata.r](https://petrpajdla.github.io/atRium/sparql/wikidata.r)
+- Check out article by Sophie C. Schmid et al. 2022 *Practices of Linked Open Data in Archaeology and Their Realisation in Wikidata* [https://doi.org/10.3390/digital2030019](https://doi.org/10.3390/digital2030019)
+    - Try to reproduce the Ogham stones distribution map.
+    - Try to reproduce the Samian Ware distribution map.
 
-Load the glitter package:
-```{r}
-library(glitter)
-```
+#### ARIADNE KB
 
-Package `WikidataR` helps us to identify entities and properties we need:
-```{r}
-# entities
-WikidataR::find_item("archaeological artefact")
-WikidataR::find_item("bronze")
-```
-```{r}
-# properties 
-WikidataR::find_property("instance of")
-WikidataR::find_property("made of")
-```
+ARIADNE SPARQL endpoint is here: 
 
+`https://graphdb.ariadne.d4science.org/repositories/ariadneplus-pr01`
 
-## Example query (/2) {background-color="#CDFFB5"}
-
-### Wikidata 
-
-- Find all archaeological artefacts made of bronze.
-
-Once we know the identifiers of properties and entities we can build a query:
-```{r}
-q1 <- spq_init() %>% 
-  spq_add("?a wdt:P31 wd:Q220659") %>% 
-  spq_add("?a wdt:P186 wd:Q34095") %>% 
-  spq_label(a, .languages = "en$")
-```
-
-Explore the query:
-```{r}
-q1
-```
-
-
-## Example query (/3) {background-color="#CDFFB5"}
-
-Perform the query:
-```{r}
-res1 <- q1 %>% 
-  spq_perform()
-```
-
-Explore the results:
-```{r}
-res1
-```
-
-
-## Example query {background-color="#CDFFB5"}
-
-### Wikidata 
-
-- Count how many artefacts are made of each material.
-
-```{.r}
-# build
-q2 <- spq_init() %>% 
-  spq_add("?a wdt:P31 wd:Q220659") %>% 
-  spq_add("?a wdt:P186 ?mat") %>% 
-  spq_label(mat, .languages = "en$") %>% 
-  spq_group_by(mat_label) %>% 
-  spq_count() %>% 
-  spq_arrange(desc(n))
-
-# explore
-q2
-
-# perform
-res2 <- q2 %>% 
-  spq_perform()
-
-# explore
-res2
-```
-
-
-## Example query {background-color="#CDFFB5"}
-
-### Wikidata 
-
-- Add coordinates and images to artefacts made of bronze where possible.
-
-```{.r}
-WikidataR::find_property("coordinate")
-
-# edit
-q3 <- spq_init() %>% 
-  spq_add("?a wdt:P31 wd:Q220659") %>% 
-  spq_add("?a wdt:P186 wd:Q34095") %>% 
-  spq_add("?a wdt:P625 ?coords", .required = FALSE) %>% 
-  spq_add("?a wdt:P18 ?img", .required = FALSE) %>% 
-  spq_label(a, .languages = "en$")
-
-# perform
-res3 <- q3 %>% 
-  spq_perform()
-
-# transform to simple features
-res3sf <- res3 %>% 
-  dplyr::filter(!is.na(coords)) %>% 
-  sf::st_as_sf(wkt = "coords") %>% 
-  dplyr::mutate(
-    popup = dplyr::if_else(
-      is.na(img), 
-      paste0("<a href='", a,"'><h2>", a_label, "</h2></a>"), 
-      paste0("<a href='", a,"'><h2>", a_label, "</h2></a><img src='", img, "' width='200' height='200'>")))
-
-# plot using leaflet
-res3sf %>% 
-  leaflet::leaflet() %>% 
-  leaflet::addTiles() %>% 
-  leaflet::addMarkers(popup = res3sf$popup)
-```
-
-## Example query {background-color="#CDFFB5"}
-
-### ARIADNE KB 
-
-```{.r}
-library(glitter)
-```
-
-```{.r}
-endpoint <- 
-```
-
-
-##
+- Explore and continue work in the `R` script [**here**](ariadne.r).  
+    [https://petrpajdla.github.io/atRium/sparql/ariadne.r](https://petrpajdla.github.io/atRium/sparql/ariadne.r)
+    - Check [AO-Cat Ontology](https://zenodo.org/doi/10.5281/zenodo.7818374) if needed.
