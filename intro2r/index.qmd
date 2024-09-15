@@ -1,0 +1,561 @@
+---
+title: "Introduction to R"
+subtitle: "Part 1"
+author: "Peter Tkáč"
+format:
+  revealjs:
+    fontsize: 24px
+    scrollable: true
+    # output-file: atRium2024_intro_part1.html
+    footer: "[atRium](https://petrpajdla.github.io/atRium/) *training school*, Brno 2024 | [Intro to R](/intro2r/index.qmd)"
+    logo: /figs/Clay.png
+    chalkboard:
+      theme: whiteboard
+      chalk-effect: 0.0
+execute:
+  echo: true
+  warning: false
+  cache: true
+---
+
+## Overview {background-color="steelblue"}
+
+## R Basics
+
+1.) Introduction - code along
+
+-   orientation in RStudio
+-   execution command, basic operators
+-   assigning operator
+-   vectors
+-   comments
+
+2.) Syntax and basic functions
+
+-   functions, objects, values, syntax
+-   dataframes and vectors
+  
+
+## Workflow
+
+3.) Workflow
+
+-   projects and scripts
+-   packages
+-   loading data
+
+## Orientation in RStudio   
+```{r}
+#| echo: FALSE
+library(here)
+```
+
+## Basic operators
+```{r}
+5+5
+2*2
+10/2
+3**2
+sqrt(9)
+```
+
+```{r}
+3==3
+3==4
+10>5
+10<5
+```
+
+## Assigning operator
+
+```{r}
+my_number <- 10
+my_number
+my_number+5
+my_other_number <- 200
+my_number + my_other_number
+```
+```{r}
+my_number == 10
+my_number < my_other_number
+```
+
+
+## Creating vectors
+
+```{r}
+my_vector <- c(1, 2, 3, 4, 5)
+my_vector
+my_vector + 10
+my_other_vector <- c(6:10)
+my_other_vector
+my_other_vector + my_vector
+my_other_vector[2]
+```
+
+## Adding comments
+
+```{r}
+# this is comment
+# 10 / 2
+```
+
+## Exercise {background-color="lightpink"}
+
+## Task:
+
+1.) create one vector which contains 10 numbers from 51 to 60 
+
+2.) and another vector which contains 10 numbers from 101 to 110
+
+3.) save the first vector as "vect_1" and second as "vect_2"
+
+4.) subtract vect_1 from vect_2 and save the results as "vect_sub"
+
+
+## Solution
+```{r}
+vect_1 <- c(51:60)
+vect_2 <- c(101:110)
+
+vect_sub <- vect_2 - vect_1
+vect_sub
+```
+
+
+
+## Functions and syntax
+- functions always go with parentheses `()`
+- functions are doing stuff
+- syntax:
+
+`function_name(argument1 = value1, argument2 = value2, ...)`
+
+```{r}
+mean(1:10)
+```
+
+```{r}
+a <- mean(1:10)
+a
+```
+
+```{r}
+summary(1:10)
+```
+
+
+```{r}
+
+my_sequence <- seq(from = 1000,  to = 2000, by = 10)
+my_sequence
+
+
+length(my_sequence)
+range(my_sequence)
+
+```
+
+
+## Basic syntax 
+
+![](figs/fig1_syntax.png)
+
+## Objects and values
+
+- there are different types of objects and values in R, each type is allowing you to do different operations
+
+### Objects
+- for now, it will be enough to introduce __vector__ and __dataframe__
+- __vector__
+  - a list of items that are of the same type
+- __dataframe__
+  - a table
+  - has rows and columns
+  - rectangular, ie. identical number of rows in each column.
+
+
+### Values
+- similarly, there are many types of values - characters, numbers, factors. 
+- all you need to know now is that if you want to do mathematic operations, you always have to __check whether your numbers are really a numbers__ and not something else, such as characters
+- function `str()` will quickly tell you what kind of object with what kind of values you have
+
+## Vector
+
+
+```{r}
+nums <- c(1:10)
+nums
+
+hunds <- c(101:110)
+hunds
+str(hunds)
+
+letts <- letters[1:10]
+letts
+str(letts)
+
+capital_towns  <- c("Berlin", "Bratislava", "Prague", "Vienna", "Warsaw")
+str(capital_towns)
+```
+
+If the vector combines numbers and words, the result will save the numbers as characters, so it is then not possible to make mathematical operations with them
+```{r}
+strange_vector <- c("Berlin", 1, 5, 12, 110)
+str(strange_vector)
+```
+
+## Dataframes
+- you can create dataframes by binding the of the same length (!) together
+- `cbind()` binds vectors into columns and then `as.data.frame()` change them into dataframe
+```{r}
+df<-as.data.frame(cbind(nums, hunds, letts))
+df
+```
+
+## Dataframe - structure
+Get the basic information about the dataframe with `str()`
+
+```{r}
+str(df)
+```
+We see that columns _nums_ and _hunds_ are not numbers, but characters. To be able for us to do mathematic operations, we need to change the values into numbers by function `as.numeric()`
+
+```{r}
+df$nums <- as.numeric(df$nums)
+df$hunds <- as.numeric(df$hunds)
+```
+
+```{r}
+str(df)
+```
+
+
+## Subseting data
+
+### Square brackets `[,]`
+
+`name_of_your_dataframe[row_number,column_number]`
+
+First row
+
+```{r}
+df[1,]
+```
+
+First column
+
+```{r}
+df[,1]
+```
+
+
+
+```{r}
+sum(df[,2])
+```
+
+### Subseting data with `$`
+
+```{r}
+df$letts
+```
+
+```{r}
+mean(df$hunds)
+```
+
+## Dataframe with atRium participants
+
+Copy, paste and run this whole code chunk:
+
+```{r}
+first_name <- c("Margaux", "Lesley", "Carole", "Alexander", "Dita", "Brigit", "Sara", "Yiu-Kang", "Romane", "Nicky", "Mihailo", "Valeriia", "Carlo", "Panagiotis", "Juan Carlos", "Anna", "Swe Zin", "Ilenia")
+country <- c("Lithuania","Ireland","Germany","United Kingdom","Netherlands","Austria","Germany","Germany","Italy","United Kingdom","Serbia","Ukraine","Germany","Italy","France","United Kingdom","Switzerland ","Luxembourg")
+position <- c("post_doc","researcher","post_doc","masters_student","post_doc","researcher","phd_student","researcher","phd_student","researcher","researcher","ba_student","post_doc","researcher","researcher","phd_student","phd_student","phd_student")
+institution <- c("university","public_research_org","university","university","university","public_research_org","university","public_research_org","university","digital_repository","university","university","public_research_org","public_research_org","private_org","university","university","university")
+city <- c("Vilnius","Dublin","Kiel","York","Leiden","Vienna","Kiel","Bochum","Padova","York","Belgrade","Odesa","Leibzig","Rome","Paris","Glasgow","Bern","Luxembourg")
+distance_km <- c(850, 1650, 720, 1300, 910, 110, 720, 710, 550, 1300, 560, 1090, 380, 870, 1040, 1590, 720, 760)
+
+
+df_people <- as.data.frame(cbind(first_name, country, position, institution, city, distance_km))
+df_people$distance_km <- as.numeric(df_people$distance_km)
+head(df_people, 4)
+```
+
+## Lets play a bit
+
+#### What's your name?
+
+```{r}
+df_people$first_name
+```
+
+#### Where are you coming from?
+
+```{r}
+unique(df_people$country)
+```
+
+#### Which country is most represented?
+
+```{r}
+table(df_people$country)
+```
+
+#### Quick Task: 
+
+- could calculate which cities are represented?
+
+#### What is the longest distance one of you had to travel?
+
+```{r}
+max(df_people$distance_km)
+```
+
+## Lets play a bit 2
+
+#### What are your positions?
+
+```{r}
+table(df_people$position)
+```
+
+#### Who are the PhD students?
+
+```{r}
+df_people[df_people$position=="phd_student",]
+```
+
+Alternative - selecting specific columns
+
+```{r}
+df_people[df_people$position=="phd_student",c(1,3,5)]
+```
+
+#### Quick Task: 
+
+- can you subset row with your name and check whether I didn't messed up your data?
+
+## Exercise {background-color="lightpink"}
+
+## Task:
+
+Use the dataframe `df_people` to solve this questions:
+
+1.  What are the names of the variables in the dataframe?
+2.  Which types of institution are represented here?
+3.  Which types of institution are **most** represented here?
+4.  What is the average distance between Brno and the cities?
+5.  Who are the postdocs and from which cities are they coming?
+
+Hints: `names()`, `unique()`, `table()`, `mean()`,`[,]`
+
+## Solution
+
+1.  What are the names of the variables in the dataframe?
+
+```{r}
+names(df_people)
+```
+
+Alternative:
+
+```{r}
+colnames(df_people)
+```
+
+2.  Which types of institution are represented here?
+
+```{r}
+unique(df_people$institution)
+```
+
+3.  Which types of institution are **most** represented here?
+
+```{r}
+table(df_people$institution)
+```
+
+## Solution
+
+4.  What is the average distance between Brno and the cities?
+
+```{r}
+mean(df_people$distance_km)
+```
+
+Alternative
+
+```{r}
+summary(df_people$distance_km)
+```
+
+5.  Who are the postdocs and what distance did they have to travel?
+
+```{r}
+df_people[df_people$position=="post_doc",c(1,3,6)]
+```
+
+## Other useful functions for dataframe
+
+-   `str()` - reveals the structure of the dataframe
+
+```{r}
+str(df_people)
+```
+
+- `head()`, `tail()`
+
+```{r}
+head(df_people, 2)
+```
+
+```{r}
+tail(df_people, 2)
+```
+
+- `ncol()`, `nrows()`,
+
+```{r}
+ncol(df_people)
+```
+
+```{r}
+nrow(df_people)
+```
+
+-   `sum()`
+
+```{r}
+sum(df_people$distance_km)
+```
+ 
+## Workflow {background-color="steelblue"}
+- scripts
+- projects
+- packages
+- loading data
+
+## Scripts
+
+```{.r}
+# Practice script for atRium training school 2024
+# Author: Peter Tkáč
+# Date: 2024-09-10
+
+## ---- Packages
+library(here)
+library(tidyverse)
+
+## ---- Data Loading
+
+df_darts <- read.csv(here("data/dartpoints.csv"))
+str(df_darts)
+
+## ---- Basic summaries
+
+nrow(df_darts) # number of dartpoints
+table(df_darts$Name) # numer of types of the dartpoints
+
+## ---- Plots
+
+ggplot(df_darts, aes(x=Name))+
+  geom_bar(fill = "pink")+
+  theme_light()
+
+## ---- Saving result
+
+ggsave(filename = "very_important_plot.png")
+```
+
+## Projects
+- `.Rproj` file - a "storage" of your scripts, data...
+- we recommend you to use parent folder to store your project file and then sub-folders to store data, figures, scripts, etc.
+
+![](figs/fig3_folder.png){.nostretch width="50%"}
+
+
+## Packages
+
+- by installing additional packages, you can expand the amount of things you can do in R
+- there are plenty of packages with different functions and aims
+- basic principle will be introduced by package "here"
+
+
+
+```{r}
+#install.packages("here") # installs the package
+library(here) # loads the package
+here() # runs a function from the package
+```
+
+- you only need to __install the package once__ `install.packages("name_of_the_package")`, but it needs to be __loaded every time__ you start a new script or after you have cleaned up your workspace `library(name_of_the_package)`
+
+- sometime you need to specify from which package your function is: `name-of-the-package::name-of-the-function()`
+
+```{r}
+dplyr::filter(df_people, city == "Kiel")
+```
+
+If you are not sure from which package your function is coming, you can easily find out by:
+
+```{r}
+?filter()
+```
+
+
+## Loading data
+
+- download data [dartpoints.csv](/data/dartpoints.csv) and move them to your project file
+
+
+
+### Paths
+
+**Absolute** file path - The file path is specific to a given user.
+
+`C:/Documents/MyProject/data/dartpoints.csv`
+
+**Relative** file path If I am currently in MyProject/ folder:
+
+`./data/dartpoints.csv`
+
+### Package here()
+
+-   Package `here` is here to save the day!
+-   Function `here()` will know where the top directory is, so you do not need to write whole URL adress
+
+Try running `here()` to see where your project is stored
+
+```{r}
+here()
+```
+
+## Loading data
+
+An example of loading data with `here()` function:
+
+-   NOTE that in this case data which you want to load have to be in a subfolder "data" which is located in the same folder as your project
+
+```{r}
+df_darts <- read.csv(here("data/dartpoints.csv"))
+```
+
+-   `read.csv` loads .csv files (AKA **comma**-separated values file) into your R
+-   if the values in your file are separated by other way, you have to adjust. For example for values separated by semicolom `;` use argument `sep=";"`:
+
+```{r}
+# | eval: false
+df_darts2 <- read.csv(here("data/dartpoints.csv"), sep = ";")
+```
+
+## Exercise {background-color="lightpink"}
+
+
+## Observe the dartpoint data
+
+1.  How many observations and how many variables are in the dataframe?
+2.  What are the names of the variables?
+3.  Are there any quantitative variables? Are they stored properly as numbers so we can make mathematic operations?
+4.  What is the mean length of the dartpoints?
