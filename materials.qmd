@@ -36,7 +36,8 @@ title: "Materials and data"
 #### Useful links 
 
 - Intorduction to LOD on Programming Historian
-- Article introucing LOD by Sophie Schmid et al.  -->
+- Article introucing LOD by Sophie Schmid et al. 
+- AO-Cat ontology -->
 
 
 <!-- ## Wednesday 18 Sept.

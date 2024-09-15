@@ -24,6 +24,15 @@ callout-icon: false
 ---
 
 
+## Outline {.white background-image="figs/bg.jpg"  background-opacity=0.18}
+
+1. **ARIADNE** Portal
+2. **Linked Open Data** 
+    - **Triples** -- building blocks of LOD
+    - **RDF** -- way of representing LOD
+3. ARIADNE **AO-Cat ontology**
+
+
 ## ARIADNE {.center background-color="#FAF1A4"}
 
 ### *Archaeological data and the ARIADNE Portal*
@@ -226,6 +235,7 @@ The Linked Open Data Cloud from [lod-cloud.net](https://lod-cloud.net/) (2024-07
 Wikidata - community created structured (!) data, not W3C fully complient, no ontology etc.
 DBpedia - data extracted from Wikipedia infoboxes, ontology etc.
 :::
+
 
 ## Example -- URIs {background-color="#CDFFB5"}
 
@@ -482,7 +492,7 @@ graph G {
 
 ## Example -- RDF {background-color="#CDFFB5" auto-animate=true}
 
-- To make the notation more readable, lets abbreviate the URIs by defining *prefixes*.
+- To make the notation more readable, let's abbreviate the URIs by defining *prefixes*.
 
 ```{.txt}
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -755,6 +765,9 @@ dbr:Crete
 *Let's brainstorm...*
 
 
+## Wrap up
+
+
 <!-- ## Exercise {background-color="#B5E2FF"}
 
 ### Try to draw this Turtle serialization  -->
@@ -767,7 +780,7 @@ dbr:Crete
 ### *Ontologies and the Semantic Web* 
 
 
-## What is an ontology?
+## What is an ontology? {background-image="figs/schoolofathens.jpg"  background-opacity=0.42}
 
 - An **explicit, formal** way of modelling **relationships between information** within a particular **domain**.
 - An **abstraction** allowing formal representation of particular knowledge about the world.
