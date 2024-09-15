@@ -1,25 +1,48 @@
 ---
-title: "Materials"
+title: "Materials and data"
 ---
 
-## Monday
+## Monday 16 Sept.
+
+#### Introduction to R
+
+- [Presentation](/intro2r/index.qmd) contents:
+    - [Functions and data structures](/intro2r/index.qmd#/functions-and-syntax)
+    - Basic [workflows](/intro2r/index.qmd#/workflow-1) (packages, scripts, projects, paths)
+    - [Reading](/intro2r/index.qmd#/loading-data) data into R
+- Dataset [dartpoints.csv](/data/dartpoints.csv)
+
+#### Data analysis and data viz
 
 
-## Tuesday
+<!-- ## Tuesday 17 Sept.
 
-### LOD & ARIADNE 
+#### Linked Open Data & ARIADNE
 
-- [Presentation](/ariadne/index.qmd)
+- [Presentation](/ariadne/index.qmd) contents: 
+    - [ARIADNE Portal](/ariadne/index.qmd#/ariadne)
+    - [Linked Open Data (LOD)](/ariadne/index.qmd#/linked-open-data)
+    - [AO-Cat ontology](ariadne/index.qmd#/ao-cat-ontology)
 
-### SPARQL 
+#### SPARQL 
 
-- [Presentation](/sparql/index.qmd)
-- [Code](/sparql/wikidata.r) with WikiData exercise.
+- [Presentation](/sparql/index.qmd) contents:
+    - [Intro](/sparql/index.qmd#/introduction-to-sparql) to `SPARQL`
+    - Examples of `SPARQL` queries on [DBpedia](/sparql/index.qmd#/dbpedia-virtuoso-query-service), [Wikidata](/sparql/index.qmd#/wikidata-query-service) and [ARIADNE GraphDB](/sparql/index.qmd#/ariadne-knowledge-base)
+    - `SPARQL` [queries from `R`](/sparql/index.qmd#/sparql-queries-in-r) using [`glitter`](/sparql/index.qmd#/glitter-1) package
+- [`R` script `wikidata.r`](/sparql/wikidata.r) with Wikidata exercise
+- [`R` script `ariadne.r`](/sparql/ariadne.r) with ARIADNE exercise
 
-## Wednesday
+#### Useful links 
+
+- Intorduction to LOD on Programming Historian
+- Article introucing LOD by Sophie Schmid et al.  -->
 
 
-## Thursday
+<!-- ## Wednesday 18 Sept.
 
 
-## Friday
+## Thursday 19 Sept.
+
+
+## Friday 20 Sept. -->
