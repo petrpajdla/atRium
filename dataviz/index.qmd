@@ -1,0 +1,654 @@
+---
+title: "Introduction to R"
+subtitle: Part 2
+author: "Peter Tkáč"
+format:
+  revealjs:
+    scrollable: true
+    fontsize: 24px
+    output-file: atRium2024_intro_part2_dlyr_ggplot.html
+    footer: "[atRium](https://petrpajdla.github.io/atRium/) *training school*, Brno 2024 | [Data viz](/dataviz/index.qmd)"
+    logo: /figs/Clay.png
+    chalkboard:
+      theme: whiteboard
+      chalk-effect: 0.0
+execute:
+  echo: true
+  warning: false
+  cache: true
+---
+
+## Overview {background-color="steelblue"}
+
+```{css}
+#| echo: false
+code.sourceCode {
+  font-size: 1.4em;
+}
+```
+
+```{r}
+#| echo: false
+library(here)
+library(tidyverse)
+df_darts <- read.csv(here("data/dartpoints.csv"))
+```
+
+## Overview of the workshop
+
+4.) Data manipulation
+
+- dartpoints data
+- package `dplyr` / `tidyverse`
+
+5.) Data visualisation
+
+- package `ggplot2`
+
+## Exercise {background-color="lightpink"} 
+
+## Task:
+- create a new project and save it to a new, parent folder. Call it for example as "atRium2024"
+- create subfolders for data, figures, script and results
+- move the data "[dartpoints.csv](https://petrpajdla.github.io/stat4arch/lect/w05/data/dartpoints.csv)" to your data folder
+- open a new script and save it as "data_manipulation.R" to your script folders
+- load the packages `here`
+
+## Data manipulation {background-color="steelblue"}
+
+## `dplyr` package
+
+We will learn how to: 
+
+- use pipe `%>%` to work with functions more efectively 
+- select desired variables - `select()`
+- rename your variables - `rename()` 
+- order them from lowest to highest values (or vice versa) - `arrange()` 
+- filter your data based on different conditions - `filter()`
+- calculate different summary statistics such as mean or count - `summarise()` 
+- add new variables such as percentage - `mutate()` 
+- save your results as comma separated file
+
+But first, install and load package `dplyr` and `here` and load dartpoints.csv data
+
+```{r}
+#| eval: false
+install.packages("dplyr")
+library(dplyr)
+library(here)
+```
+
+```{r}
+#| eval: false
+df_darts <- read.csv(here("data/dartpoints.csv"))
+```
+
+## Select
+
+```{r}
+head(df_darts,2)
+```
+- too many variables? Select only the ones you want to work with
+- `select(dataframe, variable1, variable2)`
+
+```{r}
+df_darts_edit <- select(df_darts, Catalog, Name, Length, Width, Weight)
+head(df_darts_edit, 2)
+```
+
+## Pipe
+
+- `%>%` hotkey on my computer "CTRL + SHIFT + M" 
+- note that when using the pipe, you don't need to add name of the object (in this case "df_darts") into the parametres of the function
+
+```{r}
+df_darts_edit <- df_darts %>% 
+  select(Name, Catalog, Length, Width, Weight)
+```
+
+- note that I have created new object "df_darts_edit". From now on I will manipulate data only in this object and leave "df_darts" unchanged for back-up
+
+
+## Renaming
+- renaming your variables with function `rename(data, new_name = old_name)` can be useful when dealing with complicated code names or different languages
+
+```{r}
+df_darts_edit <- df_darts_edit %>%  
+  rename(
+    dart_type = Name,
+    dart_ID = Catalog,
+    dart_length = Length,
+    dart_width = Width,
+    dart_weight = Weight
+    ) 
+
+head(df_darts_edit, 2)
+```
+
+## Arranging
+- here you can order your observations from the lowest to highest (or vice versa). To do so, use function `arrange(data, variable)`
+
+```{r}
+df_darts_edit <- df_darts_edit %>% 
+  arrange(dart_length)
+
+head(df_darts_edit, 4)
+```
+
+
+- arranging data in oposite way by nesting function `desc()` into the `arrange()`:
+
+```{r}
+df_darts_edit <-  df_darts_edit %>% 
+  arrange(desc(dart_length))
+
+head(df_darts_edit, 4)
+```
+
+## Filtering
+
+- function `filter(data, variable <operator> value)` allows you to filter your data based on different conditions, for example minimal weight, type of the dartpoint, etc
+- logical and mathematical operators: ==, !=, <, >, >=, <=, &, |, etc (use `?dplyr::filter` for more details)
+
+
+- here we use `>` to get only dartpoints longer than 80 mm
+
+```{r}
+df_darts_80 <- df_darts_edit %>% 
+  filter(dart_length > 80)
+```
+
+
+
+- and here we use == to choose only those dartpoints which are of type “Travis”
+
+```{r}
+df_darts_travis <- df_darts_edit %>% 
+  filter(dart_type == "Travis")
+
+unique(df_darts_travis$dart_type)
+```
+
+- alternatively, you can exclude all points of a type “Travis” by negation !=
+
+```{r}
+df_darts_no_travis <- df_darts_edit %>% 
+  filter(dart_type != "Travis")
+
+unique(df_darts_no_travis$dart_type)
+```
+
+## Filtering with multiple conditions
+
+- you can use `|` or `&` for filtering with more than one condition
+- for example here we will filter all points which are type "Wells" (AND) are heavier than 10 grams
+
+```{r}
+df_darts_wells_10 <- df_darts_edit %>% 
+  filter(dart_type == "Wells" & dart_weight > 10)
+head(df_darts_wells_10)
+```
+
+Task: instead of `&` try operator `|` (OR) and see how the result differs
+
+## Filtering based on vector
+- you can make your code less complicated when you create vector from desired values and then filter all observations which fall into that vector by using operator `%in%`
+
+```{r}
+darts_of_interest <- c("Pedernales", "Ensor")
+
+df_darts_inter <- df_darts_edit %>% 
+  filter(dart_type %in% darts_of_interest)
+
+unique(df_darts_inter$dart_type)
+```
+
+## Summarise
+- we already know some functions to calculate basic summaries, for example function mean
+
+```{r}
+mean(df_darts_edit$dart_length)
+```
+
+- but if you want to create a new dataframe from calculated statistics, function `summarise(data, new_variable = summary_statistics)` is much more helpfull
+- for summary statistics you can use different functions: `mean()`, `median()`, `sd()`, `min()`…, (use `?summarise` for more details)
+
+```{r}
+df_darts_edit %>%
+  summarise(mean_length = mean(dart_length))
+```
+
+- you can also calculate more summaries:
+
+```{r}
+df_darts_summary <- df_darts_edit %>% 
+summarise(
+  mean_length = mean(dart_length),
+  sd_lenght = sd(dart_length),
+  min_length = min(dart_length),
+  max_length = max(dart_length),
+  total_count = n()
+  )
+
+df_darts_summary
+```
+
+ 
+## Grouping data
+ 
+- summaries above were applied on whole dataframe. Here we will learn how to calculate summaries for each type of the dartpoint by using `group_by(data, variable_to_be_grouped_by)`
+
+```{r}
+df_darts_edit %>% 
+  group_by(dart_type) %>% 
+  summarise(
+    mean_length = mean(dart_length),
+    type_count = n()
+    )
+```
+
+- Lets fix the decimals by function `round()`
+
+```{r}
+df_darts_edit %>% 
+  group_by(dart_type) %>% 
+  summarise(
+    mean_length = round(mean(dart_length), 2),
+    type_count = n()
+    )
+```
+
+
+## Mutate
+- function mutate creates a new variable and adds it to the most recent dataframe
+
+```{r}
+df_darts_edit %>% 
+  group_by(dart_type) %>% 
+  mutate(
+    mean_weight = round(mean(dart_weight),2)
+  )
+```
+
+## Difference between summarise() and mutate()
+
+- `summarise()` creates a new dataframe from calculated values
+- example bellow show the maximum width of the dartpoints grouped by dart type
+
+```{r}
+df_darts_edit %>% 
+  group_by(dart_type) %>% 
+  summarise(
+    width_max = max(dart_width)
+  )
+```
+
+
+- `mutate()` adds a new variable to the dataframe
+
+```{r}
+df_darts_edit %>% 
+  group_by(dart_type) %>% 
+  mutate(
+    width_max = max(dart_width)
+          ) %>% 
+  head(8)
+```
+
+## More complex summarising with dplyr and pipe
+
+```{r}
+df_darts_sum <- df_darts_edit %>% 
+  group_by(dart_type) %>% 
+  summarise(
+    length_mean = round(mean(dart_length), 1),
+    weight_mean = round(mean(dart_weight), 1),
+    type_count = n()) %>%
+  mutate(type_percent = round(type_count/sum(type_count)*100, 1)) %>% 
+  arrange(desc(type_count))
+
+df_darts_sum
+```
+- `write.csv(name_of_your_object, file = "path_to_your_folder")` will save your result as a .csv file, which is nice
+
+```{r}
+#| eval: false
+write.csv(df_darts_sum, file = here("results/darts_summary.csv"), row.names = FALSE)
+```
+
+## Data Visualisation {background-color="steelblue"}
+
+## Visualising your data with packgage ggplot2
+### Inspiration
+
+:::: {.columns}
+::: {.column width=48%}
+[Book](https://socviz.co/)  
+![](figs/fig4_book.jpg){.nostretch width="60%"}
+:::
+::: {.column width=48%}
+[The R Graph Gallery](https://r-graph-gallery.com/)  
+![](figs/fig5_graph_galery.png){.nostretch width="120%"}
+:::
+::::
+
+## Starting with ggplot2
+
+```{r}
+#install.packages("ggplot2")
+library(ggplot2)
+```
+
+
+Basic syntax
+
+`ggplot(data = <your data frame>) +`
+  
+  `aes(x = <variable to be mapped to axis x>) +`
+  
+  `geom_<geometry>()`   
+
+
+
+## Basic types of ggplot - barplot
+- for one variable
+
+```{r}
+ggplot(data = df_darts_edit)+
+  aes(x = dart_type)+
+  geom_bar()
+```
+
+
+## Basic types of ggplot - histogram
+
+- distribution of one variable
+
+```{r}
+ggplot(data = df_darts_edit)+
+  aes(x = dart_length)+
+  geom_histogram()
+```
+
+## Basic types of ggplot - density plot
+
+- distribution of one variable
+
+```{r}
+ggplot(data = df_darts_edit)+
+  aes(x = dart_length)+
+  geom_density()
+```
+
+## Basic types of ggplot - boxplot
+
+
+```{r}
+ggplot(data = df_darts_edit)+
+  aes(x = dart_type, y = dart_length)+
+  geom_boxplot()
+```
+## Basic types of ggplot - scatter plot
+
+- comparing two or more variables
+
+```{r}
+ggplot(data = df_darts_edit)+
+  aes(x = dart_weight, y = dart_length)+
+  geom_point()
+```
+
+## Refining your plot
+
+Lets go back to the scatterplot and play a little
+```{r}
+ggplot(data = df_darts_edit)+
+  aes(x = dart_weight, y = dart_length)+
+  geom_point(color = "red", alpha = 0.4, size = 3, shape = 15)+
+  geom_smooth()+
+  theme_light()
+```
+
+## Task: 
+- try different colours, shapes and themes
+
+```{r}
+#| eval = FALSE
+ggplot(data = df_darts_edit)+
+  aes(x = dart_weight, y = dart_length)+
+  geom_point(color = "red", alpha = 0.4, size = 3, shape = 15)+
+  theme_light()
+```
+
+Different shapes with their codes:
+
+![](figs/fig2_shape.png){.nostretch width="50%"}
+
+## Playing with variables
+- in this case, the colours and size of the points is conditional on the values of the variables
+
+```{r}
+ggplot(data = df_darts_edit)+
+  aes(x = dart_weight, y = dart_length, color = dart_type, size = dart_weight)+
+  geom_point(alpha = 0.5)+
+  theme_light()
+```
+
+
+## Adding text
+
+```{r}
+ggplot(data = df_darts_edit)+
+  aes(x = dart_weight, y = dart_length, color = dart_type, size = dart_weight)+
+  geom_point(alpha = 0.5)+
+  labs(
+    title = "A very nice plot",
+    subtitle = "Look at those colors!",
+    x ="weight (g)",
+    y = "length (g)", 
+    caption =  "Data = package Archdata",
+    color = "Type of a dart",
+    size = "Weight of a dart")+
+  theme_classic()
+```
+
+## Spliting plots
+
+```{r}
+ggplot(data = df_darts_edit)+
+  aes(x = dart_weight, y = dart_length, color = dart_type, size = dart_weight)+
+  geom_point(alpha = 0.5)+
+  facet_wrap(~dart_type)+
+  labs(
+    title = "A very nice plot",
+    subtitle = "Look at those colors!",
+    x ="weight (g)",
+    y = "length (g)", 
+    caption =  "Data = package Archdata",
+    color = "Type of a dart",
+    size = "Weight of a dart")+
+  theme_light()
+```
+
+## Saving plot
+
+```{r}
+best_plot <- ggplot(data = df_darts_edit)+
+  aes(x = dart_weight, y = dart_length, color = dart_type, size = dart_weight)+
+  geom_point(alpha = 0.5)+
+  labs(
+    title = "A very nice plot",
+    subtitle = "Look at those colors!",
+    x ="weight (g)",
+    y = "length (g)", 
+    caption =  "Data = package Archdata",
+    color = "Type of a dart",
+    size = "Weight of a dart")+
+  theme_classic()
+```
+
+```{r}
+ggsave(plot = best_plot, 
+       filename = here("results/plot_darts.jpg"),
+       width = 15,
+       height = 10,
+       units = "cm"
+)
+```
+
+
+## Back to barplots
+
+```{r}
+ggplot(data = df_darts_edit)+
+  aes(x = dart_type)+
+  geom_bar()
+```
+
+
+```{r}
+ggplot(data = df_darts_edit)+
+  aes(x = dart_type, color = dart_type)+
+  geom_bar()
+```
+
+
+```{r}
+ggplot(data = df_darts_edit)+
+  aes(x = dart_type, fill = dart_type)+
+  geom_bar()
+```
+
+
+```{r}
+ggplot(data = df_darts_edit)+
+  aes(x = dart_type)+
+  geom_bar(fill = "steelblue")+
+  theme_light()
+```
+
+```{r}
+ggplot(data = df_darts_edit)+
+  aes(x = fct_infreq(dart_type))+
+  geom_bar(fill = "steelblue")+
+  theme_light()
+```
+
+```{r}
+ggplot(data = df_darts_edit)+
+  aes(x = fct_rev(fct_infreq(dart_type)))+
+  geom_bar(fill = "steelblue")+
+  coord_flip()+
+  labs( x = "dart type")+
+  theme_light()
+```
+
+
+
+## Back to the density plot
+
+```{r}
+ggplot(data = df_darts_edit)+
+  aes(x = dart_length)+
+  geom_density()
+```
+
+```{r}
+ggplot(data = df_darts_edit)+
+  aes(x = dart_length)+
+  geom_density(fill = "grey75", color = "grey50")+
+  theme_linedraw()
+```  
+
+```{r}
+ggplot(data = df_darts_edit)+
+  aes(x = dart_length, fill = dart_type)+
+  geom_density(color = "white", alpha = 0.3)+
+  theme_linedraw()
+```  
+
+## Points instead of boxplots
+
+```{r}
+ggplot(data = df_darts_edit)+
+  aes(x = dart_type, y = dart_length)+
+  geom_point()
+```
+
+```{r}
+ggplot(data = df_darts_edit)+
+  aes(x = reorder(dart_type, dart_length), y = dart_length, color = dart_type)+
+  geom_point(size = 4, alpha = 0.5, show.legend = FALSE)+
+  coord_flip()+
+  theme_linedraw()
+```
+
+## Exercise {background-color="lightpink"} 
+
+## Task:
+- Download data set with bronze age cups [bacups.csv](https://petrpajdla.github.io/stat4arch/lect/w04/data/bacups.csv)
+- Explore the data set and its structure.
+- What are the observations?
+- What types of variables are there?
+- Create a plot showing distribution of cup heights (H).
+- Create a boxplot for cup heights divided by phases (Phase).
+- Are there any outliers?
+- Create a plot showing relationship between cup height and its rim diameter.
+- Color cups from different phases (Phase) by differently.
+- Label the axes sensibly.
+
+Hint: you can get the information about the dataset by:
+
+```{r}
+# install.packages("archdata")
+library(archdata)
+?archdata::BACups
+```
+
+### Other hints:
+`geom_histogram()`, `geom_boxplot()`, `geom_point()`, `labs()`
+
+## Solution
+
+```{r}
+library(here)
+df_cups <- read.csv(here("data/bacups.csv"))
+```
+
+```{r}
+head(df_cups)
+str(df_cups)
+```
+
+```{r}
+names(df_cups)
+```
+
+```{r}
+library(ggplot2)
+ggplot(data = df_cups)+
+  aes(x = H)+
+  geom_histogram()
+```
+
+```{r}
+ggplot(data = df_cups)+
+  aes(x = Phase, y = H)+
+  geom_boxplot()
+```
+
+
+```{r}
+ggplot(data = df_cups)+
+  aes(x = H, y = RD)+
+  geom_point()
+```
+
+
+```{r}
+ggplot(data = df_cups)+
+  aes(x = H, y = RD, color = Phase)+
+  geom_point(size = 4, alpha = 0.5)+
+  labs(x = "Height", y = "Rim Diameter")+
+  theme_light()
+```

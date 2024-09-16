@@ -14,6 +14,8 @@ title: "Materials and data"
 
 #### Data analysis and data viz
 
+- [Presentation](/dataviz/index.qmd)
+
 
 <!-- ## Tuesday 17 Sept.
 
