@@ -17,7 +17,7 @@ title: "Materials and data"
 - [Presentation](/dataviz/index.qmd)
 
 
-<!-- ## Tuesday 17 Sept.
+## Tuesday 17 Sept.
 
 #### Linked Open Data & ARIADNE
 
@@ -35,11 +35,12 @@ title: "Materials and data"
 - [`R` script `wikidata.r`](/sparql/wikidata.r) with Wikidata exercise
 - [`R` script `ariadne.r`](/sparql/ariadne.r) with ARIADNE exercise
 
-#### Useful links 
+#### Resources 
 
-- Intorduction to LOD on Programming Historian
-- Article introucing LOD by Sophie Schmid et al. 
-- AO-Cat ontology -->
+- Article [*Practices of Linked Open Data in Archaeology and Their Realisation in Wikidata*](https://doi.org/10.3390/digital2030019) by Sophie C. Schmid, Florian Thiery and Martina Trognitz
+- [*AO-Cat ontology*](https://zenodo.org/doi/10.5281/zenodo.7818374)
+- [*Introduction to the Principles of LOD*](https://doi.org/10.46430/phen0068) on Programming Historian
+- [*Using SPARQL to access Linked Open Data*](https://doi.org/10.46430/phen0047) on Programming Historian
 
 
 <!-- ## Wednesday 18 Sept.
