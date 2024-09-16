@@ -802,7 +802,7 @@
     "href": "intro2r/index.html#observe-the-dartpoint-data",
     "title": "Introduction to R",
     "section": "Observe the dartpoint data",
-    "text": "Observe the dartpoint data\n\nHow many observations and how many variables are in the dataframe?\nWhat are the names of the variables?\nAre there any quantitative variables? Are they stored properly as numbers so we can make mathematic operations?\nWhat is the mean length of the dartpoints?\n\n\n\n\n\natRium training school, Brno 2024 | Intro to R"
+    "text": "Observe the dartpoint data\n\nHow many observations and how many variables are in the dataframe?\nWhat are the names of the variables?\nAre there any quantitative variables? Are they stored properly as numbers so we can make mathematic operations?\nWhat is the mean length of the dartpoints?\n\n\ncode {\n  font-size: 1.3em;\n  /* or try font-size: xx-large; */\n}\n\n\n\n\n\n\natRium training school, Brno 2024 | Intro to R"
   },
   {
     "objectID": "programme.html",
