@@ -8,10 +8,10 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.57">
+  <meta name="generator" content="quarto-1.4.550">
 
   <meta name="author" content="Peter Tkáč">
-  <title>atRium Training School – Introduction to R</title>
+  <title>atRium Training School - Introduction to R</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -42,7 +42,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -70,7 +70,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.cf { color: #003b4f; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -84,7 +84,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.kw { color: #003b4f; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -1102,7 +1102,7 @@ Peter Tkáč
 <span id="cb128-2"><a></a><span class="fu">library</span>(here) <span class="co"># loads the package</span></span>
 <span id="cb128-3"><a></a><span class="fu">here</span>() <span class="co"># runs a function from the package</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "/mnt/data/Documents/Projects/atRium"</code></pre>
+<pre><code>[1] "C:/Users/pajdla/Documents/projects/atRium"</code></pre>
 </div>
 </div>
 <ul>
@@ -1120,22 +1120,12 @@ Peter Tkáč
 <p>If you are not sure from which package your function is coming, you can easily find out by:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb132"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb132-1"><a></a>?<span class="fu">filter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Help on topic 'filter' was found in the following packages:
-
-  Package               Library
-  dplyr                 /home/knytt/R/x86_64-pc-linux-gnu-library/4.4
-  stats                 /usr/lib/R/library
-
-
-Using the first match ...</code></pre>
-</div>
 </div>
 </section>
 <section id="loading-data" class="slide level2">
 <h2>Loading data</h2>
 <ul>
-<li>download data <a href="../data/dartpoints.csv">dartpoints.csv</a> and move them to your project file</li>
+<li>download data <a href="..\data/dartpoints.csv">dartpoints.csv</a> and move them to your project file</li>
 </ul>
 <h3 id="paths">Paths</h3>
 <p><strong>Absolute</strong> file path - The file path is specific to a given user.</p>
@@ -1149,9 +1139,9 @@ Using the first match ...</code></pre>
 </ul>
 <p>Try running <code>here()</code> to see where your project is stored</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb134"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb134-1"><a></a><span class="fu">here</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb133"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb133-1"><a></a><span class="fu">here</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "/mnt/data/Documents/Projects/atRium"</code></pre>
+<pre><code>[1] "C:/Users/pajdla/Documents/projects/atRium"</code></pre>
 </div>
 </div>
 </section>
@@ -1162,15 +1152,15 @@ Using the first match ...</code></pre>
 <li>NOTE that in this case data which you want to load have to be in a subfolder “data” which is located in the same folder as your project</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb136"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb136-1"><a></a>df_darts <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">here</span>(<span class="st">"data/dartpoints.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb135"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb135-1"><a></a>df_darts <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">here</span>(<span class="st">"data/dartpoints.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><code>read.csv</code> loads .csv files (AKA <strong>comma</strong>-separated values file) into your R</li>
 <li>if the values in your file are separated by other way, you have to adjust. For example for values separated by semicolom <code>;</code> use argument <code>sep=";"</code>:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb137"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb137-1"><a></a><span class="co"># | eval: false</span></span>
-<span id="cb137-2"><a></a>df_darts2 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">here</span>(<span class="st">"data/dartpoints.csv"</span>), <span class="at">sep =</span> <span class="st">";"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb136"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb136-1"><a></a><span class="co"># | eval: false</span></span>
+<span id="cb136-2"><a></a>df_darts2 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">here</span>(<span class="st">"data/dartpoints.csv"</span>), <span class="at">sep =</span> <span class="st">";"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="exercise-2" class="slide level2" data-background-color="lightpink">
@@ -1474,7 +1464,18 @@ Using the first match ...</code></pre>
         }
         return false;
       }
-      const onCopySuccess = function(e) {
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1506,47 +1507,7 @@ Using the first match ...</code></pre>
         }, 1000);
         // clear code selection
         e.clearSelection();
-      }
-      const getTextToCopy = function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-      }
-      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-        text: getTextToCopy
       });
-      clipboard.on('success', onCopySuccess);
-      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        // For code content inside modals, clipBoardJS needs to be initialized with a container option
-        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-          text: getTextToCopy,
-          container: window.document.getElementById('quarto-embedded-source-code-modal')
-        });
-        clipboardModal.on('success', onCopySuccess);
-      }
-        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-        var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp("https:\/\/petrpajdla\.github\.io\/atRium\/");
-        var isInternal = (href) => {
-            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-        }
-        // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-        for (var i=0; i<links.length; i++) {
-          const link = links[i];
-          if (!isInternal(link.href)) {
-            // undo the damage that might have been done by quarto-nav.js in the case of
-            // links that we want to consider external
-            if (link.dataset.originalHref !== undefined) {
-              link.href = link.dataset.originalHref;
-            }
-          }
-        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1583,11 +1544,7 @@ Using the first match ...</code></pre>
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          if (note) {
-            return note.innerHTML;
-          } else {
-            return "";
-          }
+          return note.innerHTML;
         });
       }
       const findCites = (el) => {
