@@ -172,14 +172,14 @@
     "href": "materials.html",
     "title": "Materials and data",
     "section": "",
-    "text": "Presentation contents:\n\nFunctions and data structures\nBasic workflows (packages, scripts, projects, paths)\nReading data into R\n\nDataset dartpoints.csv"
+    "text": "Presentation contents:\n\nFunctions and data structures\nBasic workflows (packages, scripts, projects, paths)\nReading data into R\n\nDataset dartpoints.csv\n\n\n\n\n\nPresentation"
   },
   {
     "objectID": "materials.html#monday-16-sept.",
     "href": "materials.html#monday-16-sept.",
     "title": "Materials and data",
     "section": "",
-    "text": "Presentation contents:\n\nFunctions and data structures\nBasic workflows (packages, scripts, projects, paths)\nReading data into R\n\nDataset dartpoints.csv"
+    "text": "Presentation contents:\n\nFunctions and data structures\nBasic workflows (packages, scripts, projects, paths)\nReading data into R\n\nDataset dartpoints.csv\n\n\n\n\n\nPresentation"
   },
   {
     "objectID": "info.html",
@@ -215,6 +215,321 @@
     "title": "General Information",
     "section": "Other information",
     "text": "Other information\n\nTravelling to Brno\nBrno is easily reachable by trains or buses from Prague (approx. a 2 to 2.5-hour journey) and Vienna (approx. a 1.5 to 2-hour journey). Many overnight trains crossing a large part of Europe start or end in Vienna, and we recommend taking these trains as an alternative to flying.\n\n\n\n\n\n\nFood\nThere are several places around the institute, see map above for locations.\n\n\n\n\n\n\n\n\n\n\nplace\ncuisine\nnote\n\n\n\n\nLittle Saigon\nAsian/Vietnamese\nhas vegan/vegetarian options\n\n\nMasný růžek\nCzech\na lot of meaty foods and traditional heavy Czech cuisine\n\n\nBistro Nella\nCzech\nmight have vegetarian option\n\n\nJídelna Kocourek\nCzech\nmight have vegetarian option\n\n\nGrand Kitchen Vlněna\nCzech, International\nmight have vegetarian option\n\n\nBistro Bellavista\nItalian\nmostly does not have vegetarian/vegan options\n\n\nDelitree bistro\nItalian, Czech, Salads\nhas vegetarian options\n\n\nRamen Brno\nJapanese\nmight have vegetarian options\n\n\nLos Capolitos\nMexican\nhes vegetarian option\n\n\nSargam\nNepalese\nhas vegetarian options\n\n\nVeg8Cafe\nVegan\nvegan bistro\n\n\nForky’s Vlněna Foodtruck\nVegan\nvegan streetfood"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#overview",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#overview",
+    "title": "Introduction to R",
+    "section": "Overview",
+    "text": "Overview"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#overview-of-the-workshop",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#overview-of-the-workshop",
+    "title": "Introduction to R",
+    "section": "Overview of the workshop",
+    "text": "Overview of the workshop\n4.) Data manipulation\n\ndartpoints data\npackage dplyr / tidyverse\n\n5.) Data visualisation\n\npackage ggplot2"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#exercise",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#exercise",
+    "title": "Introduction to R",
+    "section": "Exercise",
+    "text": "Exercise"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#task",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#task",
+    "title": "Introduction to R",
+    "section": "Task:",
+    "text": "Task:\n\ncreate a new project and save it to a new, parent folder. Call it for example as “atRium2024”\ncreate subfolders for data, figures, script and results\nmove the data “dartpoints.csv” to your data folder\nopen a new script and save it as “data_manipulation.R” to your script folders\nload the packages here"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#data-manipulation",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#data-manipulation",
+    "title": "Introduction to R",
+    "section": "Data manipulation",
+    "text": "Data manipulation"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#dplyr-package",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#dplyr-package",
+    "title": "Introduction to R",
+    "section": "dplyr package",
+    "text": "dplyr package\nWe will learn how to:\n\nuse pipe %&gt;% to work with functions more efectively\nselect desired variables - select()\nrename your variables - rename()\norder them from lowest to highest values (or vice versa) - arrange()\nfilter your data based on different conditions - filter()\ncalculate different summary statistics such as mean or count - summarise()\nadd new variables such as percentage - mutate()\nsave your results as comma separated file\n\nBut first, install and load package dplyr and here and load dartpoints.csv data\n\ninstall.packages(\"dplyr\")\nlibrary(dplyr)\nlibrary(here)\n\n\ndf_darts &lt;- read.csv(here(\"data/dartpoints.csv\"))"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#select",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#select",
+    "title": "Introduction to R",
+    "section": "Select",
+    "text": "Select\n\nhead(df_darts,2)\n\n  Name Catalog     TARL  Quad Length Width Thickness B.Width J.Width H.Length\n1 Darl 41-0322 41CV0536 26/59   42.8  15.8       5.8    11.3    10.6     11.6\n2 Darl 35-2946 41CV0235 21/63   40.5  17.4       5.8      NA    13.7     12.9\n  Weight Blade.Sh Base.Sh Should.Sh Should.Or Haft.Sh Haft.Or\n1    3.6        S       I         S         T       S       E\n2    4.5        S       I         S         T       S       E\n\n\n\ntoo many variables? Select only the ones you want to work with\nselect(dataframe, variable1, variable2)\n\n\ndf_darts_edit &lt;- select(df_darts, Catalog, Name, Length, Width, Weight)\nhead(df_darts_edit, 2)\n\n  Catalog Name Length Width Weight\n1 41-0322 Darl   42.8  15.8    3.6\n2 35-2946 Darl   40.5  17.4    4.5"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#pipe",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#pipe",
+    "title": "Introduction to R",
+    "section": "Pipe",
+    "text": "Pipe\n\n%&gt;% hotkey on my computer “CTRL + SHIFT + M”\nnote that when using the pipe, you don’t need to add name of the object (in this case “df_darts”) into the parametres of the function\n\n\ndf_darts_edit &lt;- df_darts %&gt;% \n  select(Name, Catalog, Length, Width, Weight)\n\n\nnote that I have created new object “df_darts_edit”. From now on I will manipulate data only in this object and leave “df_darts” unchanged for back-up"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#renaming",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#renaming",
+    "title": "Introduction to R",
+    "section": "Renaming",
+    "text": "Renaming\n\nrenaming your variables with function rename(data, new_name = old_name) can be useful when dealing with complicated code names or different languages\n\n\ndf_darts_edit &lt;- df_darts_edit %&gt;%  \n  rename(\n    dart_type = Name,\n    dart_ID = Catalog,\n    dart_length = Length,\n    dart_width = Width,\n    dart_weight = Weight\n    ) \n\nhead(df_darts_edit, 2)\n\n  dart_type dart_ID dart_length dart_width dart_weight\n1      Darl 41-0322        42.8       15.8         3.6\n2      Darl 35-2946        40.5       17.4         4.5"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#arranging",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#arranging",
+    "title": "Introduction to R",
+    "section": "Arranging",
+    "text": "Arranging\n\nhere you can order your observations from the lowest to highest (or vice versa). To do so, use function arrange(data, variable)\n\n\ndf_darts_edit &lt;- df_darts_edit %&gt;% \n  arrange(dart_length)\n\nhead(df_darts_edit, 4)\n\n  dart_type dart_ID dart_length dart_width dart_weight\n1      Darl 36-3321        30.6       17.1         2.3\n2      Darl 35-2382        31.2       15.6         2.5\n3      Darl 36-3619        32.0       16.0         3.3\n4      Darl 36-3520        32.4       14.5         2.5\n\n\n\narranging data in oposite way by nesting function desc() into the arrange():\n\n\ndf_darts_edit &lt;-  df_darts_edit %&gt;% \n  arrange(desc(dart_length))\n\nhead(df_darts_edit, 4)\n\n   dart_type dart_ID dart_length dart_width dart_weight\n1 Pedernales 35-2855       109.5       49.3        28.8\n2 Pedernales 36-3879        84.0       21.2         9.3\n3 Pedernales 35-0173        78.3       28.1        14.8\n4 Pedernales 38-0098        70.4       30.4        13.1"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#filtering",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#filtering",
+    "title": "Introduction to R",
+    "section": "Filtering",
+    "text": "Filtering\n\nfunction filter(data, variable &lt;operator&gt; value) allows you to filter your data based on different conditions, for example minimal weight, type of the dartpoint, etc\nlogical and mathematical operators: ==, !=, &lt;, &gt;, &gt;=, &lt;=, &, |, etc (use ?dplyr::filter for more details)\nhere we use &gt; to get only dartpoints longer than 80 mm\n\n\ndf_darts_80 &lt;- df_darts_edit %&gt;% \n  filter(dart_length &gt; 80)\n\n\nand here we use == to choose only those dartpoints which are of type “Travis”\n\n\ndf_darts_travis &lt;- df_darts_edit %&gt;% \n  filter(dart_type == \"Travis\")\n\nunique(df_darts_travis$dart_type)\n\n[1] \"Travis\"\n\n\n\nalternatively, you can exclude all points of a type “Travis” by negation !=\n\n\ndf_darts_no_travis &lt;- df_darts_edit %&gt;% \n  filter(dart_type != \"Travis\")\n\nunique(df_darts_no_travis$dart_type)\n\n[1] \"Pedernales\" \"Wells\"      \"Ensor\"      \"Darl\""
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#filtering-with-multiple-conditions",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#filtering-with-multiple-conditions",
+    "title": "Introduction to R",
+    "section": "Filtering with multiple conditions",
+    "text": "Filtering with multiple conditions\n\nyou can use | or & for filtering with more than one condition\nfor example here we will filter all points which are type “Wells” (AND) are heavier than 10 grams\n\n\ndf_darts_wells_10 &lt;- df_darts_edit %&gt;% \n  filter(dart_type == \"Wells\" & dart_weight &gt; 10)\nhead(df_darts_wells_10)\n\n  dart_type dart_ID dart_length dart_width dart_weight\n1     Wells 36-3088        65.4       25.1        12.6\n2     Wells 44-0732        63.1       24.7        16.3\n3     Wells 35-3079        58.9       24.4        10.5\n\n\nTask: instead of & try operator | (OR) and see how the result differs"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#filtering-based-on-vector",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#filtering-based-on-vector",
+    "title": "Introduction to R",
+    "section": "Filtering based on vector",
+    "text": "Filtering based on vector\n\nyou can make your code less complicated when you create vector from desired values and then filter all observations which fall into that vector by using operator %in%\n\n\ndarts_of_interest &lt;- c(\"Pedernales\", \"Ensor\")\n\ndf_darts_inter &lt;- df_darts_edit %&gt;% \n  filter(dart_type %in% darts_of_interest)\n\nunique(df_darts_inter$dart_type)\n\n[1] \"Pedernales\" \"Ensor\""
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#summarise",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#summarise",
+    "title": "Introduction to R",
+    "section": "Summarise",
+    "text": "Summarise\n\nwe already know some functions to calculate basic summaries, for example function mean\n\n\nmean(df_darts_edit$dart_length)\n\n[1] 49.33077\n\n\n\nbut if you want to create a new dataframe from calculated statistics, function summarise(data, new_variable = summary_statistics) is much more helpfull\nfor summary statistics you can use different functions: mean(), median(), sd(), min()…, (use ?summarise for more details)\n\n\ndf_darts_edit %&gt;%\n  summarise(mean_length = mean(dart_length))\n\n  mean_length\n1    49.33077\n\n\n\nyou can also calculate more summaries:\n\n\ndf_darts_summary &lt;- df_darts_edit %&gt;% \nsummarise(\n  mean_length = mean(dart_length),\n  sd_lenght = sd(dart_length),\n  min_length = min(dart_length),\n  max_length = max(dart_length),\n  total_count = n()\n  )\n\ndf_darts_summary\n\n  mean_length sd_lenght min_length max_length total_count\n1    49.33077  12.73619       30.6      109.5          91"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#grouping-data",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#grouping-data",
+    "title": "Introduction to R",
+    "section": "Grouping data",
+    "text": "Grouping data\n\nsummaries above were applied on whole dataframe. Here we will learn how to calculate summaries for each type of the dartpoint by using group_by(data, variable_to_be_grouped_by)\n\n\ndf_darts_edit %&gt;% \n  group_by(dart_type) %&gt;% \n  summarise(\n    mean_length = mean(dart_length),\n    type_count = n()\n    )\n\n# A tibble: 5 × 3\n  dart_type  mean_length type_count\n  &lt;chr&gt;            &lt;dbl&gt;      &lt;int&gt;\n1 Darl              39.8         28\n2 Ensor             42.7         10\n3 Pedernales        57.9         32\n4 Travis            51.4         11\n5 Wells             53.1         10\n\n\n\nLets fix the decimals by function round()\n\n\ndf_darts_edit %&gt;% \n  group_by(dart_type) %&gt;% \n  summarise(\n    mean_length = round(mean(dart_length), 2),\n    type_count = n()\n    )\n\n# A tibble: 5 × 3\n  dart_type  mean_length type_count\n  &lt;chr&gt;            &lt;dbl&gt;      &lt;int&gt;\n1 Darl              39.8         28\n2 Ensor             42.7         10\n3 Pedernales        57.9         32\n4 Travis            51.4         11\n5 Wells             53.1         10"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#mutate",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#mutate",
+    "title": "Introduction to R",
+    "section": "Mutate",
+    "text": "Mutate\n\nfunction mutate creates a new variable and adds it to the most recent dataframe\n\n\ndf_darts_edit %&gt;% \n  group_by(dart_type) %&gt;% \n  mutate(\n    mean_weight = round(mean(dart_weight),2)\n  )\n\n# A tibble: 91 × 6\n# Groups:   dart_type [5]\n   dart_type  dart_ID dart_length dart_width dart_weight mean_weight\n   &lt;chr&gt;      &lt;chr&gt;         &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;\n 1 Pedernales 35-2855       110.        49.3        28.8       10.6 \n 2 Pedernales 36-3879        84         21.2         9.3       10.6 \n 3 Pedernales 35-0173        78.3       28.1        14.8       10.6 \n 4 Pedernales 38-0098        70.4       30.4        13.1       10.6 \n 5 Travis     43-0112        69         20.9        11.4        8.59\n 6 Pedernales 41-0239        67.2       27.1        15.3       10.6 \n 7 Pedernales 35-2391        66         27.2        12.5       10.6 \n 8 Wells      36-3088        65.4       25.1        12.6        8.68\n 9 Pedernales 43-0110        65         31.6         4.6       10.6 \n10 Travis     36-0006        64.6       21.5        15          8.59\n# ℹ 81 more rows"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#difference-between-summarise-and-mutate",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#difference-between-summarise-and-mutate",
+    "title": "Introduction to R",
+    "section": "Difference between summarise() and mutate()",
+    "text": "Difference between summarise() and mutate()\n\nsummarise() creates a new dataframe from calculated values\nexample bellow show the maximum width of the dartpoints grouped by dart type\n\n\ndf_darts_edit %&gt;% \n  group_by(dart_type) %&gt;% \n  summarise(\n    width_max = max(dart_width)\n  )\n\n# A tibble: 5 × 2\n  dart_type  width_max\n  &lt;chr&gt;          &lt;dbl&gt;\n1 Darl            23.3\n2 Ensor           27.3\n3 Pedernales      49.3\n4 Travis          22.4\n5 Wells           29.6\n\n\n\nmutate() adds a new variable to the dataframe\n\n\ndf_darts_edit %&gt;% \n  group_by(dart_type) %&gt;% \n  mutate(\n    width_max = max(dart_width)\n          ) %&gt;% \n  head(8)\n\n# A tibble: 8 × 6\n# Groups:   dart_type [3]\n  dart_type  dart_ID dart_length dart_width dart_weight width_max\n  &lt;chr&gt;      &lt;chr&gt;         &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt;\n1 Pedernales 35-2855       110.        49.3        28.8      49.3\n2 Pedernales 36-3879        84         21.2         9.3      49.3\n3 Pedernales 35-0173        78.3       28.1        14.8      49.3\n4 Pedernales 38-0098        70.4       30.4        13.1      49.3\n5 Travis     43-0112        69         20.9        11.4      22.4\n6 Pedernales 41-0239        67.2       27.1        15.3      49.3\n7 Pedernales 35-2391        66         27.2        12.5      49.3\n8 Wells      36-3088        65.4       25.1        12.6      29.6"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#more-complex-summarising-with-dplyr-and-pipe",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#more-complex-summarising-with-dplyr-and-pipe",
+    "title": "Introduction to R",
+    "section": "More complex summarising with dplyr and pipe",
+    "text": "More complex summarising with dplyr and pipe\n\ndf_darts_sum &lt;- df_darts_edit %&gt;% \n  group_by(dart_type) %&gt;% \n  summarise(\n    length_mean = round(mean(dart_length), 1),\n    weight_mean = round(mean(dart_weight), 1),\n    type_count = n()) %&gt;%\n  mutate(type_percent = round(type_count/sum(type_count)*100, 1)) %&gt;% \n  arrange(desc(type_count))\n\ndf_darts_sum\n\n# A tibble: 5 × 5\n  dart_type  length_mean weight_mean type_count type_percent\n  &lt;chr&gt;            &lt;dbl&gt;       &lt;dbl&gt;      &lt;int&gt;        &lt;dbl&gt;\n1 Pedernales        57.9        10.6         32         35.2\n2 Darl              39.8         4.4         28         30.8\n3 Travis            51.4         8.6         11         12.1\n4 Ensor             42.7         5.1         10         11  \n5 Wells             53.1         8.7         10         11  \n\n\n\nwrite.csv(name_of_your_object, file = \"path_to_your_folder\") will save your result as a .csv file, which is nice\n\n\nwrite.csv(df_darts_sum, file = here(\"results/darts_summary.csv\"), row.names = FALSE)"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#data-visualisation",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#data-visualisation",
+    "title": "Introduction to R",
+    "section": "Data Visualisation",
+    "text": "Data Visualisation"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#visualising-your-data-with-packgage-ggplot2",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#visualising-your-data-with-packgage-ggplot2",
+    "title": "Introduction to R",
+    "section": "Visualising your data with packgage ggplot2",
+    "text": "Visualising your data with packgage ggplot2\nInspiration\n\n\nBook\n\n\nThe R Graph Gallery"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#starting-with-ggplot2",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#starting-with-ggplot2",
+    "title": "Introduction to R",
+    "section": "Starting with ggplot2",
+    "text": "Starting with ggplot2\n\n#install.packages(\"ggplot2\")\nlibrary(ggplot2)\n\nBasic syntax\nggplot(data = &lt;your data frame&gt;) +\naes(x = &lt;variable to be mapped to axis x&gt;) +\ngeom_&lt;geometry&gt;()"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#basic-types-of-ggplot---barplot",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#basic-types-of-ggplot---barplot",
+    "title": "Introduction to R",
+    "section": "Basic types of ggplot - barplot",
+    "text": "Basic types of ggplot - barplot\n\nfor one variable\n\n\nggplot(data = df_darts_edit)+\n  aes(x = dart_type)+\n  geom_bar()"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#basic-types-of-ggplot---histogram",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#basic-types-of-ggplot---histogram",
+    "title": "Introduction to R",
+    "section": "Basic types of ggplot - histogram",
+    "text": "Basic types of ggplot - histogram\n\ndistribution of one variable\n\n\nggplot(data = df_darts_edit)+\n  aes(x = dart_length)+\n  geom_histogram()"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#basic-types-of-ggplot---density-plot",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#basic-types-of-ggplot---density-plot",
+    "title": "Introduction to R",
+    "section": "Basic types of ggplot - density plot",
+    "text": "Basic types of ggplot - density plot\n\ndistribution of one variable\n\n\nggplot(data = df_darts_edit)+\n  aes(x = dart_length)+\n  geom_density()"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#basic-types-of-ggplot---boxplot",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#basic-types-of-ggplot---boxplot",
+    "title": "Introduction to R",
+    "section": "Basic types of ggplot - boxplot",
+    "text": "Basic types of ggplot - boxplot\n\nggplot(data = df_darts_edit)+\n  aes(x = dart_type, y = dart_length)+\n  geom_boxplot()"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#basic-types-of-ggplot---scatter-plot",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#basic-types-of-ggplot---scatter-plot",
+    "title": "Introduction to R",
+    "section": "Basic types of ggplot - scatter plot",
+    "text": "Basic types of ggplot - scatter plot\n\ncomparing two or more variables\n\n\nggplot(data = df_darts_edit)+\n  aes(x = dart_weight, y = dart_length)+\n  geom_point()"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#refining-your-plot",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#refining-your-plot",
+    "title": "Introduction to R",
+    "section": "Refining your plot",
+    "text": "Refining your plot\nLets go back to the scatterplot and play a little\n\nggplot(data = df_darts_edit)+\n  aes(x = dart_weight, y = dart_length)+\n  geom_point(color = \"red\", alpha = 0.4, size = 3, shape = 15)+\n  geom_smooth()+\n  theme_light()"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#task-1",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#task-1",
+    "title": "Introduction to R",
+    "section": "Task:",
+    "text": "Task:\n\ntry different colours, shapes and themes\n\n\nggplot(data = df_darts_edit)+\n  aes(x = dart_weight, y = dart_length)+\n  geom_point(color = \"red\", alpha = 0.4, size = 3, shape = 15)+\n  theme_light()\n\nDifferent shapes with their codes:"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#playing-with-variables",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#playing-with-variables",
+    "title": "Introduction to R",
+    "section": "Playing with variables",
+    "text": "Playing with variables\n\nin this case, the colours and size of the points is conditional on the values of the variables\n\n\nggplot(data = df_darts_edit)+\n  aes(x = dart_weight, y = dart_length, color = dart_type, size = dart_weight)+\n  geom_point(alpha = 0.5)+\n  theme_light()"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#adding-text",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#adding-text",
+    "title": "Introduction to R",
+    "section": "Adding text",
+    "text": "Adding text\n\nggplot(data = df_darts_edit)+\n  aes(x = dart_weight, y = dart_length, color = dart_type, size = dart_weight)+\n  geom_point(alpha = 0.5)+\n  labs(\n    title = \"A very nice plot\",\n    subtitle = \"Look at those colors!\",\n    x =\"weight (g)\",\n    y = \"length (g)\", \n    caption =  \"Data = package Archdata\",\n    color = \"Type of a dart\",\n    size = \"Weight of a dart\")+\n  theme_classic()"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#spliting-plots",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#spliting-plots",
+    "title": "Introduction to R",
+    "section": "Spliting plots",
+    "text": "Spliting plots\n\nggplot(data = df_darts_edit)+\n  aes(x = dart_weight, y = dart_length, color = dart_type, size = dart_weight)+\n  geom_point(alpha = 0.5)+\n  facet_wrap(~dart_type)+\n  labs(\n    title = \"A very nice plot\",\n    subtitle = \"Look at those colors!\",\n    x =\"weight (g)\",\n    y = \"length (g)\", \n    caption =  \"Data = package Archdata\",\n    color = \"Type of a dart\",\n    size = \"Weight of a dart\")+\n  theme_light()"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#saving-plot",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#saving-plot",
+    "title": "Introduction to R",
+    "section": "Saving plot",
+    "text": "Saving plot\n\nbest_plot &lt;- ggplot(data = df_darts_edit)+\n  aes(x = dart_weight, y = dart_length, color = dart_type, size = dart_weight)+\n  geom_point(alpha = 0.5)+\n  labs(\n    title = \"A very nice plot\",\n    subtitle = \"Look at those colors!\",\n    x =\"weight (g)\",\n    y = \"length (g)\", \n    caption =  \"Data = package Archdata\",\n    color = \"Type of a dart\",\n    size = \"Weight of a dart\")+\n  theme_classic()\n\n\nggsave(plot = best_plot, \n       filename = here(\"results/plot_darts.jpg\"),\n       width = 15,\n       height = 10,\n       units = \"cm\"\n)"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#back-to-barplots",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#back-to-barplots",
+    "title": "Introduction to R",
+    "section": "Back to barplots",
+    "text": "Back to barplots\n\nggplot(data = df_darts_edit)+\n  aes(x = dart_type)+\n  geom_bar()\n\n\n\n\n\n\n\n\n\nggplot(data = df_darts_edit)+\n  aes(x = dart_type, color = dart_type)+\n  geom_bar()\n\n\n\n\n\n\n\n\n\nggplot(data = df_darts_edit)+\n  aes(x = dart_type, fill = dart_type)+\n  geom_bar()\n\n\n\n\n\n\n\n\n\nggplot(data = df_darts_edit)+\n  aes(x = dart_type)+\n  geom_bar(fill = \"steelblue\")+\n  theme_light()\n\n\n\n\n\n\n\n\n\nggplot(data = df_darts_edit)+\n  aes(x = fct_infreq(dart_type))+\n  geom_bar(fill = \"steelblue\")+\n  theme_light()\n\n\n\n\n\n\n\n\n\nggplot(data = df_darts_edit)+\n  aes(x = fct_rev(fct_infreq(dart_type)))+\n  geom_bar(fill = \"steelblue\")+\n  coord_flip()+\n  labs( x = \"dart type\")+\n  theme_light()"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#back-to-the-density-plot",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#back-to-the-density-plot",
+    "title": "Introduction to R",
+    "section": "Back to the density plot",
+    "text": "Back to the density plot\n\nggplot(data = df_darts_edit)+\n  aes(x = dart_length)+\n  geom_density()\n\n\n\n\n\n\n\n\n\nggplot(data = df_darts_edit)+\n  aes(x = dart_length)+\n  geom_density(fill = \"grey75\", color = \"grey50\")+\n  theme_linedraw()\n\n\n\n\n\n\n\n\n\nggplot(data = df_darts_edit)+\n  aes(x = dart_length, fill = dart_type)+\n  geom_density(color = \"white\", alpha = 0.3)+\n  theme_linedraw()"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#points-instead-of-boxplots",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#points-instead-of-boxplots",
+    "title": "Introduction to R",
+    "section": "Points instead of boxplots",
+    "text": "Points instead of boxplots\n\nggplot(data = df_darts_edit)+\n  aes(x = dart_type, y = dart_length)+\n  geom_point()\n\n\n\n\n\n\n\n\n\nggplot(data = df_darts_edit)+\n  aes(x = reorder(dart_type, dart_length), y = dart_length, color = dart_type)+\n  geom_point(size = 4, alpha = 0.5, show.legend = FALSE)+\n  coord_flip()+\n  theme_linedraw()"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#exercise-1",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#exercise-1",
+    "title": "Introduction to R",
+    "section": "Exercise",
+    "text": "Exercise"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#task-2",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#task-2",
+    "title": "Introduction to R",
+    "section": "Task:",
+    "text": "Task:\n\nDownload data set with bronze age cups bacups.csv\nExplore the data set and its structure.\nWhat are the observations?\nWhat types of variables are there?\nCreate a plot showing distribution of cup heights (H).\nCreate a boxplot for cup heights divided by phases (Phase).\nAre there any outliers?\nCreate a plot showing relationship between cup height and its rim diameter.\nColor cups from different phases (Phase) by differently.\nLabel the axes sensibly.\n\nHint: you can get the information about the dataset by:\n\n# install.packages(\"archdata\")\nlibrary(archdata)\n?archdata::BACups\n\nOther hints:\ngeom_histogram(), geom_boxplot(), geom_point(), labs()"
+  },
+  {
+    "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#solution",
+    "href": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#solution",
+    "title": "Introduction to R",
+    "section": "Solution",
+    "text": "Solution\n\nlibrary(here)\ndf_cups &lt;- read.csv(here(\"data/bacups.csv\"))\n\n\nhead(df_cups)\n\n    RD   ND   SD   H  NH       Phase\n1 11.1 10.0 10.3 5.5 2.5 Subapennine\n2  9.5  9.2  9.8 4.8 2.0 Subapennine\n3 20.8 20.9 22.0 9.5 3.8 Subapennine\n4 19.5 18.2 19.5 8.8 2.7 Subapennine\n5 15.5 15.5 18.8 9.8 3.2 Subapennine\n6 11.7 11.1 11.5 3.8 1.4 Subapennine\n\nstr(df_cups)\n\n'data.frame':   60 obs. of  6 variables:\n $ RD   : num  11.1 9.5 20.8 19.5 15.5 11.7 10.8 15 18.5 11 ...\n $ ND   : num  10 9.2 20.9 18.2 15.5 11.1 10.7 16.1 16.4 8.9 ...\n $ SD   : num  10.3 9.8 22 19.5 18.8 11.5 10.8 16.4 18 9.5 ...\n $ H    : num  5.5 4.8 9.5 8.8 9.8 3.8 3.5 11.8 10.5 5.8 ...\n $ NH   : num  2.5 2 3.8 2.7 3.2 1.4 1.7 3.5 4.8 3.7 ...\n $ Phase: chr  \"Subapennine\" \"Subapennine\" \"Subapennine\" \"Subapennine\" ...\n\n\n\nnames(df_cups)\n\n[1] \"RD\"    \"ND\"    \"SD\"    \"H\"     \"NH\"    \"Phase\"\n\n\n\nlibrary(ggplot2)\nggplot(data = df_cups)+\n  aes(x = H)+\n  geom_histogram()\n\n\n\n\n\n\n\n\n\nggplot(data = df_cups)+\n  aes(x = Phase, y = H)+\n  geom_boxplot()\n\n\n\n\n\n\n\n\n\nggplot(data = df_cups)+\n  aes(x = H, y = RD)+\n  geom_point()\n\n\n\n\n\n\n\n\n\nggplot(data = df_cups)+\n  aes(x = H, y = RD, color = Phase)+\n  geom_point(size = 4, alpha = 0.5)+\n  labs(x = \"Height\", y = \"Rim Diameter\")+\n  theme_light()\n\n\n\n\n\n\n\n\n\n\n\n\natRium training school, Brno 2024 | Data viz"
+  },
+  {
+    "objectID": "applications.html",
+    "href": "applications.html",
+    "title": "Applications",
+    "section": "",
+    "text": "More details about the transnational access scheme grants can be found on the ATRIUM Project website."
+  },
+  {
+    "objectID": "applications.html#key-dates",
+    "href": "applications.html#key-dates",
+    "title": "Applications",
+    "section": "Key dates",
+    "text": "Key dates\n\n\n\n\n\n\n\nApril 2024\nCall for participants opens\n\n\n31 May 2024\nDeadline for applications\n\n\n20 July 28 June 2024\nAcceptance notifications sent before this date\n\n\n16–20 September 2024\nTraining school\n\n\nmid-October 2024 (?)\nDeadline for submission of reports\n\n\nend of November 2024\nGrants paid before this date"
+  },
+  {
+    "objectID": "applications.html#who-should-apply",
+    "href": "applications.html#who-should-apply",
+    "title": "Applications",
+    "section": "Who should apply",
+    "text": "Who should apply\n\n\n\n\n\n\nNote\n\n\n\nOnly applicants with institutional affiliation outside of the Czech Republic are eligible to receive funding due to the trans-national nature of the access to the infrastructure provided by the school.\n\n\nWe welcome applications from early-career researchers and PhD students who are enthusiastic about acquiring programming skills, particularly in the R scripting language, to efficiently retrieve and analyse extensive (spatial) datasets. Participants should demonstrate a keen interest in conducting data analysis and processing in a structured and reproducible manner using scripting languages.\nWhile applicants with prior knowledge of R programming are encouraged to apply, the first day of the training will be dedicated to mastering the fundamentals of R. Individuals who are complete beginners are welcome as well, as no prior experience is necessary. Additionally, applicants should have a basic understanding of statistics, data management, and geographic information systems to fully benefit from the training."
+  },
+  {
+    "objectID": "applications.html#how-to-apply",
+    "href": "applications.html#how-to-apply",
+    "title": "Applications",
+    "section": "How to apply",
+    "text": "How to apply\nSubmit your applications through an online form. On the 4th page of the application (TNA Scheme), choose ‘Summer School Access’ and ‘Archaeological Information System of the Czech Republic, Institute of Archaeology of the Czech Academy of Sciences, Brno – AIS CR (ARUB)’ as the proposed host organisation. On the next page (Summer School Application) please explain why you believe this training would be valuable for your research and how you intend to integrate these newfound skills into your work.\nMore details on how to apply can be found here."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About the training school",
+    "section": "",
+    "text": "Petr Pajdla\nInstitute of Archaeology, Czech Acad Sci, Brno\n 0000-0001-7050-9572\nPeter Tkáč\nMasaryk University\n 0000-0002-9444-1936\n\nMichael Kempf\nUniversity of Basel\n 0000-0002-9474-4670\nGiacomo Bilotti\nKiel University\n 0000-0002-7328-0811\n\n\n\n\n\n\nZuzana Kopáčová\nInstitute of Archaeology, Czech Acad Sci, Brno\nFinances, administration\n\nVít Kozák\nMasaryk University\nTeaching assistant\n\n\nAnd the AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to\nZuzana Kopáčová (kopacova@arub.cz ✉), and/or\nPetr Pajdla (pajdla@arub.cz ✉)."
+  },
+  {
+    "objectID": "about.html#organisers-lecturers",
+    "href": "about.html#organisers-lecturers",
+    "title": "About the training school",
+    "section": "",
+    "text": "Petr Pajdla\nInstitute of Archaeology, Czech Acad Sci, Brno\n 0000-0001-7050-9572\nPeter Tkáč\nMasaryk University\n 0000-0002-9444-1936\n\nMichael Kempf\nUniversity of Basel\n 0000-0002-9474-4670\nGiacomo Bilotti\nKiel University\n 0000-0002-7328-0811\n\n\n\n\n\n\nZuzana Kopáčová\nInstitute of Archaeology, Czech Acad Sci, Brno\nFinances, administration\n\nVít Kozák\nMasaryk University\nTeaching assistant\n\n\nAnd the AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to\nZuzana Kopáčová (kopacova@arub.cz ✉), and/or\nPetr Pajdla (pajdla@arub.cz ✉)."
+  },
+  {
+    "objectID": "about.html#organisations",
+    "href": "about.html#organisations",
+    "title": "About the training school",
+    "section": "Organisations",
+    "text": "Organisations\n\nATRIUM\nThe training (summer) school is organised as transnational access provision in the ATRIUM Project (Advancing Frontier Research in the Arts and Humanities) funded by the Horizon Europe research and innovation actions programme under grant agreement No. 101132163.\n\n\nARIADNE\nARIADNE Research Infrastructure is a non-profit organisation that aggregates, integrates, and provides access to over 4 million archaeological data resources. Access is facilitated through the comprehensive data catalogue ARIADNE Portal (see the short video below for more details) and directly through a SPARQL endpoint to the linked-open data triple store, the ARIADNE Knowledge Base.\nOne of the goals of the training school is to enable programmatic access to these resources by introducing the basics of knowledge representation in the triple store, explaining the ARIADNE AO-Cat Ontology, and providing training in building SPARQL queries.\n\n\n\nAIS CR\nThe Archaeological Information System of the Czech Republic (AIS CR) is a research infrastructure integrating digital resources and services on archaeology in the Czech Republic, and as such is one of many data providers in the ARIADNE Research Infrastructure. AIS CR is jointly operated by the Institutes of Archaeology of the Czech Academy of Sciences in Brno (IAB) and Prague (IAP)."
   },
   {
     "objectID": "ariadne/index.html#outline",
@@ -511,55 +826,6 @@
     "text": "ARIADNE subjects\n\nSite/monument – each record is a site/monument.\nFieldwork – each record is an individual archaeological investigation (event) .\nFieldwork report – record of fieldwork event (link to grey literature report).\nFieldwork archive – record of filedwork event (link to archive of digital objects).\nScientific analysis – any analytical data.\nDate – each record is a single archaeological date (C14, dendrochronology etc.)\nArtefact – each record is a single artefact (except coins).\nCoin – each record is a single coin.\nBuilding survey – specific category of fieldwork report or archive for standing building survey.\nMaritime – specific category of site/monument for wrecks or fieldwork event (underwater archaeology).\nInscription – monuments or artefacts that bear graphical manifestation of a human thought.\nRock art – similar to inscriptions.\nBurial – each record is a burial.\n\n\n\n\n\n\natRium training school, Brno 2024 | ARIADNE"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About the training school",
-    "section": "",
-    "text": "Petr Pajdla\nInstitute of Archaeology, Czech Acad Sci, Brno\n 0000-0001-7050-9572\nPeter Tkáč\nMasaryk University\n 0000-0002-9444-1936\n\nMichael Kempf\nUniversity of Basel\n 0000-0002-9474-4670\nGiacomo Bilotti\nKiel University\n 0000-0002-7328-0811\n\n\n\n\n\n\nZuzana Kopáčová\nInstitute of Archaeology, Czech Acad Sci, Brno\nFinances, administration\n\nVít Kozák\nMasaryk University\nTeaching assistant\n\n\nAnd the AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to\nZuzana Kopáčová (kopacova@arub.cz ✉), and/or\nPetr Pajdla (pajdla@arub.cz ✉)."
-  },
-  {
-    "objectID": "about.html#organisers-lecturers",
-    "href": "about.html#organisers-lecturers",
-    "title": "About the training school",
-    "section": "",
-    "text": "Petr Pajdla\nInstitute of Archaeology, Czech Acad Sci, Brno\n 0000-0001-7050-9572\nPeter Tkáč\nMasaryk University\n 0000-0002-9444-1936\n\nMichael Kempf\nUniversity of Basel\n 0000-0002-9474-4670\nGiacomo Bilotti\nKiel University\n 0000-0002-7328-0811\n\n\n\n\n\n\nZuzana Kopáčová\nInstitute of Archaeology, Czech Acad Sci, Brno\nFinances, administration\n\nVít Kozák\nMasaryk University\nTeaching assistant\n\n\nAnd the AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to\nZuzana Kopáčová (kopacova@arub.cz ✉), and/or\nPetr Pajdla (pajdla@arub.cz ✉)."
-  },
-  {
-    "objectID": "about.html#organisations",
-    "href": "about.html#organisations",
-    "title": "About the training school",
-    "section": "Organisations",
-    "text": "Organisations\n\nATRIUM\nThe training (summer) school is organised as transnational access provision in the ATRIUM Project (Advancing Frontier Research in the Arts and Humanities) funded by the Horizon Europe research and innovation actions programme under grant agreement No. 101132163.\n\n\nARIADNE\nARIADNE Research Infrastructure is a non-profit organisation that aggregates, integrates, and provides access to over 4 million archaeological data resources. Access is facilitated through the comprehensive data catalogue ARIADNE Portal (see the short video below for more details) and directly through a SPARQL endpoint to the linked-open data triple store, the ARIADNE Knowledge Base.\nOne of the goals of the training school is to enable programmatic access to these resources by introducing the basics of knowledge representation in the triple store, explaining the ARIADNE AO-Cat Ontology, and providing training in building SPARQL queries.\n\n\n\nAIS CR\nThe Archaeological Information System of the Czech Republic (AIS CR) is a research infrastructure integrating digital resources and services on archaeology in the Czech Republic, and as such is one of many data providers in the ARIADNE Research Infrastructure. AIS CR is jointly operated by the Institutes of Archaeology of the Czech Academy of Sciences in Brno (IAB) and Prague (IAP)."
-  },
-  {
-    "objectID": "applications.html",
-    "href": "applications.html",
-    "title": "Applications",
-    "section": "",
-    "text": "More details about the transnational access scheme grants can be found on the ATRIUM Project website."
-  },
-  {
-    "objectID": "applications.html#key-dates",
-    "href": "applications.html#key-dates",
-    "title": "Applications",
-    "section": "Key dates",
-    "text": "Key dates\n\n\n\n\n\n\n\nApril 2024\nCall for participants opens\n\n\n31 May 2024\nDeadline for applications\n\n\n20 July 28 June 2024\nAcceptance notifications sent before this date\n\n\n16–20 September 2024\nTraining school\n\n\nmid-October 2024 (?)\nDeadline for submission of reports\n\n\nend of November 2024\nGrants paid before this date"
-  },
-  {
-    "objectID": "applications.html#who-should-apply",
-    "href": "applications.html#who-should-apply",
-    "title": "Applications",
-    "section": "Who should apply",
-    "text": "Who should apply\n\n\n\n\n\n\nNote\n\n\n\nOnly applicants with institutional affiliation outside of the Czech Republic are eligible to receive funding due to the trans-national nature of the access to the infrastructure provided by the school.\n\n\nWe welcome applications from early-career researchers and PhD students who are enthusiastic about acquiring programming skills, particularly in the R scripting language, to efficiently retrieve and analyse extensive (spatial) datasets. Participants should demonstrate a keen interest in conducting data analysis and processing in a structured and reproducible manner using scripting languages.\nWhile applicants with prior knowledge of R programming are encouraged to apply, the first day of the training will be dedicated to mastering the fundamentals of R. Individuals who are complete beginners are welcome as well, as no prior experience is necessary. Additionally, applicants should have a basic understanding of statistics, data management, and geographic information systems to fully benefit from the training."
-  },
-  {
-    "objectID": "applications.html#how-to-apply",
-    "href": "applications.html#how-to-apply",
-    "title": "Applications",
-    "section": "How to apply",
-    "text": "How to apply\nSubmit your applications through an online form. On the 4th page of the application (TNA Scheme), choose ‘Summer School Access’ and ‘Archaeological Information System of the Czech Republic, Institute of Archaeology of the Czech Academy of Sciences, Brno – AIS CR (ARUB)’ as the proposed host organisation. On the next page (Summer School Application) please explain why you believe this training would be valuable for your research and how you intend to integrate these newfound skills into your work.\nMore details on how to apply can be found here."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "atRium Brno Training School",
@@ -802,7 +1068,7 @@
     "href": "intro2r/index.html#observe-the-dartpoint-data",
     "title": "Introduction to R",
     "section": "Observe the dartpoint data",
-    "text": "Observe the dartpoint data\n\nHow many observations and how many variables are in the dataframe?\nWhat are the names of the variables?\nAre there any quantitative variables? Are they stored properly as numbers so we can make mathematic operations?\nWhat is the mean length of the dartpoints?\n\n\ncode {\n  font-size: 1.3em;\n  /* or try font-size: xx-large; */\n}\n\n\n\n\n\n\natRium training school, Brno 2024 | Intro to R"
+    "text": "Observe the dartpoint data\n\nHow many observations and how many variables are in the dataframe?\nWhat are the names of the variables?\nAre there any quantitative variables? Are they stored properly as numbers so we can make mathematic operations?\nWhat is the mean length of the dartpoints?\n\n\n\n\n\natRium training school, Brno 2024 | Intro to R"
   },
   {
     "objectID": "programme.html",
