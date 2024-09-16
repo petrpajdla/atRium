@@ -9,9 +9,9 @@
 }
 
 .sourceCode {
-  font-size: 118%;
+  font-size: 118% !important;
 }
 
 .cellOutput {
-  font-size: 108%;
+  font-size: 108% !important;
 }
