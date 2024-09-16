@@ -7,3 +7,11 @@
 .tiny {
   font-size: 42%;
 }
+
+.sourceCode {
+  font-size: 118%;
+}
+
+.cellOutput {
+  font-size: 108%;
+}
