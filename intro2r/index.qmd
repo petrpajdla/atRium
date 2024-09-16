@@ -4,7 +4,7 @@ subtitle: "Part 1"
 author: "Peter Tkáč"
 format:
   revealjs:
-    fontsize: 24px
+    fontsize: 28px
     scrollable: true
     # output-file: atRium2024_intro_part1.html
     footer: "[atRium](https://petrpajdla.github.io/atRium/) *training school*, Brno 2024 | [Intro to R](/intro2r/index.qmd)"
