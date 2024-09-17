@@ -11,6 +11,7 @@ format:
     # output-file: slides_space.html
     footer: "[atRium](https://aiscr.cz/atRium/) *training school*, Brno 2024 | [ARIADNE](/ariadne/index.qmd)"
     logo: /figs/Clay.png
+    scrollable: true
     chalkboard:
       theme: whiteboard
       chalk-effect: 0.0
@@ -765,9 +766,6 @@ dbr:Crete
 *Let's brainstorm...*
 
 
-## Wrap up
-
-
 <!-- ## Exercise {background-color="#B5E2FF"}
 
 ### Try to draw this Turtle serialization  -->
@@ -819,8 +817,24 @@ graph G {
     fontsize="8"
     color="gray80"
   ]
+  graph [
+    fontname="Vollkorn,sans-serif"
+    fontsize="8"
+    fontcolor="gray40"
+  ]
   
-  "domain" -- "range" [label="predicate\n(property)"];
+  subgraph cluster_0 {
+    "subject";
+    label = "domain";
+    color = "black";
+  }
+  
+  subgraph cluster_1 {
+    "object";
+    label = "range";
+    color = "black";
+  }
+  
   "subject" -- "object" [label="predicate\n(property)"];
 }
 ```
@@ -923,7 +937,7 @@ dbr:Crete
 
 ```{dot}
 //| echo: false
-//| fig-width: 6
+//| fig-width: 8
 //| fig-height: 6
 //| fig-align: "center"
 
@@ -948,59 +962,37 @@ graph G {
   "AO_Entity" -- "AO_Resource";
   "AO_Resource" -- "AO_Service";
   "AO_Resource" -- "AO_Data_Resource";
-  "AO_Data_Resource" -- "AO_Individual_Data_Resource (A)";
-  "AO_Data_Resource" -- "AO_Collection (A)";
-  "AO_Collection (A)" -- "AO_Individual_Data_Resource (B)";
-  "AO_Collection (A)" -- "AO_Collection (B)";
-  "AO_Individual_Data_Resource (A)" -- "AO_Document";
+  "AO_Data_Resource" -- "AO_Individual_Data_Resource (1)";
+  "AO_Data_Resource" -- "AO_Collection (1)";
+  "AO_Collection (1)" -- "AO_Individual_Data_Resource (2)";
+  "AO_Collection (1)" -- "AO_Collection (2)";
+  "AO_Individual_Data_Resource (1)" -- "AO_Document";
 }
 ```
 
 
-## AO-Cat Concepts 
+## AO-Cat classes
 
-### Context
+### Where 
 
-```{dot}
-//| echo: false
-//| fig-width: 6
-//| fig-height: 6
-//| fig-align: "center"
+- `AO_Spatial_Region` 
+    - `AO_Spatial_Region_Point`
+    - `AO_Spatial_Region_Polygon`
+    - `AO_Spatial_Region_BBox`
+    - `AO_Spatial_Region_StdName`
 
-graph G {
-  rankdir=LR
-  bgcolor="transparent"
-  node [
-    fontname="Vollkorn,sans-serif"
-    fontsize="10"
-  ]
-  edge [
-    fontname="Vollkorn,sans-serif" 
-    fontsize="8"
-    color="gray80"
-  ]
-  graph [
-    fontname="Vollkorn,sans-serif"
-    fontsize="8"
-    fontcolor="gray40"
-  ]
-  
-  "AO_Data_Resource" -- "AO_Temporal_Region" [label="has_temporal_coverage"];
-  "AO_Data_Resource" -- "AO_Spatial_Region" [label="has_spatial_coverage"];
-/* "AO_Data_Resource" -- "AO" */
-}
-```
+### When 
 
+- `AO_Temporal_Region`
+    - From/until given in years
+    - PeriodO URIs
 
-## Most important properties 
+### What 
 
-## AO_Spatial_Region
-
-## AO_Temporal_Region 
-
-## AO_Concept
-
-
+- class `AO_Concept`
+- ARIADNE subjects (property `has_ARIADNE_subject` )
+- derived subjects (AAT subjects, property `has_derived_subject`)
+- native subjects (property `has_native_subject`)
 
 
 ## ARIADNE subjects 

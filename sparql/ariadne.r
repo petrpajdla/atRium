@@ -9,7 +9,6 @@
 library(glitter)
 library(dplyr)
 library(ggplot2)
-library(sf)
 
 # ARAIDNE KB SPARQL ednpoint
 endpoint <- "https://graphdb.ariadne.d4science.org/repositories/ariadneplus-pr01"
@@ -23,7 +22,7 @@ q <- spq_init(endpoint = endpoint, request_control = spq_control_request(request
 # 1. GettyAAT subjects -------------------------------------------------------
 
 # What are the 'derived subjects' (GettyAAT subjects/keywords) for artefacts in 
-# ARIADNE KB? How mayn occurences of different artefacts are there?
+# ARIADNE KB? How many occurences of different artefacts are there?
 
 q_aat <- q %>% 
   # artefacts only
@@ -53,7 +52,7 @@ r_aat <- q_aat %>%
 
 # What are the time spans for needles? Create an aoristic model.
 
-q_needles <- q %>% 
+q_needles_time <- q %>% 
   # artefacts only
   spq_add("?ae aocat:has_ARIADNE_subject ?s") %>%
   spq_add("?s rdfs:label 'Artefact'@en") %>% 
@@ -65,7 +64,7 @@ q_needles <- q %>%
   spq_add("?tc aocat:until ?until") %>%
   spq_select(ae, from, until)
 
-r_needles <- q_needles %>% 
+r_needles_time <- q_needles_time %>% 
   spq_perform() %>% 
   # years as numbers
   mutate(across(c("from", "until"), as.integer))
@@ -74,7 +73,7 @@ r_needles <- q_needles %>%
 # package aoristAAR is used here, because it is faster to install, 
 # alternative could be package kairos, but it takes longer to build
 # remotes::install_github("ISAAKiel/aoristAAR")
-needles_aoristic1 <- r_needles %>% 
+needles_aoristic1 <- r_needles_time %>% 
   aoristAAR::aorist(from = "from", to = "until", stepwidth = 100, method = "weight")
 
 needles_aoristic1
@@ -95,39 +94,44 @@ needles_aoristic1 %>%
 
 # What is the spatial distribution of needles? Create a simple map.
 
-# geographic extent
-artefacts <- spq_init(endpoint = endpoint, request_control = spq_control_request(request_type = "body-form")) %>% 
-  spq_prefix(prefixes = c(aocat = "https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/")) %>% 
+q_needles_space <- q %>% 
   # artefacts only
-  spq_add("?artefact aocat:has_ARIADNE_subject ?s") %>%
-  spq_add("?artefact rdfs:label ?label") %>% 
+  spq_add("?ae aocat:has_ARIADNE_subject ?s") %>%
   spq_add("?s rdfs:label 'Artefact'@en") %>% 
-  # swords only
-  spq_add("?artefact aocat:has_derived_subject ?ds") %>% 
-  spq_add("?ds rdfs:label 'swords'@en") %>% 
-  # temporal coverage
-  # spq_add("?artefact aocat:has_temporal_coverage ?tc") %>% 
-  # spq_add("?tc aocat:from ?from") %>% 
-  # spq_add("?tc aocat:until ?until") %>% 
-  spq_select(ds_label) %>% 
-  spq_head(500)
+  # needles only (derived subject is a needle)
+  spq_add("?ae aocat:has_derived_subject aat:300024789") %>% 
+  # spatial coverage - points
+  spq_add("?ae aocat:has_spatial_coverage ?sc") %>% 
+  spq_add("?sc aocat:has_latitude ?lat") %>% 
+  spq_add("?sc aocat:has_longitude ?lon") %>% 
+  spq_select(ae, lat, lon)
 
-artefacts %>% 
-  spq_perform() %>% View
+# result as spatial features
+r_needles_space <- q_needles_space %>% 
+  spq_perform() %>% 
+  mutate(across(c("lat", "lon"), as.numeric)) %>% 
+  sf::st_as_sf(coords = c("lon", "lat"))
 
-PREFIX aocat: <https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/>
-  PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-SELECT * WHERE {
-  
-  ?r aocat:has_spatial_coverage ?sc .
-  ?sc rdf:type aocat:AO_Spatial_Region_BBox .
-  ?sc aocat:has_bounding_box_min_lat "41.2353929"^^xsd:decimal .
-  ?sc aocat:has_bounding_box_min_lon ?bminlon .
-  ?sc aocat:has_bounding_box_max_lat ?bmaxlat.
-  ?sc aocat:has_bounding_box_max_lon ?bmaxlon .
-  
-}
+# simple leaflet map
+r_needles_space %>% 
+  leaflet::leaflet() %>% 
+  leaflet::addTiles() %>% 
+  leaflet::addCircleMarkers()
 
+# Tasks:
+# - Modify the query for swords instead of needles.
+# - Combine the queries to get time spans for needles as well.
+
+
+# 4. Exercise ----------------------------------------------------------------
+
+# Try to answer questions done in ARIADNE Portal using SPARQL queries to 
+# ARIADNE KB, skip those that you do not know how to do.
+# 1. How many **resources** are there in the ARIADNE Portal?
+# 2. How many records of **individual artefacts** are there?
+# 3. **Who** contributes the most of the records on artefacts?
+# 4. How many **swords** are there?
+# 5. How many **Bronze Age swords** are there?
+# 6. Are there any records from Brno (Czech Republic)?
+# 7. How many records are there from Africa?
 
