@@ -182,6 +182,13 @@
     "text": "Presentation contents:\n\nFunctions and data structures\nBasic workflows (packages, scripts, projects, paths)\nReading data into R\n\nDataset dartpoints.csv\n\n\n\n\n\nPresentation"
   },
   {
+    "objectID": "materials.html#tuesday-17-sept.",
+    "href": "materials.html#tuesday-17-sept.",
+    "title": "Materials and data",
+    "section": "Tuesday 17 Sept.",
+    "text": "Tuesday 17 Sept.\n\nLinked Open Data & ARIADNE\n\nPresentation contents:\n\nARIADNE Portal\nLinked Open Data (LOD)\nAO-Cat ontology\n\n\n\n\nSPARQL\n\nPresentation contents:\n\nIntro to SPARQL\nExamples of SPARQL queries on DBpedia, Wikidata and ARIADNE GraphDB\nSPARQL queries from R using glitter package\n\nR script wikidata.r with Wikidata exercise\nR script ariadne.r with ARIADNE exercise\n\n\n\nResources\n\nArticle Practices of Linked Open Data in Archaeology and Their Realisation in Wikidata by Sophie C. Schmid, Florian Thiery and Martina Trognitz\nAO-Cat ontology\nIntroduction to the Principles of LOD on Programming Historian\nUsing SPARQL to access Linked Open Data on Programming Historian"
+  },
+  {
     "objectID": "info.html",
     "href": "info.html",
     "title": "General Information",
@@ -735,13 +742,6 @@
     "text": "Why is LOD useful?\nLet’s brainstorm…"
   },
   {
-    "objectID": "ariadne/index.html#wrap-up",
-    "href": "ariadne/index.html#wrap-up",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Wrap up",
-    "text": "Wrap up"
-  },
-  {
     "objectID": "ariadne/index.html#ao-cat-ontology",
     "href": "ariadne/index.html#ao-cat-ontology",
     "title": "ARIADNE & Linked Open Data",
@@ -760,7 +760,7 @@
     "href": "ariadne/index.html#domain-and-range",
     "title": "ARIADNE & Linked Open Data",
     "section": "Domain and range",
-    "text": "Domain and range\n\n\n\n\n\n\n\nG\n\n\ndomain\n\ndomain\n\n\n\nrange\n\nrange\n\n\n\ndomain--range\n\npredicate\n(property)\n\n\n\nsubject\n\nsubject\n\n\n\nobject\n\nobject\n\n\n\nsubject--object\n\npredicate\n(property)\n\n\n\n\n\n\n\n\n\nDomain – subject described by the property is in the class specified by the domain.\nRange – object of the statement has the given range.\n\nrdfs:domain and rdfs:range properties"
+    "text": "Domain and range\n\n\n\n\n\n\n\nG\n\ncluster_1\n\nrange\n\n\ncluster_0\n\ndomain\n\n\n\nsubject\n\nsubject\n\n\n\nobject\n\nobject\n\n\n\nsubject--object\n\npredicate\n(property)\n\n\n\n\n\n\n\n\n\nDomain – subject described by the property is in the class specified by the domain.\nRange – object of the statement has the given range.\n\nrdfs:domain and rdfs:range properties"
   },
   {
     "objectID": "ariadne/index.html#example",
@@ -781,42 +781,14 @@
     "href": "ariadne/index.html#ao-cat-concepts",
     "title": "ARIADNE & Linked Open Data",
     "section": "AO-Cat Concepts",
-    "text": "AO-Cat Concepts\nResources\n\n\n\n\n\n\n\nG\n\n\nAO_Entity\n\nAO_Entity\n\n\n\nAO_Resource\n\nAO_Resource\n\n\n\nAO_Entity--AO_Resource\n\n\n\n\nAO_Service\n\nAO_Service\n\n\n\nAO_Resource--AO_Service\n\n\n\n\nAO_Data_Resource\n\nAO_Data_Resource\n\n\n\nAO_Resource--AO_Data_Resource\n\n\n\n\nAO_Individual_Data_Resource (A)\n\nAO_Individual_Data_Resource (A)\n\n\n\nAO_Data_Resource--AO_Individual_Data_Resource (A)\n\n\n\n\nAO_Collection (A)\n\nAO_Collection (A)\n\n\n\nAO_Data_Resource--AO_Collection (A)\n\n\n\n\nAO_Document\n\nAO_Document\n\n\n\nAO_Individual_Data_Resource (A)--AO_Document\n\n\n\n\nAO_Individual_Data_Resource (B)\n\nAO_Individual_Data_Resource (B)\n\n\n\nAO_Collection (A)--AO_Individual_Data_Resource (B)\n\n\n\n\nAO_Collection (B)\n\nAO_Collection (B)\n\n\n\nAO_Collection (A)--AO_Collection (B)"
+    "text": "AO-Cat Concepts\nResources\n\n\n\n\n\n\n\nG\n\n\nAO_Entity\n\nAO_Entity\n\n\n\nAO_Resource\n\nAO_Resource\n\n\n\nAO_Entity--AO_Resource\n\n\n\n\nAO_Service\n\nAO_Service\n\n\n\nAO_Resource--AO_Service\n\n\n\n\nAO_Data_Resource\n\nAO_Data_Resource\n\n\n\nAO_Resource--AO_Data_Resource\n\n\n\n\nAO_Individual_Data_Resource (1)\n\nAO_Individual_Data_Resource (1)\n\n\n\nAO_Data_Resource--AO_Individual_Data_Resource (1)\n\n\n\n\nAO_Collection (1)\n\nAO_Collection (1)\n\n\n\nAO_Data_Resource--AO_Collection (1)\n\n\n\n\nAO_Document\n\nAO_Document\n\n\n\nAO_Individual_Data_Resource (1)--AO_Document\n\n\n\n\nAO_Individual_Data_Resource (2)\n\nAO_Individual_Data_Resource (2)\n\n\n\nAO_Collection (1)--AO_Individual_Data_Resource (2)\n\n\n\n\nAO_Collection (2)\n\nAO_Collection (2)\n\n\n\nAO_Collection (1)--AO_Collection (2)"
   },
   {
-    "objectID": "ariadne/index.html#ao-cat-concepts-1",
-    "href": "ariadne/index.html#ao-cat-concepts-1",
+    "objectID": "ariadne/index.html#ao-cat-classes",
+    "href": "ariadne/index.html#ao-cat-classes",
     "title": "ARIADNE & Linked Open Data",
-    "section": "AO-Cat Concepts",
-    "text": "AO-Cat Concepts\nContext\n\n\n\n\n\n\n\nG\n\n\nAO_Data_Resource\n\nAO_Data_Resource\n\n\n\nAO_Temporal_Region\n\nAO_Temporal_Region\n\n\n\nAO_Data_Resource--AO_Temporal_Region\n\nhas_temporal_coverage\n\n\n\nAO_Spatial_Region\n\nAO_Spatial_Region\n\n\n\nAO_Data_Resource--AO_Spatial_Region\n\nhas_spatial_coverage"
-  },
-  {
-    "objectID": "ariadne/index.html#most-important-properties",
-    "href": "ariadne/index.html#most-important-properties",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Most important properties",
-    "text": "Most important properties"
-  },
-  {
-    "objectID": "ariadne/index.html#ao_spatial_region",
-    "href": "ariadne/index.html#ao_spatial_region",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "AO_Spatial_Region",
-    "text": "AO_Spatial_Region"
-  },
-  {
-    "objectID": "ariadne/index.html#ao_temporal_region",
-    "href": "ariadne/index.html#ao_temporal_region",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "AO_Temporal_Region",
-    "text": "AO_Temporal_Region"
-  },
-  {
-    "objectID": "ariadne/index.html#ao_concept",
-    "href": "ariadne/index.html#ao_concept",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "AO_Concept",
-    "text": "AO_Concept"
+    "section": "AO-Cat classes",
+    "text": "AO-Cat classes\nWhere\n\nAO_Spatial_Region\n\nAO_Spatial_Region_Point\nAO_Spatial_Region_Polygon\nAO_Spatial_Region_BBox\nAO_Spatial_Region_StdName\n\n\nWhen\n\nAO_Temporal_Region\n\nFrom/until given in years\nPeriodO URIs\n\n\nWhat\n\nclass AO_Concept\nARIADNE subjects (property has_ARIADNE_subject )\nderived subjects (AAT subjects, property has_derived_subject)\nnative subjects (property has_native_subject)"
   },
   {
     "objectID": "ariadne/index.html#ariadne-subjects",
