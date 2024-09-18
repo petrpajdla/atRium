@@ -53,3 +53,6 @@ rsconnect/
 /_site/
 
 *.Rproj
+
+# spatial data
+/spatial/spatial_is_special/*
