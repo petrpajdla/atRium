@@ -185,29 +185,29 @@
     "objectID": "materials.html#tuesday-17-sept.",
     "href": "materials.html#tuesday-17-sept.",
     "title": "Materials and data",
-    "section": "Tuesday 17 Sept.",
-    "text": "Tuesday 17 Sept.\n\nLinked Open Data & ARIADNE\n\nPresentation contents:\n\nARIADNE Portal\nLinked Open Data (LOD)\nAO-Cat ontology\n\n\n\n\nSPARQL\n\nPresentation contents:\n\nIntro to SPARQL\nExamples of SPARQL queries on DBpedia, Wikidata and ARIADNE GraphDB\nSPARQL queries from R using glitter package\n\nR script wikidata.r with Wikidata exercise\nR script ariadne.r with ARIADNE exercise\n\n\n\nResources\n\nArticle Practices of Linked Open Data in Archaeology and Their Realisation in Wikidata by Sophie C. Schmid, Florian Thiery and Martina Trognitz\nAO-Cat ontology\nIntroduction to the Principles of LOD on Programming Historian\nUsing SPARQL to access Linked Open Data on Programming Historian"
+    "section": "Tuesday 17, Sept.",
+    "text": "Tuesday 17, Sept.\n\nLinked Open Data & ARIADNE\n\nPresentation contents:\n\nARIADNE Portal\nLinked Open Data (LOD)\nAO-Cat ontology\n\n\n\n\nSPARQL\n\nPresentation contents:\n\nIntro to SPARQL\nExamples of SPARQL queries on DBpedia, Wikidata and ARIADNE GraphDB\nSPARQL queries from R using glitter package\n\nR script wikidata.r with Wikidata exercise\nR script ariadne.r with ARIADNE exercise\n\n\n\nResources\n\nArticle Practices of Linked Open Data in Archaeology and Their Realisation in Wikidata by Sophie C. Schmid, Florian Thiery and Martina Trognitz\nAO-Cat ontology\nIntroduction to the Principles of LOD on Programming Historian\nUsing SPARQL to access Linked Open Data on Programming Historian"
   },
   {
     "objectID": "materials.html#wednesday-18-sept.",
     "href": "materials.html#wednesday-18-sept.",
     "title": "Materials and data",
-    "section": "Wednesday 18 Sept.",
-    "text": "Wednesday 18 Sept.\n\nR script with required packages."
+    "section": "Wednesday, 18 Sept.",
+    "text": "Wednesday, 18 Sept.\n\nIntro to spatial data\n\nR script with required packages.\nR script with the spatial analysis.\n\n(Data circulated on a USB stick.)"
   },
   {
     "objectID": "materials.html#thursday-19-sept.",
     "href": "materials.html#thursday-19-sept.",
     "title": "Materials and data",
-    "section": "Thursday 19 Sept.",
-    "text": "Thursday 19 Sept."
+    "section": "Thursday, 19 Sept.",
+    "text": "Thursday, 19 Sept."
   },
   {
     "objectID": "materials.html#friday-20-sept.",
     "href": "materials.html#friday-20-sept.",
     "title": "Materials and data",
-    "section": "Friday 20 Sept.",
-    "text": "Friday 20 Sept."
+    "section": "Friday, 20 Sept.",
+    "text": "Friday, 20 Sept."
   },
   {
     "objectID": "info.html",
