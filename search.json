@@ -998,14 +998,14 @@
     "href": "materials.html",
     "title": "Materials and data",
     "section": "",
-    "text": "Presentation contents:\n\nFunctions and data structures\nBasic workflows (packages, scripts, projects, paths)\nReading data into R\n\nDataset dartpoints.csv\n\n\n\n\n\nPresentation"
+    "text": "Note\n\n\n\nThe online presentations in HTML can be downloaded in PDF:\n\nopen the presentation,\npress e or the three lines in the left bottom corner, Tools and PDF Export Mode,\nprint the result to PDF using your browser."
   },
   {
     "objectID": "materials.html#monday-16-sept.",
     "href": "materials.html#monday-16-sept.",
     "title": "Materials and data",
-    "section": "",
-    "text": "Presentation contents:\n\nFunctions and data structures\nBasic workflows (packages, scripts, projects, paths)\nReading data into R\n\nDataset dartpoints.csv\n\n\n\n\n\nPresentation"
+    "section": "Monday, 16 Sept.",
+    "text": "Monday, 16 Sept.\n\nIntroduction to R\n\nPresentation contents:\n\nFunctions and data structures\nBasic workflows (packages, scripts, projects, paths)\nReading data into R\n\nDataset dartpoints.csv\n\n\n\nData analysis and data viz\n\nPresentation"
   },
   {
     "objectID": "materials.html#tuesday-17-sept.",

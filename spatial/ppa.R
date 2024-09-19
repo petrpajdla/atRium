@@ -203,6 +203,7 @@ plot(density.ppp(sites_ppp, sigma = 200))
 # adjust the sigma!
 
 plot(density.ppp(sites_ppp, sigma = 500))
+plot(density.ppp(sites_ppp, sigma = 800))
 
 # adjust the sigma!
 
@@ -233,7 +234,7 @@ plot(density.ppp(sites_ppp, sigma = 1000))
 #### If you want to continue, you can turn the result into a spatial object for visualisation (terra package)
 #### turn it into a raster image using the terra package
 
-KDE1000 <- rast(density.ppp(sites_ppp, sigma = 1000))
+KDE1000 <- rast(density.ppp(sites_ppp, sigma = 1000, eps = 500))
 
 plot(KDE1000)
 
@@ -244,6 +245,7 @@ crs(KDE1000)  ## aha! there is no CRS!
 ## assign CRS
 
 crs(KDE1000) <- "EPSG:3857"
+res(KDE1000)
 
 # and plot
 
@@ -261,11 +263,8 @@ plot(vect(sites), add=T, col="red", pch=1)    ## plot the points in spatvector f
 
 ## now we continue with an underlying explanatory covariate
 
-setwd("E:/Michael_ADATA_Festplatte/Projekte/BASEL_SNF/presentations/Brno_2024/DATA")
-
-list.files()
-
-dem <- rast("DEM_large.tif")
+list.files(here::here("data/raw_data/"))
+dem <- rast(here::here("data/raw_data/DEM_large.tif"))
 
 plot(dem)
 plot(window, add=T)
@@ -278,7 +277,7 @@ crs(window)    ## we can see: the coordinate systems do not match
 
 ## we must reproject the raster first
 
-dem <- project(dem, window) # we use the window as spatial reference
+dem <- project(dem, crs(window)) # we use the window as spatial reference
 crs(dem)
 
 plot(dem)
@@ -305,14 +304,17 @@ barplot(dem)                       # looks at range
 boxplot(dem)                       # idem
 global(dem, c("mean"), na.rm=TRUE) # prints global mean of the raster
 
-
-
-
+density(dem)
 ## lets start some terrain analyses
 ## e.g., slope and check out the results
 
-slope <- terrain(dem, "slope")
-plot(c(slope, dem))
+slope <- terrain(dem, "slope", unit = "radians")
+aspect <- terrain(dem, "aspect", unit = "radians")
+tpi <- terrain(dem, "TPI")
+plot(c(slope, dem, aspect, tpi))
+
+hillshade <- shade(slope, aspect)
+plot(hillshade)
 
 ## look at the data again
 
@@ -320,7 +322,7 @@ range(slope)
 barplot(slope)
 
 plot(slope)
-plot(sites, add=T, col="black")
+plot(sites, add=T, col="white")
 
 
 
@@ -339,6 +341,7 @@ hist(P_elev$DEM_large, breaks=20)
 ## lets compare that to a random sample distribution to see if the sites behave differently!
 
 # Sample 150 random points within the window of
+set.seed(42)
 
 points = sf::st_sample(window, size=150)   ## create 150 random points
 points = vect(points)                      ## and turn them into a spatvector using terra
@@ -362,7 +365,9 @@ hist(P_elev$DEM_large, breaks=20)
 ### use the Kolmogorov-Smirnov test to check if two samples are drawn from the same distribution
 
 ### 1) ELEVATION
-
+# if p is <0.5, we can reject the hypothesis that the 
+# data is randomly distributed
+# i.e. the two samples are not drawn from the same distribution
 ks.test(P_ran$DEM_large, P_elev$DEM_large)
 
 par(mfrow=c(1,2))  ## this command just allows 2 plots on one page
