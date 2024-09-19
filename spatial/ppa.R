@@ -1,38 +1,34 @@
-
-install.packages("....")
+# Point pattern analysis in R
+# By Michael Kempf 
+# slight edits by Petr Pajdla, sorry Michael, I deleted your setwd() calls
+# and changed call from Kinhom to Kest
+# Brno, 2024-09-19
+# For atRium training school, https://www.aiscr.cz/atRium
 
 library(terra)
 library(sf)
 
 library(stars)
 library(spatstat)
-library(spatstat.explore)
-library(spatstat.utils)
-
+# library(spatstat.explore)
+# library(spatstat.utils)
 
 ## ON USB STICK: D:\spatial_is_special\data\raw_data
 
-############################
-
-# set your WD: this allows R to get data from your folder. default: documents
-
-setwd("E:/Michael_ADATA_Festplatte/Projekte/JORDAN_Model/data/sites")
-
 # list the files
-
-list.files()
+list.files(here::here("data/raw_data/"))
 
 # load your sites (csv format) and check out the study area from the geopackage
+sites <- read.csv(here::here("data/raw_data/sites.csv"), header=TRUE) ## this loads the csv file
+head(sites, 6) ## this looks at the first rows of each column
 
-sites <- read.csv("sites.csv", header=TRUE)                           ## this loads the csv file
-head(sites, 2)                                                           ## this looks at the first rows of each column
+# we have missing coordinates! Let us use only complete cases of Lat/Lon
+sites <- sites[complete.cases(sites$LAT, sites$LON), ]   
+# sites <- st_as_sf(sites, coords = c("LON", "LAT"), crs = 4326)
 
-
-sites <- sites[complete.cases(sites$LAT, sites$LON), ]   ## we have missing coordinates! Let us use only complete cases of Lat/Lon
-sites <- st_as_sf(sites, coords = c("LON", "LAT"), crs = 4326)
-
-sites <- vect(st_as_sf(sites, coords = c("LON", "LAT"), crs = 4326))  ## and turn the dataframe into a spatial object (SF and spatvector)
-plot(sites, col="red", pch=4)   ## plot them, have a look at the data!
+# and turn the dataframe into a spatial object (SF and spatvector)
+sites <- vect(st_as_sf(sites, coords = c("LON", "LAT"), crs = 4326))
+plot(sites, col="red", pch=4)   # plot them, have a look at the data!
 
 
 ## load some OSM data, we get it from here:
@@ -46,22 +42,14 @@ plot(sites, col="red", pch=4)   ## plot them, have a look at the data!
 ## PLoS ONE 15(4): e0231866. https://doi.org/10.1371/journal.pone.0231866.
 
 ## but it is provided in your summerschool data package you received
-
-setwd("E:/Michael_ADATA_Festplatte/Projekte/JORDAN_Model/data/OSM")
-
-jor <- vect("geoBoundaries-JOR-ADM0.shp")
+jor <- vect(here::here("data/raw_data/area/geoBoundaries-JOR-ADM0.shp"))
 
 ## check the coordinate ref. system (crs)
-
 crs(jor) ## it is EPSG4326 code
 
 # plot the data together in R base
-
 plot(jor)
 plot(sites, add=T, col="red")
-
-
-
 
 ## Q: Do we see anything?
 ## A: actually not, it the window of operation is far to big.
@@ -72,17 +60,13 @@ plot(extent)                    ## plot it
 plot(sites, add=T, col="red")   ## we see that sites do fall on the edges of the extent, which is not good (-> edge effects)
 
 ## we will buffer the extent a bit to enlarge the window of operation
-
 extent <- vect(extent)         ## turn the extent into a spatial object (spatvector)
 crs(extent) <- "EPSG:4326"     ## assign the correct CRS
 extent <- buffer(extent, 2000) ## buffer with 2000 m
 
-
 ## plot it again
-
 plot(extent)
 plot(sites, add=T, col="red", pch=1)
-
 
 ##################
 
@@ -119,7 +103,7 @@ spatstat.geom::Window(sites_ppp) <- spatstat.geom::Window.im(window)
 ## check the format
 
 sites_ppp  ## a point pattern: 118 points
-           ## window: polygonal boundary
+## window: polygonal boundary
 
 ## good! Lets calculate a dirty density estimation to have a look:
 
@@ -139,20 +123,34 @@ plot(sites_ppp, add=T, col="white")
 ## but are there actually clusters? Just looking at the data does not provide enough evidence to judge.
 ## We perform the K Function to check for CSR and identify IF there is clustering behavior or not
 
-k_sites <- spatstat.explore::envelope(sites_ppp,
-  fun = "Kinhom",
+k_sites_est <- spatstat.explore::envelope(
+  sites_ppp,
+  fun = "Kest", # previously this was Kinhom, but that did not work as expected
   nsim = 99,
+  correction = "best"
+)
+
+k_sites_inhom <- spatstat.explore::envelope(
+  sites_ppp,
+  fun = "Kinhom", # previously this was Kinhom, but that did not work as expected
+  nsim = 99,
+  sigma = 6000, 
   correction = "best"
 )
 
 
 #### now plot the results and evaluate.
-
-plot(k_sites,
-  main = "K-inhom site distribution",
-  sub = "nsim = 99",
-  xlab = "r in m"
+par(mfrow = c(1, 2))
+plot(k_sites_est,
+     main = "K-est site distribution",
+     sub = "nsim = 99",
+     xlab = "r in m"
 )
+
+plot(k_sites_inhom,
+     main = "K-inhom site distribution",
+     sub = "nsim = 99",
+     xlab = "r in m")
 
 ## Q: what do you see?
 
@@ -221,9 +219,9 @@ plot(density.ppp(sites_ppp, sigma = 2000))
 par(mfrow = c(1, 2))
 
 plot(k_sites,
-  main = "K-inhom site distribution",
-  sub = "nsim = 99",
-  xlab = "r in m"
+     main = "K-inhom site distribution",
+     sub = "nsim = 99",
+     xlab = "r in m"
 )
 
 plot(density.ppp(sites_ppp, sigma = 1000))
@@ -401,8 +399,8 @@ writeRaster(slope, "cropped_slope.tif", overwrite=TRUE)
 
 ## we did this already above:
 
-                       sites_ppp <- spatstat.geom::as.ppp(sites)
- spatstat.geom::marks(sites_ppp) <- NULL
+sites_ppp <- spatstat.geom::as.ppp(sites)
+spatstat.geom::marks(sites_ppp) <- NULL
 spatstat.geom::Window(sites_ppp) <- spatstat.geom::Window.im(window)
 
 
@@ -415,8 +413,8 @@ res(dem) ## [1] 104.6538 104.6538  we have a resolution of approximately 100 m
 ## make the resoltuion 100 m. Although: increasing the resolution is not adding information or enhancing the dem
 ## We simply want to have a smooth number now.
 
-   r_100 = st_as_stars(st_bbox(dem), dx = 100)
- dem_100 = st_warp((st_as_stars(dem)), r_100)
+r_100 = st_as_stars(st_bbox(dem), dx = 100)
+dem_100 = st_warp((st_as_stars(dem)), r_100)
 dem_100 <- rast(dem_100)
 
 plot(dem_100)
@@ -429,8 +427,8 @@ res(dem_100)
 
 # first, turn the raster into am im-format for spatstat ..we return to the stars format... (a pain... but spatstat does not go with terra...)
 
-         dem_100 <- st_as_stars(dem_100)
-          dem_im <- as.im(dem_100)
+dem_100 <- st_as_stars(dem_100)
+dem_im <- as.im(dem_100)
 rhohat_sites_dem <- spatstat.explore::rhohat(sites_ppp, dem_im, method = "ratio")
 
 plot(rhohat_sites_dem)
@@ -440,16 +438,16 @@ plot(rhohat_sites_dem)
 
 ## get the slope from the 100 x 100 m resolution
 
-   dem_100 <- rast(dem_100)
- slope_100 <- terrain(dem_100, "slope")
+dem_100 <- rast(dem_100)
+slope_100 <- terrain(dem_100, "slope")
 plot(slope_100)
 
 
 # and (annoying) turn it into a stars object for the im-format....
 # (you can simplify this but now we are learning ;)
 
-         slope_100 <- st_as_stars(slope_100)
-          slope_im <- as.im(slope_100)
+slope_100 <- st_as_stars(slope_100)
+slope_im <- as.im(slope_100)
 rhohat_sites_slope <- spatstat.explore::rhohat(sites_ppp, slope_im, method = "ratio")
 
 plot(rhohat_sites_slope)
