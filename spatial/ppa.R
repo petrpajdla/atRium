@@ -152,6 +152,8 @@ plot(k_sites_inhom,
      sub = "nsim = 99",
      xlab = "r in m")
 
+dev.off()
+
 ## Q: what do you see?
 
 

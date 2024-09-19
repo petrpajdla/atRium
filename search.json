@@ -1026,7 +1026,7 @@
     "href": "materials.html#thursday-19-sept.",
     "title": "Materials and data",
     "section": "Thursday, 19 Sept.",
-    "text": "Thursday, 19 Sept.\n\nPresentation (PPTX) on the point pattern analysis.\nR script with the point pattern analysis."
+    "text": "Thursday, 19 Sept.\n\nPresentation (PPTX) on the point pattern analysis.\nR script with the point pattern analysis.\n\n\nNote on setwd()\n\nBlog post by Jenny Bryan why not to hardcode setwd() into your scripts and what is the alternative.\nAlso check the Intro to R presentation from Monday, where relative paths and project oriented workflow is explained a bit."
   },
   {
     "objectID": "materials.html#friday-20-sept.",
