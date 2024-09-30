@@ -1,0 +1,14 @@
+---
+title: "Insights and recap"
+---
+
+We had 19 participants working and/or studying at institutions, universities and museums across Europe!
+
+![Map of participants' countries](figs/map.png){fig-align="center" width=80%}
+
+
+## Photos
+
+![Group photo at the terrace of the institute.](figs/photo01.jpg){.shadow}
+
+![So much sun! It hurts my eyes!](figs/photo02.jpg){.shadow}

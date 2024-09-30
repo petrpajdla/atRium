@@ -2,7 +2,17 @@
 title: "Materials and data"
 ---
 
-## Monday 16, Sept.
+::: {.callout-note}
+## Note 
+
+The online presentations in HTML can be downloaded in PDF:  
+
+- open the presentation, 
+- press `e` or the three lines in the left bottom corner, `Tools` and `PDF Export Mode`,
+- print the result to PDF using your browser.
+:::
+
+## Monday, 16 Sept.
 
 #### Introduction to R
 
@@ -17,7 +27,7 @@ title: "Materials and data"
 - [Presentation](/dataviz/index.qmd)
 
 
-## Tuesday 17, Sept.
+## Tuesday, 17 Sept.
 
 #### Linked Open Data & ARIADNE
 
@@ -55,5 +65,20 @@ title: "Materials and data"
 
 ## Thursday, 19 Sept.
 
+- [Presentation (PPTX)](spatial/PPA_intro_kempf.pptx) on the point pattern analysis.
+- [R script](spatial/ppa.R) with the point pattern analysis.
+
+### Note on `setwd()`
+
+- [Blog post](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) by Jenny Bryan why not to hardcode `setwd()` into your scripts and what is the alternative.
+- Also check the [Intro to R presentation from Monday](intro2r/#/loading-data), where relative paths and project oriented workflow is explained a bit.
+
 
 ## Friday, 20 Sept.
+
+### R books
+
+- [**R for Data Science**](https://r4ds.hadley.nz/) by Hadley Wickham, Mine Çetinkaya-Rundel and Garrett Grolemund -- `tidyverse` packages, data manipulation, visualization etc.
+- [**Geocomputation with R**](https://r.geocompx.org/) by Robin Lovelace, Jakub Nowosad, and Jannes Muenchow -- `sf`, `terra` and other spatial packages.
+- [**Spatial Data Science**](https://r-spatial.org/book/) by Edzer Pebesma and Roger Bivand -- includes more advanced topics like point pattern analysis with `spatstat` etc.
+- [**Data Visualization. A practical introduction**](https://socviz.co/) by Kieran Healy -- gives you all you need to be able to create beautiful plots with `ggplot2`.
