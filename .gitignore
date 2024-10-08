@@ -57,3 +57,7 @@ rsconnect/
 # spatial data
 /spatial/spatial_is_special/*
 /data/raw_data/*
+
+
+# certificates
+/certificates/*.pdf

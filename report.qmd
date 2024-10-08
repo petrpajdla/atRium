@@ -2,13 +2,21 @@
 title: "Insights and recap"
 ---
 
-We had 19 participants working and/or studying at institutions, universities and museums across Europe!
+We had 19 participants working and/or studying at universities, museums and other research institutions across Europe!
 
-![Map of participants' countries](figs/map.png){fig-align="center" width=80%}
-
+![Map of participants' countries](figs/map.png){fig-align="center" width="80%"}
 
 ## Photos
 
 ![Group photo at the terrace of the institute.](figs/photo01.jpg){.shadow}
 
 ![So much sun! It hurts my eyes!](figs/photo02.jpg){.shadow}
+
+## Reports by the participants
+
+```{r}
+#| echo: false
+read.csv(here::here("reports/list.csv")) |>
+  knitr::kable()
+  
+```
