@@ -63,6 +63,8 @@ Please direct any of your possible questions or inquiries to
 
 The training (summer) school is organised as transnational access provision in the [ATRIUM Project](https://atrium-research.eu/){.external} (*Advancing Frontier Research in the Arts and Humanities*) funded by the Horizon Europe research and innovation actions programme under grant agreement No. [101132163](https://cordis.europa.eu/project/id/101132163){.external}.
 
+{{< video https://www.youtube.com/watch?v=KBE7ws6tQhE >}}
+
 
 ### ARIADNE 
 
@@ -71,7 +73,7 @@ Access is facilitated through the comprehensive data catalogue [ARIADNE Portal](
 
 One of the goals of the training school is to enable *programmatic* access to these resources by introducing the basics of knowledge representation in the triple store, explaining the ARIADNE [AO-Cat Ontology](https://zenodo.org/doi/10.5281/zenodo.7818374){.external}, and providing training in building SPARQL queries.
 
-{{< video https://vimeo.com/920069846 >}}
+{{< video https://vimeo.com/1015562684 >}}
 
 
 ### AIS CR 
