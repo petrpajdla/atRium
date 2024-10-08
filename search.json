@@ -1,24 +1,451 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About the training school",
-    "section": "",
-    "text": "Petr Pajdla\nInstitute of Archaeology, Czech Acad Sci, Brno\n 0000-0001-7050-9572\nPeter Tkáč\nMasaryk University\n 0000-0002-9444-1936\n\nMichael Kempf\nUniversity of Basel\n 0000-0002-9474-4670\nGiacomo Bilotti\nKiel University\n 0000-0002-7328-0811\n\n\n\n\n\n\nZuzana Kopáčová\nInstitute of Archaeology, Czech Acad Sci, Brno\nFinances, administration\n\nVít Kozák\nMasaryk University\nTeaching assistant\n\n\nAnd the AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to\nZuzana Kopáčová (kopacova@arub.cz ✉), and/or\nPetr Pajdla (pajdla@arub.cz ✉)."
+    "objectID": "sparql/index.html#outline",
+    "href": "sparql/index.html#outline",
+    "title": "SPARQL",
+    "section": "Outline",
+    "text": "Outline\n\nIntro to SPARQL\nSPARQL queries from R\n\nSPARQL query services and endpoints\n\nWikidata\nDBpedia\nARIADNE KB"
   },
   {
-    "objectID": "about.html#organisers-lecturers",
-    "href": "about.html#organisers-lecturers",
-    "title": "About the training school",
-    "section": "",
-    "text": "Petr Pajdla\nInstitute of Archaeology, Czech Acad Sci, Brno\n 0000-0001-7050-9572\nPeter Tkáč\nMasaryk University\n 0000-0002-9444-1936\n\nMichael Kempf\nUniversity of Basel\n 0000-0002-9474-4670\nGiacomo Bilotti\nKiel University\n 0000-0002-7328-0811\n\n\n\n\n\n\nZuzana Kopáčová\nInstitute of Archaeology, Czech Acad Sci, Brno\nFinances, administration\n\nVít Kozák\nMasaryk University\nTeaching assistant\n\n\nAnd the AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to\nZuzana Kopáčová (kopacova@arub.cz ✉), and/or\nPetr Pajdla (pajdla@arub.cz ✉)."
+    "objectID": "sparql/index.html#introduction-to-sparql",
+    "href": "sparql/index.html#introduction-to-sparql",
+    "title": "SPARQL",
+    "section": "Introduction to SPARQL",
+    "text": "Introduction to SPARQL\nSPARQL Protocol and RDF Query Language"
   },
   {
-    "objectID": "about.html#organisations",
-    "href": "about.html#organisations",
-    "title": "About the training school",
-    "section": "Organisations",
-    "text": "Organisations\n\nATRIUM\nThe training (summer) school is organised as transnational access provision in the ATRIUM Project (Advancing Frontier Research in the Arts and Humanities) funded by the Horizon Europe research and innovation actions programme under grant agreement No. 101132163.\n\n\nARIADNE\nARIADNE Research Infrastructure is a non-profit organisation that aggregates, integrates, and provides access to over 4 million archaeological data resources. Access is facilitated through the comprehensive data catalogue ARIADNE Portal (see the short video below for more details) and directly through a SPARQL endpoint to the linked-open data triple store, the ARIADNE Knowledge Base.\nOne of the goals of the training school is to enable programmatic access to these resources by introducing the basics of knowledge representation in the triple store, explaining the ARIADNE AO-Cat Ontology, and providing training in building SPARQL queries.\n\n\n\nAIS CR\nThe Archaeological Information System of the Czech Republic (AIS CR) is a research infrastructure integrating digital resources and services on archaeology in the Czech Republic, and as such is one of many data providers in the ARIADNE Research Infrastructure. AIS CR is jointly operated by the Institutes of Archaeology of the Czech Academy of Sciences in Brno (IAB) and Prague (IAP)."
+    "objectID": "sparql/index.html#sparql",
+    "href": "sparql/index.html#sparql",
+    "title": "SPARQL",
+    "section": "SPARQL",
+    "text": "SPARQL\n\nSPARQL is a query language for RDF data.\nSPARQL is a recursive acronym for SPARQL Protocol and RDF Query Language.\nW3C standard.\n\nTypes of queries\n\nASK query – returns true/false answer, checks whether there is at least one result.\nSELECT query – returns list (table) of results.\nDESCRIBE query – returns all possible data about an entity.\nCONSTRUCT query – returns new set of triples based on a given template."
+  },
+  {
+    "objectID": "sparql/index.html#select-query",
+    "href": "sparql/index.html#select-query",
+    "title": "SPARQL",
+    "section": "SELECT query",
+    "text": "SELECT query\nPREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;\n\nSELECT ?label\n\nFROM &lt;SPARQL endpoint&gt;\n\nWHERE {\n  ?subject ?predicate ?object .\n  ?object rdfs:label ?label\n}\n\nLIMIT 100\nParts of the query\n\nPREFIX: Namespace definition – prefixes.\nSELECT: Selected variables – will be in the output as column names.\nFROM: Specification of the graph from which we are querying.\nWHERE: Where clause with triple patterns to be matched in the graph.\nLIMIT: Limits the number of returned results (so we do not overload the endpoint)."
+  },
+  {
+    "objectID": "sparql/index.html#sparql-query",
+    "href": "sparql/index.html#sparql-query",
+    "title": "SPARQL",
+    "section": "SPARQL query",
+    "text": "SPARQL query\n\nConsists of triple patterns with zero or more variables.\nVariables are prefixed with a question mark (?variableName).\nTriple patterns are matched against the triples in the graph.\nEach matching triple produces one result.\n\n?subject ?predicate ?object .\nCommon abbreviations\n\nSubject as ?s\nPredicate/property as ?p\nObject as ?o"
+  },
+  {
+    "objectID": "sparql/index.html#examples",
+    "href": "sparql/index.html#examples",
+    "title": "SPARQL",
+    "section": "Examples",
+    "text": "Examples\nSPARQL queries on DBpedia, Wikidata and ARIADNE KB"
+  },
+  {
+    "objectID": "sparql/index.html#linked-open-data-cloud",
+    "href": "sparql/index.html#linked-open-data-cloud",
+    "title": "SPARQL",
+    "section": "Linked Open Data Cloud",
+    "text": "Linked Open Data Cloud\n\n\nhttps://lod-cloud.net/\nLOD knowledge bases:\n\nhttps://www.wikidata.org/\n~12,5 billion triples\n\nhttp://dbpedia.org/\n~9,5 billion triples\n\n\n\nThe Linked Open Data Cloud from lod-cloud.net (2024-07-04)\n\n\n\n\nWikidata - community created structured (!) data, not W3C fully complient, no ontology etc. DBpedia - data extracted from Wikipedia infoboxes, ontology etc."
+  },
+  {
+    "objectID": "sparql/index.html#dbpedia-virtuoso-query-service",
+    "href": "sparql/index.html#dbpedia-virtuoso-query-service",
+    "title": "SPARQL",
+    "section": "DBpedia Virtuoso query service",
+    "text": "DBpedia Virtuoso query service\n\nhttps://dbpedia.org/sparql"
+  },
+  {
+    "objectID": "sparql/index.html#example-query",
+    "href": "sparql/index.html#example-query",
+    "title": "SPARQL",
+    "section": "Example query",
+    "text": "Example query\nDBpedia\n\nFind all other URIs/IRIs that Ariadne maps to in DBpedia.\n\nPREFIX dbr: &lt;http://dbpedia.org/resource/&gt;\nPREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;\n\nSELECT ?o\n\nFROM &lt;http://dbpedia.org&gt;\n\nWHERE {\n  dbr:Ariadne owl:sameAs ?o .\n}\n\nLIMIT 100\n\nQuery in DBpedia Virtuoso."
+  },
+  {
+    "objectID": "sparql/index.html#example-query-1",
+    "href": "sparql/index.html#example-query-1",
+    "title": "SPARQL",
+    "section": "Example query",
+    "text": "Example query\nDBpedia\n\nFind peole (and the dates they were born and died) who had to do anything with archaeology according to DBpedia.\n\nPREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX dbr: &lt;http://dbpedia.org/resource/&gt;\nPREFIX dbo: &lt;http://dbpedia.org/ontology/&gt;\n\nSELECT ?s ?p ?born ?died\n\nFROM &lt;http://dbpedia.org&gt;\n\nWHERE {\n  ?s rdf:type dbo:Person .\n  ?s ?p dbr:Archaeology .\n  ?s dbo:birthDate ?born .\n  ?s dbo:deathDate ?died .\n}\n\nORDER BY ASC (?born)\nLIMIT 100\n\nQuery in DBpedia Virtuoso.\n\n\nORDER BY ASC orders the results in an ascending order of the given variable."
+  },
+  {
+    "objectID": "sparql/index.html#example-query-2",
+    "href": "sparql/index.html#example-query-2",
+    "title": "SPARQL",
+    "section": "Example query",
+    "text": "Example query\nDBpedia\n\nHow many pages linking to archaeology are there?\n\nPREFIX dbr: &lt;http://dbpedia.org/resource/&gt;\n\nSELECT (COUNT(?s) AS ?count)\n\nFROM &lt;http://dbpedia.org&gt;\n\nWHERE {\n  ?s ?p dbr:Archaeology .\n}\n\nQuery in DBpedia Virtuoso.\n\n\nCOUNT(?variable) AS ?result counts the number of returned matches."
+  },
+  {
+    "objectID": "sparql/index.html#wikidata-query-service",
+    "href": "sparql/index.html#wikidata-query-service",
+    "title": "SPARQL",
+    "section": "Wikidata Query Service",
+    "text": "Wikidata Query Service\n\nQuery service: https://query.wikidata.org/\nSPARQL endpoint: https://query.wikidata.org/sparql"
+  },
+  {
+    "objectID": "sparql/index.html#example-query-3",
+    "href": "sparql/index.html#example-query-3",
+    "title": "SPARQL",
+    "section": "Example query",
+    "text": "Example query\nWikidata\n\nHow many archaeologists are there in Wikidata?\n\nPREFIX wd: &lt;http://www.wikidata.org/entity/&gt;\nPREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;\n\nSELECT (COUNT(?ae) AS ?count)\n\nWHERE {\n  ?ae wdt:P31 wd:Q5 .\n  ?ae wdt:P106 wd:Q3621491 .\n}\n\nQuery in Wikidata Query Service."
+  },
+  {
+    "objectID": "sparql/index.html#example-query-4",
+    "href": "sparql/index.html#example-query-4",
+    "title": "SPARQL",
+    "section": "Example query",
+    "text": "Example query\nWikidata\n\nReturn a list of archaeologists, their sex/gender, and the dates they were born and died.\n\nPREFIX wd: &lt;http://www.wikidata.org/entity/&gt;\nPREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;\nPREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;\n\nSELECT ?ae ?label ?sex ?born ?died\n\nWHERE {\n  ?ae wdt:P31 wd:Q5 ;\n    wdt:P106 wd:Q3621491 ;\n    rdfs:label ?label ;\n    wdt:P21 ?o ;\n    wdt:P569 ?born ;\n    wdt:P570 ?died ;\n  ?o rdfs:label ?sex .\n  \n  FILTER (lang(?label) = 'en')\n  FILTER (lang(?sex) = 'en')\n}\n\nLIMIT 200\n\nQuery in Wikidata Query Service.\n\n\nFILTER (lang(?label) = 'en') returns only labels in English."
+  },
+  {
+    "objectID": "sparql/index.html#example-query-5",
+    "href": "sparql/index.html#example-query-5",
+    "title": "SPARQL",
+    "section": "Example query",
+    "text": "Example query\nWikidata\n\nCount all archaeological artefacts and archaeological finds in Wikidata.\n\n\n\n\nArchaeological artefacts (Q220659)\n\nPREFIX wd: &lt;http://www.wikidata.org/entity/&gt;\nPREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;\n\nSELECT (COUNT(?a) AS ?count)\n\nWHERE {\n  ?a wdt:P31 wd:Q220659 .\n}\n\nWikidata Query Service.\n\n\n\nArchaeological finds (Q10855061)\n\nPREFIX wd: &lt;http://www.wikidata.org/entity/&gt;\nPREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;\n\nSELECT (COUNT(?a) AS ?count)\n\nWHERE {\n  ?a wdt:P31 wd:Q10855061 .\n}\n\nWikidata Query Service.\n\n\n\n\nTogether in one query using UNION\n\nPREFIX wd: &lt;http://www.wikidata.org/entity/&gt;\nPREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;\n\nSELECT (COUNT(?a) AS ?count)\n\nWHERE {\n  { ?a wdt:P31 wd:Q220659 } UNION { ?a wdt:P31 wd:Q10855061 }  .\n}\n\nQuery in Wikidata Query Service."
+  },
+  {
+    "objectID": "sparql/index.html#ariadne-knowledge-base",
+    "href": "sparql/index.html#ariadne-knowledge-base",
+    "title": "SPARQL",
+    "section": "ARIADNE Knowledge Base",
+    "text": "ARIADNE Knowledge Base\n\nGraphDB graph database, accessible through D4Science infrastructure\nhttps://ariadne.d4science.org/\nSPARQL endpoint\nhttps://graphdb.ariadne.d4science.org/repositories/ariadneplus-pr01"
+  },
+  {
+    "objectID": "sparql/index.html#example-query-6",
+    "href": "sparql/index.html#example-query-6",
+    "title": "SPARQL",
+    "section": "Example query",
+    "text": "Example query\nARIADNE KB\n\nFind a resource with original identifier https://doi.org/10.17026/dans-2b6-gyjh.\n\nPREFIX aocat: &lt;https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/&gt;\nPREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;\n\nSELECT * \n\nWHERE {\n    ?record aocat:has_original_id \"https://doi.org/10.17026/dans-2b6-gyjh\" .\n    ?record rdfs:label ?lab .\n}\n\nQuery in ARIADNE GraphDB.\n\n\nWhat is it?\n\nPREFIX aocat: &lt;https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/&gt;\nPREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;\n\nSELECT * \n\nWHERE {\n    ?record aocat:has_original_id \"https://doi.org/10.17026/dans-2b6-gyjh\" ;\n      rdfs:label ?lab ;\n      aocat:has_ARIADNE_subject ?as .\n    ?as rdfs:label ?aslab .\n}\n\nQuery in ARIADNE GraphDB."
+  },
+  {
+    "objectID": "sparql/index.html#example-query-7",
+    "href": "sparql/index.html#example-query-7",
+    "title": "SPARQL",
+    "section": "Example query",
+    "text": "Example query\nARIADNE KB\n\nWhat are the native subjects of resource (artefact) 10.17026/dans-2b6-gyjh?\n\nPREFIX aocat: &lt;https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/&gt;\nPREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;\n\nSELECT * \n\nWHERE {\n    ?record aocat:has_original_id \"https://doi.org/10.17026/dans-2b6-gyjh\" ;\n      rdfs:label ?lab ;\n      aocat:has_native_subject ?ns .\n}\n\nQuery in ARIADNE GraphDB.\n\n\nLet GraphDB DESCRIBE the resource for us.\n\nDESCRIBE &lt;https://ariadne-infrastructure.eu/aocat/Resource/09C1C711-5775-3FFB-AD82-F3C9A5532D26&gt;\n\nQuery in ARIADNE GraphDB."
+  },
+  {
+    "objectID": "sparql/index.html#example-query-8",
+    "href": "sparql/index.html#example-query-8",
+    "title": "SPARQL",
+    "section": "Example query",
+    "text": "Example query\nARIADNE KB\n\nReturn all ARIADNE subjects.\n\nPREFIX aocat: &lt;https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/&gt;\nPREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;\n\nSELECT DISTINCT ?as ?label \n\nWHERE {\n    ?s aocat:has_ARIADNE_subject ?as .\n    ?as rdfs:label ?label .\n}\n\nQuery in ARIADNE GraphDB."
+  },
+  {
+    "objectID": "sparql/index.html#wrap-up",
+    "href": "sparql/index.html#wrap-up",
+    "title": "SPARQL",
+    "section": "Wrap up",
+    "text": "Wrap up\n\n\n\nSPARQL is a very complex and versatile query language for queries (not only) on graph data.\nMost common queries are using SELECT verb.\nTriples in the SELECT query are matched against the triples in the graph. One matching triple in the graph returns one row in the results.\nVariable names are prefixed with a question mark (?).\n\nCommon variable names\n\n?s for subject.\n?p for predicate.\n?o for object.\n\n\n\nLearning SPARQL book by Bob DuCharme\nhttps://www.learningsparql.com/"
+  },
+  {
+    "objectID": "sparql/index.html#sparql-queries-in-r",
+    "href": "sparql/index.html#sparql-queries-in-r",
+    "title": "SPARQL",
+    "section": "SPARQL queries in R",
+    "text": "SPARQL queries in R\nHow to query SPARQL endpoints from R"
+  },
+  {
+    "objectID": "sparql/index.html#lod-packages-in-r",
+    "href": "sparql/index.html#lod-packages-in-r",
+    "title": "SPARQL",
+    "section": "LOD packages in R",
+    "text": "LOD packages in R\n\n\n\n\nglitter\nAllows writing and performing SPARQL queries without advanced knowledge of SPARQL.\nhttps://lvaudor.github.io/glitter/index.html\nremotes::install_github(\"lvaudor/glitter\")\n\n\n\n\n\n\nrdflib\nAllows to perform common tasks on local RDF data, including converting between serializations and performing SPARQL queries.\nhttps://docs.ropensci.org/rdflib/\nremotes::install_github(\"ropensci/rdflib\")\n\n\n\n\n\n\njsonld\nVarious functions for formatting of JSON-LD data and transformation to RDF (N-Quads).\nhttps://docs.ropensci.org/jsonld/index.html\ninstall.packages(\"jsonld\")"
+  },
+  {
+    "objectID": "sparql/index.html#glitter-1",
+    "href": "sparql/index.html#glitter-1",
+    "title": "SPARQL",
+    "section": "glitter",
+    "text": "glitter\n\n\n\nFunctions are prefixed with spq_.\n\nMain functions\n\nspq_init(endpoint = \"wikidata\") initiates a SPARQL query.\nspq_add(\"?s ?p ?o\") adds a triple pattern to match.\nspq_perform(&lt;query&gt;) performs the query.\n\n\n\n\n\nAdditional functions\n\nspq_prefix() add prefix to the query.\nspq_label(&lt;var&gt;) adds labels to given variables with rdfs:label.\nspq_head(n) limits number of returned results using LIMIT n.\nspq_arrange(desc(&lt;var&gt;)) arranges results in descending order of the variable.\nspq_filter(&lt;var&gt;) filter results.\nspq_group_by(&lt;var&gt;) group results by one or more variables.\nspq_count() and spq_summarise(&lt;var&gt;) count results or summarise chosen variables.\nspq_select(&lt;var&gt;) select variables."
+  },
+  {
+    "objectID": "sparql/index.html#queries-with-glitter",
+    "href": "sparql/index.html#queries-with-glitter",
+    "title": "SPARQL",
+    "section": "Queries with glitter",
+    "text": "Queries with glitter\nWikidata\n\nExplore and continue work in the R script with comments here.\nhttps://petrpajdla.github.io/atRium/sparql/wikidata.r\nCheck out article by Sophie C. Schmid et al. 2022 Practices of Linked Open Data in Archaeology and Their Realisation in Wikidata https://doi.org/10.3390/digital2030019\n\nTry to reproduce the Ogham stones distribution map.\nTry to reproduce the Samian Ware distribution map.\n\n\nARIADNE KB\nARIADNE SPARQL endpoint is here:\nhttps://graphdb.ariadne.d4science.org/repositories/ariadneplus-pr01\n\nExplore and continue work in the R script here.\nhttps://petrpajdla.github.io/atRium/sparql/ariadne.r\n\nCheck AO-Cat Ontology if needed.\n\n\n\n\n\n\natRium training school, Brno 2024 | SPARQL"
+  },
+  {
+    "objectID": "programme.html",
+    "href": "programme.html",
+    "title": "Training school programme",
+    "section": "",
+    "text": "The training school will last five days and consists of three distinct blocks (described in detail below), in which participants will learn how to code in the R programming language, query data from the ARIADNE Knowledge Base, and analyse them using various spatial analysis methods, especially point pattern analysis."
+  },
+  {
+    "objectID": "programme.html#r-programming-general-topics",
+    "href": "programme.html#r-programming-general-topics",
+    "title": "Training school programme",
+    "section": "1. R programming & general topics",
+    "text": "1. R programming & general topics\nR is a programming language and environment for statistical computing and graphics. This block focuses on equipping participants with essential coding skills in R and introducing fundamental concepts in data analysis and visualisation.\n\n1.1 Introduction to R and workflows\nAn introductory course to R. Anyone with minimal or no prior experience with R will be able to understand what is happening in the code and write or adapt existing code for their use case.\n\n\n1.2 Data analysis and visualisation in R\nThrough hands-on workshops, participants will learn the basics of data manipulation with the dplyr package and data visualisation with the ggplot2 package, as well as some basics of base R. This will provide them with a powerful set of tools to analyse and visualise data.\n\n\n1.3 Introduction to spatial data in R\nParticipants will learn how spatial data are represented in R, focusing particularly on vector data as simple features in the sf package and raster data in the terra package. We will also cover various operations with geographic data, including reprojection, geometry operations, etc. An integral part of the workshop will be creating maps in R.\n\n\n1.4 Reproducibility and good practices in data and code management\nIn the final block, we will explore good practices in data management and code design aimed at enhancing reproducibility and reusability. Although these practices will be promoted throughout the school, we will summarise and contextualise them within the larger framework of Open Science at the end of the workshop."
+  },
+  {
+    "objectID": "programme.html#ariadne-data",
+    "href": "programme.html#ariadne-data",
+    "title": "Training school programme",
+    "section": "2. ARIADNE data",
+    "text": "2. ARIADNE data\nThe ARIADNE infrastructure aggregates and integrates large amounts of archaeological data worldwide. The second day of the summer school will focus on how the data are represented in the ARIADNE Knowledge Base (ARIADNE KB) and how to access them.\n\n2.1 ARIADNE & AO-Cat Ontology\nWe will begin by exploring the ARIADNE Portal, a catalogue interface to the ARIADNE KB. After gaining an understanding of how data look in the ARIADNE Portal, we will delve deeper into how data are represented in the ARIADNE KB, from the general concept of linked-open data to semantic data in RDF. Finally, we will explore the AO-Cat Ontology, which will provide a basis for querying the knowledge base.\n\n\n2.2 Introduction to SPARQL\nSPARQL is a query language for semantic data in RDF. Participants will learn the basics of SPARQL, including query structure and components, etc. Practical examples of queries performed on the ARIADNE SPARQL endpoint will help us understand the capabilities of the query language.\n\n\n2.3 Querying the ARIADNE SPARQL endpoint\nIn the workshop, participants will utilise their knowledge of the AO-Cat ontology and SPARQL to query the ARIADNE KB. By the end of the day, they will be able to create and adapt various queries to retrieve data from the ARIADNE KB for further analysis and re-use."
+  },
+  {
+    "objectID": "programme.html#spatial-analysis",
+    "href": "programme.html#spatial-analysis",
+    "title": "Training school programme",
+    "section": "3. Spatial analysis",
+    "text": "3. Spatial analysis\nBuilding upon the foundational knowledge gained in the previous blocks, this segment delves deeper into spatial analysis. Participants will learn advanced analytical methods, including point pattern analysis and other statistical modelling techniques for spatial data. Through practical exercises, they will gain hands-on experience in analysing spatial data in R, exploring various spatial analysis methods, and applying these techniques to analyse the ARIADNE data.\n\n3.1 Analysing spatial data in R\nThis session focuses on hands-on experience in working with spatial data in R, particularly using the packages sf and terra. We will practice reading, writing, manipulating, exploring and visualising spatial data in both vector and raster formats.\n\n\n3.2 Advanced spatial analysis methods\nWe will explore sophisticated spatial analysis methods beyond the basics. Topics may include spatial interpolation, spatial regression, cluster analysis, etc. This will provide a foundation for deeper insights into complex spatial patterns and relationships within archaeological datasets, especially the ARIADNE data.\n\n\n3.3 Analysing ARIADNE data in R\nOur ultimate goal is to analyse archaeological data sourced from the ARIADNE Knowledge Base in R to gain meaningful insights into past human behaviour and settlement patterns. In the previous blocks, we were able to query and extract data from the ARIADNE KB. We will proceed by integrating such data with other local datasets and performing spatial analysis tasks using R packages such as sf, terra, stars, and spatstat."
+  },
+  {
+    "objectID": "programme.html#keynote-lecture",
+    "href": "programme.html#keynote-lecture",
+    "title": "Training school programme",
+    "section": "Keynote lecture",
+    "text": "Keynote lecture\nThe keynote lecture by Michael Kempf and Margaux Depaermentier will take place on Wednesday, 18th September at 5:30 pm as part of the Science Pub lecture series at the institute, followed by a social event.\n\nAssessing cultural vs. environmental diversity in the Neolithic Carpathian Basin using multiproxy models\nMichael Kempf and Margaux Depaermentier\nStable carbon and nitrogen isotope analysis from archaeological human and animal bone collagen is a powerful tool to enlighten past socio-agricultural systems and their close links to environmental conditions. To assess whether isotopic patterns are a function of cultural behavior or rather determined by environmental diversity, we test the spatio-temporal effects of conditional and multivariate exploratory and environmental models on stable isotope variability in the Neolithic and Chalcolithic Carpathian Basin (6000-2700 BCE)."
+  },
+  {
+    "objectID": "intro2r/index.html#overview",
+    "href": "intro2r/index.html#overview",
+    "title": "Introduction to R",
+    "section": "Overview",
+    "text": "Overview"
+  },
+  {
+    "objectID": "intro2r/index.html#r-basics",
+    "href": "intro2r/index.html#r-basics",
+    "title": "Introduction to R",
+    "section": "R Basics",
+    "text": "R Basics\n1.) Introduction - code along\n\norientation in RStudio\nexecution command, basic operators\nassigning operator\nvectors\ncomments\n\n2.) Syntax and basic functions\n\nfunctions, objects, values, syntax\ndataframes and vectors"
+  },
+  {
+    "objectID": "intro2r/index.html#workflow",
+    "href": "intro2r/index.html#workflow",
+    "title": "Introduction to R",
+    "section": "Workflow",
+    "text": "Workflow\n3.) Workflow\n\nprojects and scripts\npackages\nloading data"
+  },
+  {
+    "objectID": "intro2r/index.html#orientation-in-rstudio",
+    "href": "intro2r/index.html#orientation-in-rstudio",
+    "title": "Introduction to R",
+    "section": "Orientation in RStudio",
+    "text": "Orientation in RStudio"
+  },
+  {
+    "objectID": "intro2r/index.html#basic-operators",
+    "href": "intro2r/index.html#basic-operators",
+    "title": "Introduction to R",
+    "section": "Basic operators",
+    "text": "Basic operators\n\n5+5\n\n[1] 10\n\n2*2\n\n[1] 4\n\n10/2\n\n[1] 5\n\n3**2\n\n[1] 9\n\nsqrt(9)\n\n[1] 3\n\n\n\n3==3\n\n[1] TRUE\n\n3==4\n\n[1] FALSE\n\n10&gt;5\n\n[1] TRUE\n\n10&lt;5\n\n[1] FALSE"
+  },
+  {
+    "objectID": "intro2r/index.html#assigning-operator",
+    "href": "intro2r/index.html#assigning-operator",
+    "title": "Introduction to R",
+    "section": "Assigning operator",
+    "text": "Assigning operator\n\nmy_number &lt;- 10\nmy_number\n\n[1] 10\n\nmy_number+5\n\n[1] 15\n\nmy_other_number &lt;- 200\nmy_number + my_other_number\n\n[1] 210\n\n\n\nmy_number == 10\n\n[1] TRUE\n\nmy_number &lt; my_other_number\n\n[1] TRUE"
+  },
+  {
+    "objectID": "intro2r/index.html#creating-vectors",
+    "href": "intro2r/index.html#creating-vectors",
+    "title": "Introduction to R",
+    "section": "Creating vectors",
+    "text": "Creating vectors\n\nmy_vector &lt;- c(1, 2, 3, 4, 5)\nmy_vector\n\n[1] 1 2 3 4 5\n\nmy_vector + 10\n\n[1] 11 12 13 14 15\n\nmy_other_vector &lt;- c(6:10)\nmy_other_vector\n\n[1]  6  7  8  9 10\n\nmy_other_vector + my_vector\n\n[1]  7  9 11 13 15\n\nmy_other_vector[2]\n\n[1] 7"
+  },
+  {
+    "objectID": "intro2r/index.html#adding-comments",
+    "href": "intro2r/index.html#adding-comments",
+    "title": "Introduction to R",
+    "section": "Adding comments",
+    "text": "Adding comments\n\n# this is comment\n# 10 / 2"
+  },
+  {
+    "objectID": "intro2r/index.html#exercise",
+    "href": "intro2r/index.html#exercise",
+    "title": "Introduction to R",
+    "section": "Exercise",
+    "text": "Exercise"
+  },
+  {
+    "objectID": "intro2r/index.html#task",
+    "href": "intro2r/index.html#task",
+    "title": "Introduction to R",
+    "section": "Task:",
+    "text": "Task:\n1.) create one vector which contains 10 numbers from 51 to 60\n2.) and another vector which contains 10 numbers from 101 to 110\n3.) save the first vector as “vect_1” and second as “vect_2”\n4.) subtract vect_1 from vect_2 and save the results as “vect_sub”"
+  },
+  {
+    "objectID": "intro2r/index.html#solution",
+    "href": "intro2r/index.html#solution",
+    "title": "Introduction to R",
+    "section": "Solution",
+    "text": "Solution\n\nvect_1 &lt;- c(51:60)\nvect_2 &lt;- c(101:110)\n\nvect_sub &lt;- vect_2 - vect_1\nvect_sub\n\n [1] 50 50 50 50 50 50 50 50 50 50"
+  },
+  {
+    "objectID": "intro2r/index.html#functions-and-syntax",
+    "href": "intro2r/index.html#functions-and-syntax",
+    "title": "Introduction to R",
+    "section": "Functions and syntax",
+    "text": "Functions and syntax\n\nfunctions always go with parentheses ()\nfunctions are doing stuff\nsyntax:\n\nfunction_name(argument1 = value1, argument2 = value2, ...)\n\nmean(1:10)\n\n[1] 5.5\n\n\n\na &lt;- mean(1:10)\na\n\n[1] 5.5\n\n\n\nsummary(1:10)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   1.00    3.25    5.50    5.50    7.75   10.00 \n\n\n\nmy_sequence &lt;- seq(from = 1000,  to = 2000, by = 10)\nmy_sequence\n\n  [1] 1000 1010 1020 1030 1040 1050 1060 1070 1080 1090 1100 1110 1120 1130 1140\n [16] 1150 1160 1170 1180 1190 1200 1210 1220 1230 1240 1250 1260 1270 1280 1290\n [31] 1300 1310 1320 1330 1340 1350 1360 1370 1380 1390 1400 1410 1420 1430 1440\n [46] 1450 1460 1470 1480 1490 1500 1510 1520 1530 1540 1550 1560 1570 1580 1590\n [61] 1600 1610 1620 1630 1640 1650 1660 1670 1680 1690 1700 1710 1720 1730 1740\n [76] 1750 1760 1770 1780 1790 1800 1810 1820 1830 1840 1850 1860 1870 1880 1890\n [91] 1900 1910 1920 1930 1940 1950 1960 1970 1980 1990 2000\n\nlength(my_sequence)\n\n[1] 101\n\nrange(my_sequence)\n\n[1] 1000 2000"
+  },
+  {
+    "objectID": "intro2r/index.html#basic-syntax",
+    "href": "intro2r/index.html#basic-syntax",
+    "title": "Introduction to R",
+    "section": "Basic syntax",
+    "text": "Basic syntax"
+  },
+  {
+    "objectID": "intro2r/index.html#objects-and-values",
+    "href": "intro2r/index.html#objects-and-values",
+    "title": "Introduction to R",
+    "section": "Objects and values",
+    "text": "Objects and values\n\nthere are different types of objects and values in R, each type is allowing you to do different operations\n\nObjects\n\nfor now, it will be enough to introduce vector and dataframe\nvector\n\na list of items that are of the same type\n\ndataframe\n\na table\nhas rows and columns\nrectangular, ie. identical number of rows in each column.\n\n\nValues\n\nsimilarly, there are many types of values - characters, numbers, factors.\nall you need to know now is that if you want to do mathematic operations, you always have to check whether your numbers are really a numbers and not something else, such as characters\nfunction str() will quickly tell you what kind of object with what kind of values you have"
+  },
+  {
+    "objectID": "intro2r/index.html#vector",
+    "href": "intro2r/index.html#vector",
+    "title": "Introduction to R",
+    "section": "Vector",
+    "text": "Vector\n\nnums &lt;- c(1:10)\nnums\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\nhunds &lt;- c(101:110)\nhunds\n\n [1] 101 102 103 104 105 106 107 108 109 110\n\nstr(hunds)\n\n int [1:10] 101 102 103 104 105 106 107 108 109 110\n\nletts &lt;- letters[1:10]\nletts\n\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\"\n\nstr(letts)\n\n chr [1:10] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\"\n\ncapital_towns  &lt;- c(\"Berlin\", \"Bratislava\", \"Prague\", \"Vienna\", \"Warsaw\")\nstr(capital_towns)\n\n chr [1:5] \"Berlin\" \"Bratislava\" \"Prague\" \"Vienna\" \"Warsaw\"\n\n\nIf the vector combines numbers and words, the result will save the numbers as characters, so it is then not possible to make mathematical operations with them\n\nstrange_vector &lt;- c(\"Berlin\", 1, 5, 12, 110)\nstr(strange_vector)\n\n chr [1:5] \"Berlin\" \"1\" \"5\" \"12\" \"110\""
+  },
+  {
+    "objectID": "intro2r/index.html#dataframes",
+    "href": "intro2r/index.html#dataframes",
+    "title": "Introduction to R",
+    "section": "Dataframes",
+    "text": "Dataframes\n\nyou can create dataframes by binding the of the same length (!) together\ncbind() binds vectors into columns and then as.data.frame() change them into dataframe\n\n\ndf&lt;-as.data.frame(cbind(nums, hunds, letts))\ndf\n\n   nums hunds letts\n1     1   101     a\n2     2   102     b\n3     3   103     c\n4     4   104     d\n5     5   105     e\n6     6   106     f\n7     7   107     g\n8     8   108     h\n9     9   109     i\n10   10   110     j"
+  },
+  {
+    "objectID": "intro2r/index.html#dataframe---structure",
+    "href": "intro2r/index.html#dataframe---structure",
+    "title": "Introduction to R",
+    "section": "Dataframe - structure",
+    "text": "Dataframe - structure\nGet the basic information about the dataframe with str()\n\nstr(df)\n\n'data.frame':   10 obs. of  3 variables:\n $ nums : chr  \"1\" \"2\" \"3\" \"4\" ...\n $ hunds: chr  \"101\" \"102\" \"103\" \"104\" ...\n $ letts: chr  \"a\" \"b\" \"c\" \"d\" ...\n\n\nWe see that columns nums and hunds are not numbers, but characters. To be able for us to do mathematic operations, we need to change the values into numbers by function as.numeric()\n\ndf$nums &lt;- as.numeric(df$nums)\ndf$hunds &lt;- as.numeric(df$hunds)\n\n\nstr(df)\n\n'data.frame':   10 obs. of  3 variables:\n $ nums : num  1 2 3 4 5 6 7 8 9 10\n $ hunds: num  101 102 103 104 105 106 107 108 109 110\n $ letts: chr  \"a\" \"b\" \"c\" \"d\" ..."
+  },
+  {
+    "objectID": "intro2r/index.html#subseting-data",
+    "href": "intro2r/index.html#subseting-data",
+    "title": "Introduction to R",
+    "section": "Subseting data",
+    "text": "Subseting data\nSquare brackets [,]\nname_of_your_dataframe[row_number,column_number]\nFirst row\n\ndf[1,]\n\n  nums hunds letts\n1    1   101     a\n\n\nFirst column\n\ndf[,1]\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\n\n\nsum(df[,2])\n\n[1] 1055\n\n\nSubseting data with $\n\ndf$letts\n\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\"\n\n\n\nmean(df$hunds)\n\n[1] 105.5"
+  },
+  {
+    "objectID": "intro2r/index.html#dataframe-with-atrium-participants",
+    "href": "intro2r/index.html#dataframe-with-atrium-participants",
+    "title": "Introduction to R",
+    "section": "Dataframe with atRium participants",
+    "text": "Dataframe with atRium participants\nCopy, paste and run this whole code chunk:\n\nfirst_name &lt;- c(\"Margaux\", \"Lesley\", \"Carole\", \"Alexander\", \"Dita\", \"Brigit\", \"Sara\", \"Yiu-Kang\", \"Romane\", \"Nicky\", \"Mihailo\", \"Valeriia\", \"Carlo\", \"Panagiotis\", \"Juan Carlos\", \"Anna\", \"Swe Zin\", \"Ilenia\")\ncountry &lt;- c(\"Lithuania\",\"Ireland\",\"Germany\",\"United Kingdom\",\"Netherlands\",\"Austria\",\"Germany\",\"Germany\",\"Italy\",\"United Kingdom\",\"Serbia\",\"Ukraine\",\"Germany\",\"Italy\",\"France\",\"United Kingdom\",\"Switzerland \",\"Luxembourg\")\nposition &lt;- c(\"post_doc\",\"researcher\",\"post_doc\",\"masters_student\",\"post_doc\",\"researcher\",\"phd_student\",\"researcher\",\"phd_student\",\"researcher\",\"researcher\",\"ba_student\",\"post_doc\",\"researcher\",\"researcher\",\"phd_student\",\"phd_student\",\"phd_student\")\ninstitution &lt;- c(\"university\",\"public_research_org\",\"university\",\"university\",\"university\",\"public_research_org\",\"university\",\"public_research_org\",\"university\",\"digital_repository\",\"university\",\"university\",\"public_research_org\",\"public_research_org\",\"private_org\",\"university\",\"university\",\"university\")\ncity &lt;- c(\"Vilnius\",\"Dublin\",\"Kiel\",\"York\",\"Leiden\",\"Vienna\",\"Kiel\",\"Bochum\",\"Padova\",\"York\",\"Belgrade\",\"Odesa\",\"Leibzig\",\"Rome\",\"Paris\",\"Glasgow\",\"Bern\",\"Luxembourg\")\ndistance_km &lt;- c(850, 1650, 720, 1300, 910, 110, 720, 710, 550, 1300, 560, 1090, 380, 870, 1040, 1590, 720, 760)\n\n\ndf_people &lt;- as.data.frame(cbind(first_name, country, position, institution, city, distance_km))\ndf_people$distance_km &lt;- as.numeric(df_people$distance_km)\nhead(df_people, 4)\n\n  first_name        country        position         institution    city\n1    Margaux      Lithuania        post_doc          university Vilnius\n2     Lesley        Ireland      researcher public_research_org  Dublin\n3     Carole        Germany        post_doc          university    Kiel\n4  Alexander United Kingdom masters_student          university    York\n  distance_km\n1         850\n2        1650\n3         720\n4        1300"
+  },
+  {
+    "objectID": "intro2r/index.html#lets-play-a-bit",
+    "href": "intro2r/index.html#lets-play-a-bit",
+    "title": "Introduction to R",
+    "section": "Lets play a bit",
+    "text": "Lets play a bit\nWhat’s your name?\n\ndf_people$first_name\n\n [1] \"Margaux\"     \"Lesley\"      \"Carole\"      \"Alexander\"   \"Dita\"       \n [6] \"Brigit\"      \"Sara\"        \"Yiu-Kang\"    \"Romane\"      \"Nicky\"      \n[11] \"Mihailo\"     \"Valeriia\"    \"Carlo\"       \"Panagiotis\"  \"Juan Carlos\"\n[16] \"Anna\"        \"Swe Zin\"     \"Ilenia\"     \n\n\nWhere are you coming from?\n\nunique(df_people$country)\n\n [1] \"Lithuania\"      \"Ireland\"        \"Germany\"        \"United Kingdom\"\n [5] \"Netherlands\"    \"Austria\"        \"Italy\"          \"Serbia\"        \n [9] \"Ukraine\"        \"France\"         \"Switzerland \"   \"Luxembourg\"    \n\n\nWhich country is most represented?\n\ntable(df_people$country)\n\n\n       Austria         France        Germany        Ireland          Italy \n             1              1              4              1              2 \n     Lithuania     Luxembourg    Netherlands         Serbia   Switzerland  \n             1              1              1              1              1 \n       Ukraine United Kingdom \n             1              3 \n\n\nQuick Task:\n\ncould calculate which cities are represented?\n\nWhat is the longest distance one of you had to travel?\n\nmax(df_people$distance_km)\n\n[1] 1650"
+  },
+  {
+    "objectID": "intro2r/index.html#lets-play-a-bit-2",
+    "href": "intro2r/index.html#lets-play-a-bit-2",
+    "title": "Introduction to R",
+    "section": "Lets play a bit 2",
+    "text": "Lets play a bit 2\nWhat are your positions?\n\ntable(df_people$position)\n\n\n     ba_student masters_student     phd_student        post_doc      researcher \n              1               1               5               4               7 \n\n\nWho are the PhD students?\n\ndf_people[df_people$position==\"phd_student\",]\n\n   first_name        country    position institution       city distance_km\n7        Sara        Germany phd_student  university       Kiel         720\n9      Romane          Italy phd_student  university     Padova         550\n16       Anna United Kingdom phd_student  university    Glasgow        1590\n17    Swe Zin   Switzerland  phd_student  university       Bern         720\n18     Ilenia     Luxembourg phd_student  university Luxembourg         760\n\n\nAlternative - selecting specific columns\n\ndf_people[df_people$position==\"phd_student\",c(1,3,5)]\n\n   first_name    position       city\n7        Sara phd_student       Kiel\n9      Romane phd_student     Padova\n16       Anna phd_student    Glasgow\n17    Swe Zin phd_student       Bern\n18     Ilenia phd_student Luxembourg\n\n\nQuick Task:\n\ncan you subset row with your name and check whether I didn’t messed up your data?"
+  },
+  {
+    "objectID": "intro2r/index.html#exercise-1",
+    "href": "intro2r/index.html#exercise-1",
+    "title": "Introduction to R",
+    "section": "Exercise",
+    "text": "Exercise"
+  },
+  {
+    "objectID": "intro2r/index.html#task-1",
+    "href": "intro2r/index.html#task-1",
+    "title": "Introduction to R",
+    "section": "Task:",
+    "text": "Task:\nUse the dataframe df_people to solve this questions:\n\nWhat are the names of the variables in the dataframe?\nWhich types of institution are represented here?\nWhich types of institution are most represented here?\nWhat is the average distance between Brno and the cities?\nWho are the postdocs and from which cities are they coming?\n\nHints: names(), unique(), table(), mean(),[,]"
+  },
+  {
+    "objectID": "intro2r/index.html#solution-1",
+    "href": "intro2r/index.html#solution-1",
+    "title": "Introduction to R",
+    "section": "Solution",
+    "text": "Solution\n\nWhat are the names of the variables in the dataframe?\n\n\nnames(df_people)\n\n[1] \"first_name\"  \"country\"     \"position\"    \"institution\" \"city\"       \n[6] \"distance_km\"\n\n\nAlternative:\n\ncolnames(df_people)\n\n[1] \"first_name\"  \"country\"     \"position\"    \"institution\" \"city\"       \n[6] \"distance_km\"\n\n\n\nWhich types of institution are represented here?\n\n\nunique(df_people$institution)\n\n[1] \"university\"          \"public_research_org\" \"digital_repository\" \n[4] \"private_org\"        \n\n\n\nWhich types of institution are most represented here?\n\n\ntable(df_people$institution)\n\n\n digital_repository         private_org public_research_org          university \n                  1                   1                   5                  11"
+  },
+  {
+    "objectID": "intro2r/index.html#solution-2",
+    "href": "intro2r/index.html#solution-2",
+    "title": "Introduction to R",
+    "section": "Solution",
+    "text": "Solution\n\nWhat is the average distance between Brno and the cities?\n\n\nmean(df_people$distance_km)\n\n[1] 879.4444\n\n\nAlternative\n\nsummary(df_people$distance_km)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  110.0   712.5   805.0   879.4  1077.5  1650.0 \n\n\n\nWho are the postdocs and what distance did they have to travel?\n\n\ndf_people[df_people$position==\"post_doc\",c(1,3,6)]\n\n   first_name position distance_km\n1     Margaux post_doc         850\n3      Carole post_doc         720\n5        Dita post_doc         910\n13      Carlo post_doc         380"
+  },
+  {
+    "objectID": "intro2r/index.html#other-useful-functions-for-dataframe",
+    "href": "intro2r/index.html#other-useful-functions-for-dataframe",
+    "title": "Introduction to R",
+    "section": "Other useful functions for dataframe",
+    "text": "Other useful functions for dataframe\n\nstr() - reveals the structure of the dataframe\n\n\nstr(df_people)\n\n'data.frame':   18 obs. of  6 variables:\n $ first_name : chr  \"Margaux\" \"Lesley\" \"Carole\" \"Alexander\" ...\n $ country    : chr  \"Lithuania\" \"Ireland\" \"Germany\" \"United Kingdom\" ...\n $ position   : chr  \"post_doc\" \"researcher\" \"post_doc\" \"masters_student\" ...\n $ institution: chr  \"university\" \"public_research_org\" \"university\" \"university\" ...\n $ city       : chr  \"Vilnius\" \"Dublin\" \"Kiel\" \"York\" ...\n $ distance_km: num  850 1650 720 1300 910 110 720 710 550 1300 ...\n\n\n\nhead(), tail()\n\n\nhead(df_people, 2)\n\n  first_name   country   position         institution    city distance_km\n1    Margaux Lithuania   post_doc          university Vilnius         850\n2     Lesley   Ireland researcher public_research_org  Dublin        1650\n\n\n\ntail(df_people, 2)\n\n   first_name      country    position institution       city distance_km\n17    Swe Zin Switzerland  phd_student  university       Bern         720\n18     Ilenia   Luxembourg phd_student  university Luxembourg         760\n\n\n\nncol(), nrows(),\n\n\nncol(df_people)\n\n[1] 6\n\n\n\nnrow(df_people)\n\n[1] 18\n\n\n\nsum()\n\n\nsum(df_people$distance_km)\n\n[1] 15830"
+  },
+  {
+    "objectID": "intro2r/index.html#workflow-1",
+    "href": "intro2r/index.html#workflow-1",
+    "title": "Introduction to R",
+    "section": "Workflow",
+    "text": "Workflow\n\nscripts\nprojects\npackages\nloading data"
+  },
+  {
+    "objectID": "intro2r/index.html#scripts",
+    "href": "intro2r/index.html#scripts",
+    "title": "Introduction to R",
+    "section": "Scripts",
+    "text": "Scripts\n# Practice script for atRium training school 2024\n# Author: Peter Tkáč\n# Date: 2024-09-10\n\n## ---- Packages\nlibrary(here)\nlibrary(tidyverse)\n\n## ---- Data Loading\n\ndf_darts &lt;- read.csv(here(\"data/dartpoints.csv\"))\nstr(df_darts)\n\n## ---- Basic summaries\n\nnrow(df_darts) # number of dartpoints\ntable(df_darts$Name) # numer of types of the dartpoints\n\n## ---- Plots\n\nggplot(df_darts, aes(x=Name))+\n  geom_bar(fill = \"pink\")+\n  theme_light()\n\n## ---- Saving result\n\nggsave(filename = \"very_important_plot.png\")"
+  },
+  {
+    "objectID": "intro2r/index.html#projects",
+    "href": "intro2r/index.html#projects",
+    "title": "Introduction to R",
+    "section": "Projects",
+    "text": "Projects\n\n.Rproj file - a “storage” of your scripts, data…\nwe recommend you to use parent folder to store your project file and then sub-folders to store data, figures, scripts, etc."
+  },
+  {
+    "objectID": "intro2r/index.html#packages",
+    "href": "intro2r/index.html#packages",
+    "title": "Introduction to R",
+    "section": "Packages",
+    "text": "Packages\n\nby installing additional packages, you can expand the amount of things you can do in R\nthere are plenty of packages with different functions and aims\nbasic principle will be introduced by package “here”\n\n\n#install.packages(\"here\") # installs the package\nlibrary(here) # loads the package\nhere() # runs a function from the package\n\n[1] \"C:/Users/pajdla/Documents/projects/atRium\"\n\n\n\nyou only need to install the package once install.packages(\"name_of_the_package\"), but it needs to be loaded every time you start a new script or after you have cleaned up your workspace library(name_of_the_package)\nsometime you need to specify from which package your function is: name-of-the-package::name-of-the-function()\n\n\ndplyr::filter(df_people, city == \"Kiel\")\n\n  first_name country    position institution city distance_km\n1     Carole Germany    post_doc  university Kiel         720\n2       Sara Germany phd_student  university Kiel         720\n\n\nIf you are not sure from which package your function is coming, you can easily find out by:\n\n?filter()"
+  },
+  {
+    "objectID": "intro2r/index.html#loading-data",
+    "href": "intro2r/index.html#loading-data",
+    "title": "Introduction to R",
+    "section": "Loading data",
+    "text": "Loading data\n\ndownload data dartpoints.csv and move them to your project file\n\nPaths\nAbsolute file path - The file path is specific to a given user.\nC:/Documents/MyProject/data/dartpoints.csv\nRelative file path If I am currently in MyProject/ folder:\n./data/dartpoints.csv\nPackage here()\n\nPackage here is here to save the day!\nFunction here() will know where the top directory is, so you do not need to write whole URL adress\n\nTry running here() to see where your project is stored\n\nhere()\n\n[1] \"C:/Users/pajdla/Documents/projects/atRium\""
+  },
+  {
+    "objectID": "intro2r/index.html#loading-data-1",
+    "href": "intro2r/index.html#loading-data-1",
+    "title": "Introduction to R",
+    "section": "Loading data",
+    "text": "Loading data\nAn example of loading data with here() function:\n\nNOTE that in this case data which you want to load have to be in a subfolder “data” which is located in the same folder as your project\n\n\ndf_darts &lt;- read.csv(here(\"data/dartpoints.csv\"))\n\n\nread.csv loads .csv files (AKA comma-separated values file) into your R\nif the values in your file are separated by other way, you have to adjust. For example for values separated by semicolom ; use argument sep=\";\":\n\n\n# | eval: false\ndf_darts2 &lt;- read.csv(here(\"data/dartpoints.csv\"), sep = \";\")"
+  },
+  {
+    "objectID": "intro2r/index.html#exercise-2",
+    "href": "intro2r/index.html#exercise-2",
+    "title": "Introduction to R",
+    "section": "Exercise",
+    "text": "Exercise"
+  },
+  {
+    "objectID": "intro2r/index.html#observe-the-dartpoint-data",
+    "href": "intro2r/index.html#observe-the-dartpoint-data",
+    "title": "Introduction to R",
+    "section": "Observe the dartpoint data",
+    "text": "Observe the dartpoint data\n\nHow many observations and how many variables are in the dataframe?\nWhat are the names of the variables?\nAre there any quantitative variables? Are they stored properly as numbers so we can make mathematic operations?\nWhat is the mean length of the dartpoints?\n\n\n\n\n\natRium training school, Brno 2024 | Intro to R"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "atRium Brno Training School",
+    "section": "",
+    "text": "Basics\n\n\n\nWhen? 16–20 September 2024\nWhere? Brno, Czech Republic\nWhat? Training school on querying data aggregated in the ARIADNE infrastructure and their spatial analysis in R\n\n\nJoin us in Brno for a five-day ‘atRium’ training school in computational archaeology, where you will gain essential coding skills in the R programming language, knowledge of archaeological data integrated into the ARIADNE research infrastructure, and fundamental spatial data analysis expertise. As large amounts of archaeological data have become available, spatial analysis techniques may offer valuable insights into past human behaviour and settlement patterns. Our programme is designed to deepen your understanding of computational methods in archaeology, focusing on working in a reproducible manner using the R programming language and environment.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe training school is part of a trans-national access scheme provided by the ATRIUM Project, hosted by the Archaeological Information System of the Czech Republic (AIS CR) research infrastructure at the Institute of Archaeology, Czech Academy of Sciences, Brno.\n\nFeel free to distribute the flyer in PDF or PNG."
   },
   {
     "objectID": "ariadne/index.html#outline",
@@ -95,14 +522,14 @@
     "href": "ariadne/index.html#linked-open-data-cloud",
     "title": "ARIADNE & Linked Open Data",
     "section": "Linked Open Data Cloud",
-    "text": "Linked Open Data Cloud\n\n\nhttps://lod-cloud.net/\nLOD knowledge bases:\n\nhttps://www.wikidata.org/\n~12,5 billion triples\n\nhttp://dbpedia.org/\n~9,5 billion triples\n\n\n\nThe Linked Open Data Cloud from lod-cloud.net (2024-07-04)\n\n\n\nWikidata - community created structured (!) data, not W3C fully complient, no ontology etc. DBpedia - data extracted from Wikipedia infoboxes, ontology etc."
+    "text": "Linked Open Data Cloud\n\n\nhttps://lod-cloud.net/\nLOD knowledge bases:\n\nhttps://www.wikidata.org/\n~12,5 billion triples\n\nhttp://dbpedia.org/\n~9,5 billion triples\n\n\n\nThe Linked Open Data Cloud from lod-cloud.net (2024-07-04)\n\n\n\n\nWikidata - community created structured (!) data, not W3C fully complient, no ontology etc. DBpedia - data extracted from Wikipedia infoboxes, ontology etc."
   },
   {
     "objectID": "ariadne/index.html#example-uris",
     "href": "ariadne/index.html#example-uris",
     "title": "ARIADNE & Linked Open Data",
     "section": "Example – URIs",
-    "text": "Example – URIs\n\n\n\nAriadne is a figure in Greek mythology.\n\nARIADNE is a project acronym.\nAriadne was a Byzantine empress.\nAriadne is a genus of butterflies.\nAriadne is a drug…\n\nFar too many things are called Ariadne!\n\n\nWe need unique identifiers!\nWikidata\n\nhttp://www.wikidata.org/entity/Q184874 (URI)\nIdentifier: Q184874\n\nDBpedia\n\nhttp://dbpedia.org/resource/Ariadne (URI)\nhttp://dbpedia.org/data/Ariadne (data in RDF)\nhttp://dbpedia.org/page/Ariadne (landing page)\n\n\n\nEgisto Sani, CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0, via Wikimedia Commons"
+    "text": "Example – URIs\n\n\n\nAriadne is a figure in Greek mythology.\n\nARIADNE is a project acronym.\nAriadne was a Byzantine empress.\nAriadne is a genus of butterflies.\nAriadne is a drug…\n\nFar too many things are called Ariadne!\n\n\nWe need unique identifiers!\nWikidata\n\nhttp://www.wikidata.org/entity/Q184874 (URI)\nIdentifier: Q184874\n\nDBpedia\n\nhttp://dbpedia.org/resource/Ariadne (URI)\nhttp://dbpedia.org/data/Ariadne (data in RDF)\nhttp://dbpedia.org/page/Ariadne (landing page)\n\n\n\n\nEgisto Sani, CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0, via Wikimedia Commons"
   },
   {
     "objectID": "ariadne/index.html#triples",
@@ -200,7 +627,7 @@
     "href": "ariadne/index.html#tabular-data-vs-triples",
     "title": "ARIADNE & Linked Open Data",
     "section": "Tabular data vs triples",
-    "text": "Tabular data vs triples\n\nAny data organized in a table can be written as triples.\n\n\n\nFor example a table like this:\n\n\n\nID\nhuman\nsource\ndelta15N\ndelta13C\n\n\n\n\nsample01\nTRUE\ncoll\n6.9\n-19.2\n\n\nsample02\nFALSE\ncoll\n4.2\n-21.83\n\n\n…\n…\n…\n…\n…\n\n\nsample42\nNA\ncoll\n12.02\nNA\n\n\n\n\n\n\nCan become this:\n\n\n\nsubject\npredicate\nobject\n\n\n\n\nsample01\nfromHuman\nTRUE\n\n\nsample01\nsource\ncoll\n\n\nsample01\ndelta15N\n6.9\n\n\nsample01\ndelta13C\n-19.2\n\n\nsample02\nfromHuman\nFALSE\n\n\n…\n…\n…\n\n\nsample42\ndelta13C\nNA\n\n\n\n\n\nObservation (row) IDs become subjects.\nObservations (values) become objects.\nVariable (column) names become predicates."
+    "text": "Tabular data vs triples\n\nAny data organized in a table can be written as triples.\n\n\n\nFor example a table like this:\n\n\n\nID\nhuman\nsource\ndelta15N\ndelta13C\n\n\n\n\nsample01\nTRUE\ncoll\n6.9\n-19.2\n\n\nsample02\nFALSE\ncoll\n4.2\n-21.83\n\n\n…\n…\n…\n…\n…\n\n\nsample42\nNA\ncoll\n12.02\nNA\n\n\n\n\n\n\nCan become this:\n\n\n\nsubject\npredicate\nobject\n\n\n\n\nsample01\nfromHuman\nTRUE\n\n\nsample01\nsource\ncoll\n\n\nsample01\ndelta15N\n6.9\n\n\nsample01\ndelta13C\n-19.2\n\n\nsample02\nfromHuman\nFALSE\n\n\n…\n…\n…\n\n\nsample42\ndelta13C\nNA\n\n\n\n\n\n\nObservation (row) IDs become subjects.\nObservations (values) become objects.\nVariable (column) names become predicates."
   },
   {
     "objectID": "ariadne/index.html#exercise-1",
@@ -249,7 +676,7 @@
     "href": "ariadne/index.html#example",
     "title": "ARIADNE & Linked Open Data",
     "section": "Example",
-    "text": "Example\n\n\n\n\n\n\n\nG\n\ncluster_1\n\nrdf:type dbo:Person\n\n\ncluster_2\n\nrdf:type dbo:MythologicalFigure\n\n\ncluster_0\n\nrdf:type dbo:PopulatedPlace\n\n\n\ndbr:Crete\n\ndbr:Crete\n\n\n\ndbr:Ariadne\n\ndbr:Ariadne\n\n\n\ndbr:Ariadne--dbr:Crete\n\ndbo:origin\n\n\n\n\n\n\n\n\n@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .\n@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .\n@prefix schema: &lt;http://schema.org/&gt; .\n@prefix dbo: &lt;http://dbpedia.org/ontology/&gt; .\n@prefix dbr: &lt;http://dbpedia.org/resource/&gt; .\n\ndbo:MythologicalFigure rdfs:subClassOf dbo:Person .\n\ndbo:origin rdf:type rdf:Property ;\n  rdfs:domain dbo:Person ;\n  rdfs:range dbo:PopulatedPlace .\n\ndbr:Ariadne\n  rdf:type dbo:MythologicalFigure ;\n  dbo:origin dbr:Crete .\n\ndbr:Crete \n  rdf:type dbo:PopulatedPlace ."
+    "text": "Example\n\n\n\n\n\n\n\nG\n\ncluster_0\n\nrdf:type dbo:PopulatedPlace\n\n\ncluster_1\n\nrdf:type dbo:Person\n\n\ncluster_2\n\nrdf:type dbo:MythologicalFigure\n\n\n\ndbr:Crete\n\ndbr:Crete\n\n\n\ndbr:Ariadne\n\ndbr:Ariadne\n\n\n\ndbr:Ariadne--dbr:Crete\n\ndbo:origin\n\n\n\n\n\n\n\n\n@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .\n@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .\n@prefix schema: &lt;http://schema.org/&gt; .\n@prefix dbo: &lt;http://dbpedia.org/ontology/&gt; .\n@prefix dbr: &lt;http://dbpedia.org/resource/&gt; .\n\ndbo:MythologicalFigure rdfs:subClassOf dbo:Person .\n\ndbo:origin rdf:type rdf:Property ;\n  rdfs:domain dbo:Person ;\n  rdfs:range dbo:PopulatedPlace .\n\ndbr:Ariadne\n  rdf:type dbo:MythologicalFigure ;\n  dbo:origin dbr:Crete .\n\ndbr:Crete \n  rdf:type dbo:PopulatedPlace ."
   },
   {
     "objectID": "ariadne/index.html#ao-cat-ontology-1",
@@ -280,179 +707,53 @@
     "text": "ARIADNE subjects\n\nSite/monument – each record is a site/monument.\nFieldwork – each record is an individual archaeological investigation (event) .\nFieldwork report – record of fieldwork event (link to grey literature report).\nFieldwork archive – record of filedwork event (link to archive of digital objects).\nScientific analysis – any analytical data.\nDate – each record is a single archaeological date (C14, dendrochronology etc.)\nArtefact – each record is a single artefact (except coins).\nCoin – each record is a single coin.\nBuilding survey – specific category of fieldwork report or archive for standing building survey.\nMaritime – specific category of site/monument for wrecks or fieldwork event (underwater archaeology).\nInscription – monuments or artefacts that bear graphical manifestation of a human thought.\nRock art – similar to inscriptions.\nBurial – each record is a burial.\n\n\n\n\n\n\natRium training school, Brno 2024 | ARIADNE"
   },
   {
-    "objectID": "sparql/index.html#outline",
-    "href": "sparql/index.html#outline",
-    "title": "SPARQL",
-    "section": "Outline",
-    "text": "Outline\n\nIntro to SPARQL\nSPARQL queries from R\n\nSPARQL query services and endpoints\n\nWikidata\nDBpedia\nARIADNE KB"
-  },
-  {
-    "objectID": "sparql/index.html#introduction-to-sparql",
-    "href": "sparql/index.html#introduction-to-sparql",
-    "title": "SPARQL",
-    "section": "Introduction to SPARQL",
-    "text": "Introduction to SPARQL\nSPARQL Protocol and RDF Query Language"
-  },
-  {
-    "objectID": "sparql/index.html#sparql",
-    "href": "sparql/index.html#sparql",
-    "title": "SPARQL",
-    "section": "SPARQL",
-    "text": "SPARQL\n\nSPARQL is a query language for RDF data.\nSPARQL is a recursive acronym for SPARQL Protocol and RDF Query Language.\nW3C standard.\n\nTypes of queries\n\nASK query – returns true/false answer, checks whether there is at least one result.\nSELECT query – returns list (table) of results.\nDESCRIBE query – returns all possible data about an entity.\nCONSTRUCT query – returns new set of triples based on a given template."
-  },
-  {
-    "objectID": "sparql/index.html#select-query",
-    "href": "sparql/index.html#select-query",
-    "title": "SPARQL",
-    "section": "SELECT query",
-    "text": "SELECT query\nPREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;\n\nSELECT ?label\n\nFROM &lt;SPARQL endpoint&gt;\n\nWHERE {\n  ?subject ?predicate ?object .\n  ?object rdfs:label ?label\n}\n\nLIMIT 100\nParts of the query\n\nPREFIX: Namespace definition – prefixes.\nSELECT: Selected variables – will be in the output as column names.\nFROM: Specification of the graph from which we are querying.\nWHERE: Where clause with triple patterns to be matched in the graph.\nLIMIT: Limits the number of returned results (so we do not overload the endpoint)."
-  },
-  {
-    "objectID": "sparql/index.html#sparql-query",
-    "href": "sparql/index.html#sparql-query",
-    "title": "SPARQL",
-    "section": "SPARQL query",
-    "text": "SPARQL query\n\nConsists of triple patterns with zero or more variables.\nVariables are prefixed with a question mark (?variableName).\nTriple patterns are matched against the triples in the graph.\nEach matching triple produces one result.\n\n?subject ?predicate ?object .\nCommon abbreviations\n\nSubject as ?s\nPredicate/property as ?p\nObject as ?o"
-  },
-  {
-    "objectID": "sparql/index.html#examples",
-    "href": "sparql/index.html#examples",
-    "title": "SPARQL",
-    "section": "Examples",
-    "text": "Examples\nSPARQL queries on DBpedia, Wikidata and ARIADNE KB"
-  },
-  {
-    "objectID": "sparql/index.html#linked-open-data-cloud",
-    "href": "sparql/index.html#linked-open-data-cloud",
-    "title": "SPARQL",
-    "section": "Linked Open Data Cloud",
-    "text": "Linked Open Data Cloud\n\n\nhttps://lod-cloud.net/\nLOD knowledge bases:\n\nhttps://www.wikidata.org/\n~12,5 billion triples\n\nhttp://dbpedia.org/\n~9,5 billion triples\n\n\n\nThe Linked Open Data Cloud from lod-cloud.net (2024-07-04)\n\n\n\nWikidata - community created structured (!) data, not W3C fully complient, no ontology etc. DBpedia - data extracted from Wikipedia infoboxes, ontology etc."
-  },
-  {
-    "objectID": "sparql/index.html#dbpedia-virtuoso-query-service",
-    "href": "sparql/index.html#dbpedia-virtuoso-query-service",
-    "title": "SPARQL",
-    "section": "DBpedia Virtuoso query service",
-    "text": "DBpedia Virtuoso query service\n\nhttps://dbpedia.org/sparql"
-  },
-  {
-    "objectID": "sparql/index.html#example-query",
-    "href": "sparql/index.html#example-query",
-    "title": "SPARQL",
-    "section": "Example query",
-    "text": "Example query\nDBpedia\n\nFind all other URIs/IRIs that Ariadne maps to in DBpedia.\n\nPREFIX dbr: &lt;http://dbpedia.org/resource/&gt;\nPREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;\n\nSELECT ?o\n\nFROM &lt;http://dbpedia.org&gt;\n\nWHERE {\n  dbr:Ariadne owl:sameAs ?o .\n}\n\nLIMIT 100\n\nQuery in DBpedia Virtuoso."
-  },
-  {
-    "objectID": "sparql/index.html#example-query-1",
-    "href": "sparql/index.html#example-query-1",
-    "title": "SPARQL",
-    "section": "Example query",
-    "text": "Example query\nDBpedia\n\nFind peole (and the dates they were born and died) who had to do anything with archaeology according to DBpedia.\n\nPREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX dbr: &lt;http://dbpedia.org/resource/&gt;\nPREFIX dbo: &lt;http://dbpedia.org/ontology/&gt;\n\nSELECT ?s ?p ?born ?died\n\nFROM &lt;http://dbpedia.org&gt;\n\nWHERE {\n  ?s rdf:type dbo:Person .\n  ?s ?p dbr:Archaeology .\n  ?s dbo:birthDate ?born .\n  ?s dbo:deathDate ?died .\n}\n\nORDER BY ASC (?born)\nLIMIT 100\n\nQuery in DBpedia Virtuoso.\n\n\nORDER BY ASC orders the results in an ascending order of the given variable."
-  },
-  {
-    "objectID": "sparql/index.html#example-query-2",
-    "href": "sparql/index.html#example-query-2",
-    "title": "SPARQL",
-    "section": "Example query",
-    "text": "Example query\nDBpedia\n\nHow many pages linking to archaeology are there?\n\nPREFIX dbr: &lt;http://dbpedia.org/resource/&gt;\n\nSELECT (COUNT(?s) AS ?count)\n\nFROM &lt;http://dbpedia.org&gt;\n\nWHERE {\n  ?s ?p dbr:Archaeology .\n}\n\nQuery in DBpedia Virtuoso.\n\n\nCOUNT(?variable) AS ?result counts the number of returned matches."
-  },
-  {
-    "objectID": "sparql/index.html#wikidata-query-service",
-    "href": "sparql/index.html#wikidata-query-service",
-    "title": "SPARQL",
-    "section": "Wikidata Query Service",
-    "text": "Wikidata Query Service\n\nQuery service: https://query.wikidata.org/\nSPARQL endpoint: https://query.wikidata.org/sparql"
-  },
-  {
-    "objectID": "sparql/index.html#example-query-3",
-    "href": "sparql/index.html#example-query-3",
-    "title": "SPARQL",
-    "section": "Example query",
-    "text": "Example query\nWikidata\n\nHow many archaeologists are there in Wikidata?\n\nPREFIX wd: &lt;http://www.wikidata.org/entity/&gt;\nPREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;\n\nSELECT (COUNT(?ae) AS ?count)\n\nWHERE {\n  ?ae wdt:P31 wd:Q5 .\n  ?ae wdt:P106 wd:Q3621491 .\n}\n\nQuery in Wikidata Query Service."
-  },
-  {
-    "objectID": "sparql/index.html#example-query-4",
-    "href": "sparql/index.html#example-query-4",
-    "title": "SPARQL",
-    "section": "Example query",
-    "text": "Example query\nWikidata\n\nReturn a list of archaeologists, their sex/gender, and the dates they were born and died.\n\nPREFIX wd: &lt;http://www.wikidata.org/entity/&gt;\nPREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;\nPREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;\n\nSELECT ?ae ?label ?sex ?born ?died\n\nWHERE {\n  ?ae wdt:P31 wd:Q5 ;\n    wdt:P106 wd:Q3621491 ;\n    rdfs:label ?label ;\n    wdt:P21 ?o ;\n    wdt:P569 ?born ;\n    wdt:P570 ?died ;\n  ?o rdfs:label ?sex .\n  \n  FILTER (lang(?label) = 'en')\n  FILTER (lang(?sex) = 'en')\n}\n\nLIMIT 200\n\nQuery in Wikidata Query Service.\n\n\nFILTER (lang(?label) = 'en') returns only labels in English."
-  },
-  {
-    "objectID": "sparql/index.html#example-query-5",
-    "href": "sparql/index.html#example-query-5",
-    "title": "SPARQL",
-    "section": "Example query",
-    "text": "Example query\nWikidata\n\nCount all archaeological artefacts and archaeological finds in Wikidata.\n\n\n\n\nArchaeological artefacts (Q220659)\n\nPREFIX wd: &lt;http://www.wikidata.org/entity/&gt;\nPREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;\n\nSELECT (COUNT(?a) AS ?count)\n\nWHERE {\n  ?a wdt:P31 wd:Q220659 .\n}\n\nWikidata Query Service.\n\n\n\nArchaeological finds (Q10855061)\n\nPREFIX wd: &lt;http://www.wikidata.org/entity/&gt;\nPREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;\n\nSELECT (COUNT(?a) AS ?count)\n\nWHERE {\n  ?a wdt:P31 wd:Q10855061 .\n}\n\nWikidata Query Service.\n\n\n\nTogether in one query using UNION\n\nPREFIX wd: &lt;http://www.wikidata.org/entity/&gt;\nPREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;\n\nSELECT (COUNT(?a) AS ?count)\n\nWHERE {\n  { ?a wdt:P31 wd:Q220659 } UNION { ?a wdt:P31 wd:Q10855061 }  .\n}\n\nQuery in Wikidata Query Service."
-  },
-  {
-    "objectID": "sparql/index.html#ariadne-knowledge-base",
-    "href": "sparql/index.html#ariadne-knowledge-base",
-    "title": "SPARQL",
-    "section": "ARIADNE Knowledge Base",
-    "text": "ARIADNE Knowledge Base\n\nGraphDB graph database, accessible through D4Science infrastructure\nhttps://ariadne.d4science.org/\nSPARQL endpoint\nhttps://graphdb.ariadne.d4science.org/repositories/ariadneplus-pr01"
-  },
-  {
-    "objectID": "sparql/index.html#example-query-6",
-    "href": "sparql/index.html#example-query-6",
-    "title": "SPARQL",
-    "section": "Example query",
-    "text": "Example query\nARIADNE KB\n\nFind a resource with original identifier https://doi.org/10.17026/dans-2b6-gyjh.\n\nPREFIX aocat: &lt;https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/&gt;\nPREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;\n\nSELECT * \n\nWHERE {\n    ?record aocat:has_original_id \"https://doi.org/10.17026/dans-2b6-gyjh\" .\n    ?record rdfs:label ?lab .\n}\n\nQuery in ARIADNE GraphDB.\n\n\nWhat is it?\n\nPREFIX aocat: &lt;https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/&gt;\nPREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;\n\nSELECT * \n\nWHERE {\n    ?record aocat:has_original_id \"https://doi.org/10.17026/dans-2b6-gyjh\" ;\n      rdfs:label ?lab ;\n      aocat:has_ARIADNE_subject ?as .\n    ?as rdfs:label ?aslab .\n}\n\nQuery in ARIADNE GraphDB."
-  },
-  {
-    "objectID": "sparql/index.html#example-query-7",
-    "href": "sparql/index.html#example-query-7",
-    "title": "SPARQL",
-    "section": "Example query",
-    "text": "Example query\nARIADNE KB\n\nWhat are the native subjects of resource (artefact) 10.17026/dans-2b6-gyjh?\n\nPREFIX aocat: &lt;https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/&gt;\nPREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;\n\nSELECT * \n\nWHERE {\n    ?record aocat:has_original_id \"https://doi.org/10.17026/dans-2b6-gyjh\" ;\n      rdfs:label ?lab ;\n      aocat:has_native_subject ?ns .\n}\n\nQuery in ARIADNE GraphDB.\n\n\nLet GraphDB DESCRIBE the resource for us.\n\nDESCRIBE &lt;https://ariadne-infrastructure.eu/aocat/Resource/09C1C711-5775-3FFB-AD82-F3C9A5532D26&gt;\n\nQuery in ARIADNE GraphDB."
-  },
-  {
-    "objectID": "sparql/index.html#example-query-8",
-    "href": "sparql/index.html#example-query-8",
-    "title": "SPARQL",
-    "section": "Example query",
-    "text": "Example query\nARIADNE KB\n\nReturn all ARIADNE subjects.\n\nPREFIX aocat: &lt;https://www.ariadne-infrastructure.eu/resource/ao/cat/1.1/&gt;\nPREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;\n\nSELECT DISTINCT ?as ?label \n\nWHERE {\n    ?s aocat:has_ARIADNE_subject ?as .\n    ?as rdfs:label ?label .\n}\n\nQuery in ARIADNE GraphDB."
-  },
-  {
-    "objectID": "sparql/index.html#wrap-up",
-    "href": "sparql/index.html#wrap-up",
-    "title": "SPARQL",
-    "section": "Wrap up",
-    "text": "Wrap up\n\n\n\nSPARQL is a very complex and versatile query language for queries (not only) on graph data.\nMost common queries are using SELECT verb.\nTriples in the SELECT query are matched against the triples in the graph. One matching triple in the graph returns one row in the results.\nVariable names are prefixed with a question mark (?).\n\nCommon variable names\n\n?s for subject.\n?p for predicate.\n?o for object.\n\n\n\nLearning SPARQL book by Bob DuCharme\nhttps://www.learningsparql.com/"
-  },
-  {
-    "objectID": "sparql/index.html#sparql-queries-in-r",
-    "href": "sparql/index.html#sparql-queries-in-r",
-    "title": "SPARQL",
-    "section": "SPARQL queries in R",
-    "text": "SPARQL queries in R\nHow to query SPARQL endpoints from R"
-  },
-  {
-    "objectID": "sparql/index.html#lod-packages-in-r",
-    "href": "sparql/index.html#lod-packages-in-r",
-    "title": "SPARQL",
-    "section": "LOD packages in R",
-    "text": "LOD packages in R\n\n\n\n\nglitter\nAllows writing and performing SPARQL queries without advanced knowledge of SPARQL.\nhttps://lvaudor.github.io/glitter/index.html\nremotes::install_github(\"lvaudor/glitter\")\n\n\n\n\n\nrdflib\nAllows to perform common tasks on local RDF data, including converting between serializations and performing SPARQL queries.\nhttps://docs.ropensci.org/rdflib/\nremotes::install_github(\"ropensci/rdflib\")\n\n\n\n\n\njsonld\nVarious functions for formatting of JSON-LD data and transformation to RDF (N-Quads).\nhttps://docs.ropensci.org/jsonld/index.html\ninstall.packages(\"jsonld\")"
-  },
-  {
-    "objectID": "sparql/index.html#glitter-1",
-    "href": "sparql/index.html#glitter-1",
-    "title": "SPARQL",
-    "section": "glitter",
-    "text": "glitter\n\n\n\nFunctions are prefixed with spq_.\n\nMain functions\n\nspq_init(endpoint = \"wikidata\") initiates a SPARQL query.\nspq_add(\"?s ?p ?o\") adds a triple pattern to match.\nspq_perform(&lt;query&gt;) performs the query.\n\n\n\n\n\nAdditional functions\n\nspq_prefix() add prefix to the query.\nspq_label(&lt;var&gt;) adds labels to given variables with rdfs:label.\nspq_head(n) limits number of returned results using LIMIT n.\nspq_arrange(desc(&lt;var&gt;)) arranges results in descending order of the variable.\nspq_filter(&lt;var&gt;) filter results.\nspq_group_by(&lt;var&gt;) group results by one or more variables.\nspq_count() and spq_summarise(&lt;var&gt;) count results or summarise chosen variables.\nspq_select(&lt;var&gt;) select variables."
-  },
-  {
-    "objectID": "sparql/index.html#queries-with-glitter",
-    "href": "sparql/index.html#queries-with-glitter",
-    "title": "SPARQL",
-    "section": "Queries with glitter",
-    "text": "Queries with glitter\nWikidata\n\nExplore and continue work in the R script with comments here.\nhttps://petrpajdla.github.io/atRium/sparql/wikidata.r\nCheck out article by Sophie C. Schmid et al. 2022 Practices of Linked Open Data in Archaeology and Their Realisation in Wikidata https://doi.org/10.3390/digital2030019\n\nTry to reproduce the Ogham stones distribution map.\nTry to reproduce the Samian Ware distribution map.\n\n\nARIADNE KB\nARIADNE SPARQL endpoint is here:\nhttps://graphdb.ariadne.d4science.org/repositories/ariadneplus-pr01\n\nExplore and continue work in the R script here.\nhttps://petrpajdla.github.io/atRium/sparql/ariadne.r\n\nCheck AO-Cat Ontology if needed.\n\n\n\n\n\n\natRium training school, Brno 2024 | SPARQL"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "atRium Brno Training School",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About the training school",
     "section": "",
-    "text": "Basics\n\n\n\nWhen? 16–20 September 2024\nWhere? Brno, Czech Republic\nWhat? Training school on querying data aggregated in the ARIADNE infrastructure and their spatial analysis in R\n\n\nJoin us in Brno for a five-day ‘atRium’ training school in computational archaeology, where you will gain essential coding skills in the R programming language, knowledge of archaeological data integrated into the ARIADNE research infrastructure, and fundamental spatial data analysis expertise. As large amounts of archaeological data have become available, spatial analysis techniques may offer valuable insights into past human behaviour and settlement patterns. Our programme is designed to deepen your understanding of computational methods in archaeology, focusing on working in a reproducible manner using the R programming language and environment.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe training school is part of a trans-national access scheme provided by the ATRIUM Project, hosted by the Archaeological Information System of the Czech Republic (AIS CR) research infrastructure at the Institute of Archaeology, Czech Academy of Sciences, Brno.\n\nFeel free to distribute the flyer in PDF or PNG."
+    "text": "Petr Pajdla\nInstitute of Archaeology, Czech Acad Sci, Brno\n 0000-0001-7050-9572\nPeter Tkáč\nMasaryk University\n 0000-0002-9444-1936\n\nMichael Kempf\nUniversity of Basel\n 0000-0002-9474-4670\nGiacomo Bilotti\nKiel University\n 0000-0002-7328-0811\n\n\n\n\n\n\nZuzana Kopáčová\nInstitute of Archaeology, Czech Acad Sci, Brno\nFinances, administration\n\nVít Kozák\nMasaryk University\nTeaching assistant\n\n\nAnd the AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to\nZuzana Kopáčová (kopacova@arub.cz ✉), and/or\nPetr Pajdla (pajdla@arub.cz ✉)."
+  },
+  {
+    "objectID": "about.html#organisers-lecturers",
+    "href": "about.html#organisers-lecturers",
+    "title": "About the training school",
+    "section": "",
+    "text": "Petr Pajdla\nInstitute of Archaeology, Czech Acad Sci, Brno\n 0000-0001-7050-9572\nPeter Tkáč\nMasaryk University\n 0000-0002-9444-1936\n\nMichael Kempf\nUniversity of Basel\n 0000-0002-9474-4670\nGiacomo Bilotti\nKiel University\n 0000-0002-7328-0811\n\n\n\n\n\n\nZuzana Kopáčová\nInstitute of Archaeology, Czech Acad Sci, Brno\nFinances, administration\n\nVít Kozák\nMasaryk University\nTeaching assistant\n\n\nAnd the AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to\nZuzana Kopáčová (kopacova@arub.cz ✉), and/or\nPetr Pajdla (pajdla@arub.cz ✉)."
+  },
+  {
+    "objectID": "about.html#organisations",
+    "href": "about.html#organisations",
+    "title": "About the training school",
+    "section": "Organisations",
+    "text": "Organisations\n\nATRIUM\nThe training (summer) school is organised as transnational access provision in the ATRIUM Project (Advancing Frontier Research in the Arts and Humanities) funded by the Horizon Europe research and innovation actions programme under grant agreement No. 101132163.\n\n\nARIADNE\nARIADNE Research Infrastructure is a non-profit organisation that aggregates, integrates, and provides access to over 4 million archaeological data resources. Access is facilitated through the comprehensive data catalogue ARIADNE Portal (see the short video below for more details) and directly through a SPARQL endpoint to the linked-open data triple store, the ARIADNE Knowledge Base.\nOne of the goals of the training school is to enable programmatic access to these resources by introducing the basics of knowledge representation in the triple store, explaining the ARIADNE AO-Cat Ontology, and providing training in building SPARQL queries.\n\n\n\nAIS CR\nThe Archaeological Information System of the Czech Republic (AIS CR) is a research infrastructure integrating digital resources and services on archaeology in the Czech Republic, and as such is one of many data providers in the ARIADNE Research Infrastructure. AIS CR is jointly operated by the Institutes of Archaeology of the Czech Academy of Sciences in Brno (IAB) and Prague (IAP)."
+  },
+  {
+    "objectID": "applications.html",
+    "href": "applications.html",
+    "title": "Applications",
+    "section": "",
+    "text": "More details about the transnational access scheme grants can be found on the ATRIUM Project website."
+  },
+  {
+    "objectID": "applications.html#key-dates",
+    "href": "applications.html#key-dates",
+    "title": "Applications",
+    "section": "Key dates",
+    "text": "Key dates\n\n\n\n\n\n\n\nApril 2024\nCall for participants opens\n\n\n31 May 2024\nDeadline for applications\n\n\n20 July 28 June 2024\nAcceptance notifications sent before this date\n\n\n16–20 September 2024\nTraining school\n\n\nmid-October 2024 (?)\nDeadline for submission of reports\n\n\nend of November 2024\nGrants paid before this date"
+  },
+  {
+    "objectID": "applications.html#who-should-apply",
+    "href": "applications.html#who-should-apply",
+    "title": "Applications",
+    "section": "Who should apply",
+    "text": "Who should apply\n\n\n\n\n\n\nNote\n\n\n\nOnly applicants with institutional affiliation outside of the Czech Republic are eligible to receive funding due to the trans-national nature of the access to the infrastructure provided by the school.\n\n\nWe welcome applications from early-career researchers and PhD students who are enthusiastic about acquiring programming skills, particularly in the R scripting language, to efficiently retrieve and analyse extensive (spatial) datasets. Participants should demonstrate a keen interest in conducting data analysis and processing in a structured and reproducible manner using scripting languages.\nWhile applicants with prior knowledge of R programming are encouraged to apply, the first day of the training will be dedicated to mastering the fundamentals of R. Individuals who are complete beginners are welcome as well, as no prior experience is necessary. Additionally, applicants should have a basic understanding of statistics, data management, and geographic information systems to fully benefit from the training."
+  },
+  {
+    "objectID": "applications.html#how-to-apply",
+    "href": "applications.html#how-to-apply",
+    "title": "Applications",
+    "section": "How to apply",
+    "text": "How to apply\nSubmit your applications through an online form. On the 4th page of the application (TNA Scheme), choose ‘Summer School Access’ and ‘Archaeological Information System of the Czech Republic, Institute of Archaeology of the Czech Academy of Sciences, Brno – AIS CR (ARUB)’ as the proposed host organisation. On the next page (Summer School Application) please explain why you believe this training would be valuable for your research and how you intend to integrate these newfound skills into your work.\nMore details on how to apply can be found here."
   },
   {
     "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#overview",
@@ -721,277 +1022,39 @@
     "text": "Solution\n\nlibrary(here)\ndf_cups &lt;- read.csv(here(\"data/bacups.csv\"))\n\n\nhead(df_cups)\n\n    RD   ND   SD   H  NH       Phase\n1 11.1 10.0 10.3 5.5 2.5 Subapennine\n2  9.5  9.2  9.8 4.8 2.0 Subapennine\n3 20.8 20.9 22.0 9.5 3.8 Subapennine\n4 19.5 18.2 19.5 8.8 2.7 Subapennine\n5 15.5 15.5 18.8 9.8 3.2 Subapennine\n6 11.7 11.1 11.5 3.8 1.4 Subapennine\n\nstr(df_cups)\n\n'data.frame':   60 obs. of  6 variables:\n $ RD   : num  11.1 9.5 20.8 19.5 15.5 11.7 10.8 15 18.5 11 ...\n $ ND   : num  10 9.2 20.9 18.2 15.5 11.1 10.7 16.1 16.4 8.9 ...\n $ SD   : num  10.3 9.8 22 19.5 18.8 11.5 10.8 16.4 18 9.5 ...\n $ H    : num  5.5 4.8 9.5 8.8 9.8 3.8 3.5 11.8 10.5 5.8 ...\n $ NH   : num  2.5 2 3.8 2.7 3.2 1.4 1.7 3.5 4.8 3.7 ...\n $ Phase: chr  \"Subapennine\" \"Subapennine\" \"Subapennine\" \"Subapennine\" ...\n\n\n\nnames(df_cups)\n\n[1] \"RD\"    \"ND\"    \"SD\"    \"H\"     \"NH\"    \"Phase\"\n\n\n\nlibrary(ggplot2)\nggplot(data = df_cups)+\n  aes(x = H)+\n  geom_histogram()\n\n\n\n\n\n\n\n\n\nggplot(data = df_cups)+\n  aes(x = Phase, y = H)+\n  geom_boxplot()\n\n\n\n\n\n\n\n\n\nggplot(data = df_cups)+\n  aes(x = H, y = RD)+\n  geom_point()\n\n\n\n\n\n\n\n\n\nggplot(data = df_cups)+\n  aes(x = H, y = RD, color = Phase)+\n  geom_point(size = 4, alpha = 0.5)+\n  labs(x = \"Height\", y = \"Rim Diameter\")+\n  theme_light()\n\n\n\n\n\n\n\n\n\n\n\n\natRium training school, Brno 2024 | Data viz"
   },
   {
-    "objectID": "intro2r/index.html#overview",
-    "href": "intro2r/index.html#overview",
-    "title": "Introduction to R",
-    "section": "Overview",
-    "text": "Overview"
-  },
-  {
-    "objectID": "intro2r/index.html#r-basics",
-    "href": "intro2r/index.html#r-basics",
-    "title": "Introduction to R",
-    "section": "R Basics",
-    "text": "R Basics\n1.) Introduction - code along\n\norientation in RStudio\nexecution command, basic operators\nassigning operator\nvectors\ncomments\n\n2.) Syntax and basic functions\n\nfunctions, objects, values, syntax\ndataframes and vectors"
-  },
-  {
-    "objectID": "intro2r/index.html#workflow",
-    "href": "intro2r/index.html#workflow",
-    "title": "Introduction to R",
-    "section": "Workflow",
-    "text": "Workflow\n3.) Workflow\n\nprojects and scripts\npackages\nloading data"
-  },
-  {
-    "objectID": "intro2r/index.html#orientation-in-rstudio",
-    "href": "intro2r/index.html#orientation-in-rstudio",
-    "title": "Introduction to R",
-    "section": "Orientation in RStudio",
-    "text": "Orientation in RStudio"
-  },
-  {
-    "objectID": "intro2r/index.html#basic-operators",
-    "href": "intro2r/index.html#basic-operators",
-    "title": "Introduction to R",
-    "section": "Basic operators",
-    "text": "Basic operators\n\n5+5\n\n[1] 10\n\n2*2\n\n[1] 4\n\n10/2\n\n[1] 5\n\n3**2\n\n[1] 9\n\nsqrt(9)\n\n[1] 3\n\n\n\n3==3\n\n[1] TRUE\n\n3==4\n\n[1] FALSE\n\n10&gt;5\n\n[1] TRUE\n\n10&lt;5\n\n[1] FALSE"
-  },
-  {
-    "objectID": "intro2r/index.html#assigning-operator",
-    "href": "intro2r/index.html#assigning-operator",
-    "title": "Introduction to R",
-    "section": "Assigning operator",
-    "text": "Assigning operator\n\nmy_number &lt;- 10\nmy_number\n\n[1] 10\n\nmy_number+5\n\n[1] 15\n\nmy_other_number &lt;- 200\nmy_number + my_other_number\n\n[1] 210\n\n\n\nmy_number == 10\n\n[1] TRUE\n\nmy_number &lt; my_other_number\n\n[1] TRUE"
-  },
-  {
-    "objectID": "intro2r/index.html#creating-vectors",
-    "href": "intro2r/index.html#creating-vectors",
-    "title": "Introduction to R",
-    "section": "Creating vectors",
-    "text": "Creating vectors\n\nmy_vector &lt;- c(1, 2, 3, 4, 5)\nmy_vector\n\n[1] 1 2 3 4 5\n\nmy_vector + 10\n\n[1] 11 12 13 14 15\n\nmy_other_vector &lt;- c(6:10)\nmy_other_vector\n\n[1]  6  7  8  9 10\n\nmy_other_vector + my_vector\n\n[1]  7  9 11 13 15\n\nmy_other_vector[2]\n\n[1] 7"
-  },
-  {
-    "objectID": "intro2r/index.html#adding-comments",
-    "href": "intro2r/index.html#adding-comments",
-    "title": "Introduction to R",
-    "section": "Adding comments",
-    "text": "Adding comments\n\n# this is comment\n# 10 / 2"
-  },
-  {
-    "objectID": "intro2r/index.html#exercise",
-    "href": "intro2r/index.html#exercise",
-    "title": "Introduction to R",
-    "section": "Exercise",
-    "text": "Exercise"
-  },
-  {
-    "objectID": "intro2r/index.html#task",
-    "href": "intro2r/index.html#task",
-    "title": "Introduction to R",
-    "section": "Task:",
-    "text": "Task:\n1.) create one vector which contains 10 numbers from 51 to 60\n2.) and another vector which contains 10 numbers from 101 to 110\n3.) save the first vector as “vect_1” and second as “vect_2”\n4.) subtract vect_1 from vect_2 and save the results as “vect_sub”"
-  },
-  {
-    "objectID": "intro2r/index.html#solution",
-    "href": "intro2r/index.html#solution",
-    "title": "Introduction to R",
-    "section": "Solution",
-    "text": "Solution\n\nvect_1 &lt;- c(51:60)\nvect_2 &lt;- c(101:110)\n\nvect_sub &lt;- vect_2 - vect_1\nvect_sub\n\n [1] 50 50 50 50 50 50 50 50 50 50"
-  },
-  {
-    "objectID": "intro2r/index.html#functions-and-syntax",
-    "href": "intro2r/index.html#functions-and-syntax",
-    "title": "Introduction to R",
-    "section": "Functions and syntax",
-    "text": "Functions and syntax\n\nfunctions always go with parentheses ()\nfunctions are doing stuff\nsyntax:\n\nfunction_name(argument1 = value1, argument2 = value2, ...)\n\nmean(1:10)\n\n[1] 5.5\n\n\n\na &lt;- mean(1:10)\na\n\n[1] 5.5\n\n\n\nsummary(1:10)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   1.00    3.25    5.50    5.50    7.75   10.00 \n\n\n\nmy_sequence &lt;- seq(from = 1000,  to = 2000, by = 10)\nmy_sequence\n\n  [1] 1000 1010 1020 1030 1040 1050 1060 1070 1080 1090 1100 1110 1120 1130 1140\n [16] 1150 1160 1170 1180 1190 1200 1210 1220 1230 1240 1250 1260 1270 1280 1290\n [31] 1300 1310 1320 1330 1340 1350 1360 1370 1380 1390 1400 1410 1420 1430 1440\n [46] 1450 1460 1470 1480 1490 1500 1510 1520 1530 1540 1550 1560 1570 1580 1590\n [61] 1600 1610 1620 1630 1640 1650 1660 1670 1680 1690 1700 1710 1720 1730 1740\n [76] 1750 1760 1770 1780 1790 1800 1810 1820 1830 1840 1850 1860 1870 1880 1890\n [91] 1900 1910 1920 1930 1940 1950 1960 1970 1980 1990 2000\n\nlength(my_sequence)\n\n[1] 101\n\nrange(my_sequence)\n\n[1] 1000 2000"
-  },
-  {
-    "objectID": "intro2r/index.html#basic-syntax",
-    "href": "intro2r/index.html#basic-syntax",
-    "title": "Introduction to R",
-    "section": "Basic syntax",
-    "text": "Basic syntax"
-  },
-  {
-    "objectID": "intro2r/index.html#objects-and-values",
-    "href": "intro2r/index.html#objects-and-values",
-    "title": "Introduction to R",
-    "section": "Objects and values",
-    "text": "Objects and values\n\nthere are different types of objects and values in R, each type is allowing you to do different operations\n\nObjects\n\nfor now, it will be enough to introduce vector and dataframe\nvector\n\na list of items that are of the same type\n\ndataframe\n\na table\nhas rows and columns\nrectangular, ie. identical number of rows in each column.\n\n\nValues\n\nsimilarly, there are many types of values - characters, numbers, factors.\nall you need to know now is that if you want to do mathematic operations, you always have to check whether your numbers are really a numbers and not something else, such as characters\nfunction str() will quickly tell you what kind of object with what kind of values you have"
-  },
-  {
-    "objectID": "intro2r/index.html#vector",
-    "href": "intro2r/index.html#vector",
-    "title": "Introduction to R",
-    "section": "Vector",
-    "text": "Vector\n\nnums &lt;- c(1:10)\nnums\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\nhunds &lt;- c(101:110)\nhunds\n\n [1] 101 102 103 104 105 106 107 108 109 110\n\nstr(hunds)\n\n int [1:10] 101 102 103 104 105 106 107 108 109 110\n\nletts &lt;- letters[1:10]\nletts\n\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\"\n\nstr(letts)\n\n chr [1:10] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\"\n\ncapital_towns  &lt;- c(\"Berlin\", \"Bratislava\", \"Prague\", \"Vienna\", \"Warsaw\")\nstr(capital_towns)\n\n chr [1:5] \"Berlin\" \"Bratislava\" \"Prague\" \"Vienna\" \"Warsaw\"\n\n\nIf the vector combines numbers and words, the result will save the numbers as characters, so it is then not possible to make mathematical operations with them\n\nstrange_vector &lt;- c(\"Berlin\", 1, 5, 12, 110)\nstr(strange_vector)\n\n chr [1:5] \"Berlin\" \"1\" \"5\" \"12\" \"110\""
-  },
-  {
-    "objectID": "intro2r/index.html#dataframes",
-    "href": "intro2r/index.html#dataframes",
-    "title": "Introduction to R",
-    "section": "Dataframes",
-    "text": "Dataframes\n\nyou can create dataframes by binding the of the same length (!) together\ncbind() binds vectors into columns and then as.data.frame() change them into dataframe\n\n\ndf&lt;-as.data.frame(cbind(nums, hunds, letts))\ndf\n\n   nums hunds letts\n1     1   101     a\n2     2   102     b\n3     3   103     c\n4     4   104     d\n5     5   105     e\n6     6   106     f\n7     7   107     g\n8     8   108     h\n9     9   109     i\n10   10   110     j"
-  },
-  {
-    "objectID": "intro2r/index.html#dataframe---structure",
-    "href": "intro2r/index.html#dataframe---structure",
-    "title": "Introduction to R",
-    "section": "Dataframe - structure",
-    "text": "Dataframe - structure\nGet the basic information about the dataframe with str()\n\nstr(df)\n\n'data.frame':   10 obs. of  3 variables:\n $ nums : chr  \"1\" \"2\" \"3\" \"4\" ...\n $ hunds: chr  \"101\" \"102\" \"103\" \"104\" ...\n $ letts: chr  \"a\" \"b\" \"c\" \"d\" ...\n\n\nWe see that columns nums and hunds are not numbers, but characters. To be able for us to do mathematic operations, we need to change the values into numbers by function as.numeric()\n\ndf$nums &lt;- as.numeric(df$nums)\ndf$hunds &lt;- as.numeric(df$hunds)\n\n\nstr(df)\n\n'data.frame':   10 obs. of  3 variables:\n $ nums : num  1 2 3 4 5 6 7 8 9 10\n $ hunds: num  101 102 103 104 105 106 107 108 109 110\n $ letts: chr  \"a\" \"b\" \"c\" \"d\" ..."
-  },
-  {
-    "objectID": "intro2r/index.html#subseting-data",
-    "href": "intro2r/index.html#subseting-data",
-    "title": "Introduction to R",
-    "section": "Subseting data",
-    "text": "Subseting data\nSquare brackets [,]\nname_of_your_dataframe[row_number,column_number]\nFirst row\n\ndf[1,]\n\n  nums hunds letts\n1    1   101     a\n\n\nFirst column\n\ndf[,1]\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\n\n\nsum(df[,2])\n\n[1] 1055\n\n\nSubseting data with $\n\ndf$letts\n\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\"\n\n\n\nmean(df$hunds)\n\n[1] 105.5"
-  },
-  {
-    "objectID": "intro2r/index.html#dataframe-with-atrium-participants",
-    "href": "intro2r/index.html#dataframe-with-atrium-participants",
-    "title": "Introduction to R",
-    "section": "Dataframe with atRium participants",
-    "text": "Dataframe with atRium participants\nCopy, paste and run this whole code chunk:\n\nfirst_name &lt;- c(\"Margaux\", \"Lesley\", \"Carole\", \"Alexander\", \"Dita\", \"Brigit\", \"Sara\", \"Yiu-Kang\", \"Romane\", \"Nicky\", \"Mihailo\", \"Valeriia\", \"Carlo\", \"Panagiotis\", \"Juan Carlos\", \"Anna\", \"Swe Zin\", \"Ilenia\")\ncountry &lt;- c(\"Lithuania\",\"Ireland\",\"Germany\",\"United Kingdom\",\"Netherlands\",\"Austria\",\"Germany\",\"Germany\",\"Italy\",\"United Kingdom\",\"Serbia\",\"Ukraine\",\"Germany\",\"Italy\",\"France\",\"United Kingdom\",\"Switzerland \",\"Luxembourg\")\nposition &lt;- c(\"post_doc\",\"researcher\",\"post_doc\",\"masters_student\",\"post_doc\",\"researcher\",\"phd_student\",\"researcher\",\"phd_student\",\"researcher\",\"researcher\",\"ba_student\",\"post_doc\",\"researcher\",\"researcher\",\"phd_student\",\"phd_student\",\"phd_student\")\ninstitution &lt;- c(\"university\",\"public_research_org\",\"university\",\"university\",\"university\",\"public_research_org\",\"university\",\"public_research_org\",\"university\",\"digital_repository\",\"university\",\"university\",\"public_research_org\",\"public_research_org\",\"private_org\",\"university\",\"university\",\"university\")\ncity &lt;- c(\"Vilnius\",\"Dublin\",\"Kiel\",\"York\",\"Leiden\",\"Vienna\",\"Kiel\",\"Bochum\",\"Padova\",\"York\",\"Belgrade\",\"Odesa\",\"Leibzig\",\"Rome\",\"Paris\",\"Glasgow\",\"Bern\",\"Luxembourg\")\ndistance_km &lt;- c(850, 1650, 720, 1300, 910, 110, 720, 710, 550, 1300, 560, 1090, 380, 870, 1040, 1590, 720, 760)\n\n\ndf_people &lt;- as.data.frame(cbind(first_name, country, position, institution, city, distance_km))\ndf_people$distance_km &lt;- as.numeric(df_people$distance_km)\nhead(df_people, 4)\n\n  first_name        country        position         institution    city\n1    Margaux      Lithuania        post_doc          university Vilnius\n2     Lesley        Ireland      researcher public_research_org  Dublin\n3     Carole        Germany        post_doc          university    Kiel\n4  Alexander United Kingdom masters_student          university    York\n  distance_km\n1         850\n2        1650\n3         720\n4        1300"
-  },
-  {
-    "objectID": "intro2r/index.html#lets-play-a-bit",
-    "href": "intro2r/index.html#lets-play-a-bit",
-    "title": "Introduction to R",
-    "section": "Lets play a bit",
-    "text": "Lets play a bit\nWhat’s your name?\n\ndf_people$first_name\n\n [1] \"Margaux\"     \"Lesley\"      \"Carole\"      \"Alexander\"   \"Dita\"       \n [6] \"Brigit\"      \"Sara\"        \"Yiu-Kang\"    \"Romane\"      \"Nicky\"      \n[11] \"Mihailo\"     \"Valeriia\"    \"Carlo\"       \"Panagiotis\"  \"Juan Carlos\"\n[16] \"Anna\"        \"Swe Zin\"     \"Ilenia\"     \n\n\nWhere are you coming from?\n\nunique(df_people$country)\n\n [1] \"Lithuania\"      \"Ireland\"        \"Germany\"        \"United Kingdom\"\n [5] \"Netherlands\"    \"Austria\"        \"Italy\"          \"Serbia\"        \n [9] \"Ukraine\"        \"France\"         \"Switzerland \"   \"Luxembourg\"    \n\n\nWhich country is most represented?\n\ntable(df_people$country)\n\n\n       Austria         France        Germany        Ireland          Italy \n             1              1              4              1              2 \n     Lithuania     Luxembourg    Netherlands         Serbia   Switzerland  \n             1              1              1              1              1 \n       Ukraine United Kingdom \n             1              3 \n\n\nQuick Task:\n\ncould calculate which cities are represented?\n\nWhat is the longest distance one of you had to travel?\n\nmax(df_people$distance_km)\n\n[1] 1650"
-  },
-  {
-    "objectID": "intro2r/index.html#lets-play-a-bit-2",
-    "href": "intro2r/index.html#lets-play-a-bit-2",
-    "title": "Introduction to R",
-    "section": "Lets play a bit 2",
-    "text": "Lets play a bit 2\nWhat are your positions?\n\ntable(df_people$position)\n\n\n     ba_student masters_student     phd_student        post_doc      researcher \n              1               1               5               4               7 \n\n\nWho are the PhD students?\n\ndf_people[df_people$position==\"phd_student\",]\n\n   first_name        country    position institution       city distance_km\n7        Sara        Germany phd_student  university       Kiel         720\n9      Romane          Italy phd_student  university     Padova         550\n16       Anna United Kingdom phd_student  university    Glasgow        1590\n17    Swe Zin   Switzerland  phd_student  university       Bern         720\n18     Ilenia     Luxembourg phd_student  university Luxembourg         760\n\n\nAlternative - selecting specific columns\n\ndf_people[df_people$position==\"phd_student\",c(1,3,5)]\n\n   first_name    position       city\n7        Sara phd_student       Kiel\n9      Romane phd_student     Padova\n16       Anna phd_student    Glasgow\n17    Swe Zin phd_student       Bern\n18     Ilenia phd_student Luxembourg\n\n\nQuick Task:\n\ncan you subset row with your name and check whether I didn’t messed up your data?"
-  },
-  {
-    "objectID": "intro2r/index.html#exercise-1",
-    "href": "intro2r/index.html#exercise-1",
-    "title": "Introduction to R",
-    "section": "Exercise",
-    "text": "Exercise"
-  },
-  {
-    "objectID": "intro2r/index.html#task-1",
-    "href": "intro2r/index.html#task-1",
-    "title": "Introduction to R",
-    "section": "Task:",
-    "text": "Task:\nUse the dataframe df_people to solve this questions:\n\nWhat are the names of the variables in the dataframe?\nWhich types of institution are represented here?\nWhich types of institution are most represented here?\nWhat is the average distance between Brno and the cities?\nWho are the postdocs and from which cities are they coming?\n\nHints: names(), unique(), table(), mean(),[,]"
-  },
-  {
-    "objectID": "intro2r/index.html#solution-1",
-    "href": "intro2r/index.html#solution-1",
-    "title": "Introduction to R",
-    "section": "Solution",
-    "text": "Solution\n\nWhat are the names of the variables in the dataframe?\n\n\nnames(df_people)\n\n[1] \"first_name\"  \"country\"     \"position\"    \"institution\" \"city\"       \n[6] \"distance_km\"\n\n\nAlternative:\n\ncolnames(df_people)\n\n[1] \"first_name\"  \"country\"     \"position\"    \"institution\" \"city\"       \n[6] \"distance_km\"\n\n\n\nWhich types of institution are represented here?\n\n\nunique(df_people$institution)\n\n[1] \"university\"          \"public_research_org\" \"digital_repository\" \n[4] \"private_org\"        \n\n\n\nWhich types of institution are most represented here?\n\n\ntable(df_people$institution)\n\n\n digital_repository         private_org public_research_org          university \n                  1                   1                   5                  11"
-  },
-  {
-    "objectID": "intro2r/index.html#solution-2",
-    "href": "intro2r/index.html#solution-2",
-    "title": "Introduction to R",
-    "section": "Solution",
-    "text": "Solution\n\nWhat is the average distance between Brno and the cities?\n\n\nmean(df_people$distance_km)\n\n[1] 879.4444\n\n\nAlternative\n\nsummary(df_people$distance_km)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  110.0   712.5   805.0   879.4  1077.5  1650.0 \n\n\n\nWho are the postdocs and what distance did they have to travel?\n\n\ndf_people[df_people$position==\"post_doc\",c(1,3,6)]\n\n   first_name position distance_km\n1     Margaux post_doc         850\n3      Carole post_doc         720\n5        Dita post_doc         910\n13      Carlo post_doc         380"
-  },
-  {
-    "objectID": "intro2r/index.html#other-useful-functions-for-dataframe",
-    "href": "intro2r/index.html#other-useful-functions-for-dataframe",
-    "title": "Introduction to R",
-    "section": "Other useful functions for dataframe",
-    "text": "Other useful functions for dataframe\n\nstr() - reveals the structure of the dataframe\n\n\nstr(df_people)\n\n'data.frame':   18 obs. of  6 variables:\n $ first_name : chr  \"Margaux\" \"Lesley\" \"Carole\" \"Alexander\" ...\n $ country    : chr  \"Lithuania\" \"Ireland\" \"Germany\" \"United Kingdom\" ...\n $ position   : chr  \"post_doc\" \"researcher\" \"post_doc\" \"masters_student\" ...\n $ institution: chr  \"university\" \"public_research_org\" \"university\" \"university\" ...\n $ city       : chr  \"Vilnius\" \"Dublin\" \"Kiel\" \"York\" ...\n $ distance_km: num  850 1650 720 1300 910 110 720 710 550 1300 ...\n\n\n\nhead(), tail()\n\n\nhead(df_people, 2)\n\n  first_name   country   position         institution    city distance_km\n1    Margaux Lithuania   post_doc          university Vilnius         850\n2     Lesley   Ireland researcher public_research_org  Dublin        1650\n\n\n\ntail(df_people, 2)\n\n   first_name      country    position institution       city distance_km\n17    Swe Zin Switzerland  phd_student  university       Bern         720\n18     Ilenia   Luxembourg phd_student  university Luxembourg         760\n\n\n\nncol(), nrows(),\n\n\nncol(df_people)\n\n[1] 6\n\n\n\nnrow(df_people)\n\n[1] 18\n\n\n\nsum()\n\n\nsum(df_people$distance_km)\n\n[1] 15830"
-  },
-  {
-    "objectID": "intro2r/index.html#workflow-1",
-    "href": "intro2r/index.html#workflow-1",
-    "title": "Introduction to R",
-    "section": "Workflow",
-    "text": "Workflow\n\nscripts\nprojects\npackages\nloading data"
-  },
-  {
-    "objectID": "intro2r/index.html#scripts",
-    "href": "intro2r/index.html#scripts",
-    "title": "Introduction to R",
-    "section": "Scripts",
-    "text": "Scripts\n# Practice script for atRium training school 2024\n# Author: Peter Tkáč\n# Date: 2024-09-10\n\n## ---- Packages\nlibrary(here)\nlibrary(tidyverse)\n\n## ---- Data Loading\n\ndf_darts &lt;- read.csv(here(\"data/dartpoints.csv\"))\nstr(df_darts)\n\n## ---- Basic summaries\n\nnrow(df_darts) # number of dartpoints\ntable(df_darts$Name) # numer of types of the dartpoints\n\n## ---- Plots\n\nggplot(df_darts, aes(x=Name))+\n  geom_bar(fill = \"pink\")+\n  theme_light()\n\n## ---- Saving result\n\nggsave(filename = \"very_important_plot.png\")"
-  },
-  {
-    "objectID": "intro2r/index.html#projects",
-    "href": "intro2r/index.html#projects",
-    "title": "Introduction to R",
-    "section": "Projects",
-    "text": "Projects\n\n.Rproj file - a “storage” of your scripts, data…\nwe recommend you to use parent folder to store your project file and then sub-folders to store data, figures, scripts, etc."
-  },
-  {
-    "objectID": "intro2r/index.html#packages",
-    "href": "intro2r/index.html#packages",
-    "title": "Introduction to R",
-    "section": "Packages",
-    "text": "Packages\n\nby installing additional packages, you can expand the amount of things you can do in R\nthere are plenty of packages with different functions and aims\nbasic principle will be introduced by package “here”\n\n\n#install.packages(\"here\") # installs the package\nlibrary(here) # loads the package\nhere() # runs a function from the package\n\n[1] \"/mnt/data/Documents/Projects/atRium\"\n\n\n\nyou only need to install the package once install.packages(\"name_of_the_package\"), but it needs to be loaded every time you start a new script or after you have cleaned up your workspace library(name_of_the_package)\nsometime you need to specify from which package your function is: name-of-the-package::name-of-the-function()\n\n\ndplyr::filter(df_people, city == \"Kiel\")\n\n  first_name country    position institution city distance_km\n1     Carole Germany    post_doc  university Kiel         720\n2       Sara Germany phd_student  university Kiel         720\n\n\nIf you are not sure from which package your function is coming, you can easily find out by:\n\n?filter()\n\nHelp on topic 'filter' was found in the following packages:\n\n  Package               Library\n  dplyr                 /home/knytt/R/x86_64-pc-linux-gnu-library/4.4\n  stats                 /usr/lib/R/library\n\n\nUsing the first match ..."
-  },
-  {
-    "objectID": "intro2r/index.html#loading-data",
-    "href": "intro2r/index.html#loading-data",
-    "title": "Introduction to R",
-    "section": "Loading data",
-    "text": "Loading data\n\ndownload data dartpoints.csv and move them to your project file\n\nPaths\nAbsolute file path - The file path is specific to a given user.\nC:/Documents/MyProject/data/dartpoints.csv\nRelative file path If I am currently in MyProject/ folder:\n./data/dartpoints.csv\nPackage here()\n\nPackage here is here to save the day!\nFunction here() will know where the top directory is, so you do not need to write whole URL adress\n\nTry running here() to see where your project is stored\n\nhere()\n\n[1] \"/mnt/data/Documents/Projects/atRium\""
-  },
-  {
-    "objectID": "intro2r/index.html#loading-data-1",
-    "href": "intro2r/index.html#loading-data-1",
-    "title": "Introduction to R",
-    "section": "Loading data",
-    "text": "Loading data\nAn example of loading data with here() function:\n\nNOTE that in this case data which you want to load have to be in a subfolder “data” which is located in the same folder as your project\n\n\ndf_darts &lt;- read.csv(here(\"data/dartpoints.csv\"))\n\n\nread.csv loads .csv files (AKA comma-separated values file) into your R\nif the values in your file are separated by other way, you have to adjust. For example for values separated by semicolom ; use argument sep=\";\":\n\n\n# | eval: false\ndf_darts2 &lt;- read.csv(here(\"data/dartpoints.csv\"), sep = \";\")"
-  },
-  {
-    "objectID": "intro2r/index.html#exercise-2",
-    "href": "intro2r/index.html#exercise-2",
-    "title": "Introduction to R",
-    "section": "Exercise",
-    "text": "Exercise"
-  },
-  {
-    "objectID": "intro2r/index.html#observe-the-dartpoint-data",
-    "href": "intro2r/index.html#observe-the-dartpoint-data",
-    "title": "Introduction to R",
-    "section": "Observe the dartpoint data",
-    "text": "Observe the dartpoint data\n\nHow many observations and how many variables are in the dataframe?\nWhat are the names of the variables?\nAre there any quantitative variables? Are they stored properly as numbers so we can make mathematic operations?\nWhat is the mean length of the dartpoints?\n\n\n\n\n\natRium training school, Brno 2024 | Intro to R"
-  },
-  {
-    "objectID": "programme.html",
-    "href": "programme.html",
-    "title": "Training school programme",
+    "objectID": "info.html",
+    "href": "info.html",
+    "title": "General Information",
     "section": "",
-    "text": "The training school will last five days and consists of three distinct blocks (described in detail below), in which participants will learn how to code in the R programming language, query data from the ARIADNE Knowledge Base, and analyse them using various spatial analysis methods, especially point pattern analysis."
+    "text": "The school will be held from 16 to 20 September 2024 at the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/) at the address given below:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nNote\n\n\n\nPlease note that this is an on-site event only, and remote participation will not be possible."
   },
   {
-    "objectID": "programme.html#r-programming-general-topics",
-    "href": "programme.html#r-programming-general-topics",
-    "title": "Training school programme",
-    "section": "1. R programming & general topics",
-    "text": "1. R programming & general topics\nR is a programming language and environment for statistical computing and graphics. This block focuses on equipping participants with essential coding skills in R and introducing fundamental concepts in data analysis and visualisation.\n\n1.1 Introduction to R and workflows\nAn introductory course to R. Anyone with minimal or no prior experience with R will be able to understand what is happening in the code and write or adapt existing code for their use case.\n\n\n1.2 Data analysis and visualisation in R\nThrough hands-on workshops, participants will learn the basics of data manipulation with the dplyr package and data visualisation with the ggplot2 package, as well as some basics of base R. This will provide them with a powerful set of tools to analyse and visualise data.\n\n\n1.3 Introduction to spatial data in R\nParticipants will learn how spatial data are represented in R, focusing particularly on vector data as simple features in the sf package and raster data in the terra package. We will also cover various operations with geographic data, including reprojection, geometry operations, etc. An integral part of the workshop will be creating maps in R.\n\n\n1.4 Reproducibility and good practices in data and code management\nIn the final block, we will explore good practices in data management and code design aimed at enhancing reproducibility and reusability. Although these practices will be promoted throughout the school, we will summarise and contextualise them within the larger framework of Open Science at the end of the workshop."
+    "objectID": "info.html#date-and-location",
+    "href": "info.html#date-and-location",
+    "title": "General Information",
+    "section": "",
+    "text": "The school will be held from 16 to 20 September 2024 at the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/) at the address given below:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nNote\n\n\n\nPlease note that this is an on-site event only, and remote participation will not be possible."
   },
   {
-    "objectID": "programme.html#ariadne-data",
-    "href": "programme.html#ariadne-data",
-    "title": "Training school programme",
-    "section": "2. ARIADNE data",
-    "text": "2. ARIADNE data\nThe ARIADNE infrastructure aggregates and integrates large amounts of archaeological data worldwide. The second day of the summer school will focus on how the data are represented in the ARIADNE Knowledge Base (ARIADNE KB) and how to access them.\n\n2.1 ARIADNE & AO-Cat Ontology\nWe will begin by exploring the ARIADNE Portal, a catalogue interface to the ARIADNE KB. After gaining an understanding of how data look in the ARIADNE Portal, we will delve deeper into how data are represented in the ARIADNE KB, from the general concept of linked-open data to semantic data in RDF. Finally, we will explore the AO-Cat Ontology, which will provide a basis for querying the knowledge base.\n\n\n2.2 Introduction to SPARQL\nSPARQL is a query language for semantic data in RDF. Participants will learn the basics of SPARQL, including query structure and components, etc. Practical examples of queries performed on the ARIADNE SPARQL endpoint will help us understand the capabilities of the query language.\n\n\n2.3 Querying the ARIADNE SPARQL endpoint\nIn the workshop, participants will utilise their knowledge of the AO-Cat ontology and SPARQL to query the ARIADNE KB. By the end of the day, they will be able to create and adapt various queries to retrieve data from the ARIADNE KB for further analysis and re-use."
+    "objectID": "info.html#grants",
+    "href": "info.html#grants",
+    "title": "General Information",
+    "section": "Grants",
+    "text": "Grants\nEach participant of the school is eligible to receive a grant to cover travel expenses, housing, and daily subsistence during the meeting. To receive the grant, participants need to:\n\nApply via the official form of the ATRIUM Project (see the Applications section for details).\nParticipate in person, i.e. sign attendance sheets for each training day.\nSubmit a report within a given time frame after the conclusion of the school with details of their participation."
   },
   {
-    "objectID": "programme.html#spatial-analysis",
-    "href": "programme.html#spatial-analysis",
-    "title": "Training school programme",
-    "section": "3. Spatial analysis",
-    "text": "3. Spatial analysis\nBuilding upon the foundational knowledge gained in the previous blocks, this segment delves deeper into spatial analysis. Participants will learn advanced analytical methods, including point pattern analysis and other statistical modelling techniques for spatial data. Through practical exercises, they will gain hands-on experience in analysing spatial data in R, exploring various spatial analysis methods, and applying these techniques to analyse the ARIADNE data.\n\n3.1 Analysing spatial data in R\nThis session focuses on hands-on experience in working with spatial data in R, particularly using the packages sf and terra. We will practice reading, writing, manipulating, exploring and visualising spatial data in both vector and raster formats.\n\n\n3.2 Advanced spatial analysis methods\nWe will explore sophisticated spatial analysis methods beyond the basics. Topics may include spatial interpolation, spatial regression, cluster analysis, etc. This will provide a foundation for deeper insights into complex spatial patterns and relationships within archaeological datasets, especially the ARIADNE data.\n\n\n3.3 Analysing ARIADNE data in R\nOur ultimate goal is to analyse archaeological data sourced from the ARIADNE Knowledge Base in R to gain meaningful insights into past human behaviour and settlement patterns. In the previous blocks, we were able to query and extract data from the ARIADNE KB. We will proceed by integrating such data with other local datasets and performing spatial analysis tasks using R packages such as sf, terra, stars, and spatstat."
+    "objectID": "info.html#prerequisites",
+    "href": "info.html#prerequisites",
+    "title": "General Information",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nBring your own laptop!\nInstall R and RStudio (follow the concise quide here).\nIf you are familiar with R, feel free to use a GUI of your choice."
   },
   {
-    "objectID": "programme.html#keynote-lecture",
-    "href": "programme.html#keynote-lecture",
-    "title": "Training school programme",
-    "section": "Keynote lecture",
-    "text": "Keynote lecture\nThe keynote lecture by Michael Kempf and Margaux Depaermentier will take place on Wednesday, 18th September at 5:30 pm as part of the Science Pub lecture series at the institute, followed by a social event.\n\nAssessing cultural vs. environmental diversity in the Neolithic Carpathian Basin using multiproxy models\nMichael Kempf and Margaux Depaermentier\nStable carbon and nitrogen isotope analysis from archaeological human and animal bone collagen is a powerful tool to enlighten past socio-agricultural systems and their close links to environmental conditions. To assess whether isotopic patterns are a function of cultural behavior or rather determined by environmental diversity, we test the spatio-temporal effects of conditional and multivariate exploratory and environmental models on stable isotope variability in the Neolithic and Chalcolithic Carpathian Basin (6000-2700 BCE)."
+    "objectID": "info.html#other-information",
+    "href": "info.html#other-information",
+    "title": "General Information",
+    "section": "Other information",
+    "text": "Other information\n\nTravelling to Brno\nBrno is easily reachable by trains or buses from Prague (approx. a 2 to 2.5-hour journey) and Vienna (approx. a 1.5 to 2-hour journey). Many overnight trains crossing a large part of Europe start or end in Vienna, and we recommend taking these trains as an alternative to flying.\n\n\n\n\n\n\nFood\nThere are several places around the institute, see map above for locations.\n\n\n\n\n\n\n\n\n\n\nplace\ncuisine\nnote\n\n\n\n\nLittle Saigon\nAsian/Vietnamese\nhas vegan/vegetarian options\n\n\nMasný růžek\nCzech\na lot of meaty foods and traditional heavy Czech cuisine\n\n\nBistro Nella\nCzech\nmight have vegetarian option\n\n\nJídelna Kocourek\nCzech\nmight have vegetarian option\n\n\nGrand Kitchen Vlněna\nCzech, International\nmight have vegetarian option\n\n\nBistro Bellavista\nItalian\nmostly does not have vegetarian/vegan options\n\n\nDelitree bistro\nItalian, Czech, Salads\nhas vegetarian options\n\n\nRamen Brno\nJapanese\nmight have vegetarian options\n\n\nLos Capolitos\nMexican\nhes vegetarian option\n\n\nSargam\nNepalese\nhas vegetarian options\n\n\nVeg8Cafe\nVegan\nvegan bistro\n\n\nForky’s Vlněna Foodtruck\nVegan\nvegan streetfood"
   },
   {
     "objectID": "materials.html",
@@ -1033,69 +1096,27 @@
     "href": "materials.html#friday-20-sept.",
     "title": "Materials and data",
     "section": "Friday, 20 Sept.",
-    "text": "Friday, 20 Sept."
+    "text": "Friday, 20 Sept.\n\nR books\n\nR for Data Science by Hadley Wickham, Mine Çetinkaya-Rundel and Garrett Grolemund – tidyverse packages, data manipulation, visualization etc.\nGeocomputation with R by Robin Lovelace, Jakub Nowosad, and Jannes Muenchow – sf, terra and other spatial packages.\nSpatial Data Science by Edzer Pebesma and Roger Bivand – includes more advanced topics like point pattern analysis with spatstat etc.\nData Visualization. A practical introduction by Kieran Healy – gives you all you need to be able to create beautiful plots with ggplot2.\n\n\nSome more glitter and ARIADNE\n\nR script with an example query on coins from ARIADNE SPARQL endpoint."
   },
   {
-    "objectID": "applications.html",
-    "href": "applications.html",
-    "title": "Applications",
+    "objectID": "report.html",
+    "href": "report.html",
+    "title": "Insights and recap",
     "section": "",
-    "text": "More details about the transnational access scheme grants can be found on the ATRIUM Project website."
+    "text": "We had 19 participants working and/or studying at universities, museums and other research institutions across Europe!"
   },
   {
-    "objectID": "applications.html#key-dates",
-    "href": "applications.html#key-dates",
-    "title": "Applications",
-    "section": "Key dates",
-    "text": "Key dates\n\n\n\n\n\n\n\nApril 2024\nCall for participants opens\n\n\n31 May 2024\nDeadline for applications\n\n\n20 July 28 June 2024\nAcceptance notifications sent before this date\n\n\n16–20 September 2024\nTraining school\n\n\nmid-October 2024 (?)\nDeadline for submission of reports\n\n\nend of November 2024\nGrants paid before this date"
+    "objectID": "report.html#photos",
+    "href": "report.html#photos",
+    "title": "Insights and recap",
+    "section": "Photos",
+    "text": "Photos\n\n\n\nGroup photo at the terrace of the institute.\n\n\n\n\n\nSo much sun! It hurts my eyes!"
   },
   {
-    "objectID": "applications.html#who-should-apply",
-    "href": "applications.html#who-should-apply",
-    "title": "Applications",
-    "section": "Who should apply",
-    "text": "Who should apply\n\n\n\n\n\n\nNote\n\n\n\nOnly applicants with institutional affiliation outside of the Czech Republic are eligible to receive funding due to the trans-national nature of the access to the infrastructure provided by the school.\n\n\nWe welcome applications from early-career researchers and PhD students who are enthusiastic about acquiring programming skills, particularly in the R scripting language, to efficiently retrieve and analyse extensive (spatial) datasets. Participants should demonstrate a keen interest in conducting data analysis and processing in a structured and reproducible manner using scripting languages.\nWhile applicants with prior knowledge of R programming are encouraged to apply, the first day of the training will be dedicated to mastering the fundamentals of R. Individuals who are complete beginners are welcome as well, as no prior experience is necessary. Additionally, applicants should have a basic understanding of statistics, data management, and geographic information systems to fully benefit from the training."
-  },
-  {
-    "objectID": "applications.html#how-to-apply",
-    "href": "applications.html#how-to-apply",
-    "title": "Applications",
-    "section": "How to apply",
-    "text": "How to apply\nSubmit your applications through an online form. On the 4th page of the application (TNA Scheme), choose ‘Summer School Access’ and ‘Archaeological Information System of the Czech Republic, Institute of Archaeology of the Czech Academy of Sciences, Brno – AIS CR (ARUB)’ as the proposed host organisation. On the next page (Summer School Application) please explain why you believe this training would be valuable for your research and how you intend to integrate these newfound skills into your work.\nMore details on how to apply can be found here."
-  },
-  {
-    "objectID": "info.html",
-    "href": "info.html",
-    "title": "General Information",
-    "section": "",
-    "text": "The school will be held from 16 to 20 September 2024 at the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/) at the address given below:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nNote\n\n\n\nPlease note that this is an on-site event only, and remote participation will not be possible."
-  },
-  {
-    "objectID": "info.html#date-and-location",
-    "href": "info.html#date-and-location",
-    "title": "General Information",
-    "section": "",
-    "text": "The school will be held from 16 to 20 September 2024 at the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/) at the address given below:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nNote\n\n\n\nPlease note that this is an on-site event only, and remote participation will not be possible."
-  },
-  {
-    "objectID": "info.html#grants",
-    "href": "info.html#grants",
-    "title": "General Information",
-    "section": "Grants",
-    "text": "Grants\nEach participant of the school is eligible to receive a grant to cover travel expenses, housing, and daily subsistence during the meeting. To receive the grant, participants need to:\n\nApply via the official form of the ATRIUM Project (see the Applications section for details).\nParticipate in person, i.e. sign attendance sheets for each training day.\nSubmit a report within a given time frame after the conclusion of the school with details of their participation."
-  },
-  {
-    "objectID": "info.html#prerequisites",
-    "href": "info.html#prerequisites",
-    "title": "General Information",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nBring your own laptop!\nInstall R and RStudio (follow the concise quide here).\nIf you are familiar with R, feel free to use a GUI of your choice."
-  },
-  {
-    "objectID": "info.html#other-information",
-    "href": "info.html#other-information",
-    "title": "General Information",
-    "section": "Other information",
-    "text": "Other information\n\nTravelling to Brno\nBrno is easily reachable by trains or buses from Prague (approx. a 2 to 2.5-hour journey) and Vienna (approx. a 1.5 to 2-hour journey). Many overnight trains crossing a large part of Europe start or end in Vienna, and we recommend taking these trains as an alternative to flying.\n\n\n\n\n\n\nFood\nThere are several places around the institute, see map above for locations.\n\n\n\n\n\n\n\n\n\n\nplace\ncuisine\nnote\n\n\n\n\nLittle Saigon\nAsian/Vietnamese\nhas vegan/vegetarian options\n\n\nMasný růžek\nCzech\na lot of meaty foods and traditional heavy Czech cuisine\n\n\nBistro Nella\nCzech\nmight have vegetarian option\n\n\nJídelna Kocourek\nCzech\nmight have vegetarian option\n\n\nGrand Kitchen Vlněna\nCzech, International\nmight have vegetarian option\n\n\nBistro Bellavista\nItalian\nmostly does not have vegetarian/vegan options\n\n\nDelitree bistro\nItalian, Czech, Salads\nhas vegetarian options\n\n\nRamen Brno\nJapanese\nmight have vegetarian options\n\n\nLos Capolitos\nMexican\nhes vegetarian option\n\n\nSargam\nNepalese\nhas vegetarian options\n\n\nVeg8Cafe\nVegan\nvegan bistro\n\n\nForky’s Vlněna Foodtruck\nVegan\nvegan streetfood"
+    "objectID": "report.html#reports-by-the-participants",
+    "href": "report.html#reports-by-the-participants",
+    "title": "Insights and recap",
+    "section": "Reports by the participants",
+    "text": "Reports by the participants\n\n\n\n\n\nName\nReport\n\n\n\n\nAuzina, Dita\nReport (PDF)\n\n\nBekesi, Anna\nReport (PDF)\n\n\nCocozza, Carlo\nReport (PDF)\n\n\nDanthine, Brigit\nTo be submitted.\n\n\nDavidson, Lesley\nTo be submitted.\n\n\nDepaermentier, Margaux\nReport (PDF)\n\n\nDesarbre, Romane\nReport (PDF)\n\n\nGarland, Nicky\nReport (PDF)\n\n\nHsu, Yiu-Kang\nReport (PDF)\n\n\nKaplanis, Panagiotis\nTo be submitted.\n\n\nKravtsova , Valeriia\nTo be submitted.\n\n\nKrubeck, Sara\nReport (PDF)\n\n\nLobanova, Mariia\nReport (PDF)\n\n\nMyint, Swe Zin\nReport (PDF)\n\n\nOcampo, Juan Carlos\nReport (PDF)\n\n\nPetrarulo, Ilenia\nReport (PDF)\n\n\nQuatrelivre, Carole\nReport (PDF)\n\n\nRadinovic, Mihailo\nReport (PDF)\n\n\nWilkinson, Alexander\nReport (PDF)"
   }
 ]

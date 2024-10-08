@@ -458,8 +458,10 @@ slope_im <- as.im(slope_100)
 rhohat_sites_slope <- spatstat.explore::rhohat(sites_ppp, slope_im, method = "ratio")
 
 plot(rhohat_sites_slope)
+plot(slope_100)
 
-
+star_raster <- stars::read_stars(here::here("cropped_slope.tif"))
+plot(star_raster)
 
 ## plot both results:
 
