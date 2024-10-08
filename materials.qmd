@@ -55,7 +55,7 @@ The online presentations in HTML can be downloaded in PDF:
 
 ## Wednesday, 18 Sept.
 
-### Intro to spatial data
+#### Intro to spatial data
 
 - [R script](spatial/install_packages.R) with required packages.
 - [R script](spatial/spatial_is_special.R) with the spatial analysis.
@@ -68,7 +68,7 @@ The online presentations in HTML can be downloaded in PDF:
 - [Presentation (PPTX)](spatial/PPA_intro_kempf.pptx) on the point pattern analysis.
 - [R script](spatial/ppa.R) with the point pattern analysis.
 
-### Note on `setwd()`
+#### Note on `setwd()`
 
 - [Blog post](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) by Jenny Bryan why not to hardcode `setwd()` into your scripts and what is the alternative.
 - Also check the [Intro to R presentation from Monday](intro2r/#/loading-data), where relative paths and project oriented workflow is explained a bit.
@@ -76,9 +76,14 @@ The online presentations in HTML can be downloaded in PDF:
 
 ## Friday, 20 Sept.
 
-### R books
+#### R books
 
-- [**R for Data Science**](https://r4ds.hadley.nz/) by Hadley Wickham, Mine Çetinkaya-Rundel and Garrett Grolemund -- `tidyverse` packages, data manipulation, visualization etc.
-- [**Geocomputation with R**](https://r.geocompx.org/) by Robin Lovelace, Jakub Nowosad, and Jannes Muenchow -- `sf`, `terra` and other spatial packages.
-- [**Spatial Data Science**](https://r-spatial.org/book/) by Edzer Pebesma and Roger Bivand -- includes more advanced topics like point pattern analysis with `spatstat` etc.
-- [**Data Visualization. A practical introduction**](https://socviz.co/) by Kieran Healy -- gives you all you need to be able to create beautiful plots with `ggplot2`.
+- [*R for Data Science*](https://r4ds.hadley.nz/) by Hadley Wickham, Mine Çetinkaya-Rundel and Garrett Grolemund -- `tidyverse` packages, data manipulation, visualization etc.
+- [*Geocomputation with R*](https://r.geocompx.org/) by Robin Lovelace, Jakub Nowosad, and Jannes Muenchow -- `sf`, `terra` and other spatial packages.
+- [*Spatial Data Science*](https://r-spatial.org/book/) by Edzer Pebesma and Roger Bivand -- includes more advanced topics like point pattern analysis with `spatstat` etc.
+- [*Data Visualization. A practical introduction*](https://socviz.co/) by Kieran Healy -- gives you all you need to be able to create beautiful plots with `ggplot2`.
+
+
+##### Some more `glitter` and ARIADNE 
+
+- [`R` script](/sparql/friday.r) with an example query on coins from ARIADNE SPARQL endpoint.

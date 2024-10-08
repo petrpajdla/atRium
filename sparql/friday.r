@@ -49,9 +49,10 @@ sf_coins <- r_coins %>%
   summarise(from = min(from), to = max(to))
 
 sf_coins
-# sf_coins %>% 
-#   leaflet() %>% 
-#   addTiles() %>% 
-#   addMarkers()
+
+sf_coins %>%
+  leaflet() %>%
+  addTiles() %>%
+  addMarkers()
 
 
