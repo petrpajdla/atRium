@@ -1,5 +1,285 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About the training school",
+    "section": "",
+    "text": "Petr Pajdla\nInstitute of Archaeology, Czech Acad Sci, Brno\n 0000-0001-7050-9572\nPeter Tkáč\nMasaryk University\n 0000-0002-9444-1936\n\nMichael Kempf\nUniversity of Basel\n 0000-0002-9474-4670\nGiacomo Bilotti\nKiel University\n 0000-0002-7328-0811\n\n\n\n\n\n\nZuzana Kopáčová\nInstitute of Archaeology, Czech Acad Sci, Brno\nFinances, administration\n\nVít Kozák\nMasaryk University\nTeaching assistant\n\n\nAnd the AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to\nZuzana Kopáčová (kopacova@arub.cz ✉), and/or\nPetr Pajdla (pajdla@arub.cz ✉)."
+  },
+  {
+    "objectID": "about.html#organisers-lecturers",
+    "href": "about.html#organisers-lecturers",
+    "title": "About the training school",
+    "section": "",
+    "text": "Petr Pajdla\nInstitute of Archaeology, Czech Acad Sci, Brno\n 0000-0001-7050-9572\nPeter Tkáč\nMasaryk University\n 0000-0002-9444-1936\n\nMichael Kempf\nUniversity of Basel\n 0000-0002-9474-4670\nGiacomo Bilotti\nKiel University\n 0000-0002-7328-0811\n\n\n\n\n\n\nZuzana Kopáčová\nInstitute of Archaeology, Czech Acad Sci, Brno\nFinances, administration\n\nVít Kozák\nMasaryk University\nTeaching assistant\n\n\nAnd the AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to\nZuzana Kopáčová (kopacova@arub.cz ✉), and/or\nPetr Pajdla (pajdla@arub.cz ✉)."
+  },
+  {
+    "objectID": "about.html#organisations",
+    "href": "about.html#organisations",
+    "title": "About the training school",
+    "section": "Organisations",
+    "text": "Organisations\n\nATRIUM\nThe training (summer) school is organised as transnational access provision in the ATRIUM Project (Advancing Frontier Research in the Arts and Humanities) funded by the Horizon Europe research and innovation actions programme under grant agreement No. 101132163.\n\n\n\nARIADNE\nARIADNE Research Infrastructure is a non-profit organisation that aggregates, integrates, and provides access to over 4 million archaeological data resources. Access is facilitated through the comprehensive data catalogue ARIADNE Portal (see the short video below for more details) and directly through a SPARQL endpoint to the linked-open data triple store, the ARIADNE Knowledge Base.\nOne of the goals of the training school is to enable programmatic access to these resources by introducing the basics of knowledge representation in the triple store, explaining the ARIADNE AO-Cat Ontology, and providing training in building SPARQL queries.\n\n\n\nAIS CR\nThe Archaeological Information System of the Czech Republic (AIS CR) is a research infrastructure integrating digital resources and services on archaeology in the Czech Republic, and as such is one of many data providers in the ARIADNE Research Infrastructure. AIS CR is jointly operated by the Institutes of Archaeology of the Czech Academy of Sciences in Brno (IAB) and Prague (IAP)."
+  },
+  {
+    "objectID": "ariadne/index.html#outline",
+    "href": "ariadne/index.html#outline",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Outline",
+    "text": "Outline\n\nARIADNE Portal\nLinked Open Data\n\nTriples – building blocks of LOD\nRDF – way of representing LOD\n\nARIADNE AO-Cat ontology"
+  },
+  {
+    "objectID": "ariadne/index.html#ariadne",
+    "href": "ariadne/index.html#ariadne",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "ARIADNE",
+    "text": "ARIADNE\nArchaeological data and the ARIADNE Portal"
+  },
+  {
+    "objectID": "ariadne/index.html#ariadne-1",
+    "href": "ariadne/index.html#ariadne-1",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "ARIADNE",
+    "text": "ARIADNE\n\n\nA figure in Greek mythology\n\nCretan princess, daughter of King Minos.\nKnown for helping Theseus escape from the labyrinth after he kills Minotaur.\n\n\n\nEgisto Sani, CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0, via Wikimedia Commons\n\n\nA research infrastructure\n\nAn acronym for Advanced Research Infrastructure for Archaeological Dataset Networking In Europe.\nARIADNE aggregates, integrates, and provides access to various archaeological data resources.\n\nhttps://www.ariadne-research-infrastructure.eu/"
+  },
+  {
+    "objectID": "ariadne/index.html#ariadne-portal",
+    "href": "ariadne/index.html#ariadne-portal",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "ARIADNE Portal",
+    "text": "ARIADNE Portal\n\nhttps://portal.ariadne-infrastructure.eu/\n\n\ntypes of resources\nwhere, when, what\nPeriodO\nGetty AAT"
+  },
+  {
+    "objectID": "ariadne/index.html#exercise",
+    "href": "ariadne/index.html#exercise",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Exercise",
+    "text": "Exercise\n\nHow many resources are there in the ARIADNE Portal?\nHow many records of individual artefacts are there?\nWho contributes the most of the records on artefacts?\nHow many swords are there?\nHow many Bronze Age swords are there?\nAre there any records from Brno (Czech Republic)?\nHow many records are there from Africa?"
+  },
+  {
+    "objectID": "ariadne/index.html#what-where-when",
+    "href": "ariadne/index.html#what-where-when",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "What, where & when",
+    "text": "What, where & when\nWhere\n\nGeolocations of places (points, polygons, bounding boxes)\n\nWhen\n\nPeriodO gazeteer (https://perio.do/) – maps periods to absolute dates on a common time scale.\nDate\n\nWhat\n\nGetty Art & Architecture Thesaurus\n(Getty AAT, https://www.getty.edu/research/tools/vocabularies/aat/)"
+  },
+  {
+    "objectID": "ariadne/index.html#linked-open-data",
+    "href": "ariadne/index.html#linked-open-data",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Linked Open Data",
+    "text": "Linked Open Data\nFrom ARIADNE Portal to ARIADNE Knowledge Base"
+  },
+  {
+    "objectID": "ariadne/index.html#lets-discuss",
+    "href": "ariadne/index.html#lets-discuss",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Let’s discuss…",
+    "text": "Let’s discuss…\n\n\n\nWhat is data?\nWhat is structured data?\nWhat is unstructured data?\nWhat is a database?\nWhat is a relational database?\nWhat makes data open?\nWhat makes data linked?\n\n\n\nHave you ever collected/created any data?\nHave you ever created a database?\nHave you ever filled in a database designed by someone else?"
+  },
+  {
+    "objectID": "ariadne/index.html#linked-open-data-1",
+    "href": "ariadne/index.html#linked-open-data-1",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Linked Open Data",
+    "text": "Linked Open Data\n(LOD)\n\nhttps://5stardata.info/\n\nTim Berners Lee, 2006\n5-star deployment scheme for Open Data:\n\nAvailable on the web (whatever format) but with an open licence, to be Open Data\nAvailable as machine-readable structured data (e.g. excel instead of image scan of a table)\nas (2) plus non-proprietary format (e.g. CSV instead of excel)\nuse URIs to denote things, so that people can point at your stuff (All the above plus, Use open standards from W3C (RDF and SPARQL) to identify things, so that people can point at your stuff)\nAll the above, plus: Link your data to other people’s data to provide context\n\nhttps://www.w3.org/DesignIssues/LinkedData.html"
+  },
+  {
+    "objectID": "ariadne/index.html#linked-open-data-2",
+    "href": "ariadne/index.html#linked-open-data-2",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Linked Open Data",
+    "text": "Linked Open Data\nWhat makes it linked and open?\n\n\n\n\nSemantic Web / Web of Data\n\n\nSemantic Web is an extension of the Web of documents to the Web of data. It is about creating links between documents, datasets etc. that are understandable and readable to both humans and machines. Linked Open Data is at the core of the Semantic Web providing tools and best practices to make these links.\n\n\n\n\nOpen license.\nUniform Resource Identifiers (URIs) name and identify individual things.\nURIs are resolvable using http:// (or https://) protocol\n(it is possible to find information about the things).\nURIs lead to useful information (data in RDF or SPARQL standards).\nURIs in the resources lead to other resources, so more things can be discovered following the links.\n\n\n\n\nURLs, URIs & IRIs\n\n\nURL (Uniform Resource Locator) – locates and allows retrieval of things on the Web.\nURN (Universal Resource Name) – identifies but does not locate.\nURI (Uniform Resource Identifier, formerly Universal Resource Identifier) – identifies (both abstract or physical) things (resources) in the Web.\nIRI (Internationalized Resource identifier) – same as URI, allows wider range of characters to accomodate various writing systems."
+  },
+  {
+    "objectID": "ariadne/index.html#linked-open-data-cloud",
+    "href": "ariadne/index.html#linked-open-data-cloud",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Linked Open Data Cloud",
+    "text": "Linked Open Data Cloud\n\n\nhttps://lod-cloud.net/\nLOD knowledge bases:\n\nhttps://www.wikidata.org/\n~12,5 billion triples\n\nhttp://dbpedia.org/\n~9,5 billion triples\n\n\n\nThe Linked Open Data Cloud from lod-cloud.net (2024-07-04)\n\n\n\nWikidata - community created structured (!) data, not W3C fully complient, no ontology etc. DBpedia - data extracted from Wikipedia infoboxes, ontology etc."
+  },
+  {
+    "objectID": "ariadne/index.html#example-uris",
+    "href": "ariadne/index.html#example-uris",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Example – URIs",
+    "text": "Example – URIs\n\n\n\nAriadne is a figure in Greek mythology.\n\nARIADNE is a project acronym.\nAriadne was a Byzantine empress.\nAriadne is a genus of butterflies.\nAriadne is a drug…\n\nFar too many things are called Ariadne!\n\n\nWe need unique identifiers!\nWikidata\n\nhttp://www.wikidata.org/entity/Q184874 (URI)\nIdentifier: Q184874\n\nDBpedia\n\nhttp://dbpedia.org/resource/Ariadne (URI)\nhttp://dbpedia.org/data/Ariadne (data in RDF)\nhttp://dbpedia.org/page/Ariadne (landing page)\n\n\n\nEgisto Sani, CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0, via Wikimedia Commons"
+  },
+  {
+    "objectID": "ariadne/index.html#triples",
+    "href": "ariadne/index.html#triples",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Triples",
+    "text": "Triples\nHow to represent LOD?\n\n\n\n\n\n\n\nG\n\n\nsubject\n\nsubject\n\n\n\nobject\n\nobject\n\n\n\nsubject--object\n\npredicate\n(property)"
+  },
+  {
+    "objectID": "ariadne/index.html#example-triples",
+    "href": "ariadne/index.html#example-triples",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Example – triples",
+    "text": "Example – triples\n\nAriadne is a figure in Greek mythology.\n\n\n\n\n\n\n\n\nG\n\n\nAriadne\n\nAriadne\n\n\n\nmythological figure\n\nmythological figure\n\n\n\nAriadne--mythological figure\n\nis a"
+  },
+  {
+    "objectID": "ariadne/index.html#example-triples-1",
+    "href": "ariadne/index.html#example-triples-1",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Example – triples",
+    "text": "Example – triples\n\nAriadne is a figure in Greek mythology.\nAriadne is from Crete.\nCrete is an island.\n\n\n\n\n\n\n\n\nG\n\n\nAriadne\n\nAriadne\n\n\n\nmythological\\nfigure\n\nmythological\nfigure\n\n\n\nAriadne--mythological\\nfigure\n\nis a\n\n\n\nCrete\n\nCrete\n\n\n\nAriadne--Crete\n\nis from\n\n\n\nisland\n\nisland\n\n\n\nCrete--island\n\nis an"
+  },
+  {
+    "objectID": "ariadne/index.html#example-triples-2",
+    "href": "ariadne/index.html#example-triples-2",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Example – triples",
+    "text": "Example – triples\n\nURIs in place of subjects and objects\n\n\n\n\n\n\n\n\nG\n\n\nhttp://dbpedia.org/\\nresource/Ariadne\n\nhttp://dbpedia.org/\nresource/Ariadne\n\n\n\nhttp://dbpedia.org/\\nontology/MythologicalFigure\n\nhttp://dbpedia.org/\nontology/MythologicalFigure\n\n\n\nhttp://dbpedia.org/\\nresource/Ariadne--http://dbpedia.org/\\nontology/MythologicalFigure\n\nis a\n\n\n\nhttp://dbpedia.org/\\nresource/Crete\n\nhttp://dbpedia.org/\nresource/Crete\n\n\n\nhttp://dbpedia.org/\\nresource/Ariadne--http://dbpedia.org/\\nresource/Crete\n\nis from\n\n\n\nhttp://dbpedia.org/\\nontology/Island\n\nhttp://dbpedia.org/\nontology/Island\n\n\n\nhttp://dbpedia.org/\\nresource/Crete--http://dbpedia.org/\\nontology/Island\n\nis an\n\n\n\nhttp://sws.geonames.org/\\n258763\n\nhttp://sws.geonames.org/\n258763\n\n\n\nhttp://dbpedia.org/\\nresource/Crete--http://sws.geonames.org/\\n258763\n\nis the same as"
+  },
+  {
+    "objectID": "ariadne/index.html#example-triples-3",
+    "href": "ariadne/index.html#example-triples-3",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Example – triples",
+    "text": "Example – triples\n\nURIs in place of subjects and objects\nAbbreviated URIs\n\ndbo: http://dbpedia.org/ontology/\ndbr: http://dbpedia.org/resource/\ngn:  http://sws.geonames.org/\n\n\n\n\n\n\n\nG\n\n\ndbr:Ariadne\n\ndbr:Ariadne\n\n\n\ndbo:MythologicalFigure\n\ndbo:MythologicalFigure\n\n\n\ndbr:Ariadne--dbo:MythologicalFigure\n\nis a\n\n\n\ndbr:Crete\n\ndbr:Crete\n\n\n\ndbr:Ariadne--dbr:Crete\n\nis from\n\n\n\ndbo:Island\n\ndbo:Island\n\n\n\ndbr:Crete--dbo:Island\n\nis an\n\n\n\ngn:258763\n\ngn:258763\n\n\n\ndbr:Crete--gn:258763\n\nis the same as"
+  },
+  {
+    "objectID": "ariadne/index.html#example-triples-4",
+    "href": "ariadne/index.html#example-triples-4",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Example – triples",
+    "text": "Example – triples\n\nURIs in place of predicates (properties)\n\ndbo: http://dbpedia.org/ontology/\ndbr: http://dbpedia.org/resource/\ngn:  https://sws.geonames.org/\nrdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#\nowl: http://www.w3.org/2002/07/owl#\n\n\n\n\n\n\n\nG\n\n\ndbr:Ariadne\n\ndbr:Ariadne\n\n\n\ndbo:MythologicalFigure\n\ndbo:MythologicalFigure\n\n\n\ndbr:Ariadne--dbo:MythologicalFigure\n\nrdf:type\n\n\n\ndbr:Crete\n\ndbr:Crete\n\n\n\ndbr:Ariadne--dbr:Crete\n\ndbo:origin\n\n\n\ndbo:Island\n\ndbo:Island\n\n\n\ndbr:Crete--dbo:Island\n\nrdf:type\n\n\n\ngn:258763\n\ngn:258763\n\n\n\ndbr:Crete--gn:258763\n\nowl:sameAs"
+  },
+  {
+    "objectID": "ariadne/index.html#example-rdf",
+    "href": "ariadne/index.html#example-rdf",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Example – RDF",
+    "text": "Example – RDF\n\nWe can write down the triples using full URIs.\nEach triple ends with a period (.)\n\n&lt;http://dbpedia.org/resource/Ariadne&gt; \n  &lt;http://www.w3.org/2000/01/rdf-schema#label&gt; \n    \"Ariadne\"@en .\n\n&lt;http://dbpedia.org/resource/Ariadne&gt; \n  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; \n    &lt;http://dbpedia.org/ontology/MythologicalFigure&gt; .\n\n&lt;http://dbpedia.org/resource/Ariadne&gt; \n  &lt;http://dbpedia.org/ontology/origin&gt; \n    &lt;http://dbpedia.org/resource/Crete&gt; .\n  \n&lt;http://dbpedia.org/resource/Crete&gt; \n  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; \n    &lt;http://dbpedia.org/ontology/Island&gt; .\n\n&lt;http://dbpedia.org/resource/Crete&gt; \n  &lt;http://www.w3.org/2002/07/owl#sameAs&gt; \n    &lt;https://sws.geonames.org/258763&gt; .\n\nThis is perfectly fine for the machine, not so much for the human."
+  },
+  {
+    "objectID": "ariadne/index.html#example-rdf-1",
+    "href": "ariadne/index.html#example-rdf-1",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Example – RDF",
+    "text": "Example – RDF\n\nTo make the notation more readable, let’s abbreviate the URIs by defining prefixes.\n\n@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .\n@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .\n@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .\n@prefix dbo: &lt;http://dbpedia.org/ontology/&gt; .\n@prefix dbr: &lt;http://dbpedia.org/resource/&gt; .\n\ndbr:Ariadne rdfs:label \"Ariadne\"@en .\ndbr:Ariadne rdf:type dbo:MythologicalFigure .\ndbr:Ariadne dbo:origin dbr:Crete .\n  \ndbr:Crete rdf:type dbo:Island .\ndbr:Crete owl:sameAs &lt;https://sws.geonames.org/258763&gt; .\n\nThere is still a lot of repetition, e.g. in the subjects."
+  },
+  {
+    "objectID": "ariadne/index.html#example-rdf-2",
+    "href": "ariadne/index.html#example-rdf-2",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Example – RDF",
+    "text": "Example – RDF\n\nTo remove repetition, we add different predicates and objects to the same subject using semicolon (;)\nThe set of triples still ends with a period (.)\n\n@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .\n@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .\n@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .\n@prefix dbo: &lt;http://dbpedia.org/ontology/&gt; .\n@prefix dbr: &lt;http://dbpedia.org/resource/&gt; .\n\ndbr:Ariadne\n  rdfs:label \"Ariadne\"@en ;\n  rdf:type dbo:MythologicalFigure ;\n  dbo:origin dbr:Crete .\n  \ndbr:Crete \n  rdf:type dbo:Island ;\n  owl:sameAs &lt;https://sws.geonames.org/258763&gt; .\n\nThis is a Turtle serialization of an RDF, one of common ways of representing LOD."
+  },
+  {
+    "objectID": "ariadne/index.html#rdf",
+    "href": "ariadne/index.html#rdf",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "RDF",
+    "text": "RDF\nResource Description Framework\n\nA standard for LOD defined by the World Wide Web Consortium (W3C).\nRDF is a data model that describes how data is structured.\nUses triples to represent statements.\nRDF does not exactly tell us how to write the triples.\nNumerous serializations (how to write things down) of RDF exist.\n\nhttps://www.w3.org/standards/techs/rdf\nRDF serializations\n\nTurtle (subset of Notation3 language, superset of N-Triples format)\nRDF/XML\nJSON-LD\n\nand many more…\nRDF converter: https://www.easyrdf.org/converter"
+  },
+  {
+    "objectID": "ariadne/index.html#turtle",
+    "href": "ariadne/index.html#turtle",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Turtle",
+    "text": "Turtle\n\nStands for Terse RDF Triple Language.\nFile extension .ttl.\nTriple ends with a period.\nURIs in angle brackets (&lt;, &gt;).\nLiteral (text or other value) in quotation marks (\").\nTriples with a same subject are divided with semicolon (;).\nTriples with a same subject and property are divided with comma (,).\n\n@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .\n@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .\n@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .\n@prefix dbo: &lt;http://dbpedia.org/ontology/&gt; .\n@prefix dbr: &lt;http://dbpedia.org/resource/&gt; .\n\ndbr:Ariadne\n  rdfs:label \"Ariadne\"@en ;\n  rdf:type dbo:MythologicalFigure ;\n  dbo:origin dbr:Crete .\n  \ndbr:Crete \n  rdf:type dbo:Island ;\n  owl:sameAs &lt;https://sws.geonames.org/258763&gt; ."
+  },
+  {
+    "objectID": "ariadne/index.html#rdf-can-contain",
+    "href": "ariadne/index.html#rdf-can-contain",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "RDF can contain…",
+    "text": "RDF can contain…\n\nURIs/IRIs:\n\nwritten in angle brackets\n&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nshortened as prefixes\n@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\n\nLiterals (values):\n\nwritten in quotes followed by their datatype URI (typed literals)\nlist of RDF datatypes: https://www.w3.org/TR/rdf11-concepts/#section-Datatypes\nstrings (datatype xsd:string can be omitted)\n\"Ariadne\"^^xsd:string is the same as \"Ariadne\"\nnumbers (quotes can be omitted)\n\"3.14\"^^xsd:decimal is the same as 3.14\ndates\n\"2024-09-17\"^^xsd:date"
+  },
+  {
+    "objectID": "ariadne/index.html#rdfxml",
+    "href": "ariadne/index.html#rdfxml",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "RDF/XML",
+    "text": "RDF/XML\n\nFile extension .rdf.\nW3C standard (https://www.w3.org/TR/rdf-syntax-grammar/).\n\n&lt;?xml version=\"1.0\" encoding=\"utf-8\" ?&gt;\n&lt;rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n         xmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\"\n         xmlns:owl=\"http://www.w3.org/2002/07/owl#\"\n         xmlns:dbo=\"http://dbpedia.org/ontology/\"&gt;\n\n  &lt;rdf:Description rdf:about=\"http://dbpedia.org/resource/Ariadne\"&gt;\n    &lt;rdfs:label xml:lang=\"en\"&gt;Ariadne&lt;/rdfs:label&gt;\n    &lt;rdf:type rdf:resource=\"http://dbpedia.org/ontology/MythologicalFigure\"/&gt;\n    &lt;dbo:origin&gt;\n      &lt;dbo:Island rdf:about=\"http://dbpedia.org/resource/Crete\"&gt;\n        &lt;owl:sameAs rdf:resource=\"https://sws.geonames.org/258763\"/&gt;\n      &lt;/dbo:Island&gt;\n    &lt;/dbo:origin&gt;\n  &lt;/rdf:Description&gt;\n&lt;/rdf:RDF&gt;"
+  },
+  {
+    "objectID": "ariadne/index.html#tabular-data-vs-triples",
+    "href": "ariadne/index.html#tabular-data-vs-triples",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Tabular data vs triples",
+    "text": "Tabular data vs triples\n\nAny data organized in a table can be written as triples.\n\n\n\nFor example a table like this:\n\n\n\nID\nhuman\nsource\ndelta15N\ndelta13C\n\n\n\n\nsample01\nTRUE\ncoll\n6.9\n-19.2\n\n\nsample02\nFALSE\ncoll\n4.2\n-21.83\n\n\n…\n…\n…\n…\n…\n\n\nsample42\nNA\ncoll\n12.02\nNA\n\n\n\n\n\n\nCan become this:\n\n\n\nsubject\npredicate\nobject\n\n\n\n\nsample01\nfromHuman\nTRUE\n\n\nsample01\nsource\ncoll\n\n\nsample01\ndelta15N\n6.9\n\n\nsample01\ndelta13C\n-19.2\n\n\nsample02\nfromHuman\nFALSE\n\n\n…\n…\n…\n\n\nsample42\ndelta13C\nNA\n\n\n\n\n\nObservation (row) IDs become subjects.\nObservations (values) become objects.\nVariable (column) names become predicates."
+  },
+  {
+    "objectID": "ariadne/index.html#exercise-1",
+    "href": "ariadne/index.html#exercise-1",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Exercise",
+    "text": "Exercise\nSerialize the statements in this diagram as Turtle RDF using DBpedia\n\n\n\n\n\n\n\nG\n\n\ndbr:Phaistos_Disc\n\ndbr:Phaistos_Disc\n\n\n\ndbr:Artifact_(archaeology)\n\ndbr:Artifact_(archaeology)\n\n\n\ndbr:Phaistos_Disc--dbr:Artifact_(archaeology)\n\nrdf:type\n\n\n\n'1908-07-03'\n\n'1908-07-03'\n\n\n\ndbr:Phaistos_Disc--'1908-07-03'\n\ndbp:discoveredDate\n\n\n\ndbr:Crete\n\ndbr:Crete\n\n\n\ndbr:Phaistos_Disc--dbr:Crete\n\ndbp:discoveredPlace\n\n\n\ndbo:Island\n\ndbo:Island\n\n\n\ndbr:Crete--dbo:Island\n\nrdf:type\n\n\n\ngn:258763\n\ngn:258763\n\n\n\ndbr:Crete--gn:258763\n\nowl:sameAs\n\n\n\n\n\n\n\n\n\nPrefixes:\nrdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# .\nxsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .\nowl: http://www.w3.org/2002/07/owl# .\ndbo: http://dbpedia.org/ontology/ .\ndbr: http://dbpedia.org/resource/ .\ndbp: http://dbpedia.org/property/ .\ngn:  http://sws.geonames.org/ ."
+  },
+  {
+    "objectID": "ariadne/index.html#solution",
+    "href": "ariadne/index.html#solution",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Solution",
+    "text": "Solution\n\n\n\n\n\n\n\nG\n\n\ndbr:Phaistos_Disc\n\ndbr:Phaistos_Disc\n\n\n\ndbr:Artifact_(archaeology)\n\ndbr:Artifact_(archaeology)\n\n\n\ndbr:Phaistos_Disc--dbr:Artifact_(archaeology)\n\nrdf:type\n\n\n\n'1908-07-03'\n\n'1908-07-03'\n\n\n\ndbr:Phaistos_Disc--'1908-07-03'\n\ndbp:discoveredDate\n\n\n\ndbr:Crete\n\ndbr:Crete\n\n\n\ndbr:Phaistos_Disc--dbr:Crete\n\ndbp:discoveredPlace\n\n\n\ndbo:Island\n\ndbo:Island\n\n\n\ndbr:Crete--dbo:Island\n\nrdf:type\n\n\n\ngn:258763\n\ngn:258763\n\n\n\ndbr:Crete--gn:258763\n\nowl:sameAs\n\n\n\n\n\n\n\n\n@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .\n@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .\n@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .\n@prefix dbo: &lt;http://dbpedia.org/ontology/&gt; .\n@prefix dbr: &lt;http://dbpedia.org/resource/&gt; .\n@prefix dbp: &lt;http://dbpedia.org/property/&gt; .\n@prefix gn:  &lt;http://sws.geonames.org/&gt; .\n\ndbr:Phaistos_Disc \n  rdf:type dbr:Artifact_(archaeology) ;\n  dbp:discoveredDate \"1908-07-03\"^^xsd:date ;\n  dbp:discoveredPlace dbr:Crete .\n  \ndbr:Crete \n  rdf:type dbo:Island ;\n  owl:sameAs gn:258763 ."
+  },
+  {
+    "objectID": "ariadne/index.html#why-is-lod-useful",
+    "href": "ariadne/index.html#why-is-lod-useful",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Why is LOD useful?",
+    "text": "Why is LOD useful?\nLet’s brainstorm…"
+  },
+  {
+    "objectID": "ariadne/index.html#ao-cat-ontology",
+    "href": "ariadne/index.html#ao-cat-ontology",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "AO-Cat Ontology",
+    "text": "AO-Cat Ontology\nOntologies and the Semantic Web"
+  },
+  {
+    "objectID": "ariadne/index.html#what-is-an-ontology",
+    "href": "ariadne/index.html#what-is-an-ontology",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "What is an ontology?",
+    "text": "What is an ontology?\n\nAn explicit, formal way of modelling relationships between information within a particular domain.\nAn abstraction allowing formal representation of particular knowledge about the world. \nOntologies provide precisely defined vocabularies for modelling relationships.\n\nWhat is in an ontology?\n\nClasses – ontology defines abstract groups, fundamental categories of objects or concepts within a domain.\nRelationships (properties) – ontology limits what kinds of subjects and objects can properties link and how classes are related.\nInstances of objects – what are the described individuals.\n\nWhy is this useful?\n\nLogic\nAutomated reasoning\nInteroperability and data integration"
+  },
+  {
+    "objectID": "ariadne/index.html#domain-and-range",
+    "href": "ariadne/index.html#domain-and-range",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Domain and range",
+    "text": "Domain and range\n\n\n\n\n\n\n\nG\n\ncluster_1\n\nrange\n\n\ncluster_0\n\ndomain\n\n\n\nsubject\n\nsubject\n\n\n\nobject\n\nobject\n\n\n\nsubject--object\n\npredicate\n(property)\n\n\n\n\n\n\n\n\n\nDomain – subject described by the property is in the class specified by the domain.\nRange – object of the statement has the given range.\n\nrdfs:domain and rdfs:range properties"
+  },
+  {
+    "objectID": "ariadne/index.html#example",
+    "href": "ariadne/index.html#example",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "Example",
+    "text": "Example\n\n\n\n\n\n\n\nG\n\ncluster_1\n\nrdf:type dbo:Person\n\n\ncluster_2\n\nrdf:type dbo:MythologicalFigure\n\n\ncluster_0\n\nrdf:type dbo:PopulatedPlace\n\n\n\ndbr:Crete\n\ndbr:Crete\n\n\n\ndbr:Ariadne\n\ndbr:Ariadne\n\n\n\ndbr:Ariadne--dbr:Crete\n\ndbo:origin\n\n\n\n\n\n\n\n\n@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .\n@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .\n@prefix schema: &lt;http://schema.org/&gt; .\n@prefix dbo: &lt;http://dbpedia.org/ontology/&gt; .\n@prefix dbr: &lt;http://dbpedia.org/resource/&gt; .\n\ndbo:MythologicalFigure rdfs:subClassOf dbo:Person .\n\ndbo:origin rdf:type rdf:Property ;\n  rdfs:domain dbo:Person ;\n  rdfs:range dbo:PopulatedPlace .\n\ndbr:Ariadne\n  rdf:type dbo:MythologicalFigure ;\n  dbo:origin dbr:Crete .\n\ndbr:Crete \n  rdf:type dbo:PopulatedPlace ."
+  },
+  {
+    "objectID": "ariadne/index.html#ao-cat-ontology-1",
+    "href": "ariadne/index.html#ao-cat-ontology-1",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "AO-Cat Ontology",
+    "text": "AO-Cat Ontology\n\nFelicetti A., Meghini C., Richards J., Theodoridou M. 2023: The AO-Cat Ontology. doi:10.5281/zenodo.7818374.\n\n\n\n\n\n\nApplication profile of CIDOC CRM (most of the classes are mapped to CRM).\nNamespace IRI: https://ariadne-infrastructure.eu/aocat/\nClasses prefixed with AO_\n\nDefines:\n\n22 classes\n\n66 properties"
+  },
+  {
+    "objectID": "ariadne/index.html#ao-cat-concepts",
+    "href": "ariadne/index.html#ao-cat-concepts",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "AO-Cat Concepts",
+    "text": "AO-Cat Concepts\nResources\n\n\n\n\n\n\n\nG\n\n\nAO_Entity\n\nAO_Entity\n\n\n\nAO_Resource\n\nAO_Resource\n\n\n\nAO_Entity--AO_Resource\n\n\n\n\nAO_Service\n\nAO_Service\n\n\n\nAO_Resource--AO_Service\n\n\n\n\nAO_Data_Resource\n\nAO_Data_Resource\n\n\n\nAO_Resource--AO_Data_Resource\n\n\n\n\nAO_Individual_Data_Resource (1)\n\nAO_Individual_Data_Resource (1)\n\n\n\nAO_Data_Resource--AO_Individual_Data_Resource (1)\n\n\n\n\nAO_Collection (1)\n\nAO_Collection (1)\n\n\n\nAO_Data_Resource--AO_Collection (1)\n\n\n\n\nAO_Document\n\nAO_Document\n\n\n\nAO_Individual_Data_Resource (1)--AO_Document\n\n\n\n\nAO_Individual_Data_Resource (2)\n\nAO_Individual_Data_Resource (2)\n\n\n\nAO_Collection (1)--AO_Individual_Data_Resource (2)\n\n\n\n\nAO_Collection (2)\n\nAO_Collection (2)\n\n\n\nAO_Collection (1)--AO_Collection (2)"
+  },
+  {
+    "objectID": "ariadne/index.html#ao-cat-classes",
+    "href": "ariadne/index.html#ao-cat-classes",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "AO-Cat classes",
+    "text": "AO-Cat classes\nWhere\n\nAO_Spatial_Region\n\nAO_Spatial_Region_Point\nAO_Spatial_Region_Polygon\nAO_Spatial_Region_BBox\nAO_Spatial_Region_StdName\n\n\nWhen\n\nAO_Temporal_Region\n\nFrom/until given in years\nPeriodO URIs\n\n\nWhat\n\nclass AO_Concept\nARIADNE subjects (property has_ARIADNE_subject )\nderived subjects (AAT subjects, property has_derived_subject)\nnative subjects (property has_native_subject)"
+  },
+  {
+    "objectID": "ariadne/index.html#ariadne-subjects",
+    "href": "ariadne/index.html#ariadne-subjects",
+    "title": "ARIADNE & Linked Open Data",
+    "section": "ARIADNE subjects",
+    "text": "ARIADNE subjects\n\nSite/monument – each record is a site/monument.\nFieldwork – each record is an individual archaeological investigation (event) .\nFieldwork report – record of fieldwork event (link to grey literature report).\nFieldwork archive – record of filedwork event (link to archive of digital objects).\nScientific analysis – any analytical data.\nDate – each record is a single archaeological date (C14, dendrochronology etc.)\nArtefact – each record is a single artefact (except coins).\nCoin – each record is a single coin.\nBuilding survey – specific category of fieldwork report or archive for standing building survey.\nMaritime – specific category of site/monument for wrecks or fieldwork event (underwater archaeology).\nInscription – monuments or artefacts that bear graphical manifestation of a human thought.\nRock art – similar to inscriptions.\nBurial – each record is a burial.\n\n\n\n\n\n\natRium training school, Brno 2024 | ARIADNE"
+  },
+  {
     "objectID": "sparql/index.html#outline",
     "href": "sparql/index.html#outline",
     "title": "SPARQL",
@@ -46,7 +326,7 @@
     "href": "sparql/index.html#linked-open-data-cloud",
     "title": "SPARQL",
     "section": "Linked Open Data Cloud",
-    "text": "Linked Open Data Cloud\n\n\nhttps://lod-cloud.net/\nLOD knowledge bases:\n\nhttps://www.wikidata.org/\n~12,5 billion triples\n\nhttp://dbpedia.org/\n~9,5 billion triples\n\n\n\nThe Linked Open Data Cloud from lod-cloud.net (2024-07-04)\n\n\n\n\nWikidata - community created structured (!) data, not W3C fully complient, no ontology etc. DBpedia - data extracted from Wikipedia infoboxes, ontology etc."
+    "text": "Linked Open Data Cloud\n\n\nhttps://lod-cloud.net/\nLOD knowledge bases:\n\nhttps://www.wikidata.org/\n~12,5 billion triples\n\nhttp://dbpedia.org/\n~9,5 billion triples\n\n\n\nThe Linked Open Data Cloud from lod-cloud.net (2024-07-04)\n\n\n\nWikidata - community created structured (!) data, not W3C fully complient, no ontology etc. DBpedia - data extracted from Wikipedia infoboxes, ontology etc."
   },
   {
     "objectID": "sparql/index.html#dbpedia-virtuoso-query-service",
@@ -102,7 +382,7 @@
     "href": "sparql/index.html#example-query-5",
     "title": "SPARQL",
     "section": "Example query",
-    "text": "Example query\nWikidata\n\nCount all archaeological artefacts and archaeological finds in Wikidata.\n\n\n\n\nArchaeological artefacts (Q220659)\n\nPREFIX wd: &lt;http://www.wikidata.org/entity/&gt;\nPREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;\n\nSELECT (COUNT(?a) AS ?count)\n\nWHERE {\n  ?a wdt:P31 wd:Q220659 .\n}\n\nWikidata Query Service.\n\n\n\nArchaeological finds (Q10855061)\n\nPREFIX wd: &lt;http://www.wikidata.org/entity/&gt;\nPREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;\n\nSELECT (COUNT(?a) AS ?count)\n\nWHERE {\n  ?a wdt:P31 wd:Q10855061 .\n}\n\nWikidata Query Service.\n\n\n\n\nTogether in one query using UNION\n\nPREFIX wd: &lt;http://www.wikidata.org/entity/&gt;\nPREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;\n\nSELECT (COUNT(?a) AS ?count)\n\nWHERE {\n  { ?a wdt:P31 wd:Q220659 } UNION { ?a wdt:P31 wd:Q10855061 }  .\n}\n\nQuery in Wikidata Query Service."
+    "text": "Example query\nWikidata\n\nCount all archaeological artefacts and archaeological finds in Wikidata.\n\n\n\n\nArchaeological artefacts (Q220659)\n\nPREFIX wd: &lt;http://www.wikidata.org/entity/&gt;\nPREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;\n\nSELECT (COUNT(?a) AS ?count)\n\nWHERE {\n  ?a wdt:P31 wd:Q220659 .\n}\n\nWikidata Query Service.\n\n\n\nArchaeological finds (Q10855061)\n\nPREFIX wd: &lt;http://www.wikidata.org/entity/&gt;\nPREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;\n\nSELECT (COUNT(?a) AS ?count)\n\nWHERE {\n  ?a wdt:P31 wd:Q10855061 .\n}\n\nWikidata Query Service.\n\n\n\nTogether in one query using UNION\n\nPREFIX wd: &lt;http://www.wikidata.org/entity/&gt;\nPREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;\n\nSELECT (COUNT(?a) AS ?count)\n\nWHERE {\n  { ?a wdt:P31 wd:Q220659 } UNION { ?a wdt:P31 wd:Q10855061 }  .\n}\n\nQuery in Wikidata Query Service."
   },
   {
     "objectID": "sparql/index.html#ariadne-knowledge-base",
@@ -151,7 +431,7 @@
     "href": "sparql/index.html#lod-packages-in-r",
     "title": "SPARQL",
     "section": "LOD packages in R",
-    "text": "LOD packages in R\n\n\n\n\nglitter\nAllows writing and performing SPARQL queries without advanced knowledge of SPARQL.\nhttps://lvaudor.github.io/glitter/index.html\nremotes::install_github(\"lvaudor/glitter\")\n\n\n\n\n\n\nrdflib\nAllows to perform common tasks on local RDF data, including converting between serializations and performing SPARQL queries.\nhttps://docs.ropensci.org/rdflib/\nremotes::install_github(\"ropensci/rdflib\")\n\n\n\n\n\n\njsonld\nVarious functions for formatting of JSON-LD data and transformation to RDF (N-Quads).\nhttps://docs.ropensci.org/jsonld/index.html\ninstall.packages(\"jsonld\")"
+    "text": "LOD packages in R\n\n\n\n\nglitter\nAllows writing and performing SPARQL queries without advanced knowledge of SPARQL.\nhttps://lvaudor.github.io/glitter/index.html\nremotes::install_github(\"lvaudor/glitter\")\n\n\n\n\n\nrdflib\nAllows to perform common tasks on local RDF data, including converting between serializations and performing SPARQL queries.\nhttps://docs.ropensci.org/rdflib/\nremotes::install_github(\"ropensci/rdflib\")\n\n\n\n\n\njsonld\nVarious functions for formatting of JSON-LD data and transformation to RDF (N-Quads).\nhttps://docs.ropensci.org/jsonld/index.html\ninstall.packages(\"jsonld\")"
   },
   {
     "objectID": "sparql/index.html#glitter-1",
@@ -166,6 +446,13 @@
     "title": "SPARQL",
     "section": "Queries with glitter",
     "text": "Queries with glitter\nWikidata\n\nExplore and continue work in the R script with comments here.\nhttps://petrpajdla.github.io/atRium/sparql/wikidata.r\nCheck out article by Sophie C. Schmid et al. 2022 Practices of Linked Open Data in Archaeology and Their Realisation in Wikidata https://doi.org/10.3390/digital2030019\n\nTry to reproduce the Ogham stones distribution map.\nTry to reproduce the Samian Ware distribution map.\n\n\nARIADNE KB\nARIADNE SPARQL endpoint is here:\nhttps://graphdb.ariadne.d4science.org/repositories/ariadneplus-pr01\n\nExplore and continue work in the R script here.\nhttps://petrpajdla.github.io/atRium/sparql/ariadne.r\n\nCheck AO-Cat Ontology if needed.\n\n\n\n\n\n\natRium training school, Brno 2024 | SPARQL"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "atRium Brno Training School",
+    "section": "",
+    "text": "Basics\n\n\n\nWhen? 16–20 September 2024\nWhere? Brno, Czech Republic\nWhat? Training school on querying data aggregated in the ARIADNE infrastructure and their spatial analysis in R\n\n\nJoin us in Brno for a five-day ‘atRium’ training school in computational archaeology, where you will gain essential coding skills in the R programming language, knowledge of archaeological data integrated into the ARIADNE research infrastructure, and fundamental spatial data analysis expertise. As large amounts of archaeological data have become available, spatial analysis techniques may offer valuable insights into past human behaviour and settlement patterns. Our programme is designed to deepen your understanding of computational methods in archaeology, focusing on working in a reproducible manner using the R programming language and environment.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe training school is part of a trans-national access scheme provided by the ATRIUM Project, hosted by the Archaeological Information System of the Czech Republic (AIS CR) research infrastructure at the Institute of Archaeology, Czech Academy of Sciences, Brno.\n\nFeel free to distribute the flyer in PDF or PNG."
   },
   {
     "objectID": "programme.html",
@@ -410,14 +697,14 @@
     "href": "intro2r/index.html#packages",
     "title": "Introduction to R",
     "section": "Packages",
-    "text": "Packages\n\nby installing additional packages, you can expand the amount of things you can do in R\nthere are plenty of packages with different functions and aims\nbasic principle will be introduced by package “here”\n\n\n#install.packages(\"here\") # installs the package\nlibrary(here) # loads the package\nhere() # runs a function from the package\n\n[1] \"C:/Users/pajdla/Documents/projects/atRium\"\n\n\n\nyou only need to install the package once install.packages(\"name_of_the_package\"), but it needs to be loaded every time you start a new script or after you have cleaned up your workspace library(name_of_the_package)\nsometime you need to specify from which package your function is: name-of-the-package::name-of-the-function()\n\n\ndplyr::filter(df_people, city == \"Kiel\")\n\n  first_name country    position institution city distance_km\n1     Carole Germany    post_doc  university Kiel         720\n2       Sara Germany phd_student  university Kiel         720\n\n\nIf you are not sure from which package your function is coming, you can easily find out by:\n\n?filter()"
+    "text": "Packages\n\nby installing additional packages, you can expand the amount of things you can do in R\nthere are plenty of packages with different functions and aims\nbasic principle will be introduced by package “here”\n\n\n#install.packages(\"here\") # installs the package\nlibrary(here) # loads the package\nhere() # runs a function from the package\n\n[1] \"/mnt/data/Documents/Projects/atRium\"\n\n\n\nyou only need to install the package once install.packages(\"name_of_the_package\"), but it needs to be loaded every time you start a new script or after you have cleaned up your workspace library(name_of_the_package)\nsometime you need to specify from which package your function is: name-of-the-package::name-of-the-function()\n\n\ndplyr::filter(df_people, city == \"Kiel\")\n\n  first_name country    position institution city distance_km\n1     Carole Germany    post_doc  university Kiel         720\n2       Sara Germany phd_student  university Kiel         720\n\n\nIf you are not sure from which package your function is coming, you can easily find out by:\n\n?filter()\n\nHelp on topic 'filter' was found in the following packages:\n\n  Package               Library\n  dplyr                 /home/knytt/R/x86_64-pc-linux-gnu-library/4.4\n  stats                 /usr/lib/R/library\n\n\nUsing the first match ..."
   },
   {
     "objectID": "intro2r/index.html#loading-data",
     "href": "intro2r/index.html#loading-data",
     "title": "Introduction to R",
     "section": "Loading data",
-    "text": "Loading data\n\ndownload data dartpoints.csv and move them to your project file\n\nPaths\nAbsolute file path - The file path is specific to a given user.\nC:/Documents/MyProject/data/dartpoints.csv\nRelative file path If I am currently in MyProject/ folder:\n./data/dartpoints.csv\nPackage here()\n\nPackage here is here to save the day!\nFunction here() will know where the top directory is, so you do not need to write whole URL adress\n\nTry running here() to see where your project is stored\n\nhere()\n\n[1] \"C:/Users/pajdla/Documents/projects/atRium\""
+    "text": "Loading data\n\ndownload data dartpoints.csv and move them to your project file\n\nPaths\nAbsolute file path - The file path is specific to a given user.\nC:/Documents/MyProject/data/dartpoints.csv\nRelative file path If I am currently in MyProject/ folder:\n./data/dartpoints.csv\nPackage here()\n\nPackage here is here to save the day!\nFunction here() will know where the top directory is, so you do not need to write whole URL adress\n\nTry running here() to see where your project is stored\n\nhere()\n\n[1] \"/mnt/data/Documents/Projects/atRium\""
   },
   {
     "objectID": "intro2r/index.html#loading-data-1",
@@ -439,321 +726,6 @@
     "title": "Introduction to R",
     "section": "Observe the dartpoint data",
     "text": "Observe the dartpoint data\n\nHow many observations and how many variables are in the dataframe?\nWhat are the names of the variables?\nAre there any quantitative variables? Are they stored properly as numbers so we can make mathematic operations?\nWhat is the mean length of the dartpoints?\n\n\n\n\n\natRium training school, Brno 2024 | Intro to R"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "atRium Brno Training School",
-    "section": "",
-    "text": "Basics\n\n\n\nWhen? 16–20 September 2024\nWhere? Brno, Czech Republic\nWhat? Training school on querying data aggregated in the ARIADNE infrastructure and their spatial analysis in R\n\n\nJoin us in Brno for a five-day ‘atRium’ training school in computational archaeology, where you will gain essential coding skills in the R programming language, knowledge of archaeological data integrated into the ARIADNE research infrastructure, and fundamental spatial data analysis expertise. As large amounts of archaeological data have become available, spatial analysis techniques may offer valuable insights into past human behaviour and settlement patterns. Our programme is designed to deepen your understanding of computational methods in archaeology, focusing on working in a reproducible manner using the R programming language and environment.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe training school is part of a trans-national access scheme provided by the ATRIUM Project, hosted by the Archaeological Information System of the Czech Republic (AIS CR) research infrastructure at the Institute of Archaeology, Czech Academy of Sciences, Brno.\n\nFeel free to distribute the flyer in PDF or PNG."
-  },
-  {
-    "objectID": "ariadne/index.html#outline",
-    "href": "ariadne/index.html#outline",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Outline",
-    "text": "Outline\n\nARIADNE Portal\nLinked Open Data\n\nTriples – building blocks of LOD\nRDF – way of representing LOD\n\nARIADNE AO-Cat ontology"
-  },
-  {
-    "objectID": "ariadne/index.html#ariadne",
-    "href": "ariadne/index.html#ariadne",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "ARIADNE",
-    "text": "ARIADNE\nArchaeological data and the ARIADNE Portal"
-  },
-  {
-    "objectID": "ariadne/index.html#ariadne-1",
-    "href": "ariadne/index.html#ariadne-1",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "ARIADNE",
-    "text": "ARIADNE\n\n\nA figure in Greek mythology\n\nCretan princess, daughter of King Minos.\nKnown for helping Theseus escape from the labyrinth after he kills Minotaur.\n\n\n\nEgisto Sani, CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0, via Wikimedia Commons\n\n\nA research infrastructure\n\nAn acronym for Advanced Research Infrastructure for Archaeological Dataset Networking In Europe.\nARIADNE aggregates, integrates, and provides access to various archaeological data resources.\n\nhttps://www.ariadne-research-infrastructure.eu/"
-  },
-  {
-    "objectID": "ariadne/index.html#ariadne-portal",
-    "href": "ariadne/index.html#ariadne-portal",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "ARIADNE Portal",
-    "text": "ARIADNE Portal\n\nhttps://portal.ariadne-infrastructure.eu/\n\n\ntypes of resources\nwhere, when, what\nPeriodO\nGetty AAT"
-  },
-  {
-    "objectID": "ariadne/index.html#exercise",
-    "href": "ariadne/index.html#exercise",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Exercise",
-    "text": "Exercise\n\nHow many resources are there in the ARIADNE Portal?\nHow many records of individual artefacts are there?\nWho contributes the most of the records on artefacts?\nHow many swords are there?\nHow many Bronze Age swords are there?\nAre there any records from Brno (Czech Republic)?\nHow many records are there from Africa?"
-  },
-  {
-    "objectID": "ariadne/index.html#what-where-when",
-    "href": "ariadne/index.html#what-where-when",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "What, where & when",
-    "text": "What, where & when\nWhere\n\nGeolocations of places (points, polygons, bounding boxes)\n\nWhen\n\nPeriodO gazeteer (https://perio.do/) – maps periods to absolute dates on a common time scale.\nDate\n\nWhat\n\nGetty Art & Architecture Thesaurus\n(Getty AAT, https://www.getty.edu/research/tools/vocabularies/aat/)"
-  },
-  {
-    "objectID": "ariadne/index.html#linked-open-data",
-    "href": "ariadne/index.html#linked-open-data",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Linked Open Data",
-    "text": "Linked Open Data\nFrom ARIADNE Portal to ARIADNE Knowledge Base"
-  },
-  {
-    "objectID": "ariadne/index.html#lets-discuss",
-    "href": "ariadne/index.html#lets-discuss",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Let’s discuss…",
-    "text": "Let’s discuss…\n\n\n\nWhat is data?\nWhat is structured data?\nWhat is unstructured data?\nWhat is a database?\nWhat is a relational database?\nWhat makes data open?\nWhat makes data linked?\n\n\n\nHave you ever collected/created any data?\nHave you ever created a database?\nHave you ever filled in a database designed by someone else?"
-  },
-  {
-    "objectID": "ariadne/index.html#linked-open-data-1",
-    "href": "ariadne/index.html#linked-open-data-1",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Linked Open Data",
-    "text": "Linked Open Data\n(LOD)\n\nhttps://5stardata.info/\n\nTim Berners Lee, 2006\n5-star deployment scheme for Open Data:\n\nAvailable on the web (whatever format) but with an open licence, to be Open Data\nAvailable as machine-readable structured data (e.g. excel instead of image scan of a table)\nas (2) plus non-proprietary format (e.g. CSV instead of excel)\nuse URIs to denote things, so that people can point at your stuff (All the above plus, Use open standards from W3C (RDF and SPARQL) to identify things, so that people can point at your stuff)\nAll the above, plus: Link your data to other people’s data to provide context\n\nhttps://www.w3.org/DesignIssues/LinkedData.html"
-  },
-  {
-    "objectID": "ariadne/index.html#linked-open-data-2",
-    "href": "ariadne/index.html#linked-open-data-2",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Linked Open Data",
-    "text": "Linked Open Data\nWhat makes it linked and open?\n\n\n\n\nSemantic Web / Web of Data\n\n\nSemantic Web is an extension of the Web of documents to the Web of data. It is about creating links between documents, datasets etc. that are understandable and readable to both humans and machines. Linked Open Data is at the core of the Semantic Web providing tools and best practices to make these links.\n\n\n\n\nOpen license.\nUniform Resource Identifiers (URIs) name and identify individual things.\nURIs are resolvable using http:// (or https://) protocol\n(it is possible to find information about the things).\nURIs lead to useful information (data in RDF or SPARQL standards).\nURIs in the resources lead to other resources, so more things can be discovered following the links.\n\n\n\n\nURLs, URIs & IRIs\n\n\nURL (Uniform Resource Locator) – locates and allows retrieval of things on the Web.\nURN (Universal Resource Name) – identifies but does not locate.\nURI (Uniform Resource Identifier, formerly Universal Resource Identifier) – identifies (both abstract or physical) things (resources) in the Web.\nIRI (Internationalized Resource identifier) – same as URI, allows wider range of characters to accomodate various writing systems."
-  },
-  {
-    "objectID": "ariadne/index.html#linked-open-data-cloud",
-    "href": "ariadne/index.html#linked-open-data-cloud",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Linked Open Data Cloud",
-    "text": "Linked Open Data Cloud\n\n\nhttps://lod-cloud.net/\nLOD knowledge bases:\n\nhttps://www.wikidata.org/\n~12,5 billion triples\n\nhttp://dbpedia.org/\n~9,5 billion triples\n\n\n\nThe Linked Open Data Cloud from lod-cloud.net (2024-07-04)\n\n\n\n\nWikidata - community created structured (!) data, not W3C fully complient, no ontology etc. DBpedia - data extracted from Wikipedia infoboxes, ontology etc."
-  },
-  {
-    "objectID": "ariadne/index.html#example-uris",
-    "href": "ariadne/index.html#example-uris",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Example – URIs",
-    "text": "Example – URIs\n\n\n\nAriadne is a figure in Greek mythology.\n\nARIADNE is a project acronym.\nAriadne was a Byzantine empress.\nAriadne is a genus of butterflies.\nAriadne is a drug…\n\nFar too many things are called Ariadne!\n\n\nWe need unique identifiers!\nWikidata\n\nhttp://www.wikidata.org/entity/Q184874 (URI)\nIdentifier: Q184874\n\nDBpedia\n\nhttp://dbpedia.org/resource/Ariadne (URI)\nhttp://dbpedia.org/data/Ariadne (data in RDF)\nhttp://dbpedia.org/page/Ariadne (landing page)\n\n\n\n\nEgisto Sani, CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0, via Wikimedia Commons"
-  },
-  {
-    "objectID": "ariadne/index.html#triples",
-    "href": "ariadne/index.html#triples",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Triples",
-    "text": "Triples\nHow to represent LOD?\n\n\n\n\n\n\n\nG\n\n\nsubject\n\nsubject\n\n\n\nobject\n\nobject\n\n\n\nsubject--object\n\npredicate\n(property)"
-  },
-  {
-    "objectID": "ariadne/index.html#example-triples",
-    "href": "ariadne/index.html#example-triples",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Example – triples",
-    "text": "Example – triples\n\nAriadne is a figure in Greek mythology.\n\n\n\n\n\n\n\n\nG\n\n\nAriadne\n\nAriadne\n\n\n\nmythological figure\n\nmythological figure\n\n\n\nAriadne--mythological figure\n\nis a"
-  },
-  {
-    "objectID": "ariadne/index.html#example-triples-1",
-    "href": "ariadne/index.html#example-triples-1",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Example – triples",
-    "text": "Example – triples\n\nAriadne is a figure in Greek mythology.\nAriadne is from Crete.\nCrete is an island.\n\n\n\n\n\n\n\n\nG\n\n\nAriadne\n\nAriadne\n\n\n\nmythological\\nfigure\n\nmythological\nfigure\n\n\n\nAriadne--mythological\\nfigure\n\nis a\n\n\n\nCrete\n\nCrete\n\n\n\nAriadne--Crete\n\nis from\n\n\n\nisland\n\nisland\n\n\n\nCrete--island\n\nis an"
-  },
-  {
-    "objectID": "ariadne/index.html#example-triples-2",
-    "href": "ariadne/index.html#example-triples-2",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Example – triples",
-    "text": "Example – triples\n\nURIs in place of subjects and objects\n\n\n\n\n\n\n\n\nG\n\n\nhttp://dbpedia.org/\\nresource/Ariadne\n\nhttp://dbpedia.org/\nresource/Ariadne\n\n\n\nhttp://dbpedia.org/\\nontology/MythologicalFigure\n\nhttp://dbpedia.org/\nontology/MythologicalFigure\n\n\n\nhttp://dbpedia.org/\\nresource/Ariadne--http://dbpedia.org/\\nontology/MythologicalFigure\n\nis a\n\n\n\nhttp://dbpedia.org/\\nresource/Crete\n\nhttp://dbpedia.org/\nresource/Crete\n\n\n\nhttp://dbpedia.org/\\nresource/Ariadne--http://dbpedia.org/\\nresource/Crete\n\nis from\n\n\n\nhttp://dbpedia.org/\\nontology/Island\n\nhttp://dbpedia.org/\nontology/Island\n\n\n\nhttp://dbpedia.org/\\nresource/Crete--http://dbpedia.org/\\nontology/Island\n\nis an\n\n\n\nhttp://sws.geonames.org/\\n258763\n\nhttp://sws.geonames.org/\n258763\n\n\n\nhttp://dbpedia.org/\\nresource/Crete--http://sws.geonames.org/\\n258763\n\nis the same as"
-  },
-  {
-    "objectID": "ariadne/index.html#example-triples-3",
-    "href": "ariadne/index.html#example-triples-3",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Example – triples",
-    "text": "Example – triples\n\nURIs in place of subjects and objects\nAbbreviated URIs\n\ndbo: http://dbpedia.org/ontology/\ndbr: http://dbpedia.org/resource/\ngn:  http://sws.geonames.org/\n\n\n\n\n\n\n\nG\n\n\ndbr:Ariadne\n\ndbr:Ariadne\n\n\n\ndbo:MythologicalFigure\n\ndbo:MythologicalFigure\n\n\n\ndbr:Ariadne--dbo:MythologicalFigure\n\nis a\n\n\n\ndbr:Crete\n\ndbr:Crete\n\n\n\ndbr:Ariadne--dbr:Crete\n\nis from\n\n\n\ndbo:Island\n\ndbo:Island\n\n\n\ndbr:Crete--dbo:Island\n\nis an\n\n\n\ngn:258763\n\ngn:258763\n\n\n\ndbr:Crete--gn:258763\n\nis the same as"
-  },
-  {
-    "objectID": "ariadne/index.html#example-triples-4",
-    "href": "ariadne/index.html#example-triples-4",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Example – triples",
-    "text": "Example – triples\n\nURIs in place of predicates (properties)\n\ndbo: http://dbpedia.org/ontology/\ndbr: http://dbpedia.org/resource/\ngn:  https://sws.geonames.org/\nrdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#\nowl: http://www.w3.org/2002/07/owl#\n\n\n\n\n\n\n\nG\n\n\ndbr:Ariadne\n\ndbr:Ariadne\n\n\n\ndbo:MythologicalFigure\n\ndbo:MythologicalFigure\n\n\n\ndbr:Ariadne--dbo:MythologicalFigure\n\nrdf:type\n\n\n\ndbr:Crete\n\ndbr:Crete\n\n\n\ndbr:Ariadne--dbr:Crete\n\ndbo:origin\n\n\n\ndbo:Island\n\ndbo:Island\n\n\n\ndbr:Crete--dbo:Island\n\nrdf:type\n\n\n\ngn:258763\n\ngn:258763\n\n\n\ndbr:Crete--gn:258763\n\nowl:sameAs"
-  },
-  {
-    "objectID": "ariadne/index.html#example-rdf",
-    "href": "ariadne/index.html#example-rdf",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Example – RDF",
-    "text": "Example – RDF\n\nWe can write down the triples using full URIs.\nEach triple ends with a period (.)\n\n&lt;http://dbpedia.org/resource/Ariadne&gt; \n  &lt;http://www.w3.org/2000/01/rdf-schema#label&gt; \n    \"Ariadne\"@en .\n\n&lt;http://dbpedia.org/resource/Ariadne&gt; \n  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; \n    &lt;http://dbpedia.org/ontology/MythologicalFigure&gt; .\n\n&lt;http://dbpedia.org/resource/Ariadne&gt; \n  &lt;http://dbpedia.org/ontology/origin&gt; \n    &lt;http://dbpedia.org/resource/Crete&gt; .\n  \n&lt;http://dbpedia.org/resource/Crete&gt; \n  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; \n    &lt;http://dbpedia.org/ontology/Island&gt; .\n\n&lt;http://dbpedia.org/resource/Crete&gt; \n  &lt;http://www.w3.org/2002/07/owl#sameAs&gt; \n    &lt;https://sws.geonames.org/258763&gt; .\n\nThis is perfectly fine for the machine, not so much for the human."
-  },
-  {
-    "objectID": "ariadne/index.html#example-rdf-1",
-    "href": "ariadne/index.html#example-rdf-1",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Example – RDF",
-    "text": "Example – RDF\n\nTo make the notation more readable, let’s abbreviate the URIs by defining prefixes.\n\n@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .\n@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .\n@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .\n@prefix dbo: &lt;http://dbpedia.org/ontology/&gt; .\n@prefix dbr: &lt;http://dbpedia.org/resource/&gt; .\n\ndbr:Ariadne rdfs:label \"Ariadne\"@en .\ndbr:Ariadne rdf:type dbo:MythologicalFigure .\ndbr:Ariadne dbo:origin dbr:Crete .\n  \ndbr:Crete rdf:type dbo:Island .\ndbr:Crete owl:sameAs &lt;https://sws.geonames.org/258763&gt; .\n\nThere is still a lot of repetition, e.g. in the subjects."
-  },
-  {
-    "objectID": "ariadne/index.html#example-rdf-2",
-    "href": "ariadne/index.html#example-rdf-2",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Example – RDF",
-    "text": "Example – RDF\n\nTo remove repetition, we add different predicates and objects to the same subject using semicolon (;)\nThe set of triples still ends with a period (.)\n\n@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .\n@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .\n@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .\n@prefix dbo: &lt;http://dbpedia.org/ontology/&gt; .\n@prefix dbr: &lt;http://dbpedia.org/resource/&gt; .\n\ndbr:Ariadne\n  rdfs:label \"Ariadne\"@en ;\n  rdf:type dbo:MythologicalFigure ;\n  dbo:origin dbr:Crete .\n  \ndbr:Crete \n  rdf:type dbo:Island ;\n  owl:sameAs &lt;https://sws.geonames.org/258763&gt; .\n\nThis is a Turtle serialization of an RDF, one of common ways of representing LOD."
-  },
-  {
-    "objectID": "ariadne/index.html#rdf",
-    "href": "ariadne/index.html#rdf",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "RDF",
-    "text": "RDF\nResource Description Framework\n\nA standard for LOD defined by the World Wide Web Consortium (W3C).\nRDF is a data model that describes how data is structured.\nUses triples to represent statements.\nRDF does not exactly tell us how to write the triples.\nNumerous serializations (how to write things down) of RDF exist.\n\nhttps://www.w3.org/standards/techs/rdf\nRDF serializations\n\nTurtle (subset of Notation3 language, superset of N-Triples format)\nRDF/XML\nJSON-LD\n\nand many more…\nRDF converter: https://www.easyrdf.org/converter"
-  },
-  {
-    "objectID": "ariadne/index.html#turtle",
-    "href": "ariadne/index.html#turtle",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Turtle",
-    "text": "Turtle\n\nStands for Terse RDF Triple Language.\nFile extension .ttl.\nTriple ends with a period.\nURIs in angle brackets (&lt;, &gt;).\nLiteral (text or other value) in quotation marks (\").\nTriples with a same subject are divided with semicolon (;).\nTriples with a same subject and property are divided with comma (,).\n\n@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .\n@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .\n@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .\n@prefix dbo: &lt;http://dbpedia.org/ontology/&gt; .\n@prefix dbr: &lt;http://dbpedia.org/resource/&gt; .\n\ndbr:Ariadne\n  rdfs:label \"Ariadne\"@en ;\n  rdf:type dbo:MythologicalFigure ;\n  dbo:origin dbr:Crete .\n  \ndbr:Crete \n  rdf:type dbo:Island ;\n  owl:sameAs &lt;https://sws.geonames.org/258763&gt; ."
-  },
-  {
-    "objectID": "ariadne/index.html#rdf-can-contain",
-    "href": "ariadne/index.html#rdf-can-contain",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "RDF can contain…",
-    "text": "RDF can contain…\n\nURIs/IRIs:\n\nwritten in angle brackets\n&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nshortened as prefixes\n@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\n\nLiterals (values):\n\nwritten in quotes followed by their datatype URI (typed literals)\nlist of RDF datatypes: https://www.w3.org/TR/rdf11-concepts/#section-Datatypes\nstrings (datatype xsd:string can be omitted)\n\"Ariadne\"^^xsd:string is the same as \"Ariadne\"\nnumbers (quotes can be omitted)\n\"3.14\"^^xsd:decimal is the same as 3.14\ndates\n\"2024-09-17\"^^xsd:date"
-  },
-  {
-    "objectID": "ariadne/index.html#rdfxml",
-    "href": "ariadne/index.html#rdfxml",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "RDF/XML",
-    "text": "RDF/XML\n\nFile extension .rdf.\nW3C standard (https://www.w3.org/TR/rdf-syntax-grammar/).\n\n&lt;?xml version=\"1.0\" encoding=\"utf-8\" ?&gt;\n&lt;rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n         xmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\"\n         xmlns:owl=\"http://www.w3.org/2002/07/owl#\"\n         xmlns:dbo=\"http://dbpedia.org/ontology/\"&gt;\n\n  &lt;rdf:Description rdf:about=\"http://dbpedia.org/resource/Ariadne\"&gt;\n    &lt;rdfs:label xml:lang=\"en\"&gt;Ariadne&lt;/rdfs:label&gt;\n    &lt;rdf:type rdf:resource=\"http://dbpedia.org/ontology/MythologicalFigure\"/&gt;\n    &lt;dbo:origin&gt;\n      &lt;dbo:Island rdf:about=\"http://dbpedia.org/resource/Crete\"&gt;\n        &lt;owl:sameAs rdf:resource=\"https://sws.geonames.org/258763\"/&gt;\n      &lt;/dbo:Island&gt;\n    &lt;/dbo:origin&gt;\n  &lt;/rdf:Description&gt;\n&lt;/rdf:RDF&gt;"
-  },
-  {
-    "objectID": "ariadne/index.html#tabular-data-vs-triples",
-    "href": "ariadne/index.html#tabular-data-vs-triples",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Tabular data vs triples",
-    "text": "Tabular data vs triples\n\nAny data organized in a table can be written as triples.\n\n\n\nFor example a table like this:\n\n\n\nID\nhuman\nsource\ndelta15N\ndelta13C\n\n\n\n\nsample01\nTRUE\ncoll\n6.9\n-19.2\n\n\nsample02\nFALSE\ncoll\n4.2\n-21.83\n\n\n…\n…\n…\n…\n…\n\n\nsample42\nNA\ncoll\n12.02\nNA\n\n\n\n\n\n\nCan become this:\n\n\n\nsubject\npredicate\nobject\n\n\n\n\nsample01\nfromHuman\nTRUE\n\n\nsample01\nsource\ncoll\n\n\nsample01\ndelta15N\n6.9\n\n\nsample01\ndelta13C\n-19.2\n\n\nsample02\nfromHuman\nFALSE\n\n\n…\n…\n…\n\n\nsample42\ndelta13C\nNA\n\n\n\n\n\n\nObservation (row) IDs become subjects.\nObservations (values) become objects.\nVariable (column) names become predicates."
-  },
-  {
-    "objectID": "ariadne/index.html#exercise-1",
-    "href": "ariadne/index.html#exercise-1",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Exercise",
-    "text": "Exercise\nSerialize the statements in this diagram as Turtle RDF using DBpedia\n\n\n\n\n\n\n\nG\n\n\ndbr:Phaistos_Disc\n\ndbr:Phaistos_Disc\n\n\n\ndbr:Artifact_(archaeology)\n\ndbr:Artifact_(archaeology)\n\n\n\ndbr:Phaistos_Disc--dbr:Artifact_(archaeology)\n\nrdf:type\n\n\n\n'1908-07-03'\n\n'1908-07-03'\n\n\n\ndbr:Phaistos_Disc--'1908-07-03'\n\ndbp:discoveredDate\n\n\n\ndbr:Crete\n\ndbr:Crete\n\n\n\ndbr:Phaistos_Disc--dbr:Crete\n\ndbp:discoveredPlace\n\n\n\ndbo:Island\n\ndbo:Island\n\n\n\ndbr:Crete--dbo:Island\n\nrdf:type\n\n\n\ngn:258763\n\ngn:258763\n\n\n\ndbr:Crete--gn:258763\n\nowl:sameAs\n\n\n\n\n\n\n\n\n\nPrefixes:\nrdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# .\nxsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .\nowl: http://www.w3.org/2002/07/owl# .\ndbo: http://dbpedia.org/ontology/ .\ndbr: http://dbpedia.org/resource/ .\ndbp: http://dbpedia.org/property/ .\ngn:  http://sws.geonames.org/ ."
-  },
-  {
-    "objectID": "ariadne/index.html#solution",
-    "href": "ariadne/index.html#solution",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Solution",
-    "text": "Solution\n\n\n\n\n\n\n\nG\n\n\ndbr:Phaistos_Disc\n\ndbr:Phaistos_Disc\n\n\n\ndbr:Artifact_(archaeology)\n\ndbr:Artifact_(archaeology)\n\n\n\ndbr:Phaistos_Disc--dbr:Artifact_(archaeology)\n\nrdf:type\n\n\n\n'1908-07-03'\n\n'1908-07-03'\n\n\n\ndbr:Phaistos_Disc--'1908-07-03'\n\ndbp:discoveredDate\n\n\n\ndbr:Crete\n\ndbr:Crete\n\n\n\ndbr:Phaistos_Disc--dbr:Crete\n\ndbp:discoveredPlace\n\n\n\ndbo:Island\n\ndbo:Island\n\n\n\ndbr:Crete--dbo:Island\n\nrdf:type\n\n\n\ngn:258763\n\ngn:258763\n\n\n\ndbr:Crete--gn:258763\n\nowl:sameAs\n\n\n\n\n\n\n\n\n@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .\n@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .\n@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .\n@prefix dbo: &lt;http://dbpedia.org/ontology/&gt; .\n@prefix dbr: &lt;http://dbpedia.org/resource/&gt; .\n@prefix dbp: &lt;http://dbpedia.org/property/&gt; .\n@prefix gn:  &lt;http://sws.geonames.org/&gt; .\n\ndbr:Phaistos_Disc \n  rdf:type dbr:Artifact_(archaeology) ;\n  dbp:discoveredDate \"1908-07-03\"^^xsd:date ;\n  dbp:discoveredPlace dbr:Crete .\n  \ndbr:Crete \n  rdf:type dbo:Island ;\n  owl:sameAs gn:258763 ."
-  },
-  {
-    "objectID": "ariadne/index.html#why-is-lod-useful",
-    "href": "ariadne/index.html#why-is-lod-useful",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Why is LOD useful?",
-    "text": "Why is LOD useful?\nLet’s brainstorm…"
-  },
-  {
-    "objectID": "ariadne/index.html#ao-cat-ontology",
-    "href": "ariadne/index.html#ao-cat-ontology",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "AO-Cat Ontology",
-    "text": "AO-Cat Ontology\nOntologies and the Semantic Web"
-  },
-  {
-    "objectID": "ariadne/index.html#what-is-an-ontology",
-    "href": "ariadne/index.html#what-is-an-ontology",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "What is an ontology?",
-    "text": "What is an ontology?\n\nAn explicit, formal way of modelling relationships between information within a particular domain.\nAn abstraction allowing formal representation of particular knowledge about the world. \nOntologies provide precisely defined vocabularies for modelling relationships.\n\nWhat is in an ontology?\n\nClasses – ontology defines abstract groups, fundamental categories of objects or concepts within a domain.\nRelationships (properties) – ontology limits what kinds of subjects and objects can properties link and how classes are related.\nInstances of objects – what are the described individuals.\n\nWhy is this useful?\n\nLogic\nAutomated reasoning\nInteroperability and data integration"
-  },
-  {
-    "objectID": "ariadne/index.html#domain-and-range",
-    "href": "ariadne/index.html#domain-and-range",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Domain and range",
-    "text": "Domain and range\n\n\n\n\n\n\n\nG\n\ncluster_1\n\nrange\n\n\ncluster_0\n\ndomain\n\n\n\nsubject\n\nsubject\n\n\n\nobject\n\nobject\n\n\n\nsubject--object\n\npredicate\n(property)\n\n\n\n\n\n\n\n\n\nDomain – subject described by the property is in the class specified by the domain.\nRange – object of the statement has the given range.\n\nrdfs:domain and rdfs:range properties"
-  },
-  {
-    "objectID": "ariadne/index.html#example",
-    "href": "ariadne/index.html#example",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "Example",
-    "text": "Example\n\n\n\n\n\n\n\nG\n\ncluster_0\n\nrdf:type dbo:PopulatedPlace\n\n\ncluster_1\n\nrdf:type dbo:Person\n\n\ncluster_2\n\nrdf:type dbo:MythologicalFigure\n\n\n\ndbr:Crete\n\ndbr:Crete\n\n\n\ndbr:Ariadne\n\ndbr:Ariadne\n\n\n\ndbr:Ariadne--dbr:Crete\n\ndbo:origin\n\n\n\n\n\n\n\n\n@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .\n@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .\n@prefix schema: &lt;http://schema.org/&gt; .\n@prefix dbo: &lt;http://dbpedia.org/ontology/&gt; .\n@prefix dbr: &lt;http://dbpedia.org/resource/&gt; .\n\ndbo:MythologicalFigure rdfs:subClassOf dbo:Person .\n\ndbo:origin rdf:type rdf:Property ;\n  rdfs:domain dbo:Person ;\n  rdfs:range dbo:PopulatedPlace .\n\ndbr:Ariadne\n  rdf:type dbo:MythologicalFigure ;\n  dbo:origin dbr:Crete .\n\ndbr:Crete \n  rdf:type dbo:PopulatedPlace ."
-  },
-  {
-    "objectID": "ariadne/index.html#ao-cat-ontology-1",
-    "href": "ariadne/index.html#ao-cat-ontology-1",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "AO-Cat Ontology",
-    "text": "AO-Cat Ontology\n\nFelicetti A., Meghini C., Richards J., Theodoridou M. 2023: The AO-Cat Ontology. doi:10.5281/zenodo.7818374.\n\n\n\n\n\n\nApplication profile of CIDOC CRM (most of the classes are mapped to CRM).\nNamespace IRI: https://ariadne-infrastructure.eu/aocat/\nClasses prefixed with AO_\n\nDefines:\n\n22 classes\n\n66 properties"
-  },
-  {
-    "objectID": "ariadne/index.html#ao-cat-concepts",
-    "href": "ariadne/index.html#ao-cat-concepts",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "AO-Cat Concepts",
-    "text": "AO-Cat Concepts\nResources\n\n\n\n\n\n\n\nG\n\n\nAO_Entity\n\nAO_Entity\n\n\n\nAO_Resource\n\nAO_Resource\n\n\n\nAO_Entity--AO_Resource\n\n\n\n\nAO_Service\n\nAO_Service\n\n\n\nAO_Resource--AO_Service\n\n\n\n\nAO_Data_Resource\n\nAO_Data_Resource\n\n\n\nAO_Resource--AO_Data_Resource\n\n\n\n\nAO_Individual_Data_Resource (1)\n\nAO_Individual_Data_Resource (1)\n\n\n\nAO_Data_Resource--AO_Individual_Data_Resource (1)\n\n\n\n\nAO_Collection (1)\n\nAO_Collection (1)\n\n\n\nAO_Data_Resource--AO_Collection (1)\n\n\n\n\nAO_Document\n\nAO_Document\n\n\n\nAO_Individual_Data_Resource (1)--AO_Document\n\n\n\n\nAO_Individual_Data_Resource (2)\n\nAO_Individual_Data_Resource (2)\n\n\n\nAO_Collection (1)--AO_Individual_Data_Resource (2)\n\n\n\n\nAO_Collection (2)\n\nAO_Collection (2)\n\n\n\nAO_Collection (1)--AO_Collection (2)"
-  },
-  {
-    "objectID": "ariadne/index.html#ao-cat-classes",
-    "href": "ariadne/index.html#ao-cat-classes",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "AO-Cat classes",
-    "text": "AO-Cat classes\nWhere\n\nAO_Spatial_Region\n\nAO_Spatial_Region_Point\nAO_Spatial_Region_Polygon\nAO_Spatial_Region_BBox\nAO_Spatial_Region_StdName\n\n\nWhen\n\nAO_Temporal_Region\n\nFrom/until given in years\nPeriodO URIs\n\n\nWhat\n\nclass AO_Concept\nARIADNE subjects (property has_ARIADNE_subject )\nderived subjects (AAT subjects, property has_derived_subject)\nnative subjects (property has_native_subject)"
-  },
-  {
-    "objectID": "ariadne/index.html#ariadne-subjects",
-    "href": "ariadne/index.html#ariadne-subjects",
-    "title": "ARIADNE & Linked Open Data",
-    "section": "ARIADNE subjects",
-    "text": "ARIADNE subjects\n\nSite/monument – each record is a site/monument.\nFieldwork – each record is an individual archaeological investigation (event) .\nFieldwork report – record of fieldwork event (link to grey literature report).\nFieldwork archive – record of filedwork event (link to archive of digital objects).\nScientific analysis – any analytical data.\nDate – each record is a single archaeological date (C14, dendrochronology etc.)\nArtefact – each record is a single artefact (except coins).\nCoin – each record is a single coin.\nBuilding survey – specific category of fieldwork report or archive for standing building survey.\nMaritime – specific category of site/monument for wrecks or fieldwork event (underwater archaeology).\nInscription – monuments or artefacts that bear graphical manifestation of a human thought.\nRock art – similar to inscriptions.\nBurial – each record is a burial.\n\n\n\n\n\n\natRium training school, Brno 2024 | ARIADNE"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About the training school",
-    "section": "",
-    "text": "Petr Pajdla\nInstitute of Archaeology, Czech Acad Sci, Brno\n 0000-0001-7050-9572\nPeter Tkáč\nMasaryk University\n 0000-0002-9444-1936\n\nMichael Kempf\nUniversity of Basel\n 0000-0002-9474-4670\nGiacomo Bilotti\nKiel University\n 0000-0002-7328-0811\n\n\n\n\n\n\nZuzana Kopáčová\nInstitute of Archaeology, Czech Acad Sci, Brno\nFinances, administration\n\nVít Kozák\nMasaryk University\nTeaching assistant\n\n\nAnd the AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to\nZuzana Kopáčová (kopacova@arub.cz ✉), and/or\nPetr Pajdla (pajdla@arub.cz ✉)."
-  },
-  {
-    "objectID": "about.html#organisers-lecturers",
-    "href": "about.html#organisers-lecturers",
-    "title": "About the training school",
-    "section": "",
-    "text": "Petr Pajdla\nInstitute of Archaeology, Czech Acad Sci, Brno\n 0000-0001-7050-9572\nPeter Tkáč\nMasaryk University\n 0000-0002-9444-1936\n\nMichael Kempf\nUniversity of Basel\n 0000-0002-9474-4670\nGiacomo Bilotti\nKiel University\n 0000-0002-7328-0811\n\n\n\n\n\n\nZuzana Kopáčová\nInstitute of Archaeology, Czech Acad Sci, Brno\nFinances, administration\n\nVít Kozák\nMasaryk University\nTeaching assistant\n\n\nAnd the AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to\nZuzana Kopáčová (kopacova@arub.cz ✉), and/or\nPetr Pajdla (pajdla@arub.cz ✉)."
-  },
-  {
-    "objectID": "about.html#organisations",
-    "href": "about.html#organisations",
-    "title": "About the training school",
-    "section": "Organisations",
-    "text": "Organisations\n\nATRIUM\nThe training (summer) school is organised as transnational access provision in the ATRIUM Project (Advancing Frontier Research in the Arts and Humanities) funded by the Horizon Europe research and innovation actions programme under grant agreement No. 101132163.\n\n\nARIADNE\nARIADNE Research Infrastructure is a non-profit organisation that aggregates, integrates, and provides access to over 4 million archaeological data resources. Access is facilitated through the comprehensive data catalogue ARIADNE Portal (see the short video below for more details) and directly through a SPARQL endpoint to the linked-open data triple store, the ARIADNE Knowledge Base.\nOne of the goals of the training school is to enable programmatic access to these resources by introducing the basics of knowledge representation in the triple store, explaining the ARIADNE AO-Cat Ontology, and providing training in building SPARQL queries.\n\n\n\nAIS CR\nThe Archaeological Information System of the Czech Republic (AIS CR) is a research infrastructure integrating digital resources and services on archaeology in the Czech Republic, and as such is one of many data providers in the ARIADNE Research Infrastructure. AIS CR is jointly operated by the Institutes of Archaeology of the Czech Academy of Sciences in Brno (IAB) and Prague (IAP)."
-  },
-  {
-    "objectID": "applications.html",
-    "href": "applications.html",
-    "title": "Applications",
-    "section": "",
-    "text": "More details about the transnational access scheme grants can be found on the ATRIUM Project website."
-  },
-  {
-    "objectID": "applications.html#key-dates",
-    "href": "applications.html#key-dates",
-    "title": "Applications",
-    "section": "Key dates",
-    "text": "Key dates\n\n\n\n\n\n\n\nApril 2024\nCall for participants opens\n\n\n31 May 2024\nDeadline for applications\n\n\n20 July 28 June 2024\nAcceptance notifications sent before this date\n\n\n16–20 September 2024\nTraining school\n\n\nmid-October 2024 (?)\nDeadline for submission of reports\n\n\nend of November 2024\nGrants paid before this date"
-  },
-  {
-    "objectID": "applications.html#who-should-apply",
-    "href": "applications.html#who-should-apply",
-    "title": "Applications",
-    "section": "Who should apply",
-    "text": "Who should apply\n\n\n\n\n\n\nNote\n\n\n\nOnly applicants with institutional affiliation outside of the Czech Republic are eligible to receive funding due to the trans-national nature of the access to the infrastructure provided by the school.\n\n\nWe welcome applications from early-career researchers and PhD students who are enthusiastic about acquiring programming skills, particularly in the R scripting language, to efficiently retrieve and analyse extensive (spatial) datasets. Participants should demonstrate a keen interest in conducting data analysis and processing in a structured and reproducible manner using scripting languages.\nWhile applicants with prior knowledge of R programming are encouraged to apply, the first day of the training will be dedicated to mastering the fundamentals of R. Individuals who are complete beginners are welcome as well, as no prior experience is necessary. Additionally, applicants should have a basic understanding of statistics, data management, and geographic information systems to fully benefit from the training."
-  },
-  {
-    "objectID": "applications.html#how-to-apply",
-    "href": "applications.html#how-to-apply",
-    "title": "Applications",
-    "section": "How to apply",
-    "text": "How to apply\nSubmit your applications through an online form. On the 4th page of the application (TNA Scheme), choose ‘Summer School Access’ and ‘Archaeological Information System of the Czech Republic, Institute of Archaeology of the Czech Academy of Sciences, Brno – AIS CR (ARUB)’ as the proposed host organisation. On the next page (Summer School Application) please explain why you believe this training would be valuable for your research and how you intend to integrate these newfound skills into your work.\nMore details on how to apply can be found here."
   },
   {
     "objectID": "dataviz/atRium2024_intro_part2_dlyr_ggplot.html#overview",
@@ -1022,39 +994,25 @@
     "text": "Solution\n\nlibrary(here)\ndf_cups &lt;- read.csv(here(\"data/bacups.csv\"))\n\n\nhead(df_cups)\n\n    RD   ND   SD   H  NH       Phase\n1 11.1 10.0 10.3 5.5 2.5 Subapennine\n2  9.5  9.2  9.8 4.8 2.0 Subapennine\n3 20.8 20.9 22.0 9.5 3.8 Subapennine\n4 19.5 18.2 19.5 8.8 2.7 Subapennine\n5 15.5 15.5 18.8 9.8 3.2 Subapennine\n6 11.7 11.1 11.5 3.8 1.4 Subapennine\n\nstr(df_cups)\n\n'data.frame':   60 obs. of  6 variables:\n $ RD   : num  11.1 9.5 20.8 19.5 15.5 11.7 10.8 15 18.5 11 ...\n $ ND   : num  10 9.2 20.9 18.2 15.5 11.1 10.7 16.1 16.4 8.9 ...\n $ SD   : num  10.3 9.8 22 19.5 18.8 11.5 10.8 16.4 18 9.5 ...\n $ H    : num  5.5 4.8 9.5 8.8 9.8 3.8 3.5 11.8 10.5 5.8 ...\n $ NH   : num  2.5 2 3.8 2.7 3.2 1.4 1.7 3.5 4.8 3.7 ...\n $ Phase: chr  \"Subapennine\" \"Subapennine\" \"Subapennine\" \"Subapennine\" ...\n\n\n\nnames(df_cups)\n\n[1] \"RD\"    \"ND\"    \"SD\"    \"H\"     \"NH\"    \"Phase\"\n\n\n\nlibrary(ggplot2)\nggplot(data = df_cups)+\n  aes(x = H)+\n  geom_histogram()\n\n\n\n\n\n\n\n\n\nggplot(data = df_cups)+\n  aes(x = Phase, y = H)+\n  geom_boxplot()\n\n\n\n\n\n\n\n\n\nggplot(data = df_cups)+\n  aes(x = H, y = RD)+\n  geom_point()\n\n\n\n\n\n\n\n\n\nggplot(data = df_cups)+\n  aes(x = H, y = RD, color = Phase)+\n  geom_point(size = 4, alpha = 0.5)+\n  labs(x = \"Height\", y = \"Rim Diameter\")+\n  theme_light()\n\n\n\n\n\n\n\n\n\n\n\n\natRium training school, Brno 2024 | Data viz"
   },
   {
-    "objectID": "info.html",
-    "href": "info.html",
-    "title": "General Information",
+    "objectID": "report.html",
+    "href": "report.html",
+    "title": "Insights and recap",
     "section": "",
-    "text": "The school will be held from 16 to 20 September 2024 at the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/) at the address given below:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nNote\n\n\n\nPlease note that this is an on-site event only, and remote participation will not be possible."
+    "text": "We had 19 participants working and/or studying at universities, museums and other research institutions across Europe!"
   },
   {
-    "objectID": "info.html#date-and-location",
-    "href": "info.html#date-and-location",
-    "title": "General Information",
-    "section": "",
-    "text": "The school will be held from 16 to 20 September 2024 at the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/) at the address given below:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nNote\n\n\n\nPlease note that this is an on-site event only, and remote participation will not be possible."
+    "objectID": "report.html#photos",
+    "href": "report.html#photos",
+    "title": "Insights and recap",
+    "section": "Photos",
+    "text": "Photos\n\n\n\nGroup photo at the terrace of the institute.\n\n\n\n\n\nSo much sun! It hurts my eyes!"
   },
   {
-    "objectID": "info.html#grants",
-    "href": "info.html#grants",
-    "title": "General Information",
-    "section": "Grants",
-    "text": "Grants\nEach participant of the school is eligible to receive a grant to cover travel expenses, housing, and daily subsistence during the meeting. To receive the grant, participants need to:\n\nApply via the official form of the ATRIUM Project (see the Applications section for details).\nParticipate in person, i.e. sign attendance sheets for each training day.\nSubmit a report within a given time frame after the conclusion of the school with details of their participation."
-  },
-  {
-    "objectID": "info.html#prerequisites",
-    "href": "info.html#prerequisites",
-    "title": "General Information",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nBring your own laptop!\nInstall R and RStudio (follow the concise quide here).\nIf you are familiar with R, feel free to use a GUI of your choice."
-  },
-  {
-    "objectID": "info.html#other-information",
-    "href": "info.html#other-information",
-    "title": "General Information",
-    "section": "Other information",
-    "text": "Other information\n\nTravelling to Brno\nBrno is easily reachable by trains or buses from Prague (approx. a 2 to 2.5-hour journey) and Vienna (approx. a 1.5 to 2-hour journey). Many overnight trains crossing a large part of Europe start or end in Vienna, and we recommend taking these trains as an alternative to flying.\n\n\n\n\n\n\nFood\nThere are several places around the institute, see map above for locations.\n\n\n\n\n\n\n\n\n\n\nplace\ncuisine\nnote\n\n\n\n\nLittle Saigon\nAsian/Vietnamese\nhas vegan/vegetarian options\n\n\nMasný růžek\nCzech\na lot of meaty foods and traditional heavy Czech cuisine\n\n\nBistro Nella\nCzech\nmight have vegetarian option\n\n\nJídelna Kocourek\nCzech\nmight have vegetarian option\n\n\nGrand Kitchen Vlněna\nCzech, International\nmight have vegetarian option\n\n\nBistro Bellavista\nItalian\nmostly does not have vegetarian/vegan options\n\n\nDelitree bistro\nItalian, Czech, Salads\nhas vegetarian options\n\n\nRamen Brno\nJapanese\nmight have vegetarian options\n\n\nLos Capolitos\nMexican\nhes vegetarian option\n\n\nSargam\nNepalese\nhas vegetarian options\n\n\nVeg8Cafe\nVegan\nvegan bistro\n\n\nForky’s Vlněna Foodtruck\nVegan\nvegan streetfood"
+    "objectID": "report.html#reports-by-the-participants",
+    "href": "report.html#reports-by-the-participants",
+    "title": "Insights and recap",
+    "section": "Reports by the participants",
+    "text": "Reports by the participants\n\n\n\n\n\nName\nReport\n\n\n\n\nAuzina, Dita\nReport (PDF)\n\n\nBekesi, Anna\nReport (PDF)\n\n\nCocozza, Carlo\nReport (PDF)\n\n\nDanthine, Brigit\nTo be submitted.\n\n\nDavidson, Lesley\nTo be submitted.\n\n\nDepaermentier, Margaux\nReport (PDF)\n\n\nDesarbre, Romane\nReport (PDF)\n\n\nGarland, Nicky\nReport (PDF)\n\n\nHsu, Yiu-Kang\nReport (PDF)\n\n\nKaplanis, Panagiotis\nTo be submitted.\n\n\nKravtsova, Valeriia\nReport (PDF)\n\n\nKrubeck, Sara\nReport (PDF)\n\n\nLobanova, Mariia\nReport (PDF)\n\n\nMyint, Swe Zin\nReport (PDF)\n\n\nOcampo, Juan Carlos\nReport (PDF)\n\n\nPetrarulo, Ilenia\nReport (PDF)\n\n\nQuatrelivre, Carole\nReport (PDF)\n\n\nRadinovic, Mihailo\nReport (PDF)\n\n\nWilkinson, Alexander\nReport (PDF)"
   },
   {
     "objectID": "materials.html",
@@ -1099,24 +1057,66 @@
     "text": "Friday, 20 Sept.\n\nR books\n\nR for Data Science by Hadley Wickham, Mine Çetinkaya-Rundel and Garrett Grolemund – tidyverse packages, data manipulation, visualization etc.\nGeocomputation with R by Robin Lovelace, Jakub Nowosad, and Jannes Muenchow – sf, terra and other spatial packages.\nSpatial Data Science by Edzer Pebesma and Roger Bivand – includes more advanced topics like point pattern analysis with spatstat etc.\nData Visualization. A practical introduction by Kieran Healy – gives you all you need to be able to create beautiful plots with ggplot2.\n\n\nSome more glitter and ARIADNE\n\nR script with an example query on coins from ARIADNE SPARQL endpoint."
   },
   {
-    "objectID": "report.html",
-    "href": "report.html",
-    "title": "Insights and recap",
+    "objectID": "applications.html",
+    "href": "applications.html",
+    "title": "Applications",
     "section": "",
-    "text": "We had 19 participants working and/or studying at universities, museums and other research institutions across Europe!"
+    "text": "More details about the transnational access scheme grants can be found on the ATRIUM Project website."
   },
   {
-    "objectID": "report.html#photos",
-    "href": "report.html#photos",
-    "title": "Insights and recap",
-    "section": "Photos",
-    "text": "Photos\n\n\n\nGroup photo at the terrace of the institute.\n\n\n\n\n\nSo much sun! It hurts my eyes!"
+    "objectID": "applications.html#key-dates",
+    "href": "applications.html#key-dates",
+    "title": "Applications",
+    "section": "Key dates",
+    "text": "Key dates\n\n\n\n\n\n\n\nApril 2024\nCall for participants opens\n\n\n31 May 2024\nDeadline for applications\n\n\n20 July 28 June 2024\nAcceptance notifications sent before this date\n\n\n16–20 September 2024\nTraining school\n\n\nmid-October 2024 (?)\nDeadline for submission of reports\n\n\nend of November 2024\nGrants paid before this date"
   },
   {
-    "objectID": "report.html#reports-by-the-participants",
-    "href": "report.html#reports-by-the-participants",
-    "title": "Insights and recap",
-    "section": "Reports by the participants",
-    "text": "Reports by the participants\n\n\n\n\n\nName\nReport\n\n\n\n\nAuzina, Dita\nReport (PDF)\n\n\nBekesi, Anna\nReport (PDF)\n\n\nCocozza, Carlo\nReport (PDF)\n\n\nDanthine, Brigit\nTo be submitted.\n\n\nDavidson, Lesley\nTo be submitted.\n\n\nDepaermentier, Margaux\nReport (PDF)\n\n\nDesarbre, Romane\nReport (PDF)\n\n\nGarland, Nicky\nReport (PDF)\n\n\nHsu, Yiu-Kang\nReport (PDF)\n\n\nKaplanis, Panagiotis\nTo be submitted.\n\n\nKravtsova , Valeriia\nTo be submitted.\n\n\nKrubeck, Sara\nReport (PDF)\n\n\nLobanova, Mariia\nReport (PDF)\n\n\nMyint, Swe Zin\nReport (PDF)\n\n\nOcampo, Juan Carlos\nReport (PDF)\n\n\nPetrarulo, Ilenia\nReport (PDF)\n\n\nQuatrelivre, Carole\nReport (PDF)\n\n\nRadinovic, Mihailo\nReport (PDF)\n\n\nWilkinson, Alexander\nReport (PDF)"
+    "objectID": "applications.html#who-should-apply",
+    "href": "applications.html#who-should-apply",
+    "title": "Applications",
+    "section": "Who should apply",
+    "text": "Who should apply\n\n\n\n\n\n\nNote\n\n\n\nOnly applicants with institutional affiliation outside of the Czech Republic are eligible to receive funding due to the trans-national nature of the access to the infrastructure provided by the school.\n\n\nWe welcome applications from early-career researchers and PhD students who are enthusiastic about acquiring programming skills, particularly in the R scripting language, to efficiently retrieve and analyse extensive (spatial) datasets. Participants should demonstrate a keen interest in conducting data analysis and processing in a structured and reproducible manner using scripting languages.\nWhile applicants with prior knowledge of R programming are encouraged to apply, the first day of the training will be dedicated to mastering the fundamentals of R. Individuals who are complete beginners are welcome as well, as no prior experience is necessary. Additionally, applicants should have a basic understanding of statistics, data management, and geographic information systems to fully benefit from the training."
+  },
+  {
+    "objectID": "applications.html#how-to-apply",
+    "href": "applications.html#how-to-apply",
+    "title": "Applications",
+    "section": "How to apply",
+    "text": "How to apply\nSubmit your applications through an online form. On the 4th page of the application (TNA Scheme), choose ‘Summer School Access’ and ‘Archaeological Information System of the Czech Republic, Institute of Archaeology of the Czech Academy of Sciences, Brno – AIS CR (ARUB)’ as the proposed host organisation. On the next page (Summer School Application) please explain why you believe this training would be valuable for your research and how you intend to integrate these newfound skills into your work.\nMore details on how to apply can be found here."
+  },
+  {
+    "objectID": "info.html",
+    "href": "info.html",
+    "title": "General Information",
+    "section": "",
+    "text": "The school will be held from 16 to 20 September 2024 at the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/) at the address given below:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nNote\n\n\n\nPlease note that this is an on-site event only, and remote participation will not be possible."
+  },
+  {
+    "objectID": "info.html#date-and-location",
+    "href": "info.html#date-and-location",
+    "title": "General Information",
+    "section": "",
+    "text": "The school will be held from 16 to 20 September 2024 at the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/) at the address given below:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nNote\n\n\n\nPlease note that this is an on-site event only, and remote participation will not be possible."
+  },
+  {
+    "objectID": "info.html#grants",
+    "href": "info.html#grants",
+    "title": "General Information",
+    "section": "Grants",
+    "text": "Grants\nEach participant of the school is eligible to receive a grant to cover travel expenses, housing, and daily subsistence during the meeting. To receive the grant, participants need to:\n\nApply via the official form of the ATRIUM Project (see the Applications section for details).\nParticipate in person, i.e. sign attendance sheets for each training day.\nSubmit a report within a given time frame after the conclusion of the school with details of their participation."
+  },
+  {
+    "objectID": "info.html#prerequisites",
+    "href": "info.html#prerequisites",
+    "title": "General Information",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nBring your own laptop!\nInstall R and RStudio (follow the concise quide here).\nIf you are familiar with R, feel free to use a GUI of your choice."
+  },
+  {
+    "objectID": "info.html#other-information",
+    "href": "info.html#other-information",
+    "title": "General Information",
+    "section": "Other information",
+    "text": "Other information\n\nTravelling to Brno\nBrno is easily reachable by trains or buses from Prague (approx. a 2 to 2.5-hour journey) and Vienna (approx. a 1.5 to 2-hour journey). Many overnight trains crossing a large part of Europe start or end in Vienna, and we recommend taking these trains as an alternative to flying.\n\n\n\n\n\n\nFood\nThere are several places around the institute, see map above for locations.\n\n\n\n\n\n\n\n\n\n\nplace\ncuisine\nnote\n\n\n\n\nLittle Saigon\nAsian/Vietnamese\nhas vegan/vegetarian options\n\n\nMasný růžek\nCzech\na lot of meaty foods and traditional heavy Czech cuisine\n\n\nBistro Nella\nCzech\nmight have vegetarian option\n\n\nJídelna Kocourek\nCzech\nmight have vegetarian option\n\n\nGrand Kitchen Vlněna\nCzech, International\nmight have vegetarian option\n\n\nBistro Bellavista\nItalian\nmostly does not have vegetarian/vegan options\n\n\nDelitree bistro\nItalian, Czech, Salads\nhas vegetarian options\n\n\nRamen Brno\nJapanese\nmight have vegetarian options\n\n\nLos Capolitos\nMexican\nhes vegetarian option\n\n\nSargam\nNepalese\nhas vegetarian options\n\n\nVeg8Cafe\nVegan\nvegan bistro\n\n\nForky’s Vlněna Foodtruck\nVegan\nvegan streetfood"
   }
 ]
