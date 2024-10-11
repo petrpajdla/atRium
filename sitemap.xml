@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://petrpajdla.github.io/atRium/about.html</loc>
-    <lastmod>2024-10-09T18:12:10.356Z</lastmod>
-  </url>
-  <url>
-    <loc>https://petrpajdla.github.io/atRium/ariadne/index.html</loc>
-    <lastmod>2024-09-18T12:32:36.433Z</lastmod>
-  </url>
-  <url>
     <loc>https://petrpajdla.github.io/atRium/sparql/index.html</loc>
-    <lastmod>2024-09-16T09:44:32.243Z</lastmod>
-  </url>
-  <url>
-    <loc>https://petrpajdla.github.io/atRium/index.html</loc>
-    <lastmod>2024-08-26T17:50:26.866Z</lastmod>
+    <lastmod>2024-09-17T07:22:50.377Z</lastmod>
   </url>
   <url>
     <loc>https://petrpajdla.github.io/atRium/programme.html</loc>
-    <lastmod>2024-09-14T19:37:58.595Z</lastmod>
+    <lastmod>2024-09-13T08:48:28.431Z</lastmod>
   </url>
   <url>
     <loc>https://petrpajdla.github.io/atRium/intro2r/index.html</loc>
-    <lastmod>2024-09-16T12:46:23.866Z</lastmod>
+    <lastmod>2024-09-16T11:48:45.063Z</lastmod>
   </url>
   <url>
-    <loc>https://petrpajdla.github.io/atRium/dataviz/atRium2024_intro_part2_dlyr_ggplot.html</loc>
-    <lastmod>2024-09-16T12:46:23.856Z</lastmod>
+    <loc>https://petrpajdla.github.io/atRium/index.html</loc>
+    <lastmod>2024-05-06T07:27:03.462Z</lastmod>
   </url>
   <url>
-    <loc>https://petrpajdla.github.io/atRium/report.html</loc>
-    <lastmod>2024-10-10T08:11:55.576Z</lastmod>
+    <loc>https://petrpajdla.github.io/atRium/ariadne/index.html</loc>
+    <lastmod>2024-09-30T08:29:24.153Z</lastmod>
   </url>
   <url>
-    <loc>https://petrpajdla.github.io/atRium/materials.html</loc>
-    <lastmod>2024-10-09T18:12:10.363Z</lastmod>
+    <loc>https://petrpajdla.github.io/atRium/about.html</loc>
+    <lastmod>2024-10-08T11:34:59.385Z</lastmod>
   </url>
   <url>
     <loc>https://petrpajdla.github.io/atRium/applications.html</loc>
-    <lastmod>2024-08-26T17:50:26.746Z</lastmod>
+    <lastmod>2024-06-12T07:55:45.316Z</lastmod>
+  </url>
+  <url>
+    <loc>https://petrpajdla.github.io/atRium/dataviz/atRium2024_intro_part2_dlyr_ggplot.html</loc>
+    <lastmod>2024-09-16T11:58:47.155Z</lastmod>
   </url>
   <url>
     <loc>https://petrpajdla.github.io/atRium/info.html</loc>
-    <lastmod>2024-09-14T19:37:58.579Z</lastmod>
+    <lastmod>2024-09-13T08:48:28.428Z</lastmod>
+  </url>
+  <url>
+    <loc>https://petrpajdla.github.io/atRium/materials.html</loc>
+    <lastmod>2024-10-08T09:07:00.165Z</lastmod>
+  </url>
+  <url>
+    <loc>https://petrpajdla.github.io/atRium/report.html</loc>
+    <lastmod>2024-10-11T07:28:03.351Z</lastmod>
   </url>
 </urlset>
