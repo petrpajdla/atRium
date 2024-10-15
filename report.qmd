@@ -18,5 +18,4 @@ We had 19 participants working and/or studying at universities, museums and othe
 #| echo: false
 read.csv(here::here("reports/list.csv")) |>
   knitr::kable()
-  
 ```

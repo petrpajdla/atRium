@@ -61,3 +61,6 @@ rsconnect/
 
 # certificates
 /certificates/*.pdf
+
+# report comments
+/reports/*_comments.pdf

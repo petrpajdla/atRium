@@ -8,6 +8,7 @@ sh <- googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1CSlE5E7
 
 fl <- list.files(here::here("reports/"), pattern = "\\.pdf") %>% 
   as_tibble() %>% 
+  filter(!str_detect(value, "comments")) %>% 
   mutate(p = str_extract(value, "(?<=report_).+(?=\\.pdf$)"),
          p = str_to_lower(p))
 
