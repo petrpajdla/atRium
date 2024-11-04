@@ -4,7 +4,7 @@ sh <- googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1CSlE5E7
   filter(Confirmation) %>% 
   mutate(p = str_extract(Name, ".+(?=,)"),
          p = str_to_lower(p)) %>% 
-  select(p, Name, Report, Reference, Organisation)
+  select(p, Name, Report, Reference, Organisation, Country = `Org Country`)
 
 fl <- list.files(here::here("reports/"), pattern = "\\.pdf") %>% 
   as_tibble() %>% 
@@ -15,6 +15,6 @@ fl <- list.files(here::here("reports/"), pattern = "\\.pdf") %>%
 full_join(sh, fl, by = join_by("p")) %>% 
   mutate(path = if_else(Report, paste0("reports/", value), NA),
          Report = if_else(Report, paste0("[Report (PDF)](", path, ")"), "*To be submitted.*")) %>% 
-  select(Name, Report) %>% 
+  select(Name, Country, Report) %>% 
   write_csv(here::here("reports/list.csv"))
   
